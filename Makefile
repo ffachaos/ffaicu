@@ -10,3 +10,15 @@ help:  ## Show this help message
 .PHONY: shebang
 shebang: ## shebangを任意のパスに変更する (e.g. make shebang SHEBANG="/usr/local/bin/perl --")
 	@bash scripts/shebang.sh $(SHEBANG)
+
+.PHONY: up
+up: ## Dockerコンテナを起動する
+	@docker-compose up -d --build
+
+.PHONY: down
+down: ## Dockerコンテナを停止する
+	@docker-compose down
+
+.PHONY: build
+build: ## Dockerコンテナをbuildする
+	@docker-compose build
