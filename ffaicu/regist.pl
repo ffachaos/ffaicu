@@ -96,8 +96,8 @@ sub decode {
 		$value =~ tr/+/ /;
 		$value =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/eg;
 
-		# 文字コードをシフトJIS変換
-		&jcode'convert(*value, "sjis", "", "z");
+		# 文字コードをUTF8変換
+		&jcode'convert(*value, "utf8", "", "z");
 
 		# タグ処理
 		$value =~ s/</&lt;/g;
@@ -255,7 +255,7 @@ sub header {
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
 <head>
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=Shift_JIS">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 <META http-equiv="Content-Script-Type" content="text/javascript">
 <META http-equiv="Content-Style-Type" content="text/css">
 <SCRIPT Language="JavaScript" src="$java_script" type="text/javascript">
