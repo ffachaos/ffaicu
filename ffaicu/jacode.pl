@@ -10,10 +10,10 @@ package jcode;
 #   http://search.cpan.org/dist/jacode/
 #
 # *** CAUTION ***
-# This software is not "jcode.pl"
-# Thus don't redistribute this software renaming as "jcode.pl"
+# This software is not "jacode.pl"
+# Thus don't redistribute this software renaming as "jacode.pl"
 #
-# Original version `jcode.pl' is ...
+# Original version `jacode.pl' is ...
 #
 # Copyright (c) 2002 Kazumasa Utashiro
 # http://web.archive.org/web/20090608090304/http://srekcah.org/jcode/
@@ -42,7 +42,7 @@ package jcode;
 #   ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/
 #
 $rcsid =
-q$Id: jacode.pl,v 2.13.4.16 branched from jcode.pl,v 2.13 2000/09/29 16:10:05 utashiro Exp $;
+q$Id: jacode.pl,v 2.13.4.16 branched from jacode.pl,v 2.13 2000/09/29 16:10:05 utashiro Exp $;
 $VERSION =
 $VERSION = sprintf('%d.%02d%02d%02d', $rcsid =~ /(\d+)\.(\d+)\.(\d+)\.(\d+)/);
 
@@ -170,7 +170,7 @@ $VERSION = sprintf('%d.%02d%02d%02d', $rcsid =~ /(\d+)\.(\d+)\.(\d+)\.(\d+)/);
 # ------------------------------------
 #
 #   jacode::getcode_utashiro_2000_09_29(\$line)
-#       Original &getcode() of jcode.pl.
+#       Original &getcode() of jacode.pl.
 #
 #   jacode::tr(\$line, $from, $to [, $option])
 #       jacode::tr emulates tr operator for 2 byte code.  Only 'd'
@@ -213,7 +213,7 @@ $VERSION = sprintf('%d.%02d%02d%02d', $rcsid =~ /(\d+)\.(\d+)\.(\d+)\.(\d+)/);
 #
 ######################################################################
 #
-# PERL4 INTERFACE for jcode.pl users
+# PERL4 INTERFACE for jacode.pl users
 # ----------------------------------
 #
 # See jacode::xxxxx to know &jcode'xxxxx
@@ -244,7 +244,7 @@ $VERSION = sprintf('%d.%02d%02d%02d', $rcsid =~ /(\d+)\.(\d+)\.(\d+)\.(\d+)/);
 #
 ######################################################################
 #
-# PERL5 INTERFACE for jcode.pl users
+# PERL5 INTERFACE for jacode.pl users
 # ----------------------------------
 #
 # Since lexical variable is not a subject of typeglob, *string style
@@ -285,7 +285,7 @@ $VERSION = sprintf('%d.%02d%02d%02d', $rcsid =~ /(\d+)\.(\d+)\.(\d+)\.(\d+)/);
 #
 # Convert SJIS to JIS and print each line with code name
 #
-#   #require 'jcode.pl';
+#   #require 'jacode.pl';
 #   require "./jacode.pl";
 #   while (defined($s = <>)) {
 #       $code = &jcode'convert(*s, 'jis', 'sjis');
@@ -294,7 +294,7 @@ $VERSION = sprintf('%d.%02d%02d%02d', $rcsid =~ /(\d+)\.(\d+)\.(\d+)\.(\d+)/);
 #
 # Convert all lines to JIS according to the first recognized line
 #
-#   #require 'jcode.pl';
+#   #require 'jacode.pl';
 #   require "./jacode.pl";
 #   while (defined($s = <>)) {
 #       print, next unless $s =~ /[\x1b\x80-\xff]/;
@@ -307,7 +307,7 @@ $VERSION = sprintf('%d.%02d%02d%02d', $rcsid =~ /(\d+)\.(\d+)\.(\d+)\.(\d+)/);
 #
 # The safest way of JIS conversion
 #
-#   #require 'jcode.pl';
+#   #require 'jacode.pl';
 #   require "./jacode.pl";
 #   while (defined($s = <>)) {
 #       ($matched, $INPUT_encoding) = &jcode'getcode(*s);
@@ -331,7 +331,7 @@ $VERSION = sprintf('%d.%02d%02d%02d', $rcsid =~ /(\d+)\.(\d+)\.(\d+)\.(\d+)/);
 #
 # Convert SJIS to UTF-8 and print each line by perl 4.036 or later
 #
-#   #retire 'jcode.pl';
+#   #retire 'jacode.pl';
 #   require "./jacode.pl";
 #   while (defined($s = <>)) {
 #       &jcode'convert(*s, 'utf8', 'sjis');
@@ -1607,7 +1607,7 @@ sub getcode {
 
 # http://www.srekcah.org/jcode/2.13.3/
 #
-#! ;; $rcsid = q$Id: jcode.pl,v 2.13.3.2 2002/04/07 08:13:57 utashiro Exp $;
+#! ;; $rcsid = q$Id: jacode.pl,v 2.13.3.2 2002/04/07 08:13:57 utashiro Exp $;
 # *** 370,375 ****
 # --- 370,390 ----
 #   elsif ($s =~ /$re_bin/o) { # 'binary'
@@ -1900,11 +1900,11 @@ sub jis2sjis {
 #---------------------------------------------------------------------
 sub _jis2sjis {
 
-# fixing bug of jcode.pl (1 of 2)
+# fixing bug of jacode.pl (1 of 2)
 # miscounting $n
 # http://srekcah.org/jcode/2.13.1/
 #
-#! ;; $rcsid = q$Id: jcode.pl,v 2.13.1.4 2002/04/07 07:27:00 utashiro Exp $;
+#! ;; $rcsid = q$Id: jacode.pl,v 2.13.1.4 2002/04/07 07:27:00 utashiro Exp $;
 # *** 516,522 ****
 #   local($esc, $s) = @_;
 #   if ($esc =~ /^$re_jis0212/o) {
@@ -2433,7 +2433,7 @@ sub _h2z_jis {
 }
 
 # Ad hoc patch for reduce waring on h2z_euc
-# http://white.niu.ne.jp/yapw/yapw.cgi/jcode.pl%A4%CE%A5%A8%A5%E9%A1%BC%CD%DE%C0%A9
+# http://white.niu.ne.jp/yapw/yapw.cgi/jacode.pl%A4%CE%A5%A8%A5%E9%A1%BC%CD%DE%C0%A9
 # by NAKATA Yoshinori
 
 #---------------------------------------------------------------------
@@ -11026,11 +11026,11 @@ sub tr {
     local ( @from, @to );
     local ( $jis, $n ) = ( 0, 0 );
 
-# fixing bug of jcode.pl (2 of 2)
+# fixing bug of jacode.pl (2 of 2)
 # mis-caching table
 # http://srekcah.org/jcode/2.13.1/
 #
-#! ;; $rcsid = q$Id: jcode.pl,v 2.13.1.4 2002/04/07 07:27:00 utashiro Exp $;
+#! ;; $rcsid = q$Id: jacode.pl,v 2.13.1.4 2002/04/07 07:27:00 utashiro Exp $;
 # *** 727,734 ****
 #   $jis++, &jis2euc(*s) if $s =~ /$re_jp|$re_asc|$re_kana/o;
 #   $jis++ if $to =~ /$re_jp|$re_asc|$re_kana/o;
@@ -11149,7 +11149,7 @@ jacode.pl - Perl library for Japanese character code conversion
     jacode::getcode(\$line)
     jacode::init()
 
-    # Perl4 INTERFACE for jcode.pl users
+    # Perl4 INTERFACE for jacode.pl users
 
     &jcode'getcode_utashiro_2000_09_29(*line)
     &jcode'getcode(*line)
@@ -11176,7 +11176,7 @@ jacode.pl - Perl library for Japanese character code conversion
     $jcode'z2hf{'xxx'}
     $jcode'h2zf{'xxx'}
 
-    # Perl5 INTERFACE for jcode.pl users
+    # Perl5 INTERFACE for jacode.pl users
 
     jcode::getcode_utashiro_2000_09_29(\$line)
     jcode::getcode(\$line)
@@ -11205,8 +11205,8 @@ jacode.pl - Perl library for Japanese character code conversion
 
 =head1 ABSTRACT
 
-This software has upper compatibility to jcode.pl and multiple
-inheritance both stable jcode.pl library and active Encode module.
+This software has upper compatibility to jacode.pl and multiple
+inheritance both stable jacode.pl library and active Encode module.
 
 'Ja' is a meaning of 'Japanese' in ISO 639-1 code and is unrelated
 to 'JA Group Organization'.
@@ -11227,7 +11227,7 @@ What's this software good for ...
 
 =over 2
 
-=item * jcode.pl upper compatible
+=item * jacode.pl upper compatible
 
 =item * pkf command upper compatible
 
@@ -11391,7 +11391,7 @@ This software requires perl 4.036 or later.
 
 =item jacode::getcode_utashiro_2000_09_29(\$line)
 
-  Original &getcode() of jcode.pl.
+  Original &getcode() of jacode.pl.
 
 =item jacode::cache()
 
@@ -11443,7 +11443,7 @@ This software requires perl 4.036 or later.
 
 =back
 
-=head1 PERL4 INTERFACE for jcode.pl users
+=head1 PERL4 INTERFACE for jacode.pl users
 
 =over 2
 
@@ -11495,7 +11495,7 @@ This software requires perl 4.036 or later.
 
 =back
 
-=head1 PERL5 INTERFACE for jcode.pl users
+=head1 PERL5 INTERFACE for jacode.pl users
 
 Current jacode.pl is written in Perl 4 but it is possible to use
 from Perl 5 using `references'.  Fully perl5 capable version is
@@ -11561,7 +11561,7 @@ avoid the mysterious error.
 
 Convert SJIS to JIS and print each line with code name
 
-  #require 'jcode.pl';
+  #require 'jacode.pl';
   require "./jacode.pl";
   while (defined($s = <>)) {
       $code = &jcode'convert(*s, 'jis', 'sjis');
@@ -11570,7 +11570,7 @@ Convert SJIS to JIS and print each line with code name
 
 Convert all lines to JIS according to the first recognized line
 
-  #require 'jcode.pl';
+  #require 'jacode.pl';
   require "./jacode.pl";
   while (defined($s = <>)) {
       print, next unless $s =~ /[\x1b\x80-\xff]/;
@@ -11583,7 +11583,7 @@ Convert all lines to JIS according to the first recognized line
 
 The safest way of JIS conversion
 
-  #require 'jcode.pl';
+  #require 'jacode.pl';
   require "./jacode.pl";
   while (defined($s = <>)) {
       ($matched, $INPUT_encoding) = &jcode'getcode(*s);
@@ -11607,7 +11607,7 @@ The safest way of JIS conversion
 
 Convert SJIS to UTF-8 and print each line by perl 4.036 or later
 
-  #retire 'jcode.pl';
+  #retire 'jacode.pl';
   require "./jacode.pl";
   while (defined($s = <>)) {
       &jcode'convert(*s, 'utf8', 'sjis');
@@ -11674,10 +11674,10 @@ The latest version is available here:
 L<http://search.cpan.org/dist/jacode/>
 
  *** CAUTION ***
- This software is not "jcode.pl"
- Thus don't redistribute this software renaming as "jcode.pl"
+ This software is not "jacode.pl"
+ Thus don't redistribute this software renaming as "jacode.pl"
 
-Original version `jcode.pl' is ...
+Original version `jacode.pl' is ...
 
 Copyright (c) 2002 Kazumasa Utashiro
 http://web.archive.org/web/20090608090304/http://srekcah.org/jcode/
@@ -11868,14 +11868,14 @@ I am thankful to all persons.
  Larry Wall, Perl
  http://www.perl.org/
 
- Kazumasa Utashiro, jcode.pl
+ Kazumasa Utashiro, jacode.pl
  ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/
  http://web.archive.org/web/20090608090304/http://srekcah.org/jcode/
  ftp://ftp.oreilly.co.jp/pcjp98/utashiro/
  http://mail.pm.org/pipermail/tokyo-pm/2002-March/001319.html
  https://twitter.com/uta46/status/11578906320
 
- mikeneko creator club, Private manual of jcode.pl
+ mikeneko creator club, Private manual of jacode.pl
  http://mikeneko.creator.club.ne.jp/~lab/kcode/jcode.html
 
  gama, getcode.pl
@@ -11888,7 +11888,7 @@ I am thankful to all persons.
  http://www.din.or.jp/~ohzaki/perl.htm#JP_Code
 
  NAKATA Yoshinori, Ad hoc patch for reduce waring on h2z_euc
- http://white.niu.ne.jp/yapw/yapw.cgi/jcode.pl%A4%CE%A5%A8%A5%E9%A1%BC%CD%DE%C0%A9
+ http://white.niu.ne.jp/yapw/yapw.cgi/jacode.pl%A4%CE%A5%A8%A5%E9%A1%BC%CD%DE%C0%A9
 
  Dan Kogai, Jcode module and Encode module
  http://search.cpan.org/dist/Jcode/

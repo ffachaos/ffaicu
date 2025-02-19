@@ -57,7 +57,7 @@ ffaicu(777or755)[FFAの内容が詰まっているフォルダ]
 	■ plファイル(基本644)
 		battle.pl(666)[戦闘用ライブラリ]※要変更
 		item.pl[アイテム装備用ライブラリ]
-		jcode.pl[日本語ライブラリ]
+		jacode.pl[日本語ライブラリ]
 		mbattle.pl[モンスター戦用ライブラリ]
 		regist.pl[基本ライブラリ]
 		sankasya.pl[参加者表示・記録ライブラリ]

@@ -36,7 +36,7 @@
 #     http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi 		#
 #---------------------------------------------------------------#
 # 日本語ライブラリの読み込み
-require 'jcode.pl';
+require 'jacode.pl';
 
 # レジストライブラリの読み込み
 require 'regist.pl';
