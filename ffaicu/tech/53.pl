@@ -4,7 +4,7 @@ sub hissatu{
 		$sake2 -= 999999;
 		$dmg1 = ($chara[8] + $chara[9] + $chara[33]) * int(rand(100));
 		$dmg1 = $dmg1 * $dhit;
-		$com1 .="<font class=\"yellow\" size=4>Œ¶bƒiƒCƒcEƒIƒuEƒ‰ƒEƒ“ƒh‚ğ¢ŠÒII</font><font color=red>$dhitl‚Ì‹Rm‚ª—Í‚ğ‘İ‚µ‚½II</font><br>";
+		$com1 .="<font class=\"yellow\" size=4>å¹»ç£ãƒŠã‚¤ãƒ„ãƒ»ã‚ªãƒ–ãƒ»ãƒ©ã‚¦ãƒ³ãƒ‰ã‚’å¬é‚„ï¼ï¼</font><font color=red>$dhitäººã®é¨å£«ãŒåŠ›ã‚’è²¸ã—ãŸï¼ï¼</font><br>";
 	}
 }
 sub atowaza{}

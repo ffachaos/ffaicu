@@ -1,78 +1,78 @@
 #!/usr/local/bin/perl --
 
 #------------------------------------------------------#
-#@–{ƒXƒNƒŠƒvƒg‚Ì’˜ìŒ ‚Í‰º‹L‚Ì3l‚É‚ ‚è‚Ü‚·B
-#‚¢‚©‚È‚é——R‚ª‚ ‚Á‚Ä‚à‚±‚Ì•\‹L‚ðíœ‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñ
-#ˆá”½‚ð”­Œ©‚µ‚½ê‡AƒXƒNƒŠƒvƒg‚Ì—˜—p‚ð’âŽ~‚µ‚Ä‚¢‚½‚¾‚­
-#‚¾‚¯‚Å‚È‚­A‘R‚é‚×‚«ˆ’u‚ð‚³‚¹‚Ä‚¢‚½‚¾‚«‚Ü‚·B
-#@FF ADVENTURE ‰üi v2.1
-#@programed by jun-k
-#@http://www5b.biglobe.ne.jp/~jun-kei/
-#@jun-kei@vanilla.freemail.ne.jp
+#ã€€æœ¬ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®è‘—ä½œæ¨©ã¯ä¸‹è¨˜ã®3äººã«ã‚ã‚Šã¾ã™ã€‚
+#ã„ã‹ãªã‚‹ç†ç”±ãŒã‚ã£ã¦ã‚‚ã“ã®è¡¨è¨˜ã‚’å‰Šé™¤ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“
+#é•åã‚’ç™ºè¦‹ã—ãŸå ´åˆã€ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®åˆ©ç”¨ã‚’åœæ­¢ã—ã¦ã„ãŸã ã
+#ã ã‘ã§ãªãã€ç„¶ã‚‹ã¹ãå‡¦ç½®ã‚’ã•ã›ã¦ã„ãŸã ãã¾ã™ã€‚
+#ã€€FF ADVENTURE æ”¹i v2.1
+#ã€€programed by jun-k
+#ã€€http://www5b.biglobe.ne.jp/~jun-kei/
+#ã€€jun-kei@vanilla.freemail.ne.jp
 #------------------------------------------------------#
-#@FF ADVENTURE v0.21
-#@programed by CUMRO
-#@http://cgi.members.interq.or.jp/sun/cumro/mm/
-#@cumro@sun.interq.or.jp
+#ã€€FF ADVENTURE v0.21
+#ã€€programed by CUMRO
+#ã€€http://cgi.members.interq.or.jp/sun/cumro/mm/
+#ã€€cumro@sun.interq.or.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(‰ü) v1.021
+#  FF ADVENTURE(æ”¹) v1.021
 #  remodeling by GUN
 #  http://www2.to/meeting/
 #  gun24@j-club.ne.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(‚¢‚­‰ü)
-#@remodeling by ‚¢‚­
-#@http://www.eriicu.com
-#@icu@kcc.zaq.ne.jp
+#  FF ADVENTURE(ã„ãæ”¹)
+#ã€€remodeling by ã„ã
+#ã€€http://www.eriicu.com
+#ã€€icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
 
-#--- [’ˆÓŽ–€] ------------------------------------------------#
-# 1. ‚±‚ÌƒXƒNƒŠƒvƒg‚ÍƒtƒŠ[ƒ\ƒtƒg‚Å‚·B‚±‚ÌƒXƒNƒŠƒvƒg‚ðŽg—p‚µ‚½	#
-#    ‚¢‚©‚È‚é‘¹ŠQ‚É‘Î‚µ‚ÄìŽÒ‚ÍˆêØ‚ÌÓ”C‚ð•‰‚¢‚Ü‚¹‚ñB		#
-# 2. Ý’u‚ÉŠÖ‚·‚éŽ¿–â‚ÍƒTƒ|[ƒgŒfŽ¦”Â‚É‚¨Šè‚¢‚¢‚½‚µ‚Ü‚·B	#
-#    ’¼Úƒ[ƒ‹‚É‚æ‚éŽ¿–â‚ÍˆêØ‚¨Žó‚¯‚¢‚½‚µ‚Ä‚¨‚è‚Ü‚¹‚ñB	#
-# 3. Ý’u‚µ‚½‚çŠF‚³‚ñ‚ÉŠy‚µ‚ñ‚Å‚à‚ç‚¤ˆ×‚É‚àAWebƒŠƒ“ƒO‚Ö‚º‚ÐŽQ‰Á#
-#    ‚µ‚Ä‚­‚¾‚³‚¢m(__)m						#
+#--- [æ³¨æ„äº‹é …] ------------------------------------------------#
+# 1. ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã§ã™ã€‚ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ä½¿ç”¨ã—ãŸ	#
+#    ã„ã‹ãªã‚‹æå®³ã«å¯¾ã—ã¦ä½œè€…ã¯ä¸€åˆ‡ã®è²¬ä»»ã‚’è² ã„ã¾ã›ã‚“ã€‚		#
+# 2. è¨­ç½®ã«é–¢ã™ã‚‹è³ªå•ã¯ã‚µãƒãƒ¼ãƒˆæŽ²ç¤ºæ¿ã«ãŠé¡˜ã„ã„ãŸã—ã¾ã™ã€‚	#
+#    ç›´æŽ¥ãƒ¡ãƒ¼ãƒ«ã«ã‚ˆã‚‹è³ªå•ã¯ä¸€åˆ‡ãŠå—ã‘ã„ãŸã—ã¦ãŠã‚Šã¾ã›ã‚“ã€‚	#
+# 3. è¨­ç½®ã—ãŸã‚‰çš†ã•ã‚“ã«æ¥½ã—ã‚“ã§ã‚‚ã‚‰ã†ç‚ºã«ã‚‚ã€Webãƒªãƒ³ã‚°ã¸ãœã²å‚åŠ #
+#    ã—ã¦ãã ã•ã„m(__)m						#
 #     http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi 		#
 #---------------------------------------------------------------#
-# “ú–{Œêƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚Ýž‚Ý
-require 'jcode.pl';
+# æ—¥æœ¬èªžãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './jacode.pl';
 
-# ƒŒƒWƒXƒgƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚Ýž‚Ý
-require 'regist.pl';
+# ãƒ¬ã‚¸ã‚¹ãƒˆãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './regist.pl';
 
-# í“¬ƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚Ýž‚Ý
-require 'battle.pl';
-# ƒ`ƒƒƒ“ƒví—pƒ‰ƒCƒuƒ‰ƒŠ“Ç‚Ýž‚Ý
-require 'wbattle.pl';
+# æˆ¦é—˜ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './battle.pl';
+# ãƒãƒ£ãƒ³ãƒ—æˆ¦ç”¨ãƒ©ã‚¤ãƒ–ãƒ©ãƒªèª­ã¿è¾¼ã¿
+require './wbattle.pl';
 
-# ‰ŠúÝ’èƒtƒ@ƒCƒ‹‚Ì“Ç‚Ýž‚Ý
-require 'data/ffadventure.ini';
+# åˆæœŸè¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿
+require './data/ffadventure.ini';
 
-# ‚±‚Ìƒtƒ@ƒCƒ‹—pÝ’è
+# ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ç”¨è¨­å®š
 $backgif = $battle_back;
 $midi = $battle_midi;
 
 
 #================================================================#
-#„¬„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„­#
-#„« ‚±‚ê‚æ‚è‰º‚ÍCGI‚ÉŽ©M‚Ì‚ ‚é•ûˆÈŠO‚Íˆµ‚í‚È‚¢‚Ù‚¤‚ª–³“ï‚Å‚·@„«#
-#„¯„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„®#
+#â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”“#
+#â”ƒ ã“ã‚Œã‚ˆã‚Šä¸‹ã¯CGIã«è‡ªä¿¡ã®ã‚ã‚‹æ–¹ä»¥å¤–ã¯æ‰±ã‚ãªã„ã»ã†ãŒç„¡é›£ã§ã™ã€€â”ƒ#
+#â”—â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”›#
 #================================================================#
 
 #--------------#
-#@ƒƒCƒ“ˆ—@#
+#ã€€ãƒ¡ã‚¤ãƒ³å‡¦ç†ã€€#
 #--------------#
 if($mente) {
-	&error("Œ»Ýƒo[ƒWƒ‡ƒ“ƒAƒbƒv’†‚Å‚·B‚µ‚Î‚ç‚­‚¨‘Ò‚¿‚­‚¾‚³‚¢B");
+	&error("ç¾åœ¨ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—ä¸­ã§ã™ã€‚ã—ã°ã‚‰ããŠå¾…ã¡ãã ã•ã„ã€‚");
 }
 
 &decode;
 
-#‚h‚oƒAƒhƒŒƒX‚ÅƒAƒNƒZƒX§ŒÀ
+#ï¼©ï¼°ã‚¢ãƒ‰ãƒ¬ã‚¹ã§ã‚¢ã‚¯ã‚»ã‚¹åˆ¶é™
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
-	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("ƒAƒNƒZƒX‚Å‚«‚Ü‚¹‚ñII");}
+	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã›ã‚“ï¼ï¼");}
 }
 
 if ($mode) { &$mode; }
@@ -82,7 +82,7 @@ if ($mode) { &$mode; }
 exit;
 
 #------------#
-#  Žó•t‰æ–Ê  #
+#  å—ä»˜ç”»é¢  #
 #------------#
 sub log_in{
 
@@ -93,35 +93,35 @@ sub log_in{
 	&header;
 
 	print << "EOM";
-<h1>D‚«‚ÈƒLƒƒƒ‰‚É’§í</h1>
+<h1>å¥½ããªã‚­ãƒ£ãƒ©ã«æŒ‘æˆ¦</h1>
 <hr size=0>
 <FONT SIZE=3>
-<B>ˆÄ“àl</B><BR>
-u
-‚æ‚¤‚±‚»‚¢‚ç‚Á‚µ‚á‚¢‚Ü‚µ‚½I<br>
-‚±‚±‚Å‚Í‚±‚Ì$main_title‚ÌD‚«‚ÈƒvƒŒƒCƒ„[‚É˜rŽŽ‚µ’§í‚ð‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·I<br>
-‚½‚¾‚µAŒoŒ±’lE‚¨‹à‚Í“üŽè‚Å‚«‚Ü‚¹‚ñB‚ ‚­‚Ü‚Å‚à˜rŽŽ‚µ‚¾‚¯‚Å‚·B<br>
-‚ ‚È‚½‚Í$chara[4]‚³‚ñ‚Å‚·‚ËI’§í‚µ‚Ä‚Ý‚Ü‚·‚©H
-v
+<B>æ¡ˆå†…äºº</B><BR>
+ã€Œ
+ã‚ˆã†ã“ãã„ã‚‰ã£ã—ã‚ƒã„ã¾ã—ãŸï¼<br>
+ã“ã“ã§ã¯ã“ã®$main_titleã®å¥½ããªãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã«è…•è©¦ã—æŒ‘æˆ¦ã‚’ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ï¼<br>
+ãŸã ã—ã€çµŒé¨“å€¤ãƒ»ãŠé‡‘ã¯å…¥æ‰‹ã§ãã¾ã›ã‚“ã€‚ã‚ãã¾ã§ã‚‚è…•è©¦ã—ã ã‘ã§ã™ã€‚<br>
+ã‚ãªãŸã¯$chara[4]ã•ã‚“ã§ã™ã­ï¼æŒ‘æˆ¦ã—ã¦ã¿ã¾ã™ã‹ï¼Ÿ
+ã€
 <form action="$script_select" method="post">
 <input type="hidden" name="mode" value="battle">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-–¼‘OŽw’è
+åå‰æŒ‡å®š
 <input type="text" name="aitename" value="" size="20"><br>
-<input type="submit" class="btn" value="’§í‚·‚é">
+<input type="submit" class="btn" value="æŒ‘æˆ¦ã™ã‚‹">
 </form>
 <form action="$script_select" method="post">
 <input type="hidden" name="mode" value="sentaku">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type="submit" class="btn" value="–¼‘O‚ðˆê——‚©‚ç‘I‘ð‚·‚é">
+<input type="submit" class="btn" value="åå‰ã‚’ä¸€è¦§ã‹ã‚‰é¸æŠžã™ã‚‹">
 </form>
 <form action="$script" method="POST">
 <input type="hidden" name="mode" value="log_in">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type="submit" class="btn" value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type="submit" class="btn" value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 
@@ -132,7 +132,7 @@ EOM
 }
 
 #------------#
-#  ‘I‘ð‰æ–Ê  #
+#  é¸æŠžç”»é¢  #
 #------------#
 sub sentaku{
 
@@ -145,13 +145,13 @@ sub sentaku{
 	&header;
 
 	print << "EOM";
-<h1>ˆê——‚©‚ç‘I‘ð</h1>
+<h1>ä¸€è¦§ã‹ã‚‰é¸æŠž</h1>
 <hr size=0>
 <FONT SIZE=3>
-<B>ˆÄ“àl</B><BR>
-u
-‚Ç‚Ì•û‚Æí‚í‚ê‚Ü‚·‚©H
-v
+<B>æ¡ˆå†…äºº</B><BR>
+ã€Œ
+ã©ã®æ–¹ã¨æˆ¦ã‚ã‚Œã¾ã™ã‹ï¼Ÿ
+ã€
 <form action="$script_select" method="post">
 <input type="hidden" name="mode" value="battle">
 <input type="hidden" name="id" value="$chara[0]">
@@ -175,13 +175,13 @@ EOM
 	}
 	print << "EOM";
 </tr></table>
-<input type="submit" class="btn" value="’§í‚·‚é">
+<input type="submit" class="btn" value="æŒ‘æˆ¦ã™ã‚‹">
 </form>
 <form action="$script" method="POST">
 <input type="hidden" name="mode" value="log_in">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type="submit" class="btn" value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type="submit" class="btn" value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 
@@ -192,7 +192,7 @@ EOM
 }
 
 #------------#
-#  í“¬‰æ–Ê  #
+#  æˆ¦é—˜ç”»é¢  #
 #------------#
 sub battle {
 
@@ -208,7 +208,7 @@ sub battle {
 
 	if ($vtime > 0) {
 		if ($ltime < $b_time) {
-			&error("‚ ‚Æ$vtime•bŠÔ“¬‚¦‚Ü‚¹‚ñB");
+			&error("ã‚ã¨$vtimeç§’é–“é—˜ãˆã¾ã›ã‚“ã€‚");
 		}
 	}
 
@@ -218,9 +218,9 @@ sub battle {
 <input type="hidden" name="mode" value="battle">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-‚à‚¤ˆê“x–¼‘OŽw’è
+ã‚‚ã†ä¸€åº¦åå‰æŒ‡å®š
 <input type="text" name="aitename" value="" size="20"><br>
-<input type="submit" class="btn" value="’§í‚·‚é">
+<input type="submit" class="btn" value="æŒ‘æˆ¦ã™ã‚‹">
 </form>
 EOM
 		&all_name_search($in{'aitename'},$form);
@@ -236,7 +236,7 @@ EOM
 
 	&winner_data;
 
-	# Ü‹à‚ÌŒˆ’è
+	# è³žé‡‘ã®æ±ºå®š
 	$gold = 0;
 
 	&item_load;
@@ -279,7 +279,7 @@ EOM
 
 	&header;
 
-	print "<h1>$chara[4]‚ÍA$winner[3]‚Éí‚¢‚ð’§‚ñ‚¾II</h1>\n<hr size=0><br>\n";
+	print "<h1>$chara[4]ã¯ã€$winner[3]ã«æˆ¦ã„ã‚’æŒ‘ã‚“ã ï¼ï¼</h1>\n<hr size=0><br>\n";
 
 	$i=0;
 	foreach(@battle_date){
@@ -298,7 +298,7 @@ EOM
 <input type="hidden" name="mode" value="log_in">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type="submit" class="btn" value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type="submit" class="btn" value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 

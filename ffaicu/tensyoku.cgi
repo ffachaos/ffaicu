@@ -1,54 +1,54 @@
 #!/usr/local/bin/perl --
 
 #------------------------------------------------------#
-#�@�{�X�N���v�g�̒��쌠�͂����ɂ���܂��B
-#�����Ȃ闝�R�������Ă����̕\�L���폜���邱�Ƃ͂ł��܂���
-#�ᔽ�𔭌������ꍇ�A�X�N���v�g�̗��p���~���Ă�������
-#�����łȂ��A�R��ׂ����u�������Ă��������܂��B
-#  FF ADVENTURE(������)
-#�@edit by ����
-#�@http://www.eriicu.com
-#�@icu@kcc.zaq.ne.jp
+#　本スクリプトの著作権はいくにあります。
+#いかなる理由があってもこの表記を削除することはできません
+#違反を発見した場合、スクリプトの利用を停止していただく
+#だけでなく、然るべき処置をさせていただきます。
+#  FF ADVENTURE(いく改)
+#　edit by いく
+#　http://www.eriicu.com
+#　icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
 
-#--- [���ӎ���] ------------------------------------------------#
-# 1. ���̃X�N���v�g�̓t���[�\�t�g�ł��B���̃X�N���v�g���g�p����	#
-#    �����Ȃ鑹�Q�ɑ΂��č�҂͈�؂̐ӔC�𕉂��܂���B		#
-# 2. �ݒu�Ɋւ��鎿��̓T�|�[�g�f���ɂ��肢�������܂��B	#
-#    ���ڃ��[���ɂ�鎿��͈�؂��󂯂������Ă���܂���B	#
+#--- [注意事項] ------------------------------------------------#
+# 1. このスクリプトはフリーソフトです。このスクリプトを使用した	#
+#    いかなる損害に対して作者は一切の責任を負いません。		#
+# 2. 設置に関する質問はサポート掲示板にお願いいたします。	#
+#    直接メールによる質問は一切お受けいたしておりません。	#
 #    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi             #
 #---------------------------------------------------------------#
 
-# ���{�ꃉ�C�u�����̓ǂݍ���
-require 'jcode.pl';
+# 日本語ライブラリの読み込み
+require './jacode.pl';
 
-# ���W�X�g���C�u�����̓ǂݍ���
-require 'regist.pl';
+# レジストライブラリの読み込み
+require './regist.pl';
 
-# �����ݒ�t�@�C���̓ǂݍ���
-require 'data/ffadventure.ini';
+# 初期設定ファイルの読み込み
+require './data/ffadventure.ini';
 
-# syoku_regist�Ăяo��
-require 'battle.pl';
+# syoku_regist呼び出し
+require './battle.pl';
 
-# shopfooter�Ăяo��
-require 'item.pl';
+# shopfooter呼び出し
+require './item.pl';
 
-# ���̃t�@�C���p�ݒ�
+# このファイル用設定
 $backgif = $shop_back;
 $midi = $shop_midi;
 
 #================================================================#
-#����������������������������������������������������������������#
-#�� �����艺��CGI�Ɏ��M�̂�����ȊO�͈���Ȃ��ق�������ł��@��#
-#����������������������������������������������������������������#
+#┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓#
+#┃ これより下はCGIに自信のある方以外は扱わないほうが無難です　┃#
+#┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛#
 #================================================================#
 
 #--------------#
-#�@���C�������@#
+#　メイン処理　#
 #--------------#
 if ($mente) {
-	&error("�o�[�W�����A�b�v���ł��B�Q�A�R�O�b�قǂ��҂��������Bm(_ _)m");
+	&error("バージョンアップ中です。２、３０秒ほどお待ち下さい。m(_ _)m");
 }
 
 &decode;
@@ -58,14 +58,14 @@ if ($mente) {
 <form action="$script_tensyoku" method="post">
 <input type=hidden name=id value="$in{'id'}">
 <input type="hidden" name="mydata" value="$in{'mydata'}">
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
-#�h�o�A�h���X�ŃA�N�Z�X����
+#ＩＰアドレスでアクセス制限
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
-	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("�A�N�Z�X�ł��܂���I�I");}
+	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("アクセスできません！！");}
 }
 
 if ($mode) { &$mode; }
@@ -74,7 +74,7 @@ if ($mode) { &$mode; }
 exit;
 
 #------------#
-# �]�E�̐_�a #
+# 転職の神殿 #
 #------------#
 sub tensyoku {
 
@@ -88,8 +88,8 @@ sub tensyoku {
 	@syoku = <IN>;
 	close(IN);
 
-$mitensyoku.="���ݓ]�E�ł���܂��}�X�^�[���Ă��Ȃ��E�Ƃ�<br><table><tr>";
-$tensyokuok.= "���ݓ]�E�ł���E�Ƃ�<br><table><tr>";
+$mitensyoku.="現在転職できるまだマスターしていない職業は<br><table><tr>";
+$tensyokuok.= "現在転職できる職業は<br><table><tr>";
 
 	$i=0;$hit=0;$mhit=0;
 	foreach (@syoku) {
@@ -120,31 +120,31 @@ $tensyokuok.= "���ݓ]�E�ł���E�Ƃ�<br><table><tr>";
 		}
 		$i++;
 	}
-	if(!$hit) { $tensyokuok.= "<td>����܂���</td>"; }
-	if(!$mhit) { $mitensyoku.="<td>����܂���</td>"; }
+	if(!$hit) { $tensyokuok.= "<td>ありません</td>"; }
+	if(!$mhit) { $mitensyoku.="<td>ありません</td>"; }
 
 	&header;
 
 	print <<"EOM";
-<h1>�]�E�̐_�a</h1><hr>
-�����ł͑��̐E�Ƃɓ]�E�ł��܂��B<br>
-�� �]�E����ƁA���݂̔\\�͒l�������_���ŉ�����܂��B�������A�]�E����E�Ƃ̐E�ƃ��x����20�ȏ�̏ꍇ�͉�����܂���B<br><br>
+<h1>転職の神殿</h1><hr>
+ここでは他の職業に転職できます。<br>
+※ 転職すると、現在の能\力値がランダムで下がります。ただし、転職する職業の職業レベルが20以上の場合は下がりません。<br><br>
 $tensyokuok</tr></table><br>
 $mitensyoku</tr></table><br>
 <form action="$script_tensyoku" method="post">
 <select name=syoku>
-<option value="no">�I�����Ă�������
+<option value="no">選択してください
 $selection
 </select>
 <input type=hidden name=id value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=mode value="tensyoku_change">
-<input type=submit class="btn" value="�]�E����">
+<input type=submit class="btn" value="転職する">
 </form>
 <form action="$script" method="post">
 <input type=hidden name=id value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="�X�e�[�^�X��ʂ�">
+<input type=submit class=btn value="ステータス画面へ">
 </form>
 EOM
 
@@ -154,7 +154,7 @@ EOM
 }
 
 #--------#
-#  �]�E  #
+#  転職  #
 #--------#
 sub tensyoku_change {
 
@@ -165,7 +165,7 @@ sub tensyoku_change {
 	&chara_check;
 
 	if($in{'syoku'} eq 'no') {
-		&error("�E�Ƃ�I�����Ă��������B$back_form");
+		&error("職業を選択してください。$back_form");
 	}
 
 	$lock_file = "$lockfolder/syoku$in{'id'}.lock";
@@ -187,10 +187,10 @@ sub tensyoku_change {
 	$syokudate[$in{'syoku'}] =~ s/\n//gi;
 	$syokudate[$in{'syoku'}] =~ s/\r//gi;
 
-	if (!($chara[7] >= $a and $chara[8] >= $b and $chara[9] >= $c and $chara[10] >= $d and $chara[11] >= $e and $chara[12] >= $f and $chara[13] >= $g and $chara[20] >= $h) || !$syokudate[$in{'syoku'}]) {&error("�܂��]�E�ł��܂���");}
+	if (!($chara[7] >= $a and $chara[8] >= $b and $chara[9] >= $c and $chara[10] >= $d and $chara[11] >= $e and $chara[12] >= $f and $chara[13] >= $g and $chara[20] >= $h) || !$syokudate[$in{'syoku'}]) {&error("まだ転職できません");}
 
 	$chara[14] = $in{'syoku'};
-	if ($master_tac) { $chara[30] = 0; }	# �]�E��̐�p�N���A
+	if ($master_tac) { $chara[30] = 0; }	# 転職後の戦術クリア
 	$chara[33] = $syoku_master[$chara[14]];
 
 	if (!$chara[33]) { $chara[33] = 1; }
@@ -222,11 +222,11 @@ sub tensyoku_change {
 	&header;
 
 	print <<"EOM";
-<h1>$chara_syoku[$chara[14]]�ɓ]�E���܂���</h1><hr size=0>
+<h1>$chara_syoku[$chara[14]]に転職しました</h1><hr size=0>
 <form action="$script" method="post">
 <input type=hidden name=id value="$chara[0]">
 <input type="hidden" name="mydata" value="$new_chara">
-<input type="submit" class="btn" value="�X�e�[�^�X��ʂ�">
+<input type="submit" class="btn" value="ステータス画面へ">
 </form>
 EOM
 

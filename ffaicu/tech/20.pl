@@ -3,7 +3,7 @@ sub hissatu{
 		$item[1] += $item[1];
 		$item[4] += $item[4];
 		$syukuhuku++;
-		$com1 .="<font class=\"white\" size=5>$chara[4]‚Íj•Ÿ‚Ì‰Ì‚ğ‰Ì‚Á‚½ôiUŒ‚—ÍA–hŒä—Í‘‘åAŒø‰Ê‘±j</font><br>";
+		$com1 .="<font class=\"white\" size=5>$chara[4]ã¯ç¥ç¦ã®æ­Œã‚’æ­Œã£ãŸâ™ªï¼ˆæ”»æ’ƒåŠ›ã€é˜²å¾¡åŠ›å¢—å¤§ã€åŠ¹æœæŒç¶šï¼‰</font><br>";
 	}
 }
 sub atowaza{}

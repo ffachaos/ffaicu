@@ -3,7 +3,7 @@ sub hissatu{
 		$dmg1 = ($chara[8] + $chara[33]) * int(rand(20));
 		$hpplus1 = $dmg1;
 		$sake2 -= 999999;
-		$com1 .="<font class=\"dark\" size=4>ˆÃ•–‚–@ƒhƒŒƒCƒ“III</font><br>";$kaihuku1 .= "$kname ‚Ì‚g‚o‚ª $hpplus1 ‰ñ•œ‚µ‚½Iô";
+		$com1 .="<font class=\"dark\" size=4>æš—é»’é­”æ³•ãƒ‰ãƒ¬ã‚¤ãƒ³ï¼ï¼ï¼</font><br>";$kaihuku1 .= "$kname ã®ï¼¨ï¼°ãŒ $hpplus1 å›å¾©ã—ãŸï¼â™ª";
 	}
 }
 sub atowaza{}

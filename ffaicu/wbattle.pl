@@ -1,5 +1,5 @@
 #--------------#
-#@ŠÖ”‰Šú‰»@#
+#ã€€é–¢æ•°åˆæœŸåŒ–ã€€#
 #--------------#
 sub shokika {
 	$dmg1 = $chara[18] * (int(rand(3)) + 1);
@@ -23,7 +23,7 @@ sub shokika {
 }
 
 #------------#
-#@HP‚ÌŒvZ@#
+#ã€€HPã®è¨ˆç®—ã€€#
 #------------#
 sub hp_sum {
 	$khp_flg = $khp_flg - $dmg2 + $hpplus1;
@@ -33,7 +33,7 @@ sub hp_sum {
 }
 
 #------------#
-#@Ÿ”sğŒ@#
+#ã€€å‹æ•—æ¡ä»¶ã€€#
 #------------#
 sub winlose {
 	if ($whp_flg <= 0 and $khp_flg > 0) { $win = 1; last; }
@@ -43,12 +43,12 @@ sub winlose {
 }
 
 #------------------#
-#@ƒ`ƒƒƒ“ƒv‚ÌUŒ‚@#
+#ã€€ãƒãƒ£ãƒ³ãƒ—ã®æ”»æ’ƒã€€#
 #------------------#
 sub winner_atack {
 
-	# ƒ`ƒƒƒ“ƒvƒ_ƒ[ƒWŒvZ
-	$com2 = "$winner[3]‚ÍA$winner[21]‚ÅUŒ‚II<FONT COLOR=\"$yellow\">$battlecom[$winner[14]]</FONT><br>";
+	# ãƒãƒ£ãƒ³ãƒ—ãƒ€ãƒ¡ãƒ¼ã‚¸è¨ˆç®—
+	$com2 = "$winner[3]ã¯ã€$winner[21]ã§æ”»æ’ƒï¼ï¼<FONT COLOR=\"$yellow\">$battlecom[$winner[14]]</FONT><br>";
 
 	$wattackpower="w"."$iryoku[$winner[14]]";
 	&$wattackpower;
@@ -56,7 +56,7 @@ sub winner_atack {
 }
 
 #------------------------#
-#ƒ`ƒƒƒ“ƒvƒAƒNƒZƒTƒŠ[‰ÁZ#
+#ãƒãƒ£ãƒ³ãƒ—ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼åŠ ç®—#
 #------------------------#
 sub wacs_add {
 	$temp_winner[6] = $winner[6];
@@ -80,19 +80,19 @@ sub wacs_add {
 	$winner[12] += $winner[53];
 	$winner[13] += $winner[34];
 	if ($winner[37]) {
-		require "./wtech/$winner[37].pl";
+		require './wtech/$winner[37].pl';
 	} else {
-		require "./wtech/0.pl";
+		require './wtech/0.pl';
 	}
 	if ($winner[51]) {
-		require "./wacstech/$winner[51].pl";
+		require './wacstech/$winner[51].pl';
 	} else {
-		require "./wacstech/0.pl";
+		require './wacstech/0.pl';
 	}
 }
 
 #------------------#
-# ƒ`ƒƒƒ“ƒv”\—Í•œŒ³ #
+# ãƒãƒ£ãƒ³ãƒ—èƒ½åŠ›å¾©å…ƒ #
 #------------------#
 sub wacs_sub {
 	$winner[6] = $temp_winner[6];
@@ -110,18 +110,18 @@ sub wacs_sub {
 }
 
 #------------------#
-#í“¬‰ñ”ğ          #
+#æˆ¦é—˜å›é¿          #
 #------------------#
 sub battle_kaihi{
 
-	#’§íÒ–½’†—¦•‰ñ”ğ—¦
+	#æŒ‘æˆ¦è€…å‘½ä¸­ç‡ï¼†å›é¿ç‡
 	$hit_ritu = int(($chara[11] / 10)+51);
 	$kaihi_ritu = int(($chara[12] / 20));
 	if ($kaihi_ritu > 50) {$kaihi_ritu = 50;}
 	$hit_ritu += $item[2] + $item[16];
 	$kaihi_ritu += $item[3] + $item[17];
 
-	#‘Šè–½’†—¦•‰ñ”ğ—¦
+	#ç›¸æ‰‹å‘½ä¸­ç‡ï¼†å›é¿ç‡
 	$whit_ritu = int(($winner[10] / 10)+51);
 	$wkaihi_ritu = int(($winner[11] / 20));
 	if ($wkaihi_ritu > 50) {$wkaihi_ritu = 50;}
@@ -139,7 +139,7 @@ sub battle_kaihi{
 	elsif ($dmg1 < $winner[25]) {$dmg1 = 1;}
 	else {$dmg1 = $dmg1 - $winner[25];}
 
-	#E‹Æ•Ê–hŒäƒ{[ƒiƒX
+	#è·æ¥­åˆ¥é˜²å¾¡ãƒœãƒ¼ãƒŠã‚¹
 	if($chara[14] > 17){$dmg2=int($dmg2/4);}
 	elsif($chara[14] > 7){$dmg2=int($dmg2/2);}
 	if($winner[14] > 17){$dmg1=int($dmg1/4);}
@@ -149,30 +149,30 @@ sub battle_kaihi{
 		if ($whp_flg < $kclit) {
 			if ($i > 15) {
 				$dmg2 = $dmg2 * 10;
-				$com2 .="<font color=$red size=5>c‚Á‚½—Í‚ğ‚Ó‚è‚µ‚Ú‚Á‚½II</font><br>";
+				$com2 .="<font color=$red size=5>æ®‹ã£ãŸåŠ›ã‚’ãµã‚Šã—ã¼ã£ãŸï¼ï¼</font><br>";
 			}
 		}
 	} elsif (int($sake1) > int(rand(100))) {
 		$dmg2 = 0;
-		$kawasi1 = "<FONT SIZE=4 class=\"red\">$chara[4]‚Íg‚ğ‚©‚í‚µ‚½I</FONT><br>";
+		$kawasi1 = "<FONT SIZE=4 class=\"red\">$chara[4]ã¯èº«ã‚’ã‹ã‚ã—ãŸï¼</FONT><br>";
 	}
 
 	if ($khp_flg < $kmclit) {
 		if ($khp_flg < $wclit) {
 			if ($i > 15) {
 				$dmg1 = $dmg1 * 10;
-				$com1 .="<font color=$red size=5>c‚Á‚½—Í‚ğ‚Ó‚è‚µ‚Ú‚Á‚½II</font><br>";
+				$com1 .="<font color=$red size=5>æ®‹ã£ãŸåŠ›ã‚’ãµã‚Šã—ã¼ã£ãŸï¼ï¼</font><br>";
 			}
 		}
 	} elsif(int($sake2) > int(rand(100))) {
 		$dmg1 = 0;
-		$kawasi2 = "<FONT SIZE=4 class=\"red\">$winner[3]‚Íg‚ğ‚©‚í‚µ‚½I</FONT><br>";
+		$kawasi2 = "<FONT SIZE=4 class=\"red\">$winner[3]ã¯èº«ã‚’ã‹ã‚ã—ãŸï¼</FONT><br>";
 	}
 
 }
 
 #------------------------#
-#ƒ`ƒƒƒ“ƒvƒAƒNƒZƒTƒŠ[Œø‰Ê#
+#ãƒãƒ£ãƒ³ãƒ—ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼åŠ¹æœ#
 #------------------------#
 sub wacs_waza {
 	&watowaza;
@@ -180,36 +180,36 @@ sub wacs_waza {
 }
 
 #------------------#
-#@ƒ`ƒƒƒ“ƒv‚Ì•KE‹Z#
+#ã€€ãƒãƒ£ãƒ³ãƒ—ã®å¿…æ®ºæŠ€#
 #------------------#
 sub winwaza {
 
-	# ƒNƒŠƒeƒBƒJƒ‹—¦Eíp—¦Zo
+	# ã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ«ç‡ãƒ»æˆ¦è¡“ç‡ç®—å‡º
 	$wwaza_ritu = int(($winner[13] / 15)) + 10 + $winner[39];
 	if ($wwaza_ritu > 75) { $wwaza_ritu = 75; }
 	$wwaza_ritu += $winner[36];
 	if ($wwaza_ritu > 95) { $wwaza_ritu = 95; }
 
-	# ‚g‚o‚ª‚P^‚P‚O‚É•KE—¦{‚P‚O‚O“
+	# ï¼¨ï¼°ãŒï¼‘ï¼ï¼‘ï¼æ™‚ã«å¿…æ®ºç‡ï¼‹ï¼‘ï¼ï¼ï¼…
 	if (int($wmaxhp / 10) > $whp_flg && int(rand(4)) > 1) {
 		$wwaza_ritu +=999;
 		$com2 .="<font class=\"red\" size=4>LIMIT BREAK!!</FONT><br>";
 	}
 
-	# ••ˆó‹…‚ÌŒø‰Ê
+	# å°å°çƒã®åŠ¹æœ
 	if ($item[7] == 19 and $winner[51] != 24 and $winner[51] != 19) {
 		if ($winner[14] > 16) {
-			$com1 .="<font class=\"red\" size=3>$item[7]‚ªŒõ‚ğ•ú‚ÂII$winner[3]‚É‚ÍŒø‚©‚È‚©‚Á‚½II</FONT><br>";
+			$com1 .="<font class=\"red\" size=3>$item[7]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼$winner[3]ã«ã¯åŠ¹ã‹ãªã‹ã£ãŸï¼ï¼</FONT><br>";
 		} elsif ($winner[14] > 7) {
 			if (int(rand(5)) == 0) {
 				$wwaza_ritu = 0;
-				$com1 .="<font class=\"yellow\" size=3>$item[7]‚ªŒõ‚ğ•ú‚ÂII$winner[3]‚Ì•KE‹Z‚ğ••‚¶‚ß‚½II</FONT><br>";
+				$com1 .="<font class=\"yellow\" size=3>$item[7]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼$winner[3]ã®å¿…æ®ºæŠ€ã‚’å°ã˜è¾¼ã‚ãŸï¼ï¼</FONT><br>";
 			}
 		} else {
 			if(int(rand(2)) == 0){
 				$winner[51] =0;
 				$wwaza_ritu = 0;
-				$com1 .="<font class=\"yellow\" size=3>$item[7]‚ªŒõ‚ğ•ú‚ÂII$winner[3]‚Ì•KE‹Z‚ğ••‚¶‚ß‚½II</FONT><br>";
+				$com1 .="<font class=\"yellow\" size=3>$item[7]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼$winner[3]ã®å¿…æ®ºæŠ€ã‚’å°ã˜è¾¼ã‚ãŸï¼ï¼</FONT><br>";
 			}
 		}
 	}
@@ -218,7 +218,7 @@ sub winwaza {
 }
 
 #--------------------------#
-# ƒ`ƒƒƒ“ƒvE‹Æ•ÊUŒ‚—Í•t‰Á #
+# ãƒãƒ£ãƒ³ãƒ—è·æ¥­åˆ¥æ”»æ’ƒåŠ›ä»˜åŠ  #
 #--------------------------#
 sub wsyokuzero{
 	$dmg2 += int(rand($winner[6])) + $winner[22];
@@ -312,14 +312,14 @@ sub wsyokutwentynine{
 }
 sub wsyokuthirty{
 	$dmg2 += ((int(rand($winner[6])) + int(rand($winner[7])) + int(rand($winner[8])) + int(rand($winner[9])) + int(rand($winner[10])) + int(rand($winner[11])) + int(rand($winner[12])) + int($winner[13]))) + $winner[22];
-}#ƒ`ƒƒƒ“ƒvUŒ‚—ÍŒvZ‚±‚±‚Ü‚Å
+}#ãƒãƒ£ãƒ³ãƒ—æ”»æ’ƒåŠ›è¨ˆç®—ã“ã“ã¾ã§
 
 #------------------#
-#@í“¬ó‹µ        #
+#ã€€æˆ¦é—˜çŠ¶æ³        #
 #------------------#
 sub battle_sts {
 
-	# ”\—Í’lƒo[‚ÌÚ‚µ‚¢•İ’è
+	# èƒ½åŠ›å€¤ãƒãƒ¼ã®è©³ã—ã„å¹…è¨­å®š
 	$hit_ritu = int(($chara[11] / 10) + 51);
 	if($hit_ritu > 150){$hit_ritu = 150;}
 	$kaihi_ritu = int(($chara[12]/ 20));
@@ -335,7 +335,7 @@ sub battle_sts {
 	if($bwkaihi > 200){$bwkaihi = 200;}
 	if($bwwaza > 200){$bwwaza = 200;}
 
-	# ”\—Í’lƒo[‚ÌÚ‚µ‚¢•İ’è
+	# èƒ½åŠ›å€¤ãƒãƒ¼ã®è©³ã—ã„å¹…è¨­å®š
 	$whit_ritu = int(($winner[10] / 10) + 51);
 	if($whit_ritu > 150){$whit_ritu = 150;}
 	$wkaihi_ritu = int(($winner[11] / 20));
@@ -356,30 +356,30 @@ sub battle_sts {
 <TABLE>
 <TR>
 	<TD COLSPAN="3" ALIGN="center">
-	$iƒ^[ƒ“
+	$iã‚¿ãƒ¼ãƒ³
 	</TD>
 </TR>
 <TR>
 	<TD ALIGN="center">
 	<IMG SRC="$img_path/$chara_img[$chara[6]]"><table width="100%">
-<tr><td id="td2" class="b2">•Ší</td><td align="right" class="b2">$item[0]</td></tr>
-<tr><td id="td2" class="b2">–h‹ï</td><td align="right" class="b2">$item[3]</td></tr>
-<tr><td id="td2" class="b2">ƒAƒNƒZƒTƒŠ[</td><td align="right" class="b2">$item[6]</td></tr>
-<tr><td id="td2" class="b2">–½’†—¦</td><td align="left" class="b2"><img src=\"$bar\" width=$bwhit height=$bh><br><b>$hit_ritu + $ci_plus%</b></td></tr>
-<tr><td id="td2" class="b2">‰ñ”ğ—¦</td><td align="left" class="b2"><img src=\"$bar\" width=$bwkaihi height=$bh><br><b>$kaihi_ritu + $cd_plus%</b></td></tr>
-<tr><td id="td2" class="b2">•KE—¦</td><td align="left" class="b2"><img src=\"$bar\" width=$bwwaza height=$bh><br><b>$waza_ritu + $item[18]%</b></td></tr>
+<tr><td id="td2" class="b2">æ­¦å™¨</td><td align="right" class="b2">$item[0]</td></tr>
+<tr><td id="td2" class="b2">é˜²å…·</td><td align="right" class="b2">$item[3]</td></tr>
+<tr><td id="td2" class="b2">ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼</td><td align="right" class="b2">$item[6]</td></tr>
+<tr><td id="td2" class="b2">å‘½ä¸­ç‡</td><td align="left" class="b2"><img src=\"$bar\" width=$bwhit height=$bh><br><b>$hit_ritu + $ci_plus%</b></td></tr>
+<tr><td id="td2" class="b2">å›é¿ç‡</td><td align="left" class="b2"><img src=\"$bar\" width=$bwkaihi height=$bh><br><b>$kaihi_ritu + $cd_plus%</b></td></tr>
+<tr><td id="td2" class="b2">å¿…æ®ºç‡</td><td align="left" class="b2"><img src=\"$bar\" width=$bwwaza height=$bh><br><b>$waza_ritu + $item[18]%</b></td></tr>
 </table>
 	</TD>
 	<TD>
 	</TD>
 	<TD ALIGN="center">
 	<IMG SRC="$img_path/$chara_img[$winner[5]]"><table width="100%">
-<tr><td id="td2" class="b2">•Ší</td><td align="right" class="b2">$winner[21]</td></tr>
-<tr><td id="td2" class="b2">–h‹ï</td><td align="right" class="b2">$winner[24]</td></tr>
-<tr><td id="td2" class="b2">ƒAƒNƒZƒTƒŠ[</td><td align="right" class="b2">$winner[27]</td></tr>
-<tr><td id="td2" class="b2">–½’†—¦</td><td align="left" class="b2"><img src=\"$bar\" width=$bwwhit height=$bh><br><b>$whit_ritu + $wi_plus%</b></td></tr>
-<tr><td id="td2" class="b2">‰ñ”ğ—¦</td><td align="left" class="b2"><img src=\"$bar\" width=$bwwkaihi height=$bh><br><b>$wkaihi_ritu + $wd_plus%</b></td></tr>
-<tr><td id="td2" class="b2">•KE—¦</td><td align="left" class="b2"><img src=\"$bar\" width=$bwwwaza height=$bh><br><b>$wwaza_ritu + $winner[36]%</b></td></tr>
+<tr><td id="td2" class="b2">æ­¦å™¨</td><td align="right" class="b2">$winner[21]</td></tr>
+<tr><td id="td2" class="b2">é˜²å…·</td><td align="right" class="b2">$winner[24]</td></tr>
+<tr><td id="td2" class="b2">ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼</td><td align="right" class="b2">$winner[27]</td></tr>
+<tr><td id="td2" class="b2">å‘½ä¸­ç‡</td><td align="left" class="b2"><img src=\"$bar\" width=$bwwhit height=$bh><br><b>$whit_ritu + $wi_plus%</b></td></tr>
+<tr><td id="td2" class="b2">å›é¿ç‡</td><td align="left" class="b2"><img src=\"$bar\" width=$bwwkaihi height=$bh><br><b>$wkaihi_ritu + $wd_plus%</b></td></tr>
+<tr><td id="td2" class="b2">å¿…æ®ºç‡</td><td align="left" class="b2"><img src=\"$bar\" width=$bwwwaza height=$bh><br><b>$wwaza_ritu + $winner[36]%</b></td></tr>
 </table></TD>
 	</TR>
 <TR>
@@ -387,13 +387,13 @@ sub battle_sts {
 <TABLE>
 <TR>
 	<TD CLASS="b1" id="td2">
-	‚È‚Ü‚¦
+	ãªã¾ãˆ
 	</TD>
 	<TD CLASS="b1" id="td2">
 	HP
 	</TD>
 	<TD CLASS="b1" id="td2">
-	E‹Æ
+	è·æ¥­
 	</TD>
 	<TD CLASS="b1" id="td2">
 	LV
@@ -422,13 +422,13 @@ sub battle_sts {
 <TABLE>
 <TR>
 	<TD CLASS="b1" id="td2">
-	‚È‚Ü‚¦
+	ãªã¾ãˆ
 	</TD>
 	<TD CLASS="b1" id="td2">
 	HP
 	</TD>
 	<TD CLASS="b1" id="td2">
-	E‹Æ
+	è·æ¥­
 	</TD>
 	<TD CLASS="b1" id="td2">
 	LV
@@ -452,8 +452,8 @@ sub battle_sts {
 </TD>
 </TR>
 </TABLE>
-$com1 $clit1 $kawasi2 $winner[3] ‚É <font class=yellow>$dmg1</font> ‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½B<font class=yellow>$kaihuku1</FONT><br><br>
-$com2 $clit2 $kawasi1 $chara[4] ‚É <font class=red>$dmg2</font> ‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½B<font class=yellow>$kaihuku2</FONT><br><br>
+$com1 $clit1 $kawasi2 $winner[3] ã« <font class=yellow>$dmg1</font> ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆãŸã€‚<font class=yellow>$kaihuku1</FONT><br><br>
+$com2 $clit2 $kawasi1 $chara[4] ã« <font class=red>$dmg2</font> ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆãŸã€‚<font class=yellow>$kaihuku2</FONT><br><br>
 EOM
 	}else{
 
@@ -461,7 +461,7 @@ EOM
 <TABLE>
 <TR>
 	<TD COLSPAN="3" ALIGN="center">
-	$iƒ^[ƒ“
+	$iã‚¿ãƒ¼ãƒ³
 	</TD>
 </TR>
 <TR>
@@ -469,7 +469,7 @@ EOM
 <TABLE>
 <TR>
 	<TD CLASS="b1" id="td2">
-	‚È‚Ü‚¦
+	ãªã¾ãˆ
 	</TD>
 	<TD CLASS="b1" id="td2">
 	HP
@@ -492,7 +492,7 @@ EOM
 <TABLE>
 <TR>
 	<TD CLASS="b1" id="td2">
-	‚È‚Ü‚¦
+	ãªã¾ãˆ
 	</TD>
 	<TD CLASS="b1" id="td2">
 	HP
@@ -510,25 +510,25 @@ EOM
 </TD>
 </TR>
 </TABLE>
-$com1 $clit1 $kawasi2 $winner[3] ‚É <font class=yellow>$dmg1</font> ‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½B<font class=yellow>$kaihuku1</FONT><br><br>
-$com2 $clit2 $kawasi1 $chara[4] ‚É <font class=red>$dmg2</font> ‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½B<font class=yellow>$kaihuku2</FONT><br><br>
+$com1 $clit1 $kawasi2 $winner[3] ã« <font class=yellow>$dmg1</font> ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆãŸã€‚<font class=yellow>$kaihuku1</FONT><br><br>
+$com2 $clit2 $kawasi1 $chara[4] ã« <font class=red>$dmg2</font> ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆãŸã€‚<font class=yellow>$kaihuku2</FONT><br><br>
 EOM
 	}
 
 }
 
 #------------------#
-#í“¬ƒNƒŠƒBƒeƒBƒJƒ‹#
+#æˆ¦é—˜ã‚¯ãƒªã‚£ãƒ†ã‚£ã‚«ãƒ«#
 #------------------#
 sub battle_clt {
-	#ƒNƒŠƒeƒBƒJƒ‹—¦Zo
+	#ã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ«ç‡ç®—å‡º
 	$kclt_ritu = 100 - int($khp_flg / $chara[16] * 100);
 	$wclt_ritu = 100 - int($whp_flg / $winner[16] * 100);
 
 	if($mode eq 'battle'){
 		if($i == 1){
 			if(($winner[17] - $chara[18] >= $level_sa) or $item[1] < $winner[22]){
-				$com1 .= "<font color=$blue size=5>‹t“]•KE‹Z”­“®II</font>$winner[3]‚Ì–h‹ï‚ªˆê“I‚ÉŒø‰Ê–³ŒøII<br>";
+				$com1 .= "<font color=$blue size=5>é€†è»¢å¿…æ®ºæŠ€ç™ºå‹•ï¼ï¼</font>$winner[3]ã®é˜²å…·ãŒä¸€æ™‚çš„ã«åŠ¹æœç„¡åŠ¹ï¼ï¼<br>";
 				$dmg1 = $dmg1 * $gyakuten;
 				$sake2 = int(0)-999999;
 				$winner[22] = 0;
@@ -537,7 +537,7 @@ sub battle_clt {
 	}
 
 	if($kclt_ritu > int(rand(100))) {
-		$clit1 = "<font color=$red size=5>ƒNƒŠƒeƒBƒJƒ‹IIu<b>$chara[23]</b>v</FONT><br>";
+		$clit1 = "<font color=$red size=5>ã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ«ï¼ï¼ã€Œ<b>$chara[23]</b>ã€</FONT><br>";
 		$dmg1 = $dmg1 * 2;
 		$dmg1 += $winner[22];
 	}
@@ -545,7 +545,7 @@ sub battle_clt {
 	if($mode eq 'battle'){
 		if($i == 1){
 			if(($chara[18] - $winner[17] >= $level_sa) or $winner[22] < $item[4]){
-				$com2 .= "<font color=$red size=5>‹t“]•KE‹Z”­“®II</font>$chara[4]‚Ì–h‹ï‚ªˆê“I‚ÉŒø‰Ê–³ŒøII<br>";
+				$com2 .= "<font color=$red size=5>é€†è»¢å¿…æ®ºæŠ€ç™ºå‹•ï¼ï¼</font>$chara[4]ã®é˜²å…·ãŒä¸€æ™‚çš„ã«åŠ¹æœç„¡åŠ¹ï¼ï¼<br>";
 				$dmg2 = $dmg2 * 100;
 				$sake1 -= 999999;
 				$cd_dmg = 0;
@@ -554,14 +554,14 @@ sub battle_clt {
 	}
 
 	if($wclt_ritu > int(rand(100))) {
-		$clit2 = "<font color=$red size=5>ƒNƒŠƒeƒBƒJƒ‹IIu<b>$winner[20]</b>v</FONT><br>";
+		$clit2 = "<font color=$red size=5>ã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ«ï¼ï¼ã€Œ<b>$winner[20]</b>ã€</FONT><br>";
 		$dmg2 = $dmg2 * 2;
 		$dmg2 += $item[4];
 	}
 }
 
 #------------------#
-#í“¬Œ‹‰Ê”»’è      #
+#æˆ¦é—˜çµæœåˆ¤å®š      #
 #------------------#
 sub sentoukeka{
 	if ($win == 1) {
@@ -569,7 +569,7 @@ sub sentoukeka{
 		$chara[22] += 1;
 		$exp = int($winner[17] * $kiso_exp);
 		$winner[50] = int($winner[44] * $chara[17] * $syoukin);
-		$comment = "<b><font size=5>$chara[4]‚ÍAí“¬‚ÉŸ—˜‚µ‚½II</font></b><br>";
+		$comment = "<b><font size=5>$chara[4]ã¯ã€æˆ¦é—˜ã«å‹åˆ©ã—ãŸï¼ï¼</font></b><br>";
 	} elsif($win == 2) {
 		$win = 1;
 		$chara[21] += 1;
@@ -577,20 +577,20 @@ sub sentoukeka{
 		$chara[15] = 1;
 		$winner[15] = 1;
 		$winner[50] = int($winner[44] * $chara[17] * $syoukin);
-		$comment = "<b><font size=5>$chara[4]‚ÍA$winner[3]‚Æ‘Š‘Å‚¿‚µ‚½II</font></b><br>";
+		$comment = "<b><font size=5>$chara[4]ã¯ã€$winner[3]ã¨ç›¸æ‰“ã¡ã—ãŸï¼ï¼</font></b><br>";
 	} elsif($win == 3) {
 		$chara[21] += 1;
 		$exp = int($winner[17] * $kiso_exp);
 		$gold = 0;
 		$winner[50] += int($winner[44] * $chara[17] * $syoukin);
-		$comment = "<b><font size=5>$chara[4]‚ÍA$wname‚ÆŸ•‰‚ªŒˆ‚Ü‚ç‚È‚©‚Á‚½BBB</font></b><br>";
+		$comment = "<b><font size=5>$chara[4]ã¯ã€$wnameã¨å‹è² ãŒæ±ºã¾ã‚‰ãªã‹ã£ãŸã€‚ã€‚ã€‚</font></b><br>";
 	} else {
 		$chara[21] += 1;
 		$exp = $winner[17];
 		$gold = 0;
 		$chara[19] = int(($chara[19] / 2));
 		$winner[50] += int($winner[44] * $chara[17] * $syoukin);
-		$comment = "<b><font size=5>$chara[4]‚ÍAí“¬‚É•‰‚¯‚½EEEB</font></b><br>";
+		$comment = "<b><font size=5>$chara[4]ã¯ã€æˆ¦é—˜ã«è² ã‘ãŸãƒ»ãƒ»ãƒ»ã€‚</font></b><br>";
 		$chara[28] = $boss;
 	}
 		$chara[17] = $chara[17] + $exp;

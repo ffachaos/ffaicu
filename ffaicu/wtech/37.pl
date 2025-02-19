@@ -2,7 +2,7 @@ sub whissatu{
 	if ($wwaza_ritu > int(rand(120))) {
 		$dwhit = int(rand(7))+1;
 		$dmg2 = $dmg2 * $dwhit;
-		$com2 .= "<font class=\"yellow\" size=4>•KE‹ZIII–³ŒÀ—•III</font><font class=small>$dwhit˜A‘±ƒqƒbƒgII</FONT><br>";
+		$com2 .= "<font class=\"yellow\" size=4>å¿…æ®ºæŠ€ï¼ï¼ï¼ç„¡é™ä¹±æ­¦ï¼ï¼ï¼</font><font class=small>$dwhité€£ç¶šãƒ’ãƒƒãƒˆï¼ï¼</FONT><br>";
 	}
 }
 sub watowaza{}

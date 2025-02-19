@@ -2,11 +2,11 @@ sub hissatu{}
 sub atowaza{
 	if ($waza_ritu > int(rand(120))) {
 		if ($mode eq 'isekai' or $mode eq 'boss') {
-			$com1 .="<font class=\"yellow\" size=5>‹ó–‚–@ƒXƒgƒbƒvIII</FONT>$mname‚É‚ÍŒø‚©‚È‚©‚Á‚½II<br>";
+			$com1 .="<font class=\"yellow\" size=5>æ™‚ç©ºé­”æ³•ã‚¹ãƒˆãƒƒãƒ—ï¼ï¼ï¼</FONT>$mnameã«ã¯åŠ¹ã‹ãªã‹ã£ãŸï¼ï¼<br>";
 		} else {
 			$sake2 -= 999999;
 			$dmg2 = 0;
-			$com1 .="<font class=\"yellow\" size=5>‹ó–‚–@ƒXƒgƒbƒvIII</font>$winner[3] $mname‚Ì“®‚«‚ğ~‚ß‚½I<br>";
+			$com1 .="<font class=\"yellow\" size=5>æ™‚ç©ºé­”æ³•ã‚¹ãƒˆãƒƒãƒ—ï¼ï¼ï¼</font>$winner[3] $mnameã®å‹•ãã‚’æ­¢ã‚ãŸï¼<br>";
 		}
 	}
 }

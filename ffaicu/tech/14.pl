@@ -3,7 +3,7 @@ sub hissatu{
 		$i = $turn;
 		$j = $turn;
 		$dmg1 = 0;
-		$com1 .="<font class=\"yellow\" size=5>‹ó–‚–@ƒeƒŒƒ|III</font><br>";
+		$com1 .="<font class=\"yellow\" size=5>æ™‚ç©ºé­”æ³•ãƒ†ãƒ¬ãƒï¼ï¼ï¼</font><br>";
 	}
 }
 sub atowaza{}

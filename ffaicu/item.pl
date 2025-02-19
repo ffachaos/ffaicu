@@ -1,5 +1,5 @@
 #------------#
-#@•Ší“Ç@#
+#ã€€æ­¦å™¨èª­è¾¼ã€€#
 #------------#
 sub item_read {
 	open(IN,"$item_file");
@@ -13,7 +13,7 @@ sub item_read {
 	}
 	if (!$hit) {
 		$ci_no = 0;
-		$item[0] = '‘fè';
+		$item[0] = 'ç´ æ‰‹';
 		$item[1] = 0;
 		$ci_gold = 0;
 		$item[2] = 0;
@@ -21,7 +21,7 @@ sub item_read {
 }
 
 #------------#
-#@–h‹ï“Ç@#
+#ã€€é˜²å…·èª­è¾¼ã€€#
 #------------#
 sub def_read {
 	open(IN,"$def_file");
@@ -35,7 +35,7 @@ sub def_read {
 	}
 	if (!$hit) {
 		$cd_no = 0;
-		$item[3] = '•’i’…';
+		$item[3] = 'æ™®æ®µç€';
 		$item[4] = 0;
 		$cd_gold = 0;
 		$item[5] = 0;
@@ -43,7 +43,7 @@ sub def_read {
 }
 
 #--------------#
-#@‘•ü•i“Ç@#
+#ã€€è£…é£¾å“èª­è¾¼ã€€#
 #--------------#
 sub acs_read {
 	open(IN,"$acs_file");
@@ -58,7 +58,7 @@ sub acs_read {
 	if(!$hit) {
 		$a_no = 0;
 		$a_gold = 0;
-		$item[6] = '‚È‚µ';
+		$item[6] = 'ãªã—';
 		$item[7] = 0;
 		$item[8] = 0;
 		$item[9] = 0;
@@ -76,7 +76,7 @@ sub acs_read {
 }
 
 #----------------------------#
-#@ƒAƒCƒeƒ€ƒtƒ@ƒCƒ‹‘‚«‚İ@#
+#ã€€ã‚¢ã‚¤ãƒ†ãƒ ãƒ•ã‚¡ã‚¤ãƒ«æ›¸ãè¾¼ã¿ã€€#
 #----------------------------#
 sub item_regist {
 
@@ -91,28 +91,28 @@ sub item_regist {
 }
 
 #----------------------#
-#@•Šíƒtƒ@ƒCƒ‹‰Šú‰»@#
+#ã€€æ­¦å™¨ãƒ•ã‚¡ã‚¤ãƒ«åˆæœŸåŒ–ã€€#
 #----------------------#
 sub item_lose{
-	$item[0] = '‘fè';
+	$item[0] = 'ç´ æ‰‹';
 	$item[1] = 0;
 	$item[2] = 0;
 }
 
 #----------------------#
-#@–h‹ïƒtƒ@ƒCƒ‹‰Šú‰»@#
+#ã€€é˜²å…·ãƒ•ã‚¡ã‚¤ãƒ«åˆæœŸåŒ–ã€€#
 #----------------------#
 sub def_lose{
-	$item[3] = '•’i’…';
+	$item[3] = 'æ™®æ®µç€';
 	$item[4] = 0;
 	$item[5] = 0;
 }
 
 #------------------------#
-#@‘•ü•iƒtƒ@ƒCƒ‹‰Šú‰»@#
+#ã€€è£…é£¾å“ãƒ•ã‚¡ã‚¤ãƒ«åˆæœŸåŒ–ã€€#
 #------------------------#
 sub acs_lose {
-	$item[6] = '‚È‚µ';
+	$item[6] = 'ãªã—';
 	$item[7] = 0;
 	$item[8] = 0;
 	$item[9] = 0;
@@ -129,7 +129,7 @@ sub acs_lose {
 }
 
 #------------------------------------#
-# •Ö—˜‚Èƒtƒbƒ^[(ƒLƒƒƒ‰ƒf[ƒ^XVŒã) #
+# ä¾¿åˆ©ãªãƒ•ãƒƒã‚¿ãƒ¼(ã‚­ãƒ£ãƒ©ãƒ‡ãƒ¼ã‚¿æ›´æ–°å¾Œ) #
 #------------------------------------#
 sub shopfooter {
 	print <<"EOM";
@@ -137,33 +137,33 @@ sub shopfooter {
 <form action="$item_shop" method="post">
 <input type=hidden name=id value="$chara[0]">
 <input type="hidden" name="mydata" value="$new_chara">
-<input type=submit class=btn value="•Ší‰®‚Ö">
+<input type=submit class=btn value="æ­¦å™¨å±‹ã¸">
 </form>
 <form action="$def_shop" method="post">
 <input type=hidden name=id value="$chara[0]">
 <input type="hidden" name="mydata" value="$new_chara">
-<input type=submit class=btn value="–h‹ï‰®‚Ö">
+<input type=submit class=btn value="é˜²å…·å±‹ã¸">
 </form>
 <form action="$acs_shop" method="post">
 <input type=hidden name=id value="$chara[0]">
 <input type="hidden" name="mydata" value="$new_chara">
-<input type=submit class=btn value="‘•ü•i‰®‚Ö">
+<input type=submit class=btn value="è£…é£¾å“å±‹ã¸">
 </form>
 <form action="$script_souko" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$new_chara">
-<input type=submit class=btn value="ƒAƒCƒeƒ€‘qŒÉ‚Ö">
+<input type=submit class=btn value="ã‚¢ã‚¤ãƒ†ãƒ å€‰åº«ã¸">
 </form>
 <form action="$script_bank" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$new_chara">
-<input type=submit class=btn value="‹âs‚Ö">
+<input type=submit class=btn value="éŠ€è¡Œã¸">
 </form>
 <form action="$script" method="post">
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name="mydata" value="$new_chara">
 <input type=hidden name=mode value=log_in>
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 }

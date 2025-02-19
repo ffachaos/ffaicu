@@ -1,7 +1,7 @@
 sub wacskouka{
 	if (int(rand(15))==0) {
 		$hpplus2 = $winner[8] * int(rand($winner[13]));
-		$com2 .= "<font class=\"yellow\" size=3>$winner[27]‚ªŒõ‚ğ•ú‚ÂIIƒPƒAƒ‹ƒK‚ÌŒø‰ÊII$winner[3] ‚Ì‚g‚o‚ª $hpplus2 ‰ñ•œ‚µ‚½Iô</FONT><br>";
+		$com2 .= "<font class=\"yellow\" size=3>$winner[27]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼ã‚±ã‚¢ãƒ«ã‚¬ã®åŠ¹æœï¼ï¼$winner[3] ã®ï¼¨ï¼°ãŒ $hpplus2 å›å¾©ã—ãŸï¼â™ª</FONT><br>";
 	}
 }
 1;

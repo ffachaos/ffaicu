@@ -2,7 +2,7 @@ sub wacskouka{
 	if (int(rand(2))==0) {
 		$sake1 -= 999999;
 		$dmg2 += ($winner[7] + $winner[8]) * int(rand(500));
-		$com2 .= "<font class=\"green\" size=3>$winner[27]‚ªŒõ‚ğ•ú‚ÂII‚Ì‹·ŠÔ‚æ‚èŒÃ‚Ì–‚_‚ğŒÄ‚ÑŠñ‚¹‚½IIƒOƒ‰ƒ“ƒhƒNƒƒXII</FONT><br>";
+		$com2 .= "<font class=\"green\" size=3>$winner[27]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼æ™‚ã®ç‹­é–“ã‚ˆã‚Šå¤ã®é­”ç¥ã‚’å‘¼ã³å¯„ã›ãŸï¼ï¼ã‚°ãƒ©ãƒ³ãƒ‰ã‚¯ãƒ­ã‚¹ï¼ï¼</FONT><br>";
 	}
 }
 1;

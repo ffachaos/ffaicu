@@ -1,65 +1,65 @@
 #!/usr/local/bin/perl --
 
 #------------------------------------------------------#
-#@–{ƒXƒNƒŠƒvƒg‚Ì’˜ìŒ ‚Í‰º‹L‚Ì3l‚É‚ ‚è‚Ü‚·B
-#‚¢‚©‚È‚é——R‚ª‚ ‚Á‚Ä‚à‚±‚Ì•\‹L‚ğíœ‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñ
-#ˆá”½‚ğ”­Œ©‚µ‚½ê‡AƒXƒNƒŠƒvƒg‚Ì—˜—p‚ğ’â~‚µ‚Ä‚¢‚½‚¾‚­
-#‚¾‚¯‚Å‚È‚­A‘R‚é‚×‚«ˆ’u‚ğ‚³‚¹‚Ä‚¢‚½‚¾‚«‚Ü‚·B
-#@FF ADVENTURE ‰üi v2.1
-#@programed by jun-k
-#@http://www5b.biglobe.ne.jp/~jun-kei/
-#@jun-kei@vanilla.freemail.ne.jp
+#ã€€æœ¬ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®è‘—ä½œæ¨©ã¯ä¸‹è¨˜ã®3äººã«ã‚ã‚Šã¾ã™ã€‚
+#ã„ã‹ãªã‚‹ç†ç”±ãŒã‚ã£ã¦ã‚‚ã“ã®è¡¨è¨˜ã‚’å‰Šé™¤ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“
+#é•åã‚’ç™ºè¦‹ã—ãŸå ´åˆã€ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®åˆ©ç”¨ã‚’åœæ­¢ã—ã¦ã„ãŸã ã
+#ã ã‘ã§ãªãã€ç„¶ã‚‹ã¹ãå‡¦ç½®ã‚’ã•ã›ã¦ã„ãŸã ãã¾ã™ã€‚
+#ã€€FF ADVENTURE æ”¹i v2.1
+#ã€€programed by jun-k
+#ã€€http://www5b.biglobe.ne.jp/~jun-kei/
+#ã€€jun-kei@vanilla.freemail.ne.jp
 #------------------------------------------------------#
-#@FF ADVENTURE v0.21
-#@programed by CUMRO
-#@http://cgi.members.interq.or.jp/sun/cumro/mm/
-#@cumro@sun.interq.or.jp
+#ã€€FF ADVENTURE v0.21
+#ã€€programed by CUMRO
+#ã€€http://cgi.members.interq.or.jp/sun/cumro/mm/
+#ã€€cumro@sun.interq.or.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(‰ü) v1.021
+#  FF ADVENTURE(æ”¹) v1.021
 #  remodeling by GUN
 #  http://www2.to/meeting/
 #  gun24@j-club.ne.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(‚¢‚­‰ü)
-#@remodeling by ‚¢‚­
-#@http://www3.big.or.jp/~icu/
-#@icus2@hotmail.com
+#  FF ADVENTURE(ã„ãæ”¹)
+#ã€€remodeling by ã„ã
+#ã€€http://www3.big.or.jp/~icu/
+#ã€€icus2@hotmail.com
 #------------------------------------------------------#
 
-#--- [’ˆÓ–€] ------------------------------------------------#
-# 1. ‚±‚ÌƒXƒNƒŠƒvƒg‚ÍƒtƒŠ[ƒ\ƒtƒg‚Å‚·B‚±‚ÌƒXƒNƒŠƒvƒg‚ğg—p‚µ‚½	#
-#    ‚¢‚©‚È‚é‘¹ŠQ‚É‘Î‚µ‚ÄìÒ‚ÍˆêØ‚ÌÓ”C‚ğ•‰‚¢‚Ü‚¹‚ñB		#
-# 2. İ’u‚ÉŠÖ‚·‚é¿–â‚ÍƒTƒ|[ƒgŒf¦”Â‚É‚¨Šè‚¢‚¢‚½‚µ‚Ü‚·B	#
-#    ’¼Úƒ[ƒ‹‚É‚æ‚é¿–â‚ÍˆêØ‚¨ó‚¯‚¢‚½‚µ‚Ä‚¨‚è‚Ü‚¹‚ñB	#
-# 3. İ’u‚µ‚½‚çŠF‚³‚ñ‚ÉŠy‚µ‚ñ‚Å‚à‚ç‚¤ˆ×‚É‚àAWebƒŠƒ“ƒO‚Ö‚º‚ĞQ‰Á#
-#    ‚µ‚Ä‚­‚¾‚³‚¢m(__)m						#
-#     http://www3.big.or.jp/~icu/cgi-bin/cbbs/cbbs.cgi@		#
+#--- [æ³¨æ„äº‹é …] ------------------------------------------------#
+# 1. ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã§ã™ã€‚ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ä½¿ç”¨ã—ãŸ	#
+#    ã„ã‹ãªã‚‹æå®³ã«å¯¾ã—ã¦ä½œè€…ã¯ä¸€åˆ‡ã®è²¬ä»»ã‚’è² ã„ã¾ã›ã‚“ã€‚		#
+# 2. è¨­ç½®ã«é–¢ã™ã‚‹è³ªå•ã¯ã‚µãƒãƒ¼ãƒˆæ²ç¤ºæ¿ã«ãŠé¡˜ã„ã„ãŸã—ã¾ã™ã€‚	#
+#    ç›´æ¥ãƒ¡ãƒ¼ãƒ«ã«ã‚ˆã‚‹è³ªå•ã¯ä¸€åˆ‡ãŠå—ã‘ã„ãŸã—ã¦ãŠã‚Šã¾ã›ã‚“ã€‚	#
+# 3. è¨­ç½®ã—ãŸã‚‰çš†ã•ã‚“ã«æ¥½ã—ã‚“ã§ã‚‚ã‚‰ã†ç‚ºã«ã‚‚ã€Webãƒªãƒ³ã‚°ã¸ãœã²å‚åŠ #
+#    ã—ã¦ãã ã•ã„m(__)m						#
+#     http://www3.big.or.jp/~icu/cgi-bin/cbbs/cbbs.cgiã€€		#
 #---------------------------------------------------------------#
 
-# “ú–{Œêƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
-require 'jcode.pl';
+# æ—¥æœ¬èªãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './jacode.pl';
 
-# ƒŒƒWƒXƒgƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
-require 'regist.pl';
+# ãƒ¬ã‚¸ã‚¹ãƒˆãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './regist.pl';
 
-# ‰Šúİ’èƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ
-require 'data/ffadventure.ini';
+# åˆæœŸè¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿
+require './data/ffadventure.ini';
 
-# ‚±‚Ìƒtƒ@ƒCƒ‹—pİ’è
+# ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ç”¨è¨­å®š
 $backgif = $sts_back;
 $midi = $sts_midi;
 
 #================================================================#
-#„¬„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„­#
-#„« ‚±‚ê‚æ‚è‰º‚ÍCGI‚É©M‚Ì‚ ‚é•ûˆÈŠO‚Íˆµ‚í‚È‚¢‚Ù‚¤‚ª–³“ï‚Å‚·@„«#
-#„¯„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„®#
+#â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”“#
+#â”ƒ ã“ã‚Œã‚ˆã‚Šä¸‹ã¯CGIã«è‡ªä¿¡ã®ã‚ã‚‹æ–¹ä»¥å¤–ã¯æ‰±ã‚ãªã„ã»ã†ãŒç„¡é›£ã§ã™ã€€â”ƒ#
+#â”—â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”›#
 #================================================================#
 
 #--------------#
-#@ƒƒCƒ“ˆ—@#
+#ã€€ãƒ¡ã‚¤ãƒ³å‡¦ç†ã€€#
 #--------------#
 if ($mente) {
-	&error("ƒo[ƒWƒ‡ƒ“ƒAƒbƒv’†‚Å‚·B‚QA‚R‚O•b‚Ù‚Ç‚¨‘Ò‚¿‰º‚³‚¢Bm(_ _)m");
+	&error("ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—ä¸­ã§ã™ã€‚ï¼’ã€ï¼“ï¼ç§’ã»ã©ãŠå¾…ã¡ä¸‹ã•ã„ã€‚m(_ _)m");
 }
 &decode;
 
@@ -68,15 +68,15 @@ if ($mente) {
 <form action="$scriptst" method="post">
 <input type=hidden name=id value="$in{'id'}">
 <input type="hidden" name="mydata" value="$in{'mydata'}">
-<input type=submit class=btn value="–ß‚é">
+<input type=submit class=btn value="æˆ»ã‚‹">
 </form>
 EOM
 
-#‚h‚oƒAƒhƒŒƒX‚ÅƒAƒNƒZƒX§ŒÀ
+#ï¼©ï¼°ã‚¢ãƒ‰ãƒ¬ã‚¹ã§ã‚¢ã‚¯ã‚»ã‚¹åˆ¶é™
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
 	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {
-		&error("ƒAƒNƒZƒX‚Å‚«‚Ü‚¹‚ñII");
+		&error("ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã›ã‚“ï¼ï¼");
 	}
 }
 
@@ -85,7 +85,7 @@ if ($mode) { &$mode; }
 exit;
 
 #----------------#
-#  ƒƒOƒCƒ“‰æ–Ê  #
+#  ãƒ­ã‚°ã‚¤ãƒ³ç”»é¢  #
 #----------------#
 sub chara_st {
 
@@ -95,7 +95,7 @@ sub chara_st {
 
 	&item_load;
 
-	# ”\—Í’lƒo[‚ÌÚ‚µ‚¢•İ’è
+	# èƒ½åŠ›å€¤ãƒãƒ¼ã®è©³ã—ã„å¹…è¨­å®š
 	$hit_ritu = int(($chara[11] / 10) + 51);
 	if($hit_ritu > 150){$hit_ritu = 150;}
 	$kaihi_ritu = int(($chara[12]/ 20));
@@ -119,11 +119,11 @@ sub chara_st {
 		}
 	}
 
-	if (!$thit) { $ktac_name = "•’Ê‚Éí‚¤"; }
+	if (!$thit) { $ktac_name = "æ™®é€šã«æˆ¦ã†"; }
 
 	&class;
 
-	if($chara[5]) { $esex = "’j"; } else { $esex = "—"; }
+	if($chara[5]) { $esex = "ç”·"; } else { $esex = "å¥³"; }
 	$next_ex = $chara[18] * $lv_up;
 
         if(!$chara[32]){$chara[32] = 0;}
@@ -136,19 +136,19 @@ sub chara_st {
        print <<"EOM";
 <table align="center">
 <TR>
-<TD><font size=5>$chara[4]‚³‚ñ—pƒXƒe[ƒ^ƒX•ÏX‰æ–Ê</font></TD>
+<TD><font size=5>$chara[4]ã•ã‚“ç”¨ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹å¤‰æ›´ç”»é¢</font></TD>
 </TR>
 </table>
 <hr size=0>
-<font class=white>ƒƒjƒ…[/</font>
-<a href="$scripta?mode=ranking">“o˜^Òˆê——</a> / 
-<a href="$ranking">\”\\—Í•Êƒ‰ƒ“ƒLƒ“ƒO‚Ö</a> / 
-<a href="$syoku_html" target="_blank">ŠeE‹Æ‚É•K—v‚È“Á«’l</a> / 
+<font class=white>ãƒ¡ãƒ‹ãƒ¥ãƒ¼/</font>
+<a href="$scripta?mode=ranking">ç™»éŒ²è€…ä¸€è¦§</a> / 
+<a href="$ranking">\èƒ½\åŠ›åˆ¥ãƒ©ãƒ³ã‚­ãƒ³ã‚°ã¸</a> / 
+<a href="$syoku_html" target="_blank">å„è·æ¥­ã«å¿…è¦ãªç‰¹æ€§å€¤</a> / 
 <a href="$img_all_list" target="_blank">$vote_gazou</a> / 
 <a href="$bbs" target="_blank">$bbs_title</a> / 
 <a href="$helptext" target="_blank">$helptext_url</a>
 <br>
-<font class=white>’¬‚ÌŠO‚ê/</font>
+<font class=white>ç”ºã®å¤–ã‚Œ/</font>
 <a href="$sbbs" target="_blank">$sbbs_title</a> / 
 <a href="$vote" target="_blank">$vote_title</a> / 
 <br>
@@ -157,31 +157,31 @@ sub chara_st {
 <tr>
 <td valign=top width='50%'>
 <table width="100%"><tr>
-<tr><td id="td1" colspan="5" class="b2" align="center">ƒLƒƒƒ‰ƒNƒ^[ƒf[ƒ^</td></tr>
+<tr><td id="td1" colspan="5" class="b2" align="center">ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ãƒ‡ãƒ¼ã‚¿</td></tr>
 <td rowspan="4" align="center" valign=bottom class="b2"><img src="$img_path/$chara_img[$chara[6]]">
-<tr><td id="td2" class="b2">•Ší</td><td align="right" class="b2">$item[0]</td>
-<td id="td2" class="b1">UŒ‚—Í</td><td align="right" class="b2">$item[1]</td></tr>
-<tr><td id="td2" class="b2">–h‹ï</td><td align="right" class="b2">$item[3]</td>
-<td id="td2" class="b1">–hŒä—Í</td><td align="right" class="b2">$item[4]</td></tr>
-<tr><td id="td2" class="b2">ƒAƒNƒZƒTƒŠ[</td><td align="right" class="b2">$item[6]</td>
+<tr><td id="td2" class="b2">æ­¦å™¨</td><td align="right" class="b2">$item[0]</td>
+<td id="td2" class="b1">æ”»æ’ƒåŠ›</td><td align="right" class="b2">$item[1]</td></tr>
+<tr><td id="td2" class="b2">é˜²å…·</td><td align="right" class="b2">$item[3]</td>
+<td id="td2" class="b1">é˜²å¾¡åŠ›</td><td align="right" class="b2">$item[4]</td></tr>
+<tr><td id="td2" class="b2">ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼</td><td align="right" class="b2">$item[6]</td>
 	
-<td id="td2" class="b2">Ì†</td><td align="center" class="b2"><font color=yellow>$syou</font></td></tr>
+<td id="td2" class="b2">ç§°å·</td><td align="center" class="b2"><font color=yellow>$syou</font></td></tr>
 </table>
 <table width="100%">
-<tr><td id="td1" colspan="5" class="b2" align="center">ƒXƒe[ƒ^ƒX</td></tr>
-<tr><td class="b1" id="td2">ƒWƒ‡ƒu</td>
+<tr><td id="td1" colspan="5" class="b2" align="center">ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹</td></tr>
+<tr><td class="b1" id="td2">ã‚¸ãƒ§ãƒ–</td>
 <td class="b2">
 $chara_syoku[$chara[14]]
 </td>
-<td id="td2" align="center" class="b1">ƒWƒ‡ƒuLV</td><td class="b2"><b>$chara[33]</b></td></tr>
-<tr><td class="b1" id="td2">ƒNƒ‰ƒX</td><td colspan=3 class="b2">$class</td></tr>
-<tr><td class="b1" id="td2">ƒŒƒxƒ‹</td><td class="b2">$chara[18]</td>
-<td class="b1" id="td2">ŒoŒ±’l</td><td class="b2">$chara[17]/$next_ex</td></tr>
+<td id="td2" align="center" class="b1">ã‚¸ãƒ§ãƒ–LV</td><td class="b2"><b>$chara[33]</b></td></tr>
+<tr><td class="b1" id="td2">ã‚¯ãƒ©ã‚¹</td><td colspan=3 class="b2">$class</td></tr>
+<tr><td class="b1" id="td2">ãƒ¬ãƒ™ãƒ«</td><td class="b2">$chara[18]</td>
+<td class="b1" id="td2">çµŒé¨“å€¤</td><td class="b2">$chara[17]/$next_ex</td></tr>
 <tr><td class="b1" id="td2">HP</td><td class="b2">$chara[15]\/$chara[16]</td>
-<td class="b1" id="td2">‚¨‹à</td><td class="b2">$chara[19]\/$gold_max</td></tr>
+<td class="b1" id="td2">ãŠé‡‘</td><td class="b2">$chara[19]\/$gold_max</td></tr>
 </table>
 
-<table width="100%"><tr><td id="td2" align="center" class="b1">¡‚Ü‚Å‚ÌƒWƒ‡ƒu</td></tr>
+<table width="100%"><tr><td id="td2" align="center" class="b1">ä»Šã¾ã§ã®ã‚¸ãƒ§ãƒ–</td></tr>
 <tr><td colspan=3 align="center" class="b1">
 <table width="100%">
 <tr>
@@ -200,47 +200,47 @@ EOM
 	}
 
 	if (!$s) {
-		print "<td class=\"b2\" width=\"100%\" align = \"center\">‚È‚µ</td>";
+		print "<td class=\"b2\" width=\"100%\" align = \"center\">ãªã—</td>";
 	}
 
        print <<"EOM";
 </tr></table></td></tr></table>
 <table width="100%"></form>
-<tr><td id="td1" colspan="5" class="b2" align="center">‚»‚Ì‘¼‚ÌƒRƒ}ƒ“ƒh</td></tr><tr><td id="td2"align="center" class="b2">yíp•ÏXz</td>
+<tr><td id="td1" colspan="5" class="b2" align="center">ãã®ä»–ã®ã‚³ãƒãƒ³ãƒ‰</td></tr><tr><td id="td2"align="center" class="b2">ã€æˆ¦è¡“å¤‰æ›´ã€‘</td>
 <form action="$scripts" method="post">
 <td align="center"colspan="4" class="b2">
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
-<input type=submit class=btn value="íp‚ğ•ÏX"></td>
+<input type=submit class=btn value="æˆ¦è¡“ã‚’å¤‰æ›´"></td>
 </form>
 </tr>
-<tr><td id="td2"align="center" class="b2">yƒXƒe[ƒ^ƒX‰æ–Ê‚Öz</td>
+<tr><td id="td2"align="center" class="b2">ã€ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸ã€‘</td>
 <form action="$script" method="post">
 <td align="center"colspan="4" class="b2">
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö"></td>
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸"></td>
 </form>
 </tr>
-<tr><td id="td2"align="center" class="b2">yƒpƒXƒ[ƒh•ÏXz</td>
+<tr><td id="td2"align="center" class="b2">ã€ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å¤‰æ›´ã€‘</td>
 <form action="$script_pass" method="post">
 <td align="center"colspan="4" class="b2">
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
-<input type=submit class=btn value="ƒpƒXƒ[ƒh•ÏX"></td>
+<input type=submit class=btn value="ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å¤‰æ›´"></td>
 </form>
 </tr></table>
 <td valign="top">
 <table width='100%'>
 <form action="$scriptst" method="post">
-<tr><td id="td1" colspan="5" class="b2" align="center">ƒz[ƒ€ƒy[ƒWƒf[ƒ^</td></tr>
-<tr><td id="td2" class="b1">ƒz[ƒ€ƒy[ƒW–¼</td></tr><tr><td colspan="4"><input type="text" name=site value="$chara[2]" size=50></td></tr>
-<tr><td id="td2" class="b1">ƒz[ƒ€ƒy[ƒW‚ÌURL</td></tr><tr><td colspan="4"><input type="text" name=url value="$chara[3]" size=60></td></tr>
+<tr><td id="td1" colspan="5" class="b2" align="center">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ãƒ‡ãƒ¼ã‚¿</td></tr>
+<tr><td id="td2" class="b1">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸å</td></tr><tr><td colspan="4"><input type="text" name=site value="$chara[2]" size=50></td></tr>
+<tr><td id="td2" class="b1">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ã®URL</td></tr><tr><td colspan="4"><input type="text" name=url value="$chara[3]" size=60></td></tr>
 </table>
 <table width='100%'>
-<tr><td id="td1" colspan="5" class="b2" align="center">ƒXƒe[ƒ^ƒX</td></tr>
+<tr><td id="td1" colspan="5" class="b2" align="center">ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹</td></tr>
 <tr>
-<td class="b1" id="td2">‰æ‘œİ’è</td>
+<td class="b1" id="td2">ç”»åƒè¨­å®š</td>
 <td class="b2"colspan="4">
 <input type="text" name="chara" value="$chara[6]" size=5>
 <a href="$img_all_list" target="_blank">
@@ -248,34 +248,34 @@ $vote_gazou</a>
 </td>
 </tr></td>
 <tr>
-<td class="b1" id="td2">‚È‚Ü‚¦</td><td class="b2">$chara[4]</td>
-<td class="b1" id="td2">«•Ê</td><td class="b2">$esex</td></tr>
-<tr><td class="b1" id="td2">ƒWƒ‡ƒu</td><td class="b2">$chara_syoku[$chara[14]]</td>
-<td id="td2" align="center" class="b1">ƒWƒ‡ƒuLV</td><td class="b2"><b>$chara[33]</b></td></tr>
-<tr><td class="b1" id="td2">ƒNƒ‰ƒX</td><td colspan=3 class="b2">$class</td></tr>
-<tr><td class="b1" id="td2">ƒŒƒxƒ‹</td><td class="b2">$chara[18]</td>
-<td class="b1" id="td2">ŒoŒ±’l</td><td class="b2">$chara[17]/$next_ex</td></tr>
+<td class="b1" id="td2">ãªã¾ãˆ</td><td class="b2">$chara[4]</td>
+<td class="b1" id="td2">æ€§åˆ¥</td><td class="b2">$esex</td></tr>
+<tr><td class="b1" id="td2">ã‚¸ãƒ§ãƒ–</td><td class="b2">$chara_syoku[$chara[14]]</td>
+<td id="td2" align="center" class="b1">ã‚¸ãƒ§ãƒ–LV</td><td class="b2"><b>$chara[33]</b></td></tr>
+<tr><td class="b1" id="td2">ã‚¯ãƒ©ã‚¹</td><td colspan=3 class="b2">$class</td></tr>
+<tr><td class="b1" id="td2">ãƒ¬ãƒ™ãƒ«</td><td class="b2">$chara[18]</td>
+<td class="b1" id="td2">çµŒé¨“å€¤</td><td class="b2">$chara[17]/$next_ex</td></tr>
 <tr><td class="b1" id="td2">HP</td><td class="b2">$chara[15]\/$chara[16]</td>
-<td class="b1" id="td2">‚¨‹à</td><td class="b2">$chara[19]\/$gold_max</td></tr>
-<tr><td class="b1" id="td2">—Í</td><td align="left" class="b2"><img src=\"$bar\" width=$bw0 height=$bh><br><b>$chara[7] + $item[8]</b></td>
-<td class="b1" id="td2">–‚—Í</td><td align="left" class="b2"><img src=\"$bar\" width=$bw1 height=$bh><br><b>$chara[8] + $item[9]</b></td></tr>
-<tr><td class="b1" id="td2">M‹ÂS</td><td align="left" class="b2"><img src=\"$bar\" width=$bw2 height=$bh><br><b>$chara[9] + $item[10]</b></td>
-<td class="b1" id="td2">¶–½—Í</td><td align="left" class="b2"><img src=\"$bar\" width=$bw3 height=$bh><br><b>$chara[10] + $item[11]</b></td></tr>
-<tr><td class="b1" id="td2">Ší—p‚³</td><td align="left" class="b2"><img src=\"$bar\" width=$bw4 height=$bh><br><b>$chara[11] + $item[12]</b></td>
-<td class="b1" id="td2">‘¬‚³</td><td align="left" class="b2"><img src=\"$bar\" width=$bw5 height=$bh><br><b>$chara[12] + $item[13]</b></td></tr>
-<tr><td class="b1" id="td2">–£—Í</td><td align="left" class="b2"><img src=\"$bar\" width=$bw6 height=$bh><br><b>$chara[13] + $item[14]</b></td>
-<td class="b1" id="td2">ƒJƒ‹ƒ}</td><td align="left" class="b2"><img src=\"$bar\" width=$bwlp height=$bh><br><b>$chara[20] + $item[15]</b></td></tr>
-<tr><td id="td2" class="b2">–½’†—¦</td><td align="left" class="b2"><img src=\"$bar\" width=$bwhit height=$bh><br><b>$hit_ritu + $ci_plus%</b></td>
-<td id="td2" class="b2">‰ñ”ğ—¦</td><td align="left" class="b2"><img src=\"$bar\" width=$bwkaihi height=$bh><b><br>$kaihi_ritu + $cd_plus%</b></td></tr>
-<tr><td id="td2" class="b2">•KE—¦</td><td align="left" class="b2"><img src=\"$bar\" width=$bwwaza height=$bh><br><b>$waza_ritu + $item[17]%</b></td><td id="td2" class="b2">‹Z–¼</td><td align="center" class="b2"><B>$ktac_name</B></td></tr>
-<tr><td class="b1" id="td2">‹Z”­“®ƒRƒƒ“ƒg</td><td colspan="3" align="center" class="b2"><input type="text" name=waza value="$chara[23]" size=50></td></tr>
+<td class="b1" id="td2">ãŠé‡‘</td><td class="b2">$chara[19]\/$gold_max</td></tr>
+<tr><td class="b1" id="td2">åŠ›</td><td align="left" class="b2"><img src=\"$bar\" width=$bw0 height=$bh><br><b>$chara[7] + $item[8]</b></td>
+<td class="b1" id="td2">é­”åŠ›</td><td align="left" class="b2"><img src=\"$bar\" width=$bw1 height=$bh><br><b>$chara[8] + $item[9]</b></td></tr>
+<tr><td class="b1" id="td2">ä¿¡ä»°å¿ƒ</td><td align="left" class="b2"><img src=\"$bar\" width=$bw2 height=$bh><br><b>$chara[9] + $item[10]</b></td>
+<td class="b1" id="td2">ç”Ÿå‘½åŠ›</td><td align="left" class="b2"><img src=\"$bar\" width=$bw3 height=$bh><br><b>$chara[10] + $item[11]</b></td></tr>
+<tr><td class="b1" id="td2">å™¨ç”¨ã•</td><td align="left" class="b2"><img src=\"$bar\" width=$bw4 height=$bh><br><b>$chara[11] + $item[12]</b></td>
+<td class="b1" id="td2">é€Ÿã•</td><td align="left" class="b2"><img src=\"$bar\" width=$bw5 height=$bh><br><b>$chara[12] + $item[13]</b></td></tr>
+<tr><td class="b1" id="td2">é­…åŠ›</td><td align="left" class="b2"><img src=\"$bar\" width=$bw6 height=$bh><br><b>$chara[13] + $item[14]</b></td>
+<td class="b1" id="td2">ã‚«ãƒ«ãƒ</td><td align="left" class="b2"><img src=\"$bar\" width=$bwlp height=$bh><br><b>$chara[20] + $item[15]</b></td></tr>
+<tr><td id="td2" class="b2">å‘½ä¸­ç‡</td><td align="left" class="b2"><img src=\"$bar\" width=$bwhit height=$bh><br><b>$hit_ritu + $ci_plus%</b></td>
+<td id="td2" class="b2">å›é¿ç‡</td><td align="left" class="b2"><img src=\"$bar\" width=$bwkaihi height=$bh><b><br>$kaihi_ritu + $cd_plus%</b></td></tr>
+<tr><td id="td2" class="b2">å¿…æ®ºç‡</td><td align="left" class="b2"><img src=\"$bar\" width=$bwwaza height=$bh><br><b>$waza_ritu + $item[17]%</b></td><td id="td2" class="b2">æŠ€å</td><td align="center" class="b2"><B>$ktac_name</B></td></tr>
+<tr><td class="b1" id="td2">æŠ€ç™ºå‹•æ™‚ã‚³ãƒ¡ãƒ³ãƒˆ</td><td colspan="3" align="center" class="b2"><input type="text" name=waza value="$chara[23]" size=50></td></tr>
 <tr><td id="td2" class="b1">
 
-•ÏX‚µ‚½ƒXƒe[ƒ^ƒX‚ğ“o˜^><td align="center" colspan=3 class="b2">
+å¤‰æ›´ã—ãŸã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã‚’ç™»éŒ²><td align="center" colspan=3 class="b2">
 <input type=hidden name=mode value=st_buy>
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‚ğ“o˜^‚·‚é">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã‚’ç™»éŒ²ã™ã‚‹">
 </td></tr>
 </form>
 </table>
@@ -290,7 +290,7 @@ EOM
 }
 
 #----------------#
-#  •ÏX“o˜^‰æ–Ê  #
+#  å¤‰æ›´ç™»éŒ²ç”»é¢  #
 #----------------#
 sub st_buy {
 
@@ -303,24 +303,24 @@ sub st_buy {
 	&get_host;
 
 	if($in{'id'} eq test){
-		&error("ƒeƒXƒgƒLƒƒƒ‰‚ÍƒXƒe[ƒ^ƒX•ÏX‚Í‚Å‚«‚Ü‚¹‚ñ$back_form");
+		&error("ãƒ†ã‚¹ãƒˆã‚­ãƒ£ãƒ©ã¯ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹å¤‰æ›´ã¯ã§ãã¾ã›ã‚“$back_form");
 	}
 
 	if($in{'site'} eq "") {
-		$in{'site'} = '‚¢‚­‚Ì‚b‚f‚h‚Ì‚g‚o';
+		$in{'site'} = 'ã„ãã®ï¼£ï¼§ï¼©ã®ï¼¨ï¼°';
 	}
 	if($in{'url'} eq "") {
 		$in{'url'} = 'http://www.eriicu.com';
 	}
 
 	if (length($in{'waza'}) > 100) {
-		&error("ƒNƒŠƒeƒBƒJƒ‹ƒRƒƒ“ƒg‚ª’·‚·‚¬‚Ü‚·I$back_form");
+		&error("ã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ«ã‚³ãƒ¡ãƒ³ãƒˆãŒé•·ã™ãã¾ã™ï¼$back_form");
 	}
 
 	foreach (@ban_word) {
 		if(index($in{'waza'},$_) >= 0) {
 			$in{'mesname'} = $aite_data[4];
-			&error("‹Ö~Œêu$_v‚ªŠÜ‚Ü‚ê‚Ä‚¢‚Ü‚·$back_form");
+			&error("ç¦æ­¢èªã€Œ$_ã€ãŒå«ã¾ã‚Œã¦ã„ã¾ã™$back_form");
 		}
 	}
 
@@ -335,11 +335,11 @@ sub st_buy {
 	&header;
 
  print <<"EOM";
-<h1>$chara[4]‚³‚ñ‚ÌƒXƒe[ƒ^ƒX‚ğ•ÏX‚µ‚Ü‚µ‚½</h1><br>
+<h1>$chara[4]ã•ã‚“ã®ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã‚’å¤‰æ›´ã—ã¾ã—ãŸ</h1><br>
 <form action="$scriptst" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$new_chara">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX•ÏX‰æ–Ê‚Ö">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹å¤‰æ›´ç”»é¢ã¸">
 </form>
 EOM
 

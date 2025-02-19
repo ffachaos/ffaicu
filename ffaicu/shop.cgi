@@ -1,60 +1,60 @@
 #!/usr/local/bin/perl --
 
 #------------------------------------------------------#
-#�@�{�X�N���v�g�̒��쌠�͉��L��3�l�ɂ���܂��B
-#�����Ȃ闝�R�������Ă����̕\�L���폜���邱�Ƃ͂ł��܂���
-#�ᔽ�𔭌������ꍇ�A�X�N���v�g�̗��p���~���Ă�������
-#�����łȂ��A�R��ׂ����u�������Ă��������܂��B
-#�@FF ADVENTURE ��i v2.1
-#�@programed by jun-k
-#�@http://www5b.biglobe.ne.jp/~jun-kei/
-#�@jun-kei@vanilla.freemail.ne.jp
+#　本スクリプトの著作権は下記の3人にあります。
+#いかなる理由があってもこの表記を削除することはできません
+#違反を発見した場合、スクリプトの利用を停止していただく
+#だけでなく、然るべき処置をさせていただきます。
+#　FF ADVENTURE 改i v2.1
+#　programed by jun-k
+#　http://www5b.biglobe.ne.jp/~jun-kei/
+#　jun-kei@vanilla.freemail.ne.jp
 #------------------------------------------------------#
-#�@FF ADVENTURE v0.21
-#�@programed by CUMRO
-#�@http://cgi.members.interq.or.jp/sun/cumro/mm/
-#�@cumro@sun.interq.or.jp
+#　FF ADVENTURE v0.21
+#　programed by CUMRO
+#　http://cgi.members.interq.or.jp/sun/cumro/mm/
+#　cumro@sun.interq.or.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(��) v1.021
+#  FF ADVENTURE(改) v1.021
 #  remodeling by GUN
 #  http://www2.to/meeting/
 #  gun24@j-club.ne.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(������)
-#�@remodeling by ����
-#�@http://www.eriicu.com
-#�@icu@kcc.zaq.ne.jp
+#  FF ADVENTURE(いく改)
+#　remodeling by いく
+#　http://www.eriicu.com
+#　icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
-#--- [���ӎ���] ------------------------------------------------#
-# 1. ���̃X�N���v�g�̓t���[�\�t�g�ł��B���̃X�N���v�g���g�p���� #
-#    �����Ȃ鑹�Q�ɑ΂��č�҂͈�؂̐ӔC�𕉂��܂���B     	#
-# 2. �ݒu�Ɋւ��鎿��̓T�|�[�g�f���ɂ��肢�������܂��B   	#
+#--- [注意事項] ------------------------------------------------#
+# 1. このスクリプトはフリーソフトです。このスクリプトを使用した #
+#    いかなる損害に対して作者は一切の責任を負いません。     	#
+# 2. 設置に関する質問はサポート掲示板にお願いいたします。   	#
 #    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi             #
-#    ���ڃ��[���ɂ�鎿��͈�؂��󂯂������Ă���܂���B   	#
+#    直接メールによる質問は一切お受けいたしておりません。   	#
 #---------------------------------------------------------------#
-# ���{�ꃉ�C�u�����̓ǂݍ���
-require 'jcode.pl';
+# 日本語ライブラリの読み込み
+require './jacode.pl';
 
-# ���W�X�g���C�u�����̓ǂݍ���
-require 'regist.pl';
+# レジストライブラリの読み込み
+require './regist.pl';
 
-# �A�C�e�����C�u�����̓ǂݍ���
-require 'item.pl';
+# アイテムライブラリの読み込み
+require './item.pl';
 
-# �����ݒ�t�@�C���̓ǂݍ���
-require 'data/ffadventure.ini';
+# 初期設定ファイルの読み込み
+require './data/ffadventure.ini';
 
-# ���̃t�@�C���p�ݒ�
+# このファイル用設定
 $backgif = $shop_back;
 $midi = $shop_midi;
 
-# [�ݒ�͂����܂�]------------------------------------------------------------#
+# [設定はここまで]------------------------------------------------------------#
 
-# �����艺�́ACGI�̂킩����ȊO�́A�ύX���Ȃ��ق����ǂ��ł��B
+# これより下は、CGIのわかる方以外は、変更しないほうが良いです。
 
 #-----------------------------------------------------------------------------#
 if($mente) {
-	&error("���݃o�[�W�����A�b�v���ł��B���΂炭���҂����������B");
+	&error("現在バージョンアップ中です。しばらくお待ちください。");
 }
 
 &decode;
@@ -64,14 +64,14 @@ if($mente) {
 <form action="$script" method="post">
 <input type=hidden name=id value="$in{'id'}">
 <input type="hidden" name="mydata" value="$in{'mydata'}">
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
-#�h�o�A�h���X�ŃA�N�Z�X����
+#ＩＰアドレスでアクセス制限
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
-	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("�A�N�Z�X�ł��܂���I�I");}
+	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("アクセスできません！！");}
 }
 if($mode) { &$mode; }
 
@@ -80,7 +80,7 @@ if($mode) { &$mode; }
 exit;
 
 #--------#
-#  �h��  #
+#  宿屋  #
 #--------#
 sub yado {
 
@@ -92,14 +92,14 @@ sub yado {
 
 	&get_host;
 
-        #�h��v�Z
+        #宿代計算
         $yado_daix=int($yado_dai*$chara[18]);
 
 	$chara[15] = $chara[16];
 	$chara[19] -= $yado_daix;
 	$chara[28] = $boss;
 
-	if ($chara[19] < 0) { &error("����������܂���I$back_form"); }
+	if ($chara[19] < 0) { &error("お金が足りません！$back_form"); }
 
 	&chara_regist;
 	&unlock($lock_file,'CR');
@@ -125,10 +125,10 @@ sub yado {
 	&header;
 
 	print <<"EOM";
-<h1>�h��</h1>
+<h1>宿屋</h1>
 <hr size=0>
 <FONT SIZE=3>
-$yado_daix�f���g�p���A�̗͂�S�񕜂��܂����I</FONT>
+$yado_daixＧを使用し、体力を全回復しました！</FONT>
 EOM
 
 	&shopfooter;

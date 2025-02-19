@@ -1,50 +1,50 @@
 #!/usr/local/bin/perl --
 
 #------------------------------------------------------#
-#@–{ƒXƒNƒŠƒvƒg‚Ì’˜ìŒ ‚Í‰º‹L‚Ì3l‚É‚ ‚è‚Ü‚·B
-#‚¢‚©‚È‚é——R‚ª‚ ‚Á‚Ä‚à‚±‚Ì•\‹L‚ğíœ‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñ
-#ˆá”½‚ğ”­Œ©‚µ‚½ê‡AƒXƒNƒŠƒvƒg‚Ì—˜—p‚ğ’â~‚µ‚Ä‚¢‚½‚¾‚­
-#‚¾‚¯‚Å‚È‚­A‘R‚é‚×‚«ˆ’u‚ğ‚³‚¹‚Ä‚¢‚½‚¾‚«‚Ü‚·B
-#@FF ADVENTURE ‰üi v2.1
-#@programed by jun-k
-#@http://www5b.biglobe.ne.jp/~jun-kei/
-#@jun-kei@vanilla.freemail.ne.jp
+#ã€€æœ¬ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®è‘—ä½œæ¨©ã¯ä¸‹è¨˜ã®3äººã«ã‚ã‚Šã¾ã™ã€‚
+#ã„ã‹ãªã‚‹ç†ç”±ãŒã‚ã£ã¦ã‚‚ã“ã®è¡¨è¨˜ã‚’å‰Šé™¤ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“
+#é•åã‚’ç™ºè¦‹ã—ãŸå ´åˆã€ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®åˆ©ç”¨ã‚’åœæ­¢ã—ã¦ã„ãŸã ã
+#ã ã‘ã§ãªãã€ç„¶ã‚‹ã¹ãå‡¦ç½®ã‚’ã•ã›ã¦ã„ãŸã ãã¾ã™ã€‚
+#ã€€FF ADVENTURE æ”¹i v2.1
+#ã€€programed by jun-k
+#ã€€http://www5b.biglobe.ne.jp/~jun-kei/
+#ã€€jun-kei@vanilla.freemail.ne.jp
 #------------------------------------------------------#
-#@FF ADVENTURE v0.21
-#@programed by CUMRO
-#@http://cgi.members.interq.or.jp/sun/cumro/mm/
-#@cumro@sun.interq.or.jp
+#ã€€FF ADVENTURE v0.21
+#ã€€programed by CUMRO
+#ã€€http://cgi.members.interq.or.jp/sun/cumro/mm/
+#ã€€cumro@sun.interq.or.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(‰ü) v1.021
+#  FF ADVENTURE(æ”¹) v1.021
 #  remodeling by GUN
 #  http://www2.to/meeting/
 #  gun24@j-club.ne.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(‚¢‚­‰ü)
-#@remodeling by ‚¢‚­
-#@http://www.eriicu.com
-#@icu@kcc.zaq.ne.jp
+#  FF ADVENTURE(ã„ãæ”¹)
+#ã€€remodeling by ã„ã
+#ã€€http://www.eriicu.com
+#ã€€icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
-#--- [’ˆÓ–€] ------------------------------------------------#
-# 1. ‚±‚ÌƒXƒNƒŠƒvƒg‚ÍƒtƒŠ[ƒ\ƒtƒg‚Å‚·B‚±‚ÌƒXƒNƒŠƒvƒg‚ğg—p‚µ‚½ #
-#    ‚¢‚©‚È‚é‘¹ŠQ‚É‘Î‚µ‚ÄìÒ‚ÍˆêØ‚ÌÓ”C‚ğ•‰‚¢‚Ü‚¹‚ñB     	#
-# 2. İ’u‚ÉŠÖ‚·‚é¿–â‚ÍƒTƒ|[ƒgŒf¦”Â‚É‚¨Šè‚¢‚¢‚½‚µ‚Ü‚·B   	#
+#--- [æ³¨æ„äº‹é …] ------------------------------------------------#
+# 1. ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã§ã™ã€‚ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ä½¿ç”¨ã—ãŸ #
+#    ã„ã‹ãªã‚‹æå®³ã«å¯¾ã—ã¦ä½œè€…ã¯ä¸€åˆ‡ã®è²¬ä»»ã‚’è² ã„ã¾ã›ã‚“ã€‚     	#
+# 2. è¨­ç½®ã«é–¢ã™ã‚‹è³ªå•ã¯ã‚µãƒãƒ¼ãƒˆæ²ç¤ºæ¿ã«ãŠé¡˜ã„ã„ãŸã—ã¾ã™ã€‚   	#
 #    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi             #
-#    ’¼Úƒ[ƒ‹‚É‚æ‚é¿–â‚ÍˆêØ‚¨ó‚¯‚¢‚½‚µ‚Ä‚¨‚è‚Ü‚¹‚ñB   	#
+#    ç›´æ¥ãƒ¡ãƒ¼ãƒ«ã«ã‚ˆã‚‹è³ªå•ã¯ä¸€åˆ‡ãŠå—ã‘ã„ãŸã—ã¦ãŠã‚Šã¾ã›ã‚“ã€‚   	#
 #---------------------------------------------------------------#
-# “ú–{Œêƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
-require 'jcode.pl';
+# æ—¥æœ¬èªãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './jacode.pl';
 
-# ƒŒƒWƒXƒgƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
-require 'regist.pl';
+# ãƒ¬ã‚¸ã‚¹ãƒˆãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './regist.pl';
 
-# ƒAƒCƒeƒ€ƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
-require 'item.pl';
+# ã‚¢ã‚¤ãƒ†ãƒ ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './item.pl';
 
-# ‰Šúİ’èƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ
-require 'data/ffadventure.ini';
+# åˆæœŸè¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿
+require './data/ffadventure.ini';
 
-# ‚±‚Ìƒtƒ@ƒCƒ‹—pİ’è
+# ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ç”¨è¨­å®š
 $backgif = $shop_back;
 $midi = $shop_midi;
 
@@ -53,25 +53,25 @@ $midi = $shop_midi;
 <form action="$script_souko" method="post">
 <input type=hidden name=id value="$in{'id'}">
 <input type="hidden" name="mydata" value="$in{'mydata'}">
-<input type=submit class=btn value="–ß‚é">
+<input type=submit class=btn value="æˆ»ã‚‹">
 </form>
 EOM
 
-# [İ’è‚Í‚±‚±‚Ü‚Å]------------------------------------------------------------#
+# [è¨­å®šã¯ã“ã“ã¾ã§]------------------------------------------------------------#
 
-# ‚±‚ê‚æ‚è‰º‚ÍACGI‚Ì‚í‚©‚é•ûˆÈŠO‚ÍA•ÏX‚µ‚È‚¢‚Ù‚¤‚ª—Ç‚¢‚Å‚·B
+# ã“ã‚Œã‚ˆã‚Šä¸‹ã¯ã€CGIã®ã‚ã‹ã‚‹æ–¹ä»¥å¤–ã¯ã€å¤‰æ›´ã—ãªã„ã»ã†ãŒè‰¯ã„ã§ã™ã€‚
 
 #-----------------------------------------------------------------------------#
 if($mente) {
-	&error("Œ»İƒo[ƒWƒ‡ƒ“ƒAƒbƒv’†‚Å‚·B‚µ‚Î‚ç‚­‚¨‘Ò‚¿‚­‚¾‚³‚¢B");
+	&error("ç¾åœ¨ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—ä¸­ã§ã™ã€‚ã—ã°ã‚‰ããŠå¾…ã¡ãã ã•ã„ã€‚");
 }
 
 &decode;
 
-#‚h‚oƒAƒhƒŒƒX‚ÅƒAƒNƒZƒX§ŒÀ
+#ï¼©ï¼°ã‚¢ãƒ‰ãƒ¬ã‚¹ã§ã‚¢ã‚¯ã‚»ã‚¹åˆ¶é™
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
-	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("ƒAƒNƒZƒX‚Å‚«‚Ü‚¹‚ñII");}
+	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã›ã‚“ï¼ï¼");}
 }
 if($mode) { &$mode; }
 
@@ -80,7 +80,7 @@ if($mode) { &$mode; }
 exit;
 
 #----------------#
-#  ƒAƒCƒeƒ€•\¦  #
+#  ã‚¢ã‚¤ãƒ†ãƒ è¡¨ç¤º  #
 #----------------#
 sub item_view {
 
@@ -105,20 +105,20 @@ sub item_view {
 	&header;
 
 	print <<"EOM";
-<h1>ƒAƒCƒeƒ€‘qŒÉ</h1>
+<h1>ã‚¢ã‚¤ãƒ†ãƒ å€‰åº«</h1>
 <hr size=0>
 
 <FONT SIZE=3>
-<B>‘qŒÉŠÇ—l</B><BR>
-u
-$chara[4]—l‚É—a‚©‚Á‚Ä‚¢‚é“¹‹ï‚Í‰º‚Ì‚æ‚¤‚É‚È‚Á‚Ä‚¨‚è‚Ü‚·
-v
+<B>å€‰åº«ç®¡ç†äºº</B><BR>
+ã€Œ
+$chara[4]æ§˜ã«é ã‹ã£ã¦ã„ã‚‹é“å…·ã¯ä¸‹ã®ã‚ˆã†ã«ãªã£ã¦ãŠã‚Šã¾ã™
+ã€
 </FONT>
-<br><hr>Œ»İ‚Ì‘•”õ<br>
+<br><hr>ç¾åœ¨ã®è£…å‚™<br>
 <table>
 <tr>
-<td id="td2" class="b2">•Ší</td><td align="right" class="b2">$item[0]</td>
-<td id="td2" class="b2">UŒ‚—Í</td><td align="right" class="b2">$item[1]</td>
+<td id="td2" class="b2">æ­¦å™¨</td><td align="right" class="b2">$item[0]</td>
+<td id="td2" class="b2">æ”»æ’ƒåŠ›</td><td align="right" class="b2">$item[1]</td>
 EOM
 	if ($chara[24]) {
 	print <<"EOM";
@@ -127,7 +127,7 @@ EOM
 <input type=hidden name=id value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=mode value="item_hazusi">
-<input type=submit class=btn value="ŠO‚·">
+<input type=submit class=btn value="å¤–ã™">
 </td>
 </form>
 EOM
@@ -135,8 +135,8 @@ EOM
 	print <<"EOM";
 </tr>
 <tr>
-<td id="td2" class="b2">–h‹ï</td><td align="right" class="b2">$item[3]</td>
-<td id="td2" class="b2">–hŒä—Í</td><td align="right" class="b2">$item[4]</td>
+<td id="td2" class="b2">é˜²å…·</td><td align="right" class="b2">$item[3]</td>
+<td id="td2" class="b2">é˜²å¾¡åŠ›</td><td align="right" class="b2">$item[4]</td>
 EOM
 	if ($chara[29]) {
 	print <<"EOM";
@@ -145,7 +145,7 @@ EOM
 <input type=hidden name=id value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=mode value="def_hazusi">
-<input type=submit class=btn value="ŠO‚·">
+<input type=submit class=btn value="å¤–ã™">
 </td>
 </form>
 EOM
@@ -153,8 +153,8 @@ EOM
 	print <<"EOM";
 </tr>
 <tr>
-<td id="td2" class="b2">‘•ü•i</td><td align="right" class="b2">$item[6]</td>
-<td id="td2" class="b2">à–¾</td><td align="right" class="b2">$item[19]</td>
+<td id="td2" class="b2">è£…é£¾å“</td><td align="right" class="b2">$item[6]</td>
+<td id="td2" class="b2">èª¬æ˜</td><td align="right" class="b2">$item[19]</td>
 EOM
 	if ($chara[31]) {
 	print <<"EOM";
@@ -163,7 +163,7 @@ EOM
 <input type=hidden name=id value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=mode value="acs_hazusi">
-<input type=submit class=btn value="ŠO‚·">
+<input type=submit class=btn value="å¤–ã™">
 </td>
 </form>
 EOM
@@ -174,9 +174,9 @@ EOM
 <table width = "100%">
 <tr>
 <td width = "30%" align = "center" valign = "top">
-•Ší‘qŒÉ
+æ­¦å™¨å€‰åº«
 <table width = "98%">
-<tr><th></th><th></th><th nowrap>‚È‚Ü‚¦</th><th nowrap>UŒ‚—Í</th><th nowrap>‰¿Ši</th></tr>
+<tr><th></th><th></th><th nowrap>ãªã¾ãˆ</th><th nowrap>æ”»æ’ƒåŠ›</th><th nowrap>ä¾¡æ ¼</th></tr>
 EOM
 	$i = 0;
 	foreach (@souko_item) {
@@ -189,7 +189,7 @@ EOM
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=item_no value="$i">
 <input type=hidden name=mode value="item_soubi">
-<input type=submit class=btn value="‘•”õ‚·‚é">
+<input type=submit class=btn value="è£…å‚™ã™ã‚‹">
 </td>
 </form>
 <form action="$script_souko" method="post">
@@ -198,7 +198,7 @@ EOM
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=item_no value="$i">
 <input type=hidden name=mode value="item_delete">
-<input type=submit class=btn value="Ì‚Ä‚é">
+<input type=submit class=btn value="æ¨ã¦ã‚‹">
 </td>
 </form>
 <td class=b1 nowrap>$iname</td>
@@ -212,9 +212,9 @@ EOM
 </table>
 </td>
 <td width = "30%" align = "center" valign = "top">
-–h‹ï‘qŒÉ
+é˜²å…·å€‰åº«
 <table width = "98%">
-<tr><th></th><th></th><th nowrap>‚È‚Ü‚¦</th><th nowrap>–hŒä—Í</th><th nowrap>‰¿Ši</th></tr>
+<tr><th></th><th></th><th nowrap>ãªã¾ãˆ</th><th nowrap>é˜²å¾¡åŠ›</th><th nowrap>ä¾¡æ ¼</th></tr>
 EOM
 	$i = 0;
 	foreach (@souko_def) {
@@ -227,7 +227,7 @@ EOM
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=item_no value="$i">
 <input type=hidden name=mode value="def_soubi">
-<input type=submit class=btn value="‘•”õ‚·‚é">
+<input type=submit class=btn value="è£…å‚™ã™ã‚‹">
 </td>
 </form>
 <form action="$script_souko" method="post">
@@ -236,7 +236,7 @@ EOM
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=item_no value="$i">
 <input type=hidden name=mode value="def_delete">
-<input type=submit class=btn value="Ì‚Ä‚é">
+<input type=submit class=btn value="æ¨ã¦ã‚‹">
 </td>
 </form>
 <td class=b1 nowrap>$iname</td>
@@ -250,9 +250,9 @@ EOM
 </table>
 </td>
 <td width = "40%" align = "center" valign = "top">
-‘•ü•i‘qŒÉ
+è£…é£¾å“å€‰åº«
 <table width = "98%">
-<tr><th></th><th></th><th>‚È‚Ü‚¦</th><th>à–¾</th><th>‰¿Ši</th></tr>
+<tr><th></th><th></th><th>ãªã¾ãˆ</th><th>èª¬æ˜</th><th>ä¾¡æ ¼</th></tr>
 EOM
 
 	$i = 0;
@@ -266,7 +266,7 @@ EOM
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=item_no value="$i">
 <input type=hidden name=mode value="acs_soubi">
-<input type=submit class=btn value="‘•”õ‚·‚é">
+<input type=submit class=btn value="è£…å‚™ã™ã‚‹">
 </td>
 </form>
 <form action="$script_souko" method="post">
@@ -275,7 +275,7 @@ EOM
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=item_no value="$i">
 <input type=hidden name=mode value="acs_delete">
-<input type=submit class=btn value="Ì‚Ä‚é">
+<input type=submit class=btn value="æ¨ã¦ã‚‹">
 </td>
 </form>
 <td class=b1 nowrap>$ai_name</td>
@@ -299,7 +299,7 @@ EOM
 }
 
 #------------#
-#  •Ší‘•”õ  #
+#  æ­¦å™¨è£…å‚™  #
 #------------#
 sub item_soubi {
 	
@@ -358,7 +358,7 @@ sub item_soubi {
 
 	print <<"EOM";
 <FONT SIZE=3>
-<B>$iname‚ğ‘•”õ‚µ‚Ü‚µ‚½</B><BR>
+<B>$inameã‚’è£…å‚™ã—ã¾ã—ãŸ</B><BR>
 <hr size=0>
 EOM
 
@@ -370,7 +370,7 @@ EOM
 }
 
 #------------#
-#  •Ší‰ğœ  #
+#  æ­¦å™¨è§£é™¤  #
 #------------#
 sub item_hazusi {
 
@@ -393,7 +393,7 @@ sub item_hazusi {
 		($i_no,$i_name,$i_dmg,$i_gold,$ihit) = split(/<>/);
 		if($chara[24] eq "$i_no") { $hit=1;last; }
 	}
-	if(!$hit) { &error("‚»‚ñ‚ÈƒAƒCƒeƒ€‚Í‘¶İ‚µ‚Ü‚¹‚ñ"); }
+	if(!$hit) { &error("ãã‚“ãªã‚¢ã‚¤ãƒ†ãƒ ã¯å­˜åœ¨ã—ã¾ã›ã‚“"); }
 
 	$lock_file = "$lockfolder/sitem$in{'id'}.lock";
 	&lock($lock_file,'SI');
@@ -404,7 +404,7 @@ sub item_hazusi {
 	$souko_item_num = @souko_item;
 
 	if ($souko_item_num >= $item_max) {
-		&error("•Ší‘qŒÉ‚ª‚¢‚Á‚Ï‚¢‚Å‚·I$back_form");
+		&error("æ­¦å™¨å€‰åº«ãŒã„ã£ã±ã„ã§ã™ï¼$back_form");
 	}
 
 	push(@souko_item,"$i_no<>$i_name<>$i_dmg<>$i_gold<>$ihit<>\n");
@@ -434,7 +434,7 @@ sub item_hazusi {
 
 	print <<"EOM";
 <FONT SIZE=3>
-<B>$i_name‚ğŠO‚µ‚Ü‚µ‚½</B><BR>
+<B>$i_nameã‚’å¤–ã—ã¾ã—ãŸ</B><BR>
 <hr size=0>
 EOM
 
@@ -446,7 +446,7 @@ EOM
 }
 
 #----------------#
-#  •Ší‚ğÌ‚Ä‚é  #
+#  æ­¦å™¨ã‚’æ¨ã¦ã‚‹  #
 #----------------#
 sub item_delete {
 	
@@ -476,14 +476,14 @@ sub item_delete {
 
 		print << "EOM";
 <center>
-<h2>–{“–‚É$iname‚ğÌ‚Ä‚Ü‚·‚©H</h2>
+<h2>æœ¬å½“ã«$inameã‚’æ¨ã¦ã¾ã™ã‹ï¼Ÿ</h2>
 <form action="$script_souko" method="post">
 <input type=hidden name=id value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=item_no value="$in{'item_no'}">
 <input type=hidden name=kakunin value="1">
 <input type=hidden name=mode value="item_delete">
-<input type=submit class=btn value="Ì‚Ä‚é">
+<input type=submit class=btn value="æ¨ã¦ã‚‹">
 </form>
 </center>
 EOM
@@ -508,7 +508,7 @@ EOM
 	&header;
 
 	print <<"EOM";
-<h1>$iname‚ğÌ‚Ä‚Ü‚µ‚½</h1>
+<h1>$inameã‚’æ¨ã¦ã¾ã—ãŸ</h1>
 <hr size=0>
 EOM
 
@@ -522,7 +522,7 @@ EOM
 }
 
 #------------#
-#  –h‹ï‘•”õ  #
+#  é˜²å…·è£…å‚™  #
 #------------#
 sub def_soubi {
 	
@@ -581,7 +581,7 @@ sub def_soubi {
 
 	print <<"EOM";
 <FONT SIZE=3>
-<B>$iname‚ğ‘•”õ‚µ‚Ü‚µ‚½</B><BR>
+<B>$inameã‚’è£…å‚™ã—ã¾ã—ãŸ</B><BR>
 <hr size=0>
 EOM
 
@@ -593,7 +593,7 @@ EOM
 }
 
 #------------#
-#  –h‹ï‰ğœ  #
+#  é˜²å…·è§£é™¤  #
 #------------#
 sub def_hazusi {
 
@@ -616,7 +616,7 @@ sub def_hazusi {
 		($i_no,$i_name,$i_dmg,$i_gold,$ihit) = split(/<>/);
 		if($chara[29] eq "$i_no") { $hit=1;last; }
 	}
-	if(!$hit) { &error("‚»‚ñ‚ÈƒAƒCƒeƒ€‚Í‘¶İ‚µ‚Ü‚¹‚ñ"); }
+	if(!$hit) { &error("ãã‚“ãªã‚¢ã‚¤ãƒ†ãƒ ã¯å­˜åœ¨ã—ã¾ã›ã‚“"); }
 
 	$lock_file = "$lockfolder/sdefe$in{'id'}.lock";
 	&lock($lock_file,'SD');
@@ -627,7 +627,7 @@ sub def_hazusi {
 	$souko_item_num = @souko_item;
 
 	if ($souko_item_num >= $def_max) {
-		&error("–h‹ï‘qŒÉ‚ª‚¢‚Á‚Ï‚¢‚Å‚·I$back_form");
+		&error("é˜²å…·å€‰åº«ãŒã„ã£ã±ã„ã§ã™ï¼$back_form");
 	}
 
 	push(@souko_item,"$i_no<>$i_name<>$i_dmg<>$i_gold<>$ihit<>\n");
@@ -657,7 +657,7 @@ sub def_hazusi {
 
 	print <<"EOM";
 <FONT SIZE=3>
-<B>$i_name‚ğŠO‚µ‚Ü‚µ‚½</B><BR>
+<B>$i_nameã‚’å¤–ã—ã¾ã—ãŸ</B><BR>
 <hr size=0>
 EOM
 
@@ -669,7 +669,7 @@ EOM
 }
 
 #----------------#
-#  •Ší‚ğÌ‚Ä‚é  #
+#  æ­¦å™¨ã‚’æ¨ã¦ã‚‹  #
 #----------------#
 sub def_delete {
 	
@@ -699,14 +699,14 @@ sub def_delete {
 
 		print << "EOM";
 <center>
-<h2>–{“–‚É$iname‚ğÌ‚Ä‚Ü‚·‚©H</h2>
+<h2>æœ¬å½“ã«$inameã‚’æ¨ã¦ã¾ã™ã‹ï¼Ÿ</h2>
 <form action="$script_souko" method="post">
 <input type=hidden name=id value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=item_no value="$in{'item_no'}">
 <input type=hidden name=kakunin value="1">
 <input type=hidden name=mode value="def_delete">
-<input type=submit class=btn value="Ì‚Ä‚é">
+<input type=submit class=btn value="æ¨ã¦ã‚‹">
 </form>
 </center>
 EOM
@@ -731,7 +731,7 @@ EOM
 	&header;
 
 	print <<"EOM";
-<h1>$iname‚ğÌ‚Ä‚Ü‚µ‚½</h1>
+<h1>$inameã‚’æ¨ã¦ã¾ã—ãŸ</h1>
 <hr size=0>
 EOM
 
@@ -745,7 +745,7 @@ EOM
 }
 
 #------------#
-#  ‘•ü‘•”õ  #
+#  è£…é£¾è£…å‚™  #
 #------------#
 sub acs_soubi {
 	
@@ -806,7 +806,7 @@ sub acs_soubi {
 
 	print <<"EOM";
 <FONT SIZE=3>
-<B>$acs_data[1]‚ğ‘•”õ‚µ‚Ü‚µ‚½</B><BR>
+<B>$acs_data[1]ã‚’è£…å‚™ã—ã¾ã—ãŸ</B><BR>
 <hr size=0>
 EOM
 
@@ -818,7 +818,7 @@ EOM
 }
 
 #------------#
-#  –h‹ï‰ğœ  #
+#  é˜²å…·è§£é™¤  #
 #------------#
 sub acs_hazusi {
 
@@ -842,7 +842,7 @@ sub acs_hazusi {
 		@acs_data = split(/<>/);
 		if($chara[31] eq "$acs_data[0]") { $hit=1;last; }
 	}
-	if(!$hit) { &error("‚»‚ñ‚ÈƒAƒCƒeƒ€‚Í‘¶İ‚µ‚Ü‚¹‚ñ"); }
+	if(!$hit) { &error("ãã‚“ãªã‚¢ã‚¤ãƒ†ãƒ ã¯å­˜åœ¨ã—ã¾ã›ã‚“"); }
 
 	$lock_file = "$lockfolder/acsesa$in{'id'}.lock";
 	&lock($lock_file,'SA');
@@ -853,7 +853,7 @@ sub acs_hazusi {
 	$souko_item_num = @souko_item;
 
 	if ($souko_item_num >= $def_max) {
-		&error("–h‹ï‘qŒÉ‚ª‚¢‚Á‚Ï‚¢‚Å‚·I$back_form");
+		&error("é˜²å…·å€‰åº«ãŒã„ã£ã±ã„ã§ã™ï¼$back_form");
 	}
 
 	push(@souko_item,"$acs_array");
@@ -882,7 +882,7 @@ sub acs_hazusi {
 
 	print <<"EOM";
 <FONT SIZE=3>
-<B>$acs_data[1]‚ğŠO‚µ‚Ü‚µ‚½</B><BR>
+<B>$acs_data[1]ã‚’å¤–ã—ã¾ã—ãŸ</B><BR>
 <hr size=0>
 EOM
 
@@ -894,7 +894,7 @@ EOM
 }
 
 #----------------#
-#  •Ší‚ğÌ‚Ä‚é  #
+#  æ­¦å™¨ã‚’æ¨ã¦ã‚‹  #
 #----------------#
 sub acs_delete {
 	
@@ -924,14 +924,14 @@ sub acs_delete {
 
 		print << "EOM";
 <center>
-<h2>–{“–‚É$iname‚ğÌ‚Ä‚Ü‚·‚©H</h2>
+<h2>æœ¬å½“ã«$inameã‚’æ¨ã¦ã¾ã™ã‹ï¼Ÿ</h2>
 <form action="$script_souko" method="post">
 <input type=hidden name=id value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=item_no value="$in{'item_no'}">
 <input type=hidden name=kakunin value="1">
 <input type=hidden name=mode value="acs_delete">
-<input type=submit class=btn value="Ì‚Ä‚é">
+<input type=submit class=btn value="æ¨ã¦ã‚‹">
 </form>
 </center>
 EOM
@@ -956,7 +956,7 @@ EOM
 	&header;
 
 	print <<"EOM";
-<h1>$iname‚ğÌ‚Ä‚Ü‚µ‚½</h1>
+<h1>$inameã‚’æ¨ã¦ã¾ã—ãŸ</h1>
 <hr size=0>
 EOM
 

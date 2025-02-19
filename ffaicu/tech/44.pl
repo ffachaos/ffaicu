@@ -2,8 +2,8 @@ sub hissatu{
 	if ($waza_ritu > int(rand(120))) {
 		$dmg1 += ($chara[8] + $chara[33]) * int(rand(360));
 		$hpplus1 = int($dmg1 / 10);
-		$com1 .= "<font class=\"dark\" size=4>•KE‹ZIIƒ_[ƒNEƒCƒŠƒ…[ƒWƒ‡ƒ“III</font><br>";
-		$kaihuku1 .= "$kname ‚Ì‚g‚o‚ª $hpplus1 ‰ñ•œ‚µ‚½Iô";
+		$com1 .= "<font class=\"dark\" size=4>å¿…æ®ºæŠ€ï¼ï¼ãƒ€ãƒ¼ã‚¯ãƒ»ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ï¼ï¼ï¼</font><br>";
+		$kaihuku1 .= "$kname ã®ï¼¨ï¼°ãŒ $hpplus1 å›å¾©ã—ãŸï¼â™ª";
 	}
 }
 sub atowaza{}

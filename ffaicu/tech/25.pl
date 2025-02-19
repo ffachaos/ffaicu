@@ -3,7 +3,7 @@ sub hissatu{
 		$sake1 += 999;
 		$sake2 -= 999999;
 		$dmg1+= (($chara[7] + $chara[33]) * int(rand(60)));
-		$com1 .="<font class=\"white\" size=5>ƒnƒCƒEƒCƒ“ƒhII</font><br>";
+		$com1 .="<font class=\"white\" size=5>ãƒã‚¤ã‚¦ã‚¤ãƒ³ãƒ‰ï¼ï¼</font><br>";
 	}
 }
 sub atowaza{}

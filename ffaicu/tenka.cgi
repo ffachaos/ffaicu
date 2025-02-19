@@ -1,77 +1,77 @@
 #!/usr/local/bin/perl --
 
 #------------------------------------------------------#
-#@–{ƒXƒNƒŠƒvƒg‚Ì’˜ìŒ ‚Í‰º‹L‚Ì3l‚É‚ ‚è‚Ü‚·B
-#‚¢‚©‚È‚é——R‚ª‚ ‚Á‚Ä‚à‚±‚Ì•\‹L‚ğíœ‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñ
-#ˆá”½‚ğ”­Œ©‚µ‚½ê‡AƒXƒNƒŠƒvƒg‚Ì—˜—p‚ğ’â~‚µ‚Ä‚¢‚½‚¾‚­
-#‚¾‚¯‚Å‚È‚­A‘R‚é‚×‚«ˆ’u‚ğ‚³‚¹‚Ä‚¢‚½‚¾‚«‚Ü‚·B
-#@FF ADVENTURE ‰üi v2.1
-#@programed by jun-k
-#@http://www5b.biglobe.ne.jp/~jun-kei/
-#@jun-kei@vanilla.freemail.ne.jp
+#ã€€æœ¬ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®è‘—ä½œæ¨©ã¯ä¸‹è¨˜ã®3äººã«ã‚ã‚Šã¾ã™ã€‚
+#ã„ã‹ãªã‚‹ç†ç”±ãŒã‚ã£ã¦ã‚‚ã“ã®è¡¨è¨˜ã‚’å‰Šé™¤ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“
+#é•åã‚’ç™ºè¦‹ã—ãŸå ´åˆã€ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®åˆ©ç”¨ã‚’åœæ­¢ã—ã¦ã„ãŸã ã
+#ã ã‘ã§ãªãã€ç„¶ã‚‹ã¹ãå‡¦ç½®ã‚’ã•ã›ã¦ã„ãŸã ãã¾ã™ã€‚
+#ã€€FF ADVENTURE æ”¹i v2.1
+#ã€€programed by jun-k
+#ã€€http://www5b.biglobe.ne.jp/~jun-kei/
+#ã€€jun-kei@vanilla.freemail.ne.jp
 #------------------------------------------------------#
-#@FF ADVENTURE v0.21
-#@programed by CUMRO
-#@http://cgi.members.interq.or.jp/sun/cumro/mm/
-#@cumro@sun.interq.or.jp
+#ã€€FF ADVENTURE v0.21
+#ã€€programed by CUMRO
+#ã€€http://cgi.members.interq.or.jp/sun/cumro/mm/
+#ã€€cumro@sun.interq.or.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(‰ü) v1.021
+#  FF ADVENTURE(æ”¹) v1.021
 #  remodeling by GUN
 #  http://www2.to/meeting/
 #  gun24@j-club.ne.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(‚¢‚­‰ü)
-#@remodeling by ‚¢‚­
-#@http://www.eriicu.com
-#@icu@kcc.zaq.ne.jp
+#  FF ADVENTURE(ã„ãæ”¹)
+#ã€€remodeling by ã„ã
+#ã€€http://www.eriicu.com
+#ã€€icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
 
-#--- [’ˆÓ–€] ------------------------------------------------#
-# 1. ‚±‚ÌƒXƒNƒŠƒvƒg‚ÍƒtƒŠ[ƒ\ƒtƒg‚Å‚·B‚±‚ÌƒXƒNƒŠƒvƒg‚ğg—p‚µ‚½	#
-#    ‚¢‚©‚È‚é‘¹ŠQ‚É‘Î‚µ‚ÄìÒ‚ÍˆêØ‚ÌÓ”C‚ğ•‰‚¢‚Ü‚¹‚ñB		#
-# 2. İ’u‚ÉŠÖ‚·‚é¿–â‚ÍƒTƒ|[ƒgŒf¦”Â‚É‚¨Šè‚¢‚¢‚½‚µ‚Ü‚·B	#
-#    ’¼Úƒ[ƒ‹‚É‚æ‚é¿–â‚ÍˆêØ‚¨ó‚¯‚¢‚½‚µ‚Ä‚¨‚è‚Ü‚¹‚ñB	#
-# 3. İ’u‚µ‚½‚çŠF‚³‚ñ‚ÉŠy‚µ‚ñ‚Å‚à‚ç‚¤ˆ×‚É‚àAWebƒŠƒ“ƒO‚Ö‚º‚ĞQ‰Á#
-#    ‚µ‚Ä‚­‚¾‚³‚¢m(__)m						#
+#--- [æ³¨æ„äº‹é …] ------------------------------------------------#
+# 1. ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã§ã™ã€‚ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ä½¿ç”¨ã—ãŸ	#
+#    ã„ã‹ãªã‚‹æå®³ã«å¯¾ã—ã¦ä½œè€…ã¯ä¸€åˆ‡ã®è²¬ä»»ã‚’è² ã„ã¾ã›ã‚“ã€‚		#
+# 2. è¨­ç½®ã«é–¢ã™ã‚‹è³ªå•ã¯ã‚µãƒãƒ¼ãƒˆæ²ç¤ºæ¿ã«ãŠé¡˜ã„ã„ãŸã—ã¾ã™ã€‚	#
+#    ç›´æ¥ãƒ¡ãƒ¼ãƒ«ã«ã‚ˆã‚‹è³ªå•ã¯ä¸€åˆ‡ãŠå—ã‘ã„ãŸã—ã¦ãŠã‚Šã¾ã›ã‚“ã€‚	#
+# 3. è¨­ç½®ã—ãŸã‚‰çš†ã•ã‚“ã«æ¥½ã—ã‚“ã§ã‚‚ã‚‰ã†ç‚ºã«ã‚‚ã€Webãƒªãƒ³ã‚°ã¸ãœã²å‚åŠ #
+#    ã—ã¦ãã ã•ã„m(__)m						#
 #     http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi 		#
 #---------------------------------------------------------------#
-# “ú–{Œêƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
-require 'jcode.pl';
+# æ—¥æœ¬èªãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './jacode.pl';
 
-# ƒŒƒWƒXƒgƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
-require 'regist.pl';
+# ãƒ¬ã‚¸ã‚¹ãƒˆãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './regist.pl';
 
-# í“¬ƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
-require 'battle.pl';
-# ƒ`ƒƒƒ“ƒví—pƒ‰ƒCƒuƒ‰ƒŠ“Ç‚İ‚İ
-require 'wbattle.pl';
+# æˆ¦é—˜ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './battle.pl';
+# ãƒãƒ£ãƒ³ãƒ—æˆ¦ç”¨ãƒ©ã‚¤ãƒ–ãƒ©ãƒªèª­ã¿è¾¼ã¿
+require './wbattle.pl';
 
-# ‰Šúİ’èƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ
-require 'data/ffadventure.ini';
+# åˆæœŸè¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿
+require './data/ffadventure.ini';
 
-# ‚±‚Ìƒtƒ@ƒCƒ‹—pİ’è
+# ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ç”¨è¨­å®š
 $backgif = $tennka_back;
 $midi = $tennka_midi;
 
 #================================================================#
-#„¬„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„­#
-#„« ‚±‚ê‚æ‚è‰º‚ÍCGI‚É©M‚Ì‚ ‚é•ûˆÈŠO‚Íˆµ‚í‚È‚¢‚Ù‚¤‚ª–³“ï‚Å‚·@„«#
-#„¯„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„®#
+#â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”“#
+#â”ƒ ã“ã‚Œã‚ˆã‚Šä¸‹ã¯CGIã«è‡ªä¿¡ã®ã‚ã‚‹æ–¹ä»¥å¤–ã¯æ‰±ã‚ãªã„ã»ã†ãŒç„¡é›£ã§ã™ã€€â”ƒ#
+#â”—â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”›#
 #================================================================#
 
 #--------------#
-#@ƒƒCƒ“ˆ—@#
+#ã€€ãƒ¡ã‚¤ãƒ³å‡¦ç†ã€€#
 #--------------#
 if($mente) {
-	&error("Œ»İƒo[ƒWƒ‡ƒ“ƒAƒbƒv’†‚Å‚·B‚µ‚Î‚ç‚­‚¨‘Ò‚¿‚­‚¾‚³‚¢B");
+	&error("ç¾åœ¨ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—ä¸­ã§ã™ã€‚ã—ã°ã‚‰ããŠå¾…ã¡ãã ã•ã„ã€‚");
 }
 
 &decode;
 
-#‚h‚oƒAƒhƒŒƒX‚ÅƒAƒNƒZƒX§ŒÀ
+#ï¼©ï¼°ã‚¢ãƒ‰ãƒ¬ã‚¹ã§ã‚¢ã‚¯ã‚»ã‚¹åˆ¶é™
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
-	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("ƒAƒNƒZƒX‚Å‚«‚Ü‚¹‚ñII");}
+	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã›ã‚“ï¼ï¼");}
 }
 
 if ($mode) { &$mode; }
@@ -81,7 +81,7 @@ if ($mode) { &$mode; }
 exit;
 
 #------------#
-#  ó•t‰æ–Ê  #
+#  å—ä»˜ç”»é¢  #
 #------------#
 sub log_in{
 
@@ -147,7 +147,7 @@ sub log_in{
 			$tenka_su = $tenka_ninzu;
 			$tenka_hit = 1;
 		}
-		# ”z—ñ19”Ô–Ú‚Åƒ\[ƒg
+		# é…åˆ—19ç•ªç›®ã§ã‚½ãƒ¼ãƒˆ
 		@tmp = map {(split /<>/)[18]} @temp_member;
 		@RANKING = @temp_member[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
@@ -181,31 +181,31 @@ sub log_in{
 	&header;
 
 	print << "EOM";
-<h1>“V‰ºˆê•“¹‰ï</h1>
+<h1>å¤©ä¸‹ä¸€æ­¦é“ä¼š</h1>
 <hr size=0>
 <FONT SIZE=3>
-<B>i‰ïÒ</B><BR>
-u
-‚æ‚¤‚±‚»I“V‰ºˆê•“¹‰ï‚ÖI<br>
-‚±‚±‚Í‚±‚Ì$main_title‚Å‚ÌÅ‹­‚ÌƒvƒŒƒCƒ„[‚½‚¿‚ğŸ‚¿”²‚¢‚Ä‚¢‚­•‘‘ä‚Æ‚È‚Á‚Ä‚¢‚Ü‚·I<br>
-‚ ‚È‚½‚Í$chara[4]‚³‚ñ‚Å‚·‚ËI<br>
-’§í‚µ‚Ä‚İ‚Ü‚·‚©H
-v
+<B>å¸ä¼šè€…</B><BR>
+ã€Œ
+ã‚ˆã†ã“ãï¼å¤©ä¸‹ä¸€æ­¦é“ä¼šã¸ï¼<br>
+ã“ã“ã¯ã“ã®$main_titleã§ã®æœ€å¼·ã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ãŸã¡ã‚’å‹ã¡æŠœã„ã¦ã„ãèˆå°ã¨ãªã£ã¦ã„ã¾ã™ï¼<br>
+ã‚ãªãŸã¯$chara[4]ã•ã‚“ã§ã™ã­ï¼<br>
+æŒ‘æˆ¦ã—ã¦ã¿ã¾ã™ã‹ï¼Ÿ
+ã€
 <table width = "80%">
 <tr>
 <td width = "50%" align = "left" valign = "top">
 <table width = "95%">
 <tr>
 <td align="center" id="td2" class="b2" colspan = "2">
-“V‰ºˆê•“¹‰ïƒƒ“ƒo[ƒŠƒXƒg($ztimeŠÔ‘OXV)
+å¤©ä¸‹ä¸€æ­¦é“ä¼šãƒ¡ãƒ³ãƒãƒ¼ãƒªã‚¹ãƒˆ($ztimeæ™‚é–“å‰æ›´æ–°)
 </td>
 </tr>
 <tr>
 <td align="right" class="b2">
-–¼‘O
+åå‰
 </td>
 <td align="right" class="b2">
-ƒŒƒxƒ‹
+ãƒ¬ãƒ™ãƒ«
 </td>
 </tr>
 EOM
@@ -233,18 +233,18 @@ EOM
 <table width = "95%">
 <tr>
 <td align="center" id="td2" class="b2" colspan = "3">
-‚±‚±Å‹ß‚Ì§”eÒ
+ã“ã“æœ€è¿‘ã®åˆ¶è¦‡è€…
 </td>
 </tr>
 <tr>
 <td align="right" class="b2">
-–¼‘O
+åå‰
 </td>
 <td align="right" class="b2">
-ƒŒƒxƒ‹
+ãƒ¬ãƒ™ãƒ«
 </td>
 <td align="right" class="b2">
-“ú
+æ—¥æ™‚
 </td>
 </tr>
 EOM
@@ -272,7 +272,7 @@ EOM
 			print << "EOM";
 <tr>
 <td align="center" class="b2" colspan ="2">
-‚»‚Ì‚æ‚¤‚È–ÒÒ‚Í‚Ü‚¾‚¢‚Ü‚¹‚ñ
+ãã®ã‚ˆã†ãªçŒ›è€…ã¯ã¾ã ã„ã¾ã›ã‚“
 </td>
 </tr>
 EOM
@@ -282,7 +282,7 @@ EOM
 </td></tr></table>
 EOM
 	if ($chara[28] != $boss) {
-		print 'ˆê“xAƒ`ƒƒƒ“ƒv‚É’§í‚µ‚Ä‰º‚³‚¢';
+		print 'ä¸€åº¦ã€ãƒãƒ£ãƒ³ãƒ—ã«æŒ‘æˆ¦ã—ã¦ä¸‹ã•ã„';
 	} elsif (!$tenka_hit) {
 		print << "EOM";
 <form action="$script_tenka" method="POST">
@@ -290,18 +290,18 @@ EOM
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type="hidden" name="no" value="1">
-<input type="submit" class="btn" value="“V‰ºˆê•“¹‰ï‚É’§í‚·‚é">
+<input type="submit" class="btn" value="å¤©ä¸‹ä¸€æ­¦é“ä¼šã«æŒ‘æˆ¦ã™ã‚‹">
 </form>
 EOM
 	} else {
-		print "l”‚ª‘«‚è‚Ü‚¹‚ñ";
+		print "äººæ•°ãŒè¶³ã‚Šã¾ã›ã‚“";
 	}
 	print << "EOM";
 <form action="$script" method="POST">
 <input type="hidden" name="mode" value="log_in">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type="submit" class="btn" value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type="submit" class="btn" value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 
@@ -312,7 +312,7 @@ EOM
 }
 
 #------------#
-#  í“¬‰æ–Ê  #
+#  æˆ¦é—˜ç”»é¢  #
 #------------#
 sub battle {
 
@@ -339,14 +339,14 @@ sub battle {
 	$aite = $tenka_su + $chara[28] - $boss - 1;
 
 	if ($in{'no'} != $tenka_su - $aite) {
-		&error("ƒLƒƒƒ‰ƒf[ƒ^•s®‡");
+		&error("ã‚­ãƒ£ãƒ©ãƒ‡ãƒ¼ã‚¿ä¸æ•´åˆ");
 	}
 
 	@winner_data = split(/<>/,$tenka_member[$aite]);
 
 	&winner_data;
 
-	# Ü‹à‚ÌŒˆ’è
+	# è³é‡‘ã®æ±ºå®š
 	$gold = int(rand($syoukin)+1) * int($winner[17]);
 
 	&item_load;
@@ -412,11 +412,11 @@ sub battle {
 
 	$next_winner = $chara[28] + $tenka_su - $boss;
 
-	# •“¹‰ï§”e
+	# æ­¦é“ä¼šåˆ¶è¦‡
 	if ($win == 1 && $next_winner == 0) {
 		&get_time($chara[27]);
 
-		&all_message("$chara[4]‚³‚ñ‚ª“V‰ºˆê•“¹‰ï‚ğ§”e‚³‚ê‚Ü‚µ‚½I");
+		&all_message("$chara[4]ã•ã‚“ãŒå¤©ä¸‹ä¸€æ­¦é“ä¼šã‚’åˆ¶è¦‡ã•ã‚Œã¾ã—ãŸï¼");
 
 		$lock_file = "$lockfolder/tnk.lock";
 		&lock($lock_file,'TENKA');
@@ -440,9 +440,9 @@ sub battle {
 	$juni = $tenka_su - $in{'no'} + 1;
 
 		print << "EOM";
-<font class=yellow size=5>“V‰ºˆê•“¹‰ï@‘æ<font class=red>$in{'no'}</font>‰ñíII</font><br>
-¦ƒŒƒxƒ‹ãˆÊ$tenka_sul‚Ì‚¤‚¿‘æ$juniˆÊ‚ÌƒLƒƒƒ‰ƒNƒ^[‚Æ‚Ìí“¬<br>
-<h1>$chara[4]‚ÍA$winner[3]‚Éí‚¢‚ğ’§‚ñ‚¾II</h1>
+<font class=yellow size=5>å¤©ä¸‹ä¸€æ­¦é“ä¼šã€€ç¬¬<font class=red>$in{'no'}</font>å›æˆ¦ï¼ï¼</font><br>
+â€»ãƒ¬ãƒ™ãƒ«ä¸Šä½$tenka_suäººã®ã†ã¡ç¬¬$juniä½ã®ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã¨ã®æˆ¦é—˜<br>
+<h1>$chara[4]ã¯ã€$winner[3]ã«æˆ¦ã„ã‚’æŒ‘ã‚“ã ï¼ï¼</h1>
 <hr size=0><br>
 EOM
 	$in{'no'}++;
@@ -455,20 +455,20 @@ EOM
 	if ($win) {
 		if ($next_winner != 0) {
 			print << "EOM";
-$comment<br>$chara[4]‚ÍA<b>$exp</b>‚ÌŒoŒ±’l‚ğè‚É“ü‚ê‚½B$winner[3]‚ÌÜ‹à<b>$gold</b>Gè‚É“ü‚ê‚½B<br>
+$comment<br>$chara[4]ã¯ã€<b>$exp</b>ã®çµŒé¨“å€¤ã‚’æ‰‹ã«å…¥ã‚ŒãŸã€‚$winner[3]ã®è³é‡‘<b>$gold</b>Gæ‰‹ã«å…¥ã‚ŒãŸã€‚<br>
 <form action="$script_tenka" method="POST">
 <input type="hidden" name="mode" value="battle">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$new_chara">
 <input type="hidden" name="no" value="$in{'no'}">
-<input type="submit" class="btn" value="Ÿ‚Ìí‚¢‚Ö">
+<input type="submit" class="btn" value="æ¬¡ã®æˆ¦ã„ã¸">
 </form>
 EOM
 		} else {
-		print "<font class=yellow>$comment<br>$chara[4]‚ÍA“V‰ºˆê•“¹‰ï‚Å—DŸ‚µ‚½II</font><b>$exp</b>‚ÌŒoŒ±’l‚ğè‚É“ü‚ê‚½B—DŸÜ‹à<b>$gold</b>Gè‚É“ü‚ê‚½B<br>\n";
+		print "<font class=yellow>$comment<br>$chara[4]ã¯ã€å¤©ä¸‹ä¸€æ­¦é“ä¼šã§å„ªå‹ã—ãŸï¼ï¼</font><b>$exp</b>ã®çµŒé¨“å€¤ã‚’æ‰‹ã«å…¥ã‚ŒãŸã€‚å„ªå‹è³é‡‘<b>$gold</b>Gæ‰‹ã«å…¥ã‚ŒãŸã€‚<br>\n";
 		}
 	} else {
-		print "$comment<br>$chara[4]‚ÍA<b>$exp</b>‚ÌŒoŒ±’l‚ğè‚É“ü‚ê‚½B‚¨‹à‚ª”¼•ª‚É‚È‚Á‚½EEE(—Ü)<br>\n";
+		print "$comment<br>$chara[4]ã¯ã€<b>$exp</b>ã®çµŒé¨“å€¤ã‚’æ‰‹ã«å…¥ã‚ŒãŸã€‚ãŠé‡‘ãŒåŠåˆ†ã«ãªã£ãŸãƒ»ãƒ»ãƒ»(æ¶™)<br>\n";
 	}
 
 	$new_chara =~ s/</&lt;/g;
@@ -479,7 +479,7 @@ EOM
 <input type="hidden" name="mode" value="log_in">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$new_chara">
-<input type="submit" class="btn" value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type="submit" class="btn" value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 
@@ -489,7 +489,7 @@ EOM
 }
 
 #----------------#
-#  ‘Ò‚¿ŠÔ•\¦  #
+#  å¾…ã¡æ™‚é–“è¡¨ç¤º  #
 #----------------#
 sub tenka_error {
 
@@ -513,22 +513,22 @@ sub tenka_error {
 
        print <<"EOM";
 <center><hr width=400>
-<font color=red><B>‚Ü‚¾í“¬‚Å‚«‚Ü‚¹‚ñI</B></font><br>
+<font color=red><B>ã¾ã æˆ¦é—˜ã§ãã¾ã›ã‚“ï¼</B></font><br>
 <FORM NAME="form1">
-‚ ‚Æ<INPUT TYPE="text" NAME="clock" SIZE="3">•b‘Ò‚Á‚Ä‰º‚³‚¢
+ã‚ã¨<INPUT TYPE="text" NAME="clock" SIZE="3">ç§’å¾…ã£ã¦ä¸‹ã•ã„
 </FORM>
 <form action="$script_tenka" method="POST">
 <input type="hidden" name="mode" value="battle">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$in{'mydata'}">
 <input type="hidden" name="no" value="$in{'no'}">
-<input type="submit" class="btn" value="Ÿ‚Ìí‚¢‚Ö">
+<input type="submit" class="btn" value="æ¬¡ã®æˆ¦ã„ã¸">
 </form>
 <form action="$script" method="POST">
 <input type="hidden" name="mode" value="log_in">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$in{'mydata'}">
-<input type="submit" class="btn" value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type="submit" class="btn" value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 <hr width=400>
 </center>

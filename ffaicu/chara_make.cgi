@@ -1,81 +1,81 @@
 #!/usr/local/bin/perl --
 
 #------------------------------------------------------#
-#�@�{�X�N���v�g�̒��쌠��T.CUMRO����ɂ���܂��B
-#�����Ȃ闝�R�������Ă����̕\�L���폜���邱�Ƃ͂ł��܂���
-#�ᔽ�𔭌������ꍇ�A�X�N���v�g�̗��p���~���Ă�������
-#�����łȂ��A�R��ׂ����u�������Ă��������܂��B
-#�@FF ADVENTURE ��i v2.1
-#�@programed by jun-k
-#�@http://www5b.biglobe.ne.jp/~jun-kei/
-#�@jun-kei@vanilla.freemail.ne.jp
+#　本スクリプトの著作権はT.CUMROさんにあります。
+#いかなる理由があってもこの表記を削除することはできません
+#違反を発見した場合、スクリプトの利用を停止していただく
+#だけでなく、然るべき処置をさせていただきます。
+#　FF ADVENTURE 改i v2.1
+#　programed by jun-k
+#　http://www5b.biglobe.ne.jp/~jun-kei/
+#　jun-kei@vanilla.freemail.ne.jp
 #------------------------------------------------------#
-#�@FF ADVENTURE v0.21
-#�@programed by CUMRO
-#�@http://cgi.members.interq.or.jp/sun/cumro/mm/
-#�@cumro@sun.interq.or.jp
+#　FF ADVENTURE v0.21
+#　programed by CUMRO
+#　http://cgi.members.interq.or.jp/sun/cumro/mm/
+#　cumro@sun.interq.or.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(��) v1.021
+#  FF ADVENTURE(改) v1.021
 #  remodeling by GUN
 #  http://www2.to/meeting/
 #  gun24@j-club.ne.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(������)
-#�@remodeling by ����
-#�@http://www.eriicu.com
-#�@icu@kcc.zaq.ne.jp
+#  FF ADVENTURE(いく改)
+#　remodeling by いく
+#　http://www.eriicu.com
+#　icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
 
-#--- [���ӎ���] ------------------------------------------------#
-# 1. ���̃X�N���v�g�̓t���[�\�t�g�ł��B���̃X�N���v�g���g�p����	#
-#    �����Ȃ鑹�Q�ɑ΂��č�҂͈�؂̐ӔC�𕉂��܂���B		#
-# 2. �ݒu�Ɋւ��鎿��̓T�|�[�g�f���ɂ��肢�������܂��B	#
-#    ���ڃ��[���ɂ�鎿��͈�؂��󂯂������Ă���܂���B	#
-# 3. �ݒu������F����Ɋy����ł��炤�ׂɂ��AWeb�����O�ւ��ЎQ��#
-#    ���Ă�������m(__)m						#
-#    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi�@�@�@�@�@�@�@�@�@�@�@#
+#--- [注意事項] ------------------------------------------------#
+# 1. このスクリプトはフリーソフトです。このスクリプトを使用した	#
+#    いかなる損害に対して作者は一切の責任を負いません。		#
+# 2. 設置に関する質問はサポート掲示板にお願いいたします。	#
+#    直接メールによる質問は一切お受けいたしておりません。	#
+# 3. 設置したら皆さんに楽しんでもらう為にも、Webリングへぜひ参加#
+#    してくださいm(__)m						#
+#    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi　　　　　　　　　　　#
 #---------------------------------------------------------------#
 
-# ���{�ꃉ�C�u�����̓ǂݍ���
-require 'jcode.pl';
+# 日本語ライブラリの読み込み
+require './jacode.pl';
 
-# ���W�X�g���C�u�����̓ǂݍ���
-require 'regist.pl';
+# レジストライブラリの読み込み
+require './regist.pl';
 
-# �A�C�e�����C�u�����̓ǂݍ���
-require 'item.pl';
+# アイテムライブラリの読み込み
+require './item.pl';
 
-# �����ݒ�t�@�C���̓ǂݍ���
-require 'data/ffadventure.ini';
+# 初期設定ファイルの読み込み
+require './data/ffadventure.ini';
 
-# ������Ԃ̐ݒ�(������Ԃŏ������Ă��镐��E�h��B0�́u�Ȃ��v�ɂȂ�܂�)
-$first_item = 0;	# ����NO
-$first_def = 0;		# �h��NO
-$first_acs = 0;		# �����iNO
+# 初期状態の設定(初期状態で所持している武器・防具。0は「なし」になります)
+$first_item = 0;	# 武器NO
+$first_def = 0;		# 防具NO
+$first_acs = 0;		# 装飾品NO
 
-# ���̃t�@�C���p�ݒ�
+# このファイル用設定
 $backgif = $sts_back;
 $midi = $sts_midi;
 
 #================================================================#
-#����������������������������������������������������������������#
-#�� �����艺��CGI�Ɏ��M�̂�����ȊO�͈���Ȃ��ق�������ł��@��#
-#����������������������������������������������������������������#
+#┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓#
+#┃ これより下はCGIに自信のある方以外は扱わないほうが無難です　┃#
+#┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛#
 #================================================================#
 
 #--------------#
-#�@���C�������@#
+#　メイン処理　#
 #--------------#
 if ($mente) {
-	&error("�o�[�W�����A�b�v���ł��B�Q�A�R�O�b�قǂ��҂��������Bm(_ _)m");
+	&error("バージョンアップ中です。２、３０秒ほどお待ち下さい。m(_ _)m");
 }
 
 &decode;
 
-#�h�o�A�h���X�ŃA�N�Z�X����
+#ＩＰアドレスでアクセス制限
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
-	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("�A�N�Z�X�ł��܂���I�I");}
+	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("アクセスできません！！");}
 	}
 
 if($mode) { &$mode; }
@@ -83,96 +83,96 @@ if($mode) { &$mode; }
 &chara_make;
 
 #----------------------#
-#  �L�����N�^�쐬���  #
+#  キャラクタ作成画面  #
 #----------------------#
 sub chara_make {
 
 	if($chara_stop){
-		&error("���݃L�����N�^�[�̍쐬�o�^�͂ł��܂���"); 
+		&error("現在キャラクターの作成登録はできません"); 
 	}
 
-	# �w�b�_�[�\��
+	# ヘッダー表示
 	&header;
 
 	print <<"EOM";
-<h1>�L�����N�^�쐬���</h1>
+<h1>キャラクタ作成画面</h1>
 <hr size=0>
 <form action="$chara_make" method="post">
 <input type="hidden" name="mode" value="make_pre">
 <table border=1>
 <tr>
 <td class="b1" colspan="2">
-�E�L�����N�^�[�̓o�^��<b>��l�P�L����</b>�ł��肢���܂��B��l�ȏ�o�^����Ă��邱�Ƃ����������ꍇ�́A<b>�x�������폜</b>�����Ă��������܂��B<br>
-�E�����点���b�Z�[�W��A�s���s�ׂ����o�����ꍇ�́A<b>�x���Ȃ��L�����N�^�[���폜</b>�����Ă��������܂��B<br>
-�E�����������O�̕����͂��܂���B�L���̋���ł܂߂Ƀo�b�N�A�b�v���Ƃ��Ă����Ă��������B<br>
-�E�X�V�{�^���A�ł�A�����̃E�C���h�E�ł̃v���C�A�e��<b>�{�^���A�ł̓L�������O�����̌���</b>�ƂȂ�܂��̂�<b>��΂Ɏ~�߂Ă��������B</b><br>
-�E�T�[�o�[�̕��ׂ��傫���Ȃ�ƁA�T�[�o�[�Ǘ��҂ɍ폜����Ă��܂���������Ȃ��̂ŁA�X�V�{�^���A�ł�<b>��΂Ɏ~�߂Ă��������B</b><br>
-�E�{�Q�[�����v���C���Ẵg���u���E���Q�ȂǂɊւ��܂��ẮA<b>�Ǘ��҂͈�؂̐ӔC�𕉂��܂���B</b><br>
-�ȏ��ǂ��������̏�œo�^���Ă��������B</font>
+・キャラクターの登録は<b>一人１キャラ</b>でお願いします。二人以上登録されていることが分かった場合は、<b>警告無く削除</b>させていただきます。<br>
+・嫌がらせメッセージや、不正行為が発覚した場合は、<b>警告なくキャラクターを削除</b>させていただきます。<br>
+・消失したログの復元はしません。記憶の教会でまめにバックアップをとっておいてください。<br>
+・更新ボタン連打や、複数のウインドウでのプレイ、各種<b>ボタン連打はキャラログ消失の原因</b>となりますので<b>絶対に止めてください。</b><br>
+・サーバーの負荷が大きくなると、サーバー管理者に削除されてしまうかもしれないので、更新ボタン連打は<b>絶対に止めてください。</b><br>
+・本ゲームをプレイしてのトラブル・損害などに関しましては、<b>管理者は一切の責任を負いません。</b><br>
+以上を良くご了承の上で登録してください。</font>
 </td>
 </tr>
 <tr>
 <td class="b1">ID</td>
 <td>
 <input type="text" name="id" size="10" value="$in{'id'}"><br>
-�����D���Ȕ��p�p������4�`8�����ȓ��ł��L�����������B
+△お好きな半角英数字を4～8文字以内でご記入ください。
 </td>
 </tr>
 <tr>
-<td class="b1">�p�X���[�h</td>
+<td class="b1">パスワード</td>
 <td>
 <input type="password" name="pass" size="10" value="$in{'pass'}"><br>
-�����D���Ȕ��p�p������4�`8�����ȓ��ł��L�����������B
+△お好きな半角英数字を4～8文字以内でご記入ください。
 </td>
 </tr>
 <tr>
-<td class="b1">�p�X���[�h�ύX�p�P��</td>
+<td class="b1">パスワード変更用単語</td>
 <td>
 <input type="text" name="passchange" size="10" value="$in{'passchange'}"><br>
-���p�X���[�h��ύX���鎞�̃p�X���[�h�ł��B���Ȃ�d�v�Ȃ̂ŖY��Ȃ��悤�Ƀ��������悤�ɂ��肢���܂��B
+△パスワードを変更する時のパスワードです。かなり重要なので忘れないようにメモを取るようにお願いします。
 </td>
 </tr>
 <tr>
-<td class="b1">�z�[���y�[�W��</td>
+<td class="b1">ホームページ名</td>
 <td>
 <input type="text" name="site" size="40" value="$in{'site'}"><br>
-�����Ȃ��̃z�[���y�[�W�̖��O����͂��Ă��������B�i�Ȃ��ꍇ�̓I�X�X���g�o�j
+△あなたのホームページの名前を入力してください。（ない場合はオススメＨＰ）
 </td>
 </tr>
 <tr>
 <td class="b1">URL</td>
 <td>
 <input type="text" name="url" size="50" value="$in{'url'}"><br>
-�����Ȃ��̃z�[���y�[�W�̃A�h���X���L�����Ă��������B�i�Ȃ��ꍇ�̓I�X�X���g�o�j
+△あなたのホームページのアドレスを記入してください。（ない場合はオススメＨＰ）
 </td>
 </tr>
 <tr>
-<td class="b1">�L�����N�^�[�̖��O</td>
+<td class="b1">キャラクターの名前</td>
 <td>
 <input type="text" name="c_name" size="30" value="$in{'c_name'}"><br>
-���쐬����L�����N�^�[�̖��O����͂��Ă��������B
+△作成するキャラクターの名前を入力してください。
 </td>
 </tr>
 <tr>
-<td class="b1">�L�����N�^�[�̐���</td>
+<td class="b1">キャラクターの性別</td>
 <td>
-<input type="radio" name="sex" value="0">���@
-<input type="radio" name="sex" value="1" checked>�j<br>
-���쐬����L�����N�^�[�̐��ʂ�I�����Ă��������B
+<input type="radio" name="sex" value="0">女　
+<input type="radio" name="sex" value="1" checked>男<br>
+△作成するキャラクターの性別を選択してください。
 </td>
 </tr>
 <tr>
-<td class="b1">�L�����N�^�[�̃C���[�W</td>
+<td class="b1">キャラクターのイメージ</td>
 <td><input type="text" name="chara" size="10" value="$in{'chara'}">
 <br>
-���쐬����L�����N�^�[�̉摜�ԍ����w�肵�Ă��������B
+△作成するキャラクターの画像番号を指定してください。
 (<a href="$img_all_list" target="_blank">$vote_gazou</a>)
 <br>
-�w�肵�Ȃ�������A�Ȃ��ԍ������Ă�����ƃ����_���őI�΂�܂��B
+指定しなかったり、ない番号をしていするとランダムで選ばれます。
 </td>
 </tr>
 <tr>
-<td class="b1">�L�����N�^�[�̏����E��</td>
+<td class="b1">キャラクターの初期職業</td>
 <td>
 <select name="syoku">
 <option value="0">$chara_syoku[0]</option>
@@ -184,46 +184,46 @@ sub chara_make {
 </tr>
 <tr>
 <td colspan="2" align="center">
-<input type="submit" class="btn" value="����œo�^">
+<input type="submit" class="btn" value="これで登録">
 </td>
 </tr>
 </table>
 </form>
 EOM
-	# �t�b�^�[�\��
+	# フッター表示
 	&footer;
 
 	exit;
 }
 
 #----------------#
-#  �o�^�m�F���  #
+#  登録確認画面  #
 #----------------#
 sub make_pre {
 
 	if ($in{'id'} =~ m/[^0-9a-zA-Z]/){
-		&make_error("ID�ɔ��p�p�����ȊO�̕������܂܂�Ă��܂��B"); 
+		&make_error("IDに半角英数字以外の文字が含まれています。"); 
 	}
 	elsif ($in{'pass'} =~ m/[^0-9a-zA-Z]/){
-		&make_error("�p�X���[�h�ɔ��p�p�����ȊO�̕������܂܂�Ă��܂��B"); 
+		&make_error("パスワードに半角英数字以外の文字が含まれています。"); 
 	}
 	elsif ($in{'id'} eq "" or length($in{'id'}) < 4 or length($in{'id'}) > 8) {
-		&make_error("ID�́A4�����ȏ�A8�����ȉ��œ��͂��ĉ������B");
+		&make_error("IDは、4文字以上、8文字以下で入力して下さい。");
 	}
 	elsif ($in{'pass'} eq "" or length($in{'pass'}) < 4 or length($in{'pass'}) > 8) {
-		&make_error("�p�X���[�h�́A4�����ȏ�A8�����ȉ��œ��͂��ĉ������B"); 
+		&make_error("パスワードは、4文字以上、8文字以下で入力して下さい。"); 
 	}
 	elsif ($in{'c_name'} eq "") {
-		&make_error("�L�����N�^�[�̖��O�����L���ł�"); 
+		&make_error("キャラクターの名前が未記入です"); 
 	}
 	elsif ($in{'sex'} eq "") {
-		&make_error("���ʂ��I������Ă��܂���");
+		&make_error("性別が選択されていません");
 	}
 	elsif ($in{'syoku'} < 0 || $in{'syoku'} > 4) {
-		&make_error("�E�Ƃ��I������Ă��܂���");
+		&make_error("職業が選択されていません");
 	}
 	elsif($in{'passchange'} eq "") {
-		&make_error("�p�X���[�h�ύX�p�P�ꂪ�ݒ肳��Ă��܂���");
+		&make_error("パスワード変更用単語が設定されていません");
 	}
 
 	if ($name_ban) {
@@ -234,13 +234,13 @@ sub make_pre {
 			@all_chara = split(/<>/);
 			if ($all_chara[4] eq $in{'c_name'}) {
 				close(IN);
-				&make_error("���ꖼ�̃L�����N�^�[�����܂�");
+				&make_error("同一名のキャラクターがいます");
 			}
 		}
 	}
 
 	if (-e "./charalog/$in{'id'}.cgi") {
-		&make_error("����ID�͂��łɎg�p����Ă��܂�");
+		&make_error("そのIDはすでに使用されています");
 	}
 
 	$img_sum = @chara_img;
@@ -249,50 +249,50 @@ sub make_pre {
 	}
 
 	if ($in{'site'} eq "") {
-		$in{'site'} = '�����̂b�f�h�̂g�o';
+		$in{'site'} = 'いくのＣＧＩのＨＰ';
 	}
 	if ($in{'url'} eq "") {
 		$in{'url'} = 'http://www.eriicu.com';
 	}
 
-		if($in{'sex'}) { $esex = "�j"; } else { $esex = "��"; }
+		if($in{'sex'}) { $esex = "男"; } else { $esex = "女"; }
 		$next_ex = $lv_up;
 
 		&header;
 
 		print <<"EOM";
-<h1>�o�^�m�F���</h1>
-�ȉ��̓��e�ł�낵���ł��傤���H
+<h1>登録確認画面</h1>
+以下の内容でよろしいでしょうか？
 <hr size=0>
 
 <table border=1>
 <tr>
-<td class="b1">�z�[���y�[�W</td>
+<td class="b1">ホームページ</td>
 <td colspan="4"><a href="http\:\/\/$in{'url'}">$in{'site'}</a></td>
 </tr>
 <tr>
 <td rowspan="8" align="center"><img src="$img_path/$chara_img[$in{'chara'}]"></td>
-<td class="b1">�Ȃ܂�</td>
+<td class="b1">なまえ</td>
 <td>$in{'c_name'}</td>
-<td class="b1">����</td>
+<td class="b1">性別</td>
 <td>$esex</td>
 </tr>
 <tr>
-<td class="b1">�E��</td>
+<td class="b1">職業</td>
 <td>$chara_syoku[$in{'syoku'}]</td>
-<td class="b1">����</td>
+<td class="b1">お金</td>
 <td>$intgold</td>
 </tr>
 <tr>
-<td class="b1">���x��</td>
+<td class="b1">レベル</td>
 <td>1</td>
-<td class="b1">�o���l</td>
+<td class="b1">経験値</td>
 <td>0/$next_ex</td>
 </tr>
 <tr>
-<td class="b1">�p�X���[�h�ύX�p�P��</td>
+<td class="b1">パスワード変更用単語</td>
 <td><font color="red" size += "2"><b>$in{'passchange'}</b></font></td>
-<td class="b1" colspan="2"><b>���d�v�Ȃ̂ŕK���������ĉ�������</b></td>
+<td class="b1" colspan="2"><b>※重要なので必ずメモして下さい※</b></td>
 </tr>
 </table>
 <form action="$chara_make" method="post">
@@ -306,7 +306,7 @@ sub make_pre {
 <input type=hidden name="sex" value="$in{'sex'}">
 <input type=hidden name="chara" value="$in{'chara'}">
 <input type=hidden name="syoku" value="$in{'syoku'}">
-<input type=submit class="btn" value="�쐬����"></form>
+<input type=submit class="btn" value="作成する"></form>
 <form action="$chara_make" method="post">
 <input type=hidden name="id" value="$in{'id'}">
 <input type=hidden name="pass" value="$in{'pass'}">
@@ -317,7 +317,7 @@ sub make_pre {
 <input type=hidden name="sex" value="$in{'sex'}">
 <input type=hidden name="chara" value="$in{'chara'}">
 <input type=hidden name="syoku" value="$in{'syoku'}">
-<input type=submit class="btn" value="�߂�"></form>
+<input type=submit class="btn" value="戻る"></form>
 EOM
 
 		&footer;
@@ -326,40 +326,40 @@ EOM
 }
 
 #----------------#
-#  �o�^�������  #
+#  登録完了画面  #
 #----------------#
 sub make_end {
 
 	&get_host;
 
-	if($chara_stop){ &error("���݃L�����N�^�[�̍쐬�o�^�͂ł��܂���"); }
+	if($chara_stop){ &error("現在キャラクターの作成登録はできません"); }
 
 	if ($in{'id'} =~ m/[^0-9a-zA-Z]/){
-		&make_error("ID�ɔ��p�p�����ȊO�̕������܂܂�Ă��܂��B"); 
+		&make_error("IDに半角英数字以外の文字が含まれています。"); 
 	}
 	elsif ($in{'pass'} =~ m/[^0-9a-zA-Z]/){
-		&make_error("�p�X���[�h�ɔ��p�p�����ȊO�̕������܂܂�Ă��܂��B"); 
+		&make_error("パスワードに半角英数字以外の文字が含まれています。"); 
 	}
 	elsif ($in{'id'} eq "" or length($in{'id'}) < 4 or length($in{'id'}) > 8) {
-		&make_error("ID�́A4�����ȏ�A8�����ȉ��œ��͂��ĉ������B");
+		&make_error("IDは、4文字以上、8文字以下で入力して下さい。");
 	}
 	elsif ($in{'pass'} eq "" or length($in{'pass'}) < 4 or length($in{'pass'}) > 8) {
-		&make_error("�p�X���[�h�́A4�����ȏ�A8�����ȉ��œ��͂��ĉ������B"); 
+		&make_error("パスワードは、4文字以上、8文字以下で入力して下さい。"); 
 	}
 	elsif ($in{'c_name'} eq "") {
-		&make_error("�L�����N�^�[�̖��O�����L���ł�"); 
+		&make_error("キャラクターの名前が未記入です"); 
 	}
 	elsif($in{'sex'} eq "") {
-		&make_error("���ʂ��I������Ă��܂���");
+		&make_error("性別が選択されていません");
 	}
 	elsif($in{'passchange'} eq "") {
-		&make_error("�p�X���[�h�ύX�p�P�ꂪ�ݒ肳��Ă��܂���");
+		&make_error("パスワード変更用単語が設定されていません");
 	}
 	elsif($in{'syoku'} eq "") {
-		&make_error("�E�Ƃ��I������Ă��܂���");
+		&make_error("職業が選択されていません");
 	}
 	if($in{'site'} eq "") {
-		$in{'site'} = '�����̂b�f�h�̂g�o';
+		$in{'site'} = 'いくのＣＧＩのＨＰ';
 	}
 	if($in{'url'} eq "") {
 		$in{'url'} = 'http://www.eriicu.com';
@@ -373,11 +373,11 @@ sub make_end {
 			@all_chara = split(/<>/);
 			if ($all_chara[4] eq $in{'c_name'}) {
 				close(IN);
-				&make_error("���ꖼ�̃L�����N�^�[�����܂�");
+				&make_error("同一名のキャラクターがいます");
 			}
 			elsif ($all_chara[26] eq $host && $all_chara[0] ne 'test') {
 				close(IN);
-				&error("����h�o����o�^���ꂽ�L���������łɑ��݂��܂��B");
+				&error("同一ＩＰから登録されたキャラがすでに存在します。");
 			}
 		}
 	}
@@ -389,7 +389,7 @@ sub make_end {
 			@all_chara = split(/<>/);
 			if ($all_chara[26] eq $host && $all_chara[0] ne 'test') {
 				close(IN);
-				&error("����h�o����o�^���ꂽ�L���������łɑ��݂��܂��B");
+				&error("同一ＩＰから登録されたキャラがすでに存在します。");
 			}
 		}
 	}
@@ -401,13 +401,13 @@ sub make_end {
 			@all_chara = split(/<>/);
 			if ($all_chara[4] eq $in{'c_name'}) {
 				close(IN);
-				&make_error("���ꖼ�̃L�����N�^�[�����܂�");
+				&make_error("同一名のキャラクターがいます");
 			}
 		}
 	}
 
 	if (-e "./charalog/$in{'id'}.cgi") {
-		&make_error("����ID�͂��łɎg�p����Ă��܂�");
+		&make_error("そのIDはすでに使用されています");
 	}
 
 	$img_sum = @chara_img;
@@ -499,39 +499,39 @@ sub make_end {
 	print OUT $new_item; 
 	close(OUT);
 
-	if($in{'sex'}) { $esex = "�j"; } else { $esex = "��"; }
+	if($in{'sex'}) { $esex = "男"; } else { $esex = "女"; }
 	$next_ex = $lv * $lv_up;
 
-	&all_message("$in{'c_name'}���񂪐V���ɃL�����쐬����܂����I�݂Ȃ����낵���I");
+	&all_message("$in{'c_name'}さんが新たにキャラ作成されました！みなさんよろしく！");
 
 		&header;
 
 		print <<"EOM";
-<h1>�o�^�������</h1>
-�ȉ��̓��e�œo�^���������܂����B
+<h1>登録完了画面</h1>
+以下の内容で登録が完了しました。
 <hr size=0>
 <table border=1>
 <tr>
-<td class="b1">�z�[���y�[�W</td>
+<td class="b1">ホームページ</td>
 <td colspan="4"><a href="http\:\/\/$in{'url'}">$in{'site'}</a></td>
 </tr>
 <tr>
 <td rowspan="8" align="center"><img src="$img_path/$chara_img[$in{'chara'}]"></td>
-<td class="b1">�Ȃ܂�</td>
+<td class="b1">なまえ</td>
 <td>$in{'c_name'}</td>
-<td class="b1">����</td>
+<td class="b1">性別</td>
 <td>$esex</td>
 </tr>
 <tr>
-<td class="b1">�E��</td>
+<td class="b1">職業</td>
 <td>$chara_syoku[$in{'syoku'}]</td>
-<td class="b1">����</td>
+<td class="b1">お金</td>
 <td>$intgold</td>
 </tr>
 <tr>
-<td class="b1">���x��</td>
+<td class="b1">レベル</td>
 <td>1</td>
-<td class="b1">�o���l</td>
+<td class="b1">経験値</td>
 <td>0/$next_ex</td>
 </tr>
 <tr>
@@ -541,27 +541,27 @@ sub make_end {
 <td></td>
 </tr>
 <tr>
-<td class="b1">��</td>
+<td class="b1">力</td>
 <td>$n_0</td>
-<td class="b1">����</td>
+<td class="b1">魔力</td>
 <td>$n_1</td>
 </tr>
 <tr>
-<td class="b1">�M�S</td>
+<td class="b1">信仰心</td>
 <td>$n_2</td>
-<td class="b1">������</td>
+<td class="b1">生命力</td>
 <td>$n_3</td>
 </tr>
 <tr>
-<td class="b1">��p��</td>
+<td class="b1">器用さ</td>
 <td>$n_4</td>
-<td class="b1">����</td>
+<td class="b1">速さ</td>
 <td>$n_5</td>
 </tr>
 <tr>
-<td class="b1">����</td>
+<td class="b1">魅力</td>
 <td>$n_6</td>
-<td class="b1">�J���}</td>
+<td class="b1">カルマ</td>
 <td>$lp</td>
 </tr>
 </table>
@@ -569,7 +569,7 @@ sub make_end {
 <input type="hidden" name=mode value=log_in>
 <input type="hidden" name=id value="$in{'id'}">
 <input type="hidden" name=pass value="$in{'pass'}">
-<input type="submit" class="btn" value="�X�e�[�^�X��ʂ�">
+<input type="submit" class="btn" value="ステータス画面へ">
 </form>
 EOM
 
@@ -579,7 +579,7 @@ EOM
 }
 
 #--------------------#
-#  �o�^�p�G���[���  #
+#  登録用エラー画面  #
 #--------------------#
 sub make_error{
 	&header;
@@ -598,9 +598,9 @@ sub make_error{
 <input type=hidden name="sex" value="$in{'sex'}">
 <input type=hidden name="chara" value="$in{'chara'}">
 <input type=hidden name="syoku" value="$in{'syoku'}">
-<input type=submit class="btn" value="�߂�"></form>
+<input type=submit class="btn" value="戻る"></form>
 EOM
-	print "<a href=\"$scripto\">TOP�y�[�W��</a>\n";
+	print "<a href=\"$scripto\">TOPページへ</a>\n";
 	print "</body></html>\n";
 	exit;
 }

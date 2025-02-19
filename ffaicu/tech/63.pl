@@ -6,9 +6,9 @@ sub atowaza{
 		$hpplus1 = $hpplus2;
 		$clit1 = $clit2;
 		if ($hpplus1) {
-			$kaihuku1 .= "$chara[4] ‚Ì‚g‚o‚ª $hpplus1 ‰ñ•œ‚µ‚½Iô";
+			$kaihuku1 .= "$chara[4] ã®ï¼¨ï¼°ãŒ $hpplus1 å›å¾©ã—ãŸï¼â™ª";
 		}
-		$com1 .= "<font class=\"red\">$mname $winner[3]‚Ì‚à‚Ì‚Ü‚Ë`ô</font><br>";
+		$com1 .= "<font class=\"red\">$mname $winner[3]ã®ã‚‚ã®ã¾ã­ï½â™ª</font><br>";
 	}
 }
 1;

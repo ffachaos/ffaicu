@@ -1,7 +1,7 @@
 sub hissatu{
 	$dmg1 += $chara[7] * int(rand(100));
 	$hpplus1 = int(0) - int($dmg1 * rand(0.1));
-	$com1 .="<font class=\"dark\" size=5>ˆÃ•Œ•IIi©•ª‚É‚à$hpplus1ƒ_ƒ[ƒWj</font><br>";
+	$com1 .="<font class=\"dark\" size=5>æš—é»’å‰£ï¼ï¼ï¼ˆè‡ªåˆ†ã«ã‚‚$hpplus1ãƒ€ãƒ¡ãƒ¼ã‚¸ï¼‰</font><br>";
 	}
 sub atowaza{}
 1;

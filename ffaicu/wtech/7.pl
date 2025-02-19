@@ -4,8 +4,8 @@ sub whissatu{
 		$hpplus2 = ($winner[8] + $winner[39]) * int(rand($winner[13]));if ($hpplus2 > $winner[16]/10) {
 		$hpplus2 = $winner[16]/10;
 	}
-$com2 .= "<br><font class=\"yellow\" size=3>”’–‚–@ƒPƒAƒ‹ƒKIII</FONT><br>";
-		$kaihuku2 .= "$winner[3] ‚Ì‚g‚o‚ª $hpplus2 ‰ñ•œ‚µ‚½Iô";
+$com2 .= "<br><font class=\"yellow\" size=3>ç™½é­”æ³•ã‚±ã‚¢ãƒ«ã‚¬ï¼ï¼ï¼</FONT><br>";
+		$kaihuku2 .= "$winner[3] ã®ï¼¨ï¼°ãŒ $hpplus2 å›å¾©ã—ãŸï¼â™ª";
 	}
 }
 sub watowaza{}

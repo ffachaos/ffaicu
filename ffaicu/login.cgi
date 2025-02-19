@@ -1,73 +1,73 @@
 #!/usr/local/bin/perl --
 
 #------------------------------------------------------#
-#@–{ƒXƒNƒŠƒvƒg‚Ì’˜ìŒ ‚Í‚¢‚­‚É‚ ‚è‚Ü‚·B
-#‚¢‚©‚È‚é——R‚ª‚ ‚Á‚Ä‚à‚±‚Ì•\‹L‚ðíœ‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñ
-#ˆá”½‚ð”­Œ©‚µ‚½ê‡AƒXƒNƒŠƒvƒg‚Ì—˜—p‚ð’âŽ~‚µ‚Ä‚¢‚½‚¾‚­
-#‚¾‚¯‚Å‚È‚­A‘R‚é‚×‚«ˆ’u‚ð‚³‚¹‚Ä‚¢‚½‚¾‚«‚Ü‚·B
-#  FF ADVENTURE(‚¢‚­‰ü)
-#@remodeling by ‚¢‚­
-#@http://www.eriicu.com
-#@icu@kcc.zaq.ne.jp
+#ã€€æœ¬ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®è‘—ä½œæ¨©ã¯ã„ãã«ã‚ã‚Šã¾ã™ã€‚
+#ã„ã‹ãªã‚‹ç†ç”±ãŒã‚ã£ã¦ã‚‚ã“ã®è¡¨è¨˜ã‚’å‰Šé™¤ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“
+#é•åã‚’ç™ºè¦‹ã—ãŸå ´åˆã€ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®åˆ©ç”¨ã‚’åœæ­¢ã—ã¦ã„ãŸã ã
+#ã ã‘ã§ãªãã€ç„¶ã‚‹ã¹ãå‡¦ç½®ã‚’ã•ã›ã¦ã„ãŸã ãã¾ã™ã€‚
+#  FF ADVENTURE(ã„ãæ”¹)
+#ã€€remodeling by ã„ã
+#ã€€http://www.eriicu.com
+#ã€€icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
 
-#--- [’ˆÓŽ–€] ------------------------------------------------#
-# 1. ‚±‚ÌƒXƒNƒŠƒvƒg‚ÍƒtƒŠ[ƒ\ƒtƒg‚Å‚·B‚±‚ÌƒXƒNƒŠƒvƒg‚ðŽg—p‚µ‚½	#
-#    ‚¢‚©‚È‚é‘¹ŠQ‚É‘Î‚µ‚ÄìŽÒ‚ÍˆêØ‚ÌÓ”C‚ð•‰‚¢‚Ü‚¹‚ñB		#
-# 2. Ý’u‚ÉŠÖ‚·‚éŽ¿–â‚ÍƒTƒ|[ƒgŒfŽ¦”Â‚É‚¨Šè‚¢‚¢‚½‚µ‚Ü‚·B	#
-#    ’¼Úƒ[ƒ‹‚É‚æ‚éŽ¿–â‚ÍˆêØ‚¨Žó‚¯‚¢‚½‚µ‚Ä‚¨‚è‚Ü‚¹‚ñB	#
+#--- [æ³¨æ„äº‹é …] ------------------------------------------------#
+# 1. ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã§ã™ã€‚ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ä½¿ç”¨ã—ãŸ	#
+#    ã„ã‹ãªã‚‹æå®³ã«å¯¾ã—ã¦ä½œè€…ã¯ä¸€åˆ‡ã®è²¬ä»»ã‚’è² ã„ã¾ã›ã‚“ã€‚		#
+# 2. è¨­ç½®ã«é–¢ã™ã‚‹è³ªå•ã¯ã‚µãƒãƒ¼ãƒˆæŽ²ç¤ºæ¿ã«ãŠé¡˜ã„ã„ãŸã—ã¾ã™ã€‚	#
+#    ç›´æŽ¥ãƒ¡ãƒ¼ãƒ«ã«ã‚ˆã‚‹è³ªå•ã¯ä¸€åˆ‡ãŠå—ã‘ã„ãŸã—ã¦ãŠã‚Šã¾ã›ã‚“ã€‚	#
 #    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi             #
 #---------------------------------------------------------------#
 
-# “ú–{Œêƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚Ýž‚Ý
-require 'jcode.pl';
+# æ—¥æœ¬èªžãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './jacode.pl';
 
-# ƒŒƒWƒXƒgƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚Ýž‚Ý
-require 'regist.pl';
+# ãƒ¬ã‚¸ã‚¹ãƒˆãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './regist.pl';
 
-# ƒŒƒWƒXƒgƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚Ýž‚Ý
-require 'sankasya.pl';
+# ãƒ¬ã‚¸ã‚¹ãƒˆãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './sankasya.pl';
 
-# ‰ŠúÝ’èƒtƒ@ƒCƒ‹‚Ì“Ç‚Ýž‚Ý
-require 'data/ffadventure.ini';
+# åˆæœŸè¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿
+require './data/ffadventure.ini';
 
-# ‚±‚Ìƒtƒ@ƒCƒ‹—pÝ’è
+# ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ç”¨è¨­å®š
 $backgif = $sts_back;
 $midi = $sts_midi;
 #================================================================#
-#„¬„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„­#
-#„« ‚±‚ê‚æ‚è‰º‚ÍCGI‚ÉŽ©M‚Ì‚ ‚é•ûˆÈŠO‚Íˆµ‚í‚È‚¢‚Ù‚¤‚ª–³“ï‚Å‚·@„«#
-#„¯„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„®#
+#â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”“#
+#â”ƒ ã“ã‚Œã‚ˆã‚Šä¸‹ã¯CGIã«è‡ªä¿¡ã®ã‚ã‚‹æ–¹ä»¥å¤–ã¯æ‰±ã‚ãªã„ã»ã†ãŒç„¡é›£ã§ã™ã€€â”ƒ#
+#â”—â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”›#
 #================================================================#
 
 #--------------#
-#@ƒƒCƒ“ˆ—@#
+#ã€€ãƒ¡ã‚¤ãƒ³å‡¦ç†ã€€#
 #--------------#
 if($mente) {
-	&error("ƒo[ƒWƒ‡ƒ“ƒAƒbƒv’†‚Å‚·B‚QA‚R‚O•b‚Ù‚Ç‚¨‘Ò‚¿‰º‚³‚¢Bm(_ _)m");
+	&error("ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—ä¸­ã§ã™ã€‚ï¼’ã€ï¼“ï¼ç§’ã»ã©ãŠå¾…ã¡ä¸‹ã•ã„ã€‚m(_ _)m");
 }
 &decode;
 
-#‚h‚oƒAƒhƒŒƒX‚ÅƒAƒNƒZƒX§ŒÀ
+#ï¼©ï¼°ã‚¢ãƒ‰ãƒ¬ã‚¹ã§ã‚¢ã‚¯ã‚»ã‚¹åˆ¶é™
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
-	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("ƒAƒNƒZƒX‚Å‚«‚Ü‚¹‚ñII");}
+	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã›ã‚“ï¼ï¼");}
 }
 
 &log_in;
 
 #----------------#
-#  ƒƒOƒCƒ“‰æ–Ê  #
+#  ãƒ­ã‚°ã‚¤ãƒ³ç”»é¢  #
 #----------------#
 sub log_in {
 
 	if (!( -e "./charalog/$in{'id'}.cgi")) {
-		&error('ID‚ª³‚µ‚­‚ ‚è‚Ü‚¹‚ñI');
+		&error('IDãŒæ­£ã—ãã‚ã‚Šã¾ã›ã‚“ï¼');
 	}
 
 	&chara_load;
 
-if(!@chara) { &error("ƒLƒƒƒ‰ƒf[ƒ^‚ªÁ‚¦‚Ä‚¢‚é‰Â”\\«‚ª‚ ‚è‚Ü‚·B•œŒ³‚µ‚Ü‚·‚©H‚½‚¾‚µAˆê“ú‘O‚ÌƒoƒbƒNƒAƒbƒvƒf[ƒ^‚É–ß‚é‚±‚Æ‚É‚È‚è‚Ü‚·<form action=\"hukugen.cgi\" method=\"post\"><input type=hidden name=id value=$in{'id'}><input type=hidden name=mode value=log_in><input type=submit style=\"background-color:#9370DB;color:#FFFFFF;border:2 solid BFEFFF\" value=\"•œŒ³‚·‚é\"></form>");}
+if(!@chara) { &error("ã‚­ãƒ£ãƒ©ãƒ‡ãƒ¼ã‚¿ãŒæ¶ˆãˆã¦ã„ã‚‹å¯èƒ½\æ€§ãŒã‚ã‚Šã¾ã™ã€‚å¾©å…ƒã—ã¾ã™ã‹ï¼ŸãŸã ã—ã€ä¸€æ—¥å‰ã®ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ã‚¿ã«æˆ»ã‚‹ã“ã¨ã«ãªã‚Šã¾ã™<form action=\"hukugen.cgi\" method=\"post\"><input type=hidden name=id value=$in{'id'}><input type=hidden name=mode value=log_in><input type=submit style=\"background-color:#9370DB;color:#FFFFFF;border:2 solid BFEFFF\" value=\"å¾©å…ƒã™ã‚‹\"></form>");}
 
 	&get_host;
 
@@ -90,7 +90,7 @@ if(!@chara) { &error("ƒLƒƒƒ‰ƒf[ƒ^‚ªÁ‚¦‚Ä‚¢‚é‰Â”\\«‚ª‚ ‚è‚Ü‚·B•œŒ³‚µ‚Ü‚·‚©H‚
 			close(OUT);
 			$lock_file = "$lockfolder/login$in{'id'}.lock";
 			&unlock($lock_file,'LG');
-			&error("ƒpƒXƒ[ƒh‚ªˆá‚¢‚Ü‚·I"); 
+			&error("ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒé•ã„ã¾ã™ï¼"); 
 	}
 
 	unshift(@logindata,"$in{'pass'}<>$host<>$gettime<>0<>\n");
@@ -133,16 +133,16 @@ EOM
        print <<"EOM";
 <hr size=0>
 <center>
-<h1><font color=white><font color=red>$chara[4]</font>‚ÅƒƒOƒCƒ“‚µ‚Ü‚µ‚½</font></h1>
+<h1><font color=white><font color=red>$chara[4]</font>ã§ãƒ­ã‚°ã‚¤ãƒ³ã—ã¾ã—ãŸ</font></h1>
 <table border=0 width=90%><tr><td width=50%>
 <table border=1 width=90%>
-<tr><td colspan=2 id="td2" align=center class=b2>Å‹ß‚ÌƒƒOƒCƒ“ó‹µ</td></tr>
-<tr><td class="b2" align=center>ŽžŠÔ</td><td class="b2" align=center>ƒzƒXƒg</td></tr>
+<tr><td colspan=2 id="td2" align=center class=b2>æœ€è¿‘ã®ãƒ­ã‚°ã‚¤ãƒ³çŠ¶æ³</td></tr>
+<tr><td class="b2" align=center>æ™‚é–“</td><td class="b2" align=center>ãƒ›ã‚¹ãƒˆ</td></tr>
 $logsuc
 </table></td><td width=50%>
 <table border=1 width=90%>
-<td colspan=3 id="td2" align=center class=b2>Å‹ß‚ÌƒpƒXƒ[ƒhƒGƒ‰[ƒƒOƒCƒ“‚Ìó‹µ</td></tr>
-<tr><td class="b2" align=center>ŽžŠÔ</td><td class="b2" align=center>ƒzƒXƒg</td><td class="b2" align=center>“ü—ÍƒpƒXƒ[ƒh</td></tr>
+<td colspan=3 id="td2" align=center class=b2>æœ€è¿‘ã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚¨ãƒ©ãƒ¼ãƒ­ã‚°ã‚¤ãƒ³ã®çŠ¶æ³</td></tr>
+<tr><td class="b2" align=center>æ™‚é–“</td><td class="b2" align=center>ãƒ›ã‚¹ãƒˆ</td><td class="b2" align=center>å…¥åŠ›ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰</td></tr>
 $logmiss
 </table></td></tr></table></center>
 <br>
@@ -156,7 +156,7 @@ EOM
 <center>
 <table border=0><tr><td><table border=1>
 <tr><td id="td2" align=center class=b2>
-<font class="$white">ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö</font>
+<font class="$white">ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸</font>
 </td></tr>
 <tr>
 <form action="$script" method="POST">
@@ -164,7 +164,7 @@ EOM
 <input type="hidden" name="mode" value="log_in">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type="submit" class="btn" value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type="submit" class="btn" value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </td></form></tr></table>
 </td></tr></table></center>
 EOM
@@ -174,10 +174,10 @@ EOM
 	exit;
 }
 #------------------#
-#  ƒNƒbƒL[‚Ì”­s  #
+#  ã‚¯ãƒƒã‚­ãƒ¼ã®ç™ºè¡Œ  #
 #------------------#
 sub set_cookie {
-	# ƒNƒbƒL[‚Í60“úŠÔ—LŒø
+	# ã‚¯ãƒƒã‚­ãƒ¼ã¯60æ—¥é–“æœ‰åŠ¹
 	local($sec,$min,$hour,$mday,$mon,$year,$wday) = gmtime(time+60*24*60*60);
 
 	@month=('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');

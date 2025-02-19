@@ -1,46 +1,46 @@
-# E‹Æ•ÊUŒ‚ƒRƒƒ“ƒg
-@battlecom = ("–‚«”²‚©‚ê‚½„Œ•‚ª“V’n”e‰¤‚Ì”@‚­“G‚ğa‚èJ‚­ƒbII",
-	"ŒÃ‘ã‚æ‚è¶‚Ü‚ê‚µŒ¾—t‚ªg˜@‚Ì‰Š‚ğì‚èã‚°A“G‚ğ•ï‚ŞƒbII",
-	"‰˜‚ê–³‚«S‚Í“V‚É“Í‚«A¹‚È‚é—Í‚ª×‚È‚éÒ‚ğl³‚·‚éƒbII",
-	"Œ¤‚¬Ÿ‚Ü‚³‚ê‚½ŒÜŠ´‚ª“G‚Ì“®‚«‚ğ“IŠm‚É‘¨‚¦‚éII",
-	"‹ó‚Ì‰Ê‚Ä‚É–°‚é‘å‚¢‚È‚éƒ}ƒi‚ğŒÄ‚ÑŠo‚Ü‚·II",
-	"”’‚Æ•‚Ì–‚—Í‚ªŒğ·‚µ‚Ä‹°‚é‚×‚«—Í‚ğ‰ğ•ú‚·‚éII",
-	"‚»‚Ì”ü‚µ‚¢‰¹F‚ªn‚Æ‚È‚èA“G‚ğ–»•{‚Ö‚Æ—U‚¤II",
-	"‰½‚É‚à‘®‚³‚ÊˆîÈ‚ªŒ‚«A“G‚Ì¶–½‚ğâ‚ÂƒbII",
-	"—³‚ğ©İ‚É‘€‚é“`à‚Ì‘„p‚ª“G‚ğŠÑ‚­II",
-	"¹‚È‚é”g“®‚ª‘Ì‚ğ•ï‚ŞƒbII ”g“®‚Í“V‚ÌŒõ‚Ép‚ğ•Ï‚¦‚Ä“G‚ğÄ‚«Å‚·ƒbII",
-	"‘å‚¢‚È‚é•ƒA_‚Ì–¼‚ÌŒ³‚É“G‚ğa‚éƒbII",
-	"“Œ•û‚æ‚è“`‚í‚è‚µŒ•pA‚»‚Ì‹ÉˆÓ‚ÍAˆê“—¼’fƒbII",
-	"ŒÛ“®‚ª”é‚ß‚½‚é—Í‚ğ‰ğ•ú‚·‚éƒbII Œ‚Í”g“®‚ğh‚µ“G‚ğÓ‚­ƒbII",
-	"™‹“ß‚Ì“®‚«‚ª—’‚Æ‚È‚èAn‚Í¾•—v—‹‚Ì”@‚­“G‚ğa‚èÌ‚Ä‚éƒbII",
-	"•‰‚Ì“¬‹C‚ªŒ•‚Éh‚èA“G‚ğâ–]‚Ì•£‚É’Ç‚¢‚â‚éƒbII",
-	"–‚—Í‚ğ‚ß‚½Œ•‚Íg‚­Œõ‚èA‘S‚Ä‚ğa‚è—ô‚­ÕŒ‚”j‚ğ”­‚·‚éƒbII",
-	"‹Ãk‚³‚ê‚½–‚—Í‚ª’eŠÛ‚É‚ß‚ç‚ê“G‚ğŒ‚‚ÂƒbII",
-	"ˆÙ¢ŠE‚æ‚èŒÄ‚Î‚ê‚µÒ‚ª–½‚ğó‚¯A“G‚ğ–S‚«Ò‚Æ‰»‚·ƒbII",
-	"l’m‰z‚¦‚½‚ğ–‚—Í‚ª’n‹…‚ğ—h‚é‚ª‚·ƒbII ‘z‘œ‚ğâ‚·‚é‹­‘å‚È—Í‚Í‘S‚Ä‚ğ”j‰ó‚·‚éƒbII",
-	"–‚‚ğ–Å‚Ú‚·“`à‚Ì—Í‚Í×‚È‚é—Í‚ğ••‚¶‚ß‚éII",
-	"‰ÎE…E“yE•—EEE‘S‚Ä‚ÌƒAƒ‹ƒJƒi‚ª“G‚Ì‰^–½‚ğ’f‚¿Ø‚éEEEB",
-	"‚Ü‚Ë‚Ü‚Ëô",
-	"‘S¢ŠE‚ğ‚Â‚È‚®ƒlƒbƒgƒ[ƒN‚Ì—Í‚ğW‚ß‚Ä‰ğ‚«•ú‚ÂII",
-        "‚ ‚Ç‚¯‚È‚¢è•t‚«‚Å“G‚ÉØ‚è‚©‚©‚éIIEEE‚±‚¯‚½‚—",
-        "–‚•¨‚ğx”z‚µâ‘å‚È‚é—Í‚ª“G‚ÉP‚¢Š|‚©‚éII",
-        "ˆÅ‚æ‚è¶‚Ü‚ê‚µ‚»‚Ì‘¶İ‚Í‹C”z‚·‚ç”­‚¹‚¸‘Šè‚ğ€‚ÉŠ‚ç‚µ‚ß‚éII",
-        "’·‚¢Cs‚Å¶‚Ü‚ê‚½¹‚È‚é—Í‚ª‚·‚×‚Ä‚ğò‰»‚·‚éII",
-        "ô—û‚³‚ê‚½‚»‚Ì“®‚«‚Í‰½Ò‚à‘¨‚¦‚é‚±‚Æ‚Í‚Å‚«‚È‚¢II",
-        "ŒÃ‚Ì‘I‚Î‚ê‚½¹ím’B‚ª“G‚ÉŒü‚©‚¢Œ•‚ğ‚Ó‚é‚¤II",
-        "“`à‚Æ‚Ü‚ÅŒÄ‚Î‚ê‚½‚»‚Ì—Í‚Í‹t‚ç‚¤‚±‚Æ‚·‚ç‹–‚³‚¸“G‚ğ•²‚İ‚¶‚ñ‚É‚·‚éII",
-        "‚±‚Ì¢‚Ì‚·‚×‚Ä‚ğ‹É‚ß‚µ”‘½‚Ì—Í‚Í_‚Ì—Í‚É‚·‚ç•C“G‚·‚éII");#ƒRƒƒ“ƒg‚±‚±‚Ü‚Å
+# è·æ¥­åˆ¥æ”»æ’ƒæ™‚ã‚³ãƒ¡ãƒ³ãƒˆ
+@battlecom = ("ç£¨ãæŠœã‹ã‚ŒãŸå‰›å‰£ãŒå¤©åœ°è¦‡ç‹ã®å¦‚ãæ•µã‚’æ–¬ã‚ŠæŒããƒƒï¼ï¼",
+	"å¤ä»£ã‚ˆã‚Šç”Ÿã¾ã‚Œã—è¨€è‘‰ãŒç´…è“®ã®ç‚ã‚’ä½œã‚Šä¸Šã’ã€æ•µã‚’åŒ…ã‚€ãƒƒï¼ï¼",
+	"æ±šã‚Œç„¡ãå¿ƒã¯å¤©ã«å±Šãã€è–ãªã‚‹åŠ›ãŒé‚ªãªã‚‹è€…ã‚’ç²›æ­£ã™ã‚‹ãƒƒï¼ï¼",
+	"ç ”ãæ¾„ã¾ã•ã‚ŒãŸäº”æ„ŸãŒæ•µã®å‹•ãã‚’çš„ç¢ºã«æ‰ãˆã‚‹ï¼ï¼",
+	"æ™‚ç©ºã®æœã¦ã«çœ ã‚‹å¤§ã„ãªã‚‹ãƒãƒŠã‚’å‘¼ã³è¦šã¾ã™ï¼ï¼",
+	"ç™½ã¨é»’ã®é­”åŠ›ãŒäº¤å·®ã—ã¦æã‚‹ã¹ãåŠ›ã‚’è§£æ”¾ã™ã‚‹ï¼ï¼",
+	"ãã®ç¾ã—ã„éŸ³è‰²ãŒåˆƒã¨ãªã‚Šã€æ•µã‚’å†¥åºœã¸ã¨èª˜ã†ï¼ï¼",
+	"ä½•ã«ã‚‚å±ã•ã¬ç¨²å¦»ãŒè½Ÿãã€æ•µã®ç”Ÿå‘½ã‚’çµ¶ã¤ãƒƒï¼ï¼",
+	"ç«œã‚’è‡ªåœ¨ã«æ“ã‚‹ä¼èª¬ã®æ§è¡“ãŒæ•µã‚’è²«ãï¼ï¼",
+	"è–ãªã‚‹æ³¢å‹•ãŒä½“ã‚’åŒ…ã‚€ãƒƒï¼ï¼ æ³¢å‹•ã¯å¤©ã®å…‰ã«å§¿ã‚’å¤‰ãˆã¦æ•µã‚’ç„¼ãç„¦ã™ãƒƒï¼ï¼",
+	"å¤§ã„ãªã‚‹çˆ¶ã€ç¥ã®åã®å…ƒã«æ•µã‚’æ–¬ã‚‹ãƒƒï¼ï¼",
+	"æ±æ–¹ã‚ˆã‚Šä¼ã‚ã‚Šã—å‰£è¡“ã€ãã®æ¥µæ„ã¯ã€ä¸€åˆ€ä¸¡æ–­ãƒƒï¼ï¼",
+	"é¼“å‹•ãŒç§˜ã‚ãŸã‚‹åŠ›ã‚’è§£æ”¾ã™ã‚‹ãƒƒï¼ï¼ æ‹³ã¯æ³¢å‹•ã‚’å®¿ã—æ•µã‚’ç •ããƒƒï¼ï¼",
+	"åˆ¹é‚£ã®å‹•ããŒåµã¨ãªã‚Šã€åˆƒã¯ç–¾é¢¨è¿…é›·ã®å¦‚ãæ•µã‚’æ–¬ã‚Šæ¨ã¦ã‚‹ãƒƒï¼ï¼",
+	"è² ã®é—˜æ°—ãŒå‰£ã«å®¿ã‚Šã€æ•µã‚’çµ¶æœ›ã®æ·µã«è¿½ã„ã‚„ã‚‹ãƒƒï¼ï¼",
+	"é­”åŠ›ã‚’è¾¼ã‚ãŸå‰£ã¯ç´…ãå…‰ã‚Šã€å…¨ã¦ã‚’æ–¬ã‚Šè£‚ãè¡æ’ƒç ´ã‚’ç™ºã™ã‚‹ãƒƒï¼ï¼",
+	"å‡ç¸®ã•ã‚ŒãŸé­”åŠ›ãŒå¼¾ä¸¸ã«è¾¼ã‚ã‚‰ã‚Œæ•µã‚’æ’ƒã¤ãƒƒï¼ï¼",
+	"ç•°ä¸–ç•Œã‚ˆã‚Šå‘¼ã°ã‚Œã—è€…ãŒå‘½ã‚’å—ã‘ã€æ•µã‚’äº¡ãè€…ã¨åŒ–ã™ãƒƒï¼ï¼",
+	"äººçŸ¥è¶ŠãˆãŸã‚’é­”åŠ›ãŒåœ°çƒã‚’æºã‚‹ãŒã™ãƒƒï¼ï¼ æƒ³åƒã‚’çµ¶ã™ã‚‹å¼·å¤§ãªåŠ›ã¯å…¨ã¦ã‚’ç ´å£Šã™ã‚‹ãƒƒï¼ï¼",
+	"é­”ã‚’æ»…ã¼ã™ä¼èª¬ã®åŠ›ã¯é‚ªãªã‚‹åŠ›ã‚’å°ã˜è¾¼ã‚ã‚‹ï¼ï¼",
+	"ç«ãƒ»æ°´ãƒ»åœŸãƒ»é¢¨ãƒ»ãƒ»ãƒ»å…¨ã¦ã®ã‚¢ãƒ«ã‚«ãƒŠãŒæ•µã®é‹å‘½ã‚’æ–­ã¡åˆ‡ã‚‹ãƒ»ãƒ»ãƒ»ã€‚",
+	"ã¾ã­ã¾ã­â™ª",
+	"å…¨ä¸–ç•Œã‚’ã¤ãªããƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ã®åŠ›ã‚’é›†ã‚ã¦è§£ãæ”¾ã¤ï¼ï¼",
+        "ã‚ã©ã‘ãªã„æ‰‹ä»˜ãã§æ•µã«åˆ‡ã‚Šã‹ã‹ã‚‹ï¼ï¼ãƒ»ãƒ»ãƒ»ã“ã‘ãŸï½—",
+        "é­”ç‰©ã‚’æ”¯é…ã—çµ¶å¤§ãªã‚‹åŠ›ãŒæ•µã«è¥²ã„æ›ã‹ã‚‹ï¼ï¼",
+        "é—‡ã‚ˆã‚Šç”Ÿã¾ã‚Œã—ãã®å­˜åœ¨ã¯æ°—é…ã™ã‚‰ç™ºã›ãšç›¸æ‰‹ã‚’æ­»ã«è‡³ã‚‰ã—ã‚ã‚‹ï¼ï¼",
+        "é•·ã„ä¿®è¡Œã§ç”Ÿã¾ã‚ŒãŸè–ãªã‚‹åŠ›ãŒã™ã¹ã¦ã‚’æµ„åŒ–ã™ã‚‹ï¼ï¼",
+        "æ´—ç·´ã•ã‚ŒãŸãã®å‹•ãã¯ä½•è€…ã‚‚æ‰ãˆã‚‹ã“ã¨ã¯ã§ããªã„ï¼ï¼",
+        "å¤ã®é¸ã°ã‚ŒãŸè–æˆ¦å£«é”ãŒæ•µã«å‘ã‹ã„å‰£ã‚’ãµã‚‹ã†ï¼ï¼",
+        "ä¼èª¬ã¨ã¾ã§å‘¼ã°ã‚ŒãŸãã®åŠ›ã¯é€†ã‚‰ã†ã“ã¨ã™ã‚‰è¨±ã•ãšæ•µã‚’ç²‰ã¿ã˜ã‚“ã«ã™ã‚‹ï¼ï¼",
+        "ã“ã®ä¸–ã®ã™ã¹ã¦ã‚’æ¥µã‚ã—æ•°å¤šã®åŠ›ã¯ç¥ã®åŠ›ã«ã™ã‚‰åŒ¹æ•µã™ã‚‹ï¼ï¼");#ã‚³ãƒ¡ãƒ³ãƒˆã“ã“ã¾ã§
 
-#E‹Æ•ÊUŒ‚—ÍŒˆ’èƒTƒuƒ‹[ƒ`ƒ“–¼
-@iryoku=('syokuzero','syokuone','syokutwo','syokuthree','syokufour','syokufive','syokusix','syokuseven','syokueight','syokunine','syokuten','syokueleven','syokutwelve','syokuthirteen','syokufourteen','syokufifteen','syokusixteen','syokuseventeen','syokueighteen','syokunineteen','syokutwenty','syokutwentyone','syokutwentytwo','syokutwentythree','syokutwentyfour','syokutwentyfive','syokutwentysix','syokutwentyseven','syokutwentyeight','syokutwentynine','syokuthirty');#E‹Æ•ÊUŒ‚—ÍŒˆ’è‚±‚±‚Ü‚Å
+#è·æ¥­åˆ¥æ”»æ’ƒåŠ›æ±ºå®šã‚µãƒ–ãƒ«ãƒ¼ãƒãƒ³å
+@iryoku=('syokuzero','syokuone','syokutwo','syokuthree','syokufour','syokufive','syokusix','syokuseven','syokueight','syokunine','syokuten','syokueleven','syokutwelve','syokuthirteen','syokufourteen','syokufifteen','syokusixteen','syokuseventeen','syokueighteen','syokunineteen','syokutwenty','syokutwentyone','syokutwentytwo','syokutwentythree','syokutwentyfour','syokutwentyfive','syokutwentysix','syokutwentyseven','syokutwentyeight','syokutwentynine','syokuthirty');#è·æ¥­åˆ¥æ”»æ’ƒåŠ›æ±ºå®šã“ã“ã¾ã§
 
 #------------------#
-#@’§íÒ‚ÌUŒ‚  @#
+#ã€€æŒ‘æˆ¦è€…ã®æ”»æ’ƒ  ã€€#
 #------------------#
 sub tyousensya {
 
-	# ’§íÒƒ_ƒ[ƒWŒvZ
-	$com1 = "$chara[4]‚ÍA$item[0]‚ÅUŒ‚II<FONT COLOR=\"$yellow\">$battlecom[$chara[14]]</FONT><br>";
+	# æŒ‘æˆ¦è€…ãƒ€ãƒ¡ãƒ¼ã‚¸è¨ˆç®—
+	$com1 = "$chara[4]ã¯ã€$item[0]ã§æ”»æ’ƒï¼ï¼<FONT COLOR=\"$yellow\">$battlecom[$chara[14]]</FONT><br>";
 
 	$attackpower=$iryoku[$chara[14]];
 	&$attackpower;
@@ -48,11 +48,11 @@ sub tyousensya {
 }
 
 #------------------#
-#@’§íÒ‚Ì•KE‹Z@#
+#ã€€æŒ‘æˆ¦è€…ã®å¿…æ®ºæŠ€ã€€#
 #------------------#
 sub tyosenwaza {
 
-	# ƒNƒŠƒeƒBƒJƒ‹
+	# ã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ«
 	$waza_ritu = int(($chara[20] / 15)) + 10 + $chara[33];
 	if($waza_ritu > 75){$waza_ritu = 75;}
 	$waza_ritu += $a_wazaup;
@@ -65,26 +65,26 @@ sub tyosenwaza {
 		$waza_ritu = int($waza_ritu / 2);
 	}
 
-	#‚g‚o‚ª‚P^‚P‚O‚É•KE—¦‚V‚T“
+	#ï¼¨ï¼°ãŒï¼‘ï¼ï¼‘ï¼æ™‚ã«å¿…æ®ºç‡ï¼—ï¼•ï¼…
 	if (int($chara[16] / 10) > $khp_flg && int(rand(4)) > 1) {
 		$waza_ritu +=999;
 		$com1 .="<font class=\"red\" size=4>LIMIT BREAK!!</font><br>";
 	}
 
-	# ••ˆó‹…‚ÌŒø‰Ê
+	# å°å°çƒã®åŠ¹æœ
 	if ($winner[51] == 19 and $item[7] != 24 and $item[7] != 19) {
 		if ($chara[14] > 16 or $mode eq 'boss' or $mode eq 'isekiai') {
-			$com2 .="<font color=\"$red\">$winner[27]‚ªŒõ‚ğ•ú‚ÂII$chara[4] ‚É‚ÍŒø‚©‚È‚©‚Á‚½II</font><br>";
+			$com2 .="<font color=\"$red\">$winner[27]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼$chara[4] ã«ã¯åŠ¹ã‹ãªã‹ã£ãŸï¼ï¼</font><br>";
 		} elsif ($chara[14] > 7) {
 			if (int(rand(5)) == 0) {
 				$waza_ritu = 0;
-				$com2 .="<font color=\"$yellow\">$winner[27]‚ªŒõ‚ğ•ú‚ÂII$chara[4] ‚Ì•KE‹Z‚ğ••‚¶‚ß‚½II</font><br>";
+				$com2 .="<font color=\"$yellow\">$winner[27]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼$chara[4] ã®å¿…æ®ºæŠ€ã‚’å°ã˜è¾¼ã‚ãŸï¼ï¼</font><br>";
 			}
 		} else {
 			if (int(rand(2)) == 0) {
 				$item[7] =0;
 				$waza_ritu = 0;
-				$com2 .="<font color=\"$yellow\">$winner[27]‚ªŒõ‚ğ•ú‚ÂII$chara[4] ‚Ì•KE‹Z‚ğ••‚¶‚ß‚½II</font><br>";
+				$com2 .="<font color=\"$yellow\">$winner[27]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼$chara[4] ã®å¿…æ®ºæŠ€ã‚’å°ã˜è¾¼ã‚ãŸï¼ï¼</font><br>";
 			}
 		}
 	}
@@ -92,19 +92,19 @@ sub tyosenwaza {
 	&hissatu;
 }
 #------------------#
-#@ƒŒƒxƒ‹ƒAƒbƒv  @#
+#ã€€ãƒ¬ãƒ™ãƒ«ã‚¢ãƒƒãƒ—  ã€€#
 #------------------#
 sub levelup {
 	if ($chara[18] < $charamaxlv) {
 
-		#E‹Æ•Êƒ{[ƒiƒX‰ÁZˆ—
+		#è·æ¥­åˆ¥ãƒœãƒ¼ãƒŠã‚¹åŠ ç®—å‡¦ç†
 		open(IN,"$syoku_file");
 		@syoku = <IN>;
 		close(IN);
 
 		my ($a,$b,$c,$d,$e,$f,$g,$h,$sy_0,$sy_1,$sy_2,$sy_3,$sy_4,$sy_5,$sy_6,$sylp) = split(/<>/,$syoku[$chara[14]]);
 
-		# •Ï”‚Ì‰Šú‰»
+		# å¤‰æ•°ã®åˆæœŸåŒ–
 		$as0=0;
 		$as1=0;
 		$as2=0;
@@ -234,13 +234,13 @@ sub levelup {
 		}
 
 		if ($lvup != 0){
-			$comment .= "<font class=red size=7>ƒŒƒxƒ‹‚ª$lvupã‚ª‚Á‚½I</font><br>";
+			$comment .= "<font class=red size=7>ãƒ¬ãƒ™ãƒ«ãŒ$lvupä¸ŠãŒã£ãŸï¼</font><br>";
 			$klvbf = $chara[33];
 			$chara[33] += $lvup;
 
-			#ƒWƒ‡ƒuƒ}ƒXƒ^[‚Ìˆ—
+			#ã‚¸ãƒ§ãƒ–ãƒã‚¹ã‚¿ãƒ¼ã®å‡¦ç†
 			if ($chara[33] > 59 && $klvbf <=59) {
-				$comment .= "<font class=red size=5>$chara_syoku[$chara[14]]‚ğƒ}ƒXƒ^[‚µ‚½II</font><br>";
+				$comment .= "<font class=red size=5>$chara_syoku[$chara[14]]ã‚’ãƒã‚¹ã‚¿ãƒ¼ã—ãŸï¼ï¼</font><br>";
 				$lock_file = "$lockfolder/syoku$in{'id'}.lock";
 				&lock($lock_file,'SK');
 				&syoku_load;
@@ -255,31 +255,31 @@ sub levelup {
 			$chara[15] = $chara[16];
 
 			if ($hit) {
-				$comment .= "‚g‚o‚ª<font class=yellow>$ahp</font>ã‚ª‚Á‚½II";
+				$comment .= "ï¼¨ï¼°ãŒ<font class=yellow>$ahp</font>ä¸ŠãŒã£ãŸï¼ï¼";
 			}
 			if ($t1) {
-				$comment .= "—Í‚ª<font class=yellow>$as0</font>ã‚ª‚Á‚½B";
+				$comment .= "åŠ›ãŒ<font class=yellow>$as0</font>ä¸ŠãŒã£ãŸã€‚";
 			}
 			if ($t2) {
-				$comment .= "–‚—Í‚ª<font class=yellow>$as1</font>ã‚ª‚Á‚½B";
+				$comment .= "é­”åŠ›ãŒ<font class=yellow>$as1</font>ä¸ŠãŒã£ãŸã€‚";
 			}
 			if ($t3) {
-				$comment .= "M‹ÂS‚ª<font class=yellow>$as2</font>ã‚ª‚Á‚½B";
+				$comment .= "ä¿¡ä»°å¿ƒãŒ<font class=yellow>$as2</font>ä¸ŠãŒã£ãŸã€‚";
 			}
 			if ($t4) {
-				$comment .= "¶–½—Í‚ª<font class=yellow>$as3</font>ã‚ª‚Á‚½B";
+				$comment .= "ç”Ÿå‘½åŠ›ãŒ<font class=yellow>$as3</font>ä¸ŠãŒã£ãŸã€‚";
 			}
 			if ($t5) {
-				$comment .= "Ší—p‚³‚ª<font class=yellow>$as4</font>ã‚ª‚Á‚½B";
+				$comment .= "å™¨ç”¨ã•ãŒ<font class=yellow>$as4</font>ä¸ŠãŒã£ãŸã€‚";
 			}
 			if ($t6) {
-				$comment .= "‘¬‚³‚ª<font class=yellow>$as5</font>ã‚ª‚Á‚½B";
+				$comment .= "é€Ÿã•ãŒ<font class=yellow>$as5</font>ä¸ŠãŒã£ãŸã€‚";
 			}
 			if ($t7) {
-				$comment .= "–£—Í‚ª<font class=yellow>$as6</font>ã‚ª‚Á‚½B";
+				$comment .= "é­…åŠ›ãŒ<font class=yellow>$as6</font>ä¸ŠãŒã£ãŸã€‚";
 			}
 			if ($t8) {
-				$comment .= "ƒJƒ‹ƒ}‚ª<font class=yellow>$as7</font>ã‚ª‚Á‚½B";
+				$comment .= "ã‚«ãƒ«ãƒãŒ<font class=yellow>$as7</font>ä¸ŠãŒã£ãŸã€‚";
 			}
 	
 		}
@@ -287,7 +287,7 @@ sub levelup {
 }
 
 #----------------#
-# E‹Æ‘‚İˆ— #
+# è·æ¥­æ›¸è¾¼ã¿å‡¦ç† #
 #----------------#
 sub syoku_regist {
 
@@ -310,7 +310,7 @@ sub syoku_regist {
 }
 
 #------------------#
-#’§ƒAƒNƒZƒTƒŠ[Œø‰Ê#
+#æŒ‘ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼åŠ¹æœ#
 #------------------#
 sub acs_waza {
 
@@ -320,7 +320,7 @@ sub acs_waza {
 }
 
 #----------------------#
-#’§íÒƒAƒNƒZƒTƒŠ[‰ÁZ#
+#æŒ‘æˆ¦è€…ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼åŠ ç®—#
 #----------------------#
 sub acs_add {
 	$temp_chara[7] = $chara[7];
@@ -344,19 +344,19 @@ sub acs_add {
 	@temp_item = @item;
 
 	if ($chara[30]) {
-		require "./tech/$chara[30].pl";
+		require './tech/$chara[30].pl';
 	} else {
-		require "./tech/0.pl";
+		require './tech/0.pl';
 	}
 	if ($item[7]) {
-		require "./acstech/$item[7].pl";
+		require './acstech/$item[7].pl';
 	} else {
-		require "./acstech/0.pl";
+		require './acstech/0.pl';
 	}
 }
 
 #--------------------#
-#@’§íÒ”\—Í’l•œŒ³@#
+#ã€€æŒ‘æˆ¦è€…èƒ½åŠ›å€¤å¾©å…ƒã€€#
 #--------------------#
 sub acs_sub {
 	$chara[7] = $temp_chara[7];
@@ -371,7 +371,7 @@ sub acs_sub {
 }
 
 #--------------------#
-#@E‹Æ•ÊUŒ‚—ÍŒˆ’è@#
+#ã€€è·æ¥­åˆ¥æ”»æ’ƒåŠ›æ±ºå®šã€€#
 #--------------------#
 sub syokuzero{
 	$dmg1 += int(rand($chara[7])) + $item[1];
@@ -465,12 +465,12 @@ sub syokutwentynine{
 }
 sub syokuthirty{
 	$dmg1 += ((int(rand($chara[7])) + int(rand($chara[8])) + int(rand($chara[9])) + int(rand($chara[10])) + int(rand($chara[11])) + int(rand($chara[12])) + int(rand($chara[13])) + int($chara[20]))) + $item[1];
-}#UŒ‚—ÍŒvZ‚±‚±‚Ü‚Å
+}#æ”»æ’ƒåŠ›è¨ˆç®—ã“ã“ã¾ã§
 
 #----------------------#
-#@‘Îí‘Šèƒf[ƒ^“Ç‘Ö@#
+#ã€€å¯¾æˆ¦ç›¸æ‰‹ãƒ‡ãƒ¼ã‚¿èª­æ›¿ã€€#
 #----------------------#
-# ƒLƒƒƒ‰ƒf[ƒ^‚ğ@winner_data‚É‘ã“ü‚µ‚Ä‚©‚çŒÄ‚Ño‚·‚Æ@winner‚É•ÏŠ·‚µ‚Ü‚·
+# ã‚­ãƒ£ãƒ©ãƒ‡ãƒ¼ã‚¿ã‚’@winner_dataã«ä»£å…¥ã—ã¦ã‹ã‚‰å‘¼ã³å‡ºã™ã¨@winnerã«å¤‰æ›ã—ã¾ã™
 sub winner_data {
 
 	open(IN,"./item/$winner_data[0].cgi");

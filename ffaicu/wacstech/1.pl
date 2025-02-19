@@ -1,5 +1,5 @@
 sub wacskouka{
 	$hpplus2 += int($winner[13] * rand(10));
-	$com2 .= "<font class=\"yellow\" size=3>$winner[27]‚ªŒõ‚ğ•ú‚ÂII$winner[3] ‚Ì‚g‚o‚ª $hpplus2 ‰ñ•œô</FONT><br>";
+	$com2 .= "<font class=\"yellow\" size=3>$winner[27]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼$winner[3] ã®ï¼¨ï¼°ãŒ $hpplus2 å›å¾©â™ª</FONT><br>";
 }
 1;

@@ -1,78 +1,78 @@
 #!/usr/local/bin/perl --
 
 #------------------------------------------------------#
-#@–{ƒXƒNƒŠƒvƒg‚Ì’˜ìŒ ‚Í‰º‹L‚Ì4l‚É‚ ‚è‚Ü‚·B
-#‚¢‚©‚È‚é——R‚ª‚ ‚Á‚Ä‚à‚±‚Ì•\‹L‚ğíœ‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñ
-#ˆá”½‚ğ”­Œ©‚µ‚½ê‡AƒXƒNƒŠƒvƒg‚Ì—˜—p‚ğ’â~‚µ‚Ä‚¢‚½‚¾‚­
-#‚¾‚¯‚Å‚È‚­A‘R‚é‚×‚«ˆ’u‚ğ‚³‚¹‚Ä‚¢‚½‚¾‚«‚Ü‚·B
-#  FF ADVENTURE(‚¢‚­‰ü)
-#@remodeling by ‚¢‚­
-#@http://www.eriicu.com
-#@icu@kcc.zaq.ne.jp
+#ã€€æœ¬ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®è‘—ä½œæ¨©ã¯ä¸‹è¨˜ã®4äººã«ã‚ã‚Šã¾ã™ã€‚
+#ã„ã‹ãªã‚‹ç†ç”±ãŒã‚ã£ã¦ã‚‚ã“ã®è¡¨è¨˜ã‚’å‰Šé™¤ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“
+#é•åã‚’ç™ºè¦‹ã—ãŸå ´åˆã€ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®åˆ©ç”¨ã‚’åœæ­¢ã—ã¦ã„ãŸã ã
+#ã ã‘ã§ãªãã€ç„¶ã‚‹ã¹ãå‡¦ç½®ã‚’ã•ã›ã¦ã„ãŸã ãã¾ã™ã€‚
+#  FF ADVENTURE(ã„ãæ”¹)
+#ã€€remodeling by ã„ã
+#ã€€http://www.eriicu.com
+#ã€€icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
-#@FF ADVENTURE ‰üi v2.1
-#@programed by jun-k
-#@http://www5b.biglobe.ne.jp/~jun-kei/
-#@jun-kei@vanilla.freemail.ne.jp
+#ã€€FF ADVENTURE æ”¹i v2.1
+#ã€€programed by jun-k
+#ã€€http://www5b.biglobe.ne.jp/~jun-kei/
+#ã€€jun-kei@vanilla.freemail.ne.jp
 #------------------------------------------------------#
-#@FF ADVENTURE v0.21
-#@programed by CUMRO
-#@http://cgi.members.interq.or.jp/sun/cumro/mm/
-#@cumro@sun.interq.or.jp
+#ã€€FF ADVENTURE v0.21
+#ã€€programed by CUMRO
+#ã€€http://cgi.members.interq.or.jp/sun/cumro/mm/
+#ã€€cumro@sun.interq.or.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(‰ü) v1.021
+#  FF ADVENTURE(æ”¹) v1.021
 #  remodeling by GUN
 #  http://www2.to/meeting/
 #  gun24@j-club.ne.jp
 #------------------------------------------------------#
 
-#--- [’ˆÓ–€] ------------------------------------------------#
-# 1. ‚±‚ÌƒXƒNƒŠƒvƒg‚ÍƒtƒŠ[ƒ\ƒtƒg‚Å‚·B‚±‚ÌƒXƒNƒŠƒvƒg‚ğg—p‚µ‚½	#
-#    ‚¢‚©‚È‚é‘¹ŠQ‚É‘Î‚µ‚ÄìÒ‚ÍˆêØ‚ÌÓ”C‚ğ•‰‚¢‚Ü‚¹‚ñB		#
-# 2. İ’u‚ÉŠÖ‚·‚é¿–â‚ÍƒTƒ|[ƒgŒf¦”Â‚É‚¨Šè‚¢‚¢‚½‚µ‚Ü‚·B	#
-#    ’¼Úƒ[ƒ‹‚É‚æ‚é¿–â‚ÍˆêØ‚¨ó‚¯‚¢‚½‚µ‚Ä‚¨‚è‚Ü‚¹‚ñB	#
-# 3. İ’u‚µ‚½‚çŠF‚³‚ñ‚ÉŠy‚µ‚ñ‚Å‚à‚ç‚¤ˆ×‚É‚àAWebƒŠƒ“ƒO‚Ö‚º‚ĞQ‰Á#
-#    ‚µ‚Ä‚­‚¾‚³‚¢m(__)m						#
-#    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi@		#
+#--- [æ³¨æ„äº‹é …] ------------------------------------------------#
+# 1. ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã§ã™ã€‚ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ä½¿ç”¨ã—ãŸ	#
+#    ã„ã‹ãªã‚‹æå®³ã«å¯¾ã—ã¦ä½œè€…ã¯ä¸€åˆ‡ã®è²¬ä»»ã‚’è² ã„ã¾ã›ã‚“ã€‚		#
+# 2. è¨­ç½®ã«é–¢ã™ã‚‹è³ªå•ã¯ã‚µãƒãƒ¼ãƒˆæ²ç¤ºæ¿ã«ãŠé¡˜ã„ã„ãŸã—ã¾ã™ã€‚	#
+#    ç›´æ¥ãƒ¡ãƒ¼ãƒ«ã«ã‚ˆã‚‹è³ªå•ã¯ä¸€åˆ‡ãŠå—ã‘ã„ãŸã—ã¦ãŠã‚Šã¾ã›ã‚“ã€‚	#
+# 3. è¨­ç½®ã—ãŸã‚‰çš†ã•ã‚“ã«æ¥½ã—ã‚“ã§ã‚‚ã‚‰ã†ç‚ºã«ã‚‚ã€Webãƒªãƒ³ã‚°ã¸ãœã²å‚åŠ #
+#    ã—ã¦ãã ã•ã„m(__)m						#
+#    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgiã€€		#
 #---------------------------------------------------------------#
 
-# “ú–{Œêƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
-require 'jcode.pl';
+# æ—¥æœ¬èªãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './jacode.pl';
 
-# ƒŒƒWƒXƒgƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
-require 'regist.pl';
+# ãƒ¬ã‚¸ã‚¹ãƒˆãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './regist.pl';
 
-# ‰Šúİ’èƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ
-require 'data/ffadventure.ini';
+# åˆæœŸè¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿
+require './data/ffadventure.ini';
 
-# [İ’è‚Í‚±‚±‚Ü‚Å]------------------------------------------------------------#
+# [è¨­å®šã¯ã“ã“ã¾ã§]------------------------------------------------------------#
 
-# ‚±‚ê‚æ‚è‰º‚ÍACGI‚Ì‚í‚©‚é•ûˆÈŠO‚ÍA•ÏX‚µ‚È‚¢‚Ù‚¤‚ª—Ç‚¢‚Å‚·B
+# ã“ã‚Œã‚ˆã‚Šä¸‹ã¯ã€CGIã®ã‚ã‹ã‚‹æ–¹ä»¥å¤–ã¯ã€å¤‰æ›´ã—ãªã„ã»ã†ãŒè‰¯ã„ã§ã™ã€‚
 
-# ‚±‚Ìƒtƒ@ƒCƒ‹—pİ’è
+# ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ç”¨è¨­å®š
 $backgif = $sts_back;
 $midi = $sts_midi;
 #-----------------------------------------------------------------------------#
 
-if($mente) { &error("Œ»İƒo[ƒWƒ‡ƒ“ƒAƒbƒv’†‚Å‚·B‚µ‚Î‚ç‚­‚¨‘Ò‚¿‚­‚¾‚³‚¢B"); }
+if($mente) { &error("ç¾åœ¨ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—ä¸­ã§ã™ã€‚ã—ã°ã‚‰ããŠå¾…ã¡ãã ã•ã„ã€‚"); }
 
 &decode;
 
-#‚h‚oƒAƒhƒŒƒX‚ÅƒAƒNƒZƒX§ŒÀ
+#ï¼©ï¼°ã‚¢ãƒ‰ãƒ¬ã‚¹ã§ã‚¢ã‚¯ã‚»ã‚¹åˆ¶é™
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
-	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("ƒAƒNƒZƒX‚Å‚«‚Ü‚¹‚ñII");}
+	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã›ã‚“ï¼ï¼");}
 }
 
 &rank;
 exit;
 
 #------------------#
-#  ƒ‰ƒ“ƒLƒ“ƒO•\¦  #
+#  ãƒ©ãƒ³ã‚­ãƒ³ã‚°è¡¨ç¤º  #
 #------------------#
 sub rank {
 
-	if (!$no_html) { &error("•‰‰×‚ª‘å‚«‚¢‚Ì‚ÅHTML¶¬‚Å‚«‚È‚¢ƒT[ƒo[‚Å‚Íg—p‚Å‚«‚Ü‚¹‚ñ"); }
+	if (!$no_html) { &error("è² è·ãŒå¤§ãã„ã®ã§HTMLç”Ÿæˆã§ããªã„ã‚µãƒ¼ãƒãƒ¼ã§ã¯ä½¿ç”¨ã§ãã¾ã›ã‚“"); }
 
 	$lock_file = "$lockfolder/tim.lock";
 	&lock($lock_file,'TM');
@@ -126,43 +126,43 @@ sub rank {
 
 	$sousu = @RANKING;
 
-	# ”z—ñ19”Ô–Ú‚Åƒ\[ƒg
+	# é…åˆ—19ç•ªç›®ã§ã‚½ãƒ¼ãƒˆ
 	@tmp = map {(split /<>/)[18]} @RANKING;
 	@levela = @RANKING[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
-	# ”z—ñ17”Ô–Ú‚Åƒ\[ƒg
+	# é…åˆ—17ç•ªç›®ã§ã‚½ãƒ¼ãƒˆ
 	@tmp = map {(split /<>/)[16]} @levela;
 	@hitp = @levela[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
-	# ”z—ñ8”Ô–Ú‚Åƒ\[ƒg
+	# é…åˆ—8ç•ªç›®ã§ã‚½ãƒ¼ãƒˆ
 	@tmp = map {(split /<>/)[7]} @levela;
 	@atack = @levela[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
-	# ”z—ñ9”Ô–Ú‚Åƒ\[ƒg
+	# é…åˆ—9ç•ªç›®ã§ã‚½ãƒ¼ãƒˆ
 	@tmp = map {(split /<>/)[8]} @levela;
 	@def = @levela[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
-	# ”z—ñ10”Ô–Ú‚Åƒ\[ƒg
+	# é…åˆ—10ç•ªç›®ã§ã‚½ãƒ¼ãƒˆ
 	@tmp = map {(split /<>/)[9]} @levela;
 	@rp = @levela[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
-	# ”z—ñ11”Ô–Ú‚Åƒ\[ƒg
+	# é…åˆ—11ç•ªç›®ã§ã‚½ãƒ¼ãƒˆ
 	@tmp = map {(split /<>/)[10]} @levela;
 	@gp = @levela[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
-	# ”z—ñ12”Ô–Ú‚Åƒ\[ƒg
+	# é…åˆ—12ç•ªç›®ã§ã‚½ãƒ¼ãƒˆ
 	@tmp = map {(split /<>/)[11]} @levela;
 	@sp = @levela[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
-	# ”z—ñ13”Ô–Ú‚Åƒ\[ƒg
+	# é…åˆ—13ç•ªç›®ã§ã‚½ãƒ¼ãƒˆ
 	@tmp = map {(split /<>/)[12]} @levela;
 	@bp = @levela[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
-	# ”z—ñ14”Ô–Ú‚Åƒ\[ƒg
+	# é…åˆ—14ç•ªç›®ã§ã‚½ãƒ¼ãƒˆ
 	@tmp = map {(split /<>/)[13]} @levela;
 	@lp = @levela[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
-	# ”z—ñ21”Ô–Ú‚Åƒ\[ƒg
+	# é…åˆ—21ç•ªç›®ã§ã‚½ãƒ¼ãƒˆ
 	@tmp = map {(split /<>/)[20]} @levela;
 	@yen = @levela[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
@@ -175,7 +175,7 @@ sub rank {
 		}
 	}
 
-	# ”z—ñ3”Ô–Ú‚Åƒ\[ƒg
+	# é…åˆ—3ç•ªç›®ã§ã‚½ãƒ¼ãƒˆ
 	@tmp = map {(split /<>/)[3]} @win_new;
 	@win_new = @win_new[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
@@ -185,7 +185,7 @@ sub rank {
 <html lang="ja">
 <head>
 <meta http-equiv="Pragma" content="no-cache">
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=Shift_JIS">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 <META http-equiv="Content-Script-Type" content="text/javascript">
 <META http-equiv="Content-Style-Type" content="text/css">
 <SCRIPT Language="JavaScript" src="$java_script" type="text/javascript">
@@ -219,18 +219,18 @@ EOM
 	$mody[4]++;
 
 		$buffer .= <<"EOM";
-<H3>‰p—Y‚½‚¿‚Ì‹L˜^</H3>
-<FONT SIZE="3">‚»‚ê‚¼‚ê‚ÌƒXƒe[ƒ^ƒX‚ÌTOP10‚ğ•\\¦‚µ‚Ä‚¢‚Ü‚·B<br>
-<font size =3 color =red><b>‚½‚¾‚µAXV‚Í‚P“ú‚É‚P‰ñ‚µ‚©s‚í‚ê‚Ü‚¹‚ñB</b></font>‘O‰ñ‚Í$mody[4]Œ$mody[3]“ú$mody[2]$mody[1]•ª‚ÉXV‚³‚ê‚Ü‚µ‚½B<br>
+<H3>è‹±é›„ãŸã¡ã®è¨˜éŒ²</H3>
+<FONT SIZE="3">ãã‚Œãã‚Œã®ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã®TOP10ã‚’è¡¨\ç¤ºã—ã¦ã„ã¾ã™ã€‚<br>
+<font size =3 color =red><b>ãŸã ã—ã€æ›´æ–°ã¯ï¼‘æ—¥ã«ï¼‘å›ã—ã‹è¡Œã‚ã‚Œã¾ã›ã‚“ã€‚</b></font>å‰å›ã¯$mody[4]æœˆ$mody[3]æ—¥$mody[2]æ™‚$mody[1]åˆ†ã«æ›´æ–°ã•ã‚Œã¾ã—ãŸã€‚<br>
 
-‘S“o˜^ƒLƒƒƒ‰ƒNƒ^[”‚ÍA<B>$sousu</B>l‚Å‚·B
+å…¨ç™»éŒ²ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼æ•°ã¯ã€<B>$sousu</B>äººã§ã™ã€‚
 </FONT>
 <HR SIZE=0>
 EOM
 	$buffer.="<TABLE BORDER=0>\n";
 	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b2\" COLSPAN=\"5\">\n";
-	$buffer.="ƒŒƒxƒ‹</TD></TR>\n";
-	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">‚È‚Ü‚¦</TD><TD ALIGN=\"center\" CLASS=\"b1\">LV</TD><TD ALIGN=\"center\" CLASS=\"b1\">ƒz[ƒ€ƒy[ƒW</TD>\n";
+	$buffer.="ãƒ¬ãƒ™ãƒ«</TD></TR>\n";
+	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">ãªã¾ãˆ</TD><TD ALIGN=\"center\" CLASS=\"b1\">LV</TD><TD ALIGN=\"center\" CLASS=\"b1\">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</TD>\n";
 
 	$i=1;
 	foreach(@levela){
@@ -257,7 +257,7 @@ EOM
 	$buffer.="<TABLE BORDER=0>\n";
 	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b2\" COLSPAN=\"5\">\n";
 	$buffer.="HP</TD></TR>\n";
-	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">‚È‚Ü‚¦</TD><TD ALIGN=\"center\" CLASS=\"b1\">HP</TD><TD ALIGN=\"center\" CLASS=\"b1\">ƒz[ƒ€ƒy[ƒW</TD>\n";
+	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">ãªã¾ãˆ</TD><TD ALIGN=\"center\" CLASS=\"b1\">HP</TD><TD ALIGN=\"center\" CLASS=\"b1\">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</TD>\n";
 
 	$i=1;
 	foreach(@hitp){
@@ -282,8 +282,8 @@ EOM
 
 	$buffer.="<TABLE BORDER=0>\n";
 	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b2\" COLSPAN=\"5\">\n";
-	$buffer.="‚¿‚©‚ç</TD></TR>\n";
-	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">‚È‚Ü‚¦</TD><TD ALIGN=\"center\" CLASS=\"b1\">‚¿‚©‚ç</TD><TD ALIGN=\"center\" CLASS=\"b1\">ƒz[ƒ€ƒy[ƒW</TD>\n";
+	$buffer.="ã¡ã‹ã‚‰</TD></TR>\n";
+	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">ãªã¾ãˆ</TD><TD ALIGN=\"center\" CLASS=\"b1\">ã¡ã‹ã‚‰</TD><TD ALIGN=\"center\" CLASS=\"b1\">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</TD>\n";
 
 	$i=1;
 	foreach(@atack){
@@ -308,8 +308,8 @@ EOM
 
 	$buffer.="<TABLE BORDER=0>\n";
 	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b2\" COLSPAN=\"5\">\n";
-	$buffer.="’m\”\\</TD></TR>\n";
-	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">‚È‚Ü‚¦</TD><TD ALIGN=\"center\" CLASS=\"b1\">’m\”\\</TD><TD ALIGN=\"center\" CLASS=\"b1\">ƒz[ƒ€ƒy[ƒW</TD>\n";
+	$buffer.="çŸ¥\èƒ½\</TD></TR>\n";
+	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">ãªã¾ãˆ</TD><TD ALIGN=\"center\" CLASS=\"b1\">çŸ¥\èƒ½\</TD><TD ALIGN=\"center\" CLASS=\"b1\">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</TD>\n";
 
 	$i=1;
 	foreach(@def){
@@ -335,8 +335,8 @@ EOM
 
 	$buffer.="<TABLE BORDER=0>\n";
 	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b2\" COLSPAN=\"5\">\n";
-	$buffer.="M‹ÂS</TD></TR>\n";
-	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">‚È‚Ü‚¦</TD><TD ALIGN=\"center\" CLASS=\"b1\">M‹ÂS</TD><TD ALIGN=\"center\" CLASS=\"b1\">ƒz[ƒ€ƒy[ƒW</TD>\n";
+	$buffer.="ä¿¡ä»°å¿ƒ</TD></TR>\n";
+	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">ãªã¾ãˆ</TD><TD ALIGN=\"center\" CLASS=\"b1\">ä¿¡ä»°å¿ƒ</TD><TD ALIGN=\"center\" CLASS=\"b1\">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</TD>\n";
 
 	$i=1;
 	foreach(@rp){
@@ -363,8 +363,8 @@ EOM
 
 	$buffer.="<TABLE BORDER=0>\n";
 	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b2\" COLSPAN=\"5\">\n";
-	$buffer.="¶–½—Í</TD></TR>\n";
-	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">‚È‚Ü‚¦</TD><TD ALIGN=\"center\" CLASS=\"b1\">¶–½—Í</TD><TD ALIGN=\"center\" CLASS=\"b1\">ƒz[ƒ€ƒy[ƒW</TD>\n";
+	$buffer.="ç”Ÿå‘½åŠ›</TD></TR>\n";
+	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">ãªã¾ãˆ</TD><TD ALIGN=\"center\" CLASS=\"b1\">ç”Ÿå‘½åŠ›</TD><TD ALIGN=\"center\" CLASS=\"b1\">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</TD>\n";
 
 	$i=1;
 	foreach(@gp){
@@ -391,8 +391,8 @@ EOM
 
 	$buffer.="<TABLE BORDER=0>\n";
 	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b2\" COLSPAN=\"5\">\n";
-	$buffer.="Ší—p‚³</TD></TR>\n";
-	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">‚È‚Ü‚¦</TD><TD ALIGN=\"center\" CLASS=\"b1\">Ší—p‚³</TD><TD ALIGN=\"center\" CLASS=\"b1\">ƒz[ƒ€ƒy[ƒW</TD>\n";
+	$buffer.="å™¨ç”¨ã•</TD></TR>\n";
+	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">ãªã¾ãˆ</TD><TD ALIGN=\"center\" CLASS=\"b1\">å™¨ç”¨ã•</TD><TD ALIGN=\"center\" CLASS=\"b1\">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</TD>\n";
 
 	$i=1;
 	foreach(@sp){
@@ -419,8 +419,8 @@ EOM
 
 	$buffer.="<TABLE BORDER=0>\n";
 	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b2\" COLSPAN=\"5\">\n";
-	$buffer.="‘¬‚³</TD></TR>\n";
-	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">‚È‚Ü‚¦</TD><TD ALIGN=\"center\" CLASS=\"b1\">‘¬‚³</TD><TD ALIGN=\"center\" CLASS=\"b1\">ƒz[ƒ€ƒy[ƒW</TD>\n";
+	$buffer.="é€Ÿã•</TD></TR>\n";
+	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">ãªã¾ãˆ</TD><TD ALIGN=\"center\" CLASS=\"b1\">é€Ÿã•</TD><TD ALIGN=\"center\" CLASS=\"b1\">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</TD>\n";
 
 	$i=1;
 	foreach(@bp){
@@ -447,8 +447,8 @@ EOM
 
 	$buffer.="<TABLE BORDER=0>\n";
 	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b2\" COLSPAN=\"5\">\n";
-	$buffer.="–£—Í</TD></TR>\n";
-	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">‚È‚Ü‚¦</TD><TD ALIGN=\"center\" CLASS=\"b1\">–£—Í</TD><TD ALIGN=\"center\" CLASS=\"b1\">ƒz[ƒ€ƒy[ƒW</TD>\n";
+	$buffer.="é­…åŠ›</TD></TR>\n";
+	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">ãªã¾ãˆ</TD><TD ALIGN=\"center\" CLASS=\"b1\">é­…åŠ›</TD><TD ALIGN=\"center\" CLASS=\"b1\">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</TD>\n";
 
 	$i=1;
 	foreach(@lp){
@@ -473,8 +473,8 @@ EOM
 
 	$buffer.="<TABLE BORDER=0>\n";
 	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b2\" COLSPAN=\"5\">\n";
-	$buffer.="ƒJƒ‹ƒ}</TD></TR>\n";
-	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">‚È‚Ü‚¦</TD><TD ALIGN=\"center\" CLASS=\"b1\">ƒJƒ‹ƒ}</TD><TD ALIGN=\"center\" CLASS=\"b1\">ƒz[ƒ€ƒy[ƒW</TD>\n";
+	$buffer.="ã‚«ãƒ«ãƒ</TD></TR>\n";
+	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">ãªã¾ãˆ</TD><TD ALIGN=\"center\" CLASS=\"b1\">ã‚«ãƒ«ãƒ</TD><TD ALIGN=\"center\" CLASS=\"b1\">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</TD>\n";
 
 	$i=1;
 	foreach(@yen){
@@ -499,8 +499,8 @@ EOM
 
 	$buffer.="<TABLE BORDER=0>\n";
 	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b2\" COLSPAN=\"5\">\n";
-	$buffer.="Ÿ—¦</TD></TR>\n";
-	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">‚È‚Ü‚¦</TD><TD ALIGN=\"center\" CLASS=\"b1\">Ÿ—¦</TD><TD ALIGN=\"center\" CLASS=\"b1\">ƒz[ƒ€ƒy[ƒW</TD>\n";
+	$buffer.="å‹ç‡</TD></TR>\n";
+	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">ãªã¾ãˆ</TD><TD ALIGN=\"center\" CLASS=\"b1\">å‹ç‡</TD><TD ALIGN=\"center\" CLASS=\"b1\">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</TD>\n";
 
 	$i=1;
 	foreach(@win_new){
@@ -512,7 +512,7 @@ EOM
 		$buffer.="<a href=\"../$scripta?mode=chara_sts&id=$kid\">$kname</a>\n";
 		$buffer.="</TD>\n";
 		$buffer.="<TD ALIGN=\"right\">\n";
-		$buffer.="<b>$kati_ritu</b>“($ktotalí)\n";
+		$buffer.="<b>$kati_ritu</b>ï¼…($ktotalæˆ¦)\n";
 		$buffer.="</TD>\n";
 		$buffer.="<TD>\n";
 		$buffer.="$url\n";
@@ -525,13 +525,13 @@ EOM
 
 	$buffer.= <<"EOM";
 <HR SIZE=0 WIDTH="100%">
-<a href = "$html_path$scripto">$main_title‚ÌTOP‚Ö</a>
+<a href = "$html_path$scripto">$main_titleã®TOPã¸</a>
 <HR SIZE=0 WIDTH="100%"><DIV align=right>
-FFA ‚¢‚­‰üver2.00 edit by <a href="http://www.eriicu.com" target="_top">‚¢‚­</a><br>
-FFA Emilia Ver1.01 remodeled by Classic(•Â½)<br>
-FF Battle De I v3.06 remodeling by <a href="http://www.mj-world.jp/" target="_blank">jun-k</a>(XV’â~’†)<br>
-FF ADVENTURE(‰ü) v1.040 remodeled by <a href="http://www.gun-online.com" target="_blank">‚f‚t‚m</a><br>
-FF ADVENTURE v0.43 edit by D.Takamiya(CUMRO) <a href="http://www5c.biglobe.ne.jp/~ma-ti/" target="_blank">Œ»”z•zŒ³(ŠÇ—Òma-ti)</a><br>
+FFA ã„ãæ”¹ver2.00 edit by <a href="http://www.eriicu.com" target="_top">ã„ã</a><br>
+FFA Emilia Ver1.01 remodeled by Classic(é–‰é–)<br>
+FF Battle De I v3.06 remodeling by <a href="http://www.mj-world.jp/" target="_blank">jun-k</a>(æ›´æ–°åœæ­¢ä¸­)<br>
+FF ADVENTURE(æ”¹) v1.040 remodeled by <a href="http://www.gun-online.com" target="_blank">ï¼§ï¼µï¼®</a><br>
+FF ADVENTURE v0.43 edit by D.Takamiya(CUMRO) <a href="http://www5c.biglobe.ne.jp/~ma-ti/" target="_blank">ç¾é…å¸ƒå…ƒ(ç®¡ç†è€…ma-ti)</a><br>
 </DIV></body></html>
 EOM
 

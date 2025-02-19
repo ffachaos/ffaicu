@@ -2,9 +2,9 @@ sub mons_waza{
 	if ($mons_ritu > int(rand(100))) {
 		$sake1 -= 999999;
 		$ksex = int(rand(2));
-		if ($ksex == 1) { $seibetu = "’j"; }
-		elsif ($ksex == 0) { $seibetu = "—"; }
-		$com2 .= "<font class=\"red\" size=5>«“]Š·III</font><font color =#cc6633 size = 2><br>«•Ê‚ªƒ‰ƒ“ƒ_ƒ€‚É•Ï‰»‚·‚éI$seibetu‚É‚È‚Á‚½I</font><br>";
+		if ($ksex == 1) { $seibetu = "ç”·"; }
+		elsif ($ksex == 0) { $seibetu = "å¥³"; }
+		$com2 .= "<font class=\"red\" size=5>æ€§è»¢æ›ï¼ï¼ï¼</font><font color =#cc6633 size = 2><br>æ€§åˆ¥ãŒãƒ©ãƒ³ãƒ€ãƒ ã«å¤‰åŒ–ã™ã‚‹ï¼$seibetuã«ãªã£ãŸï¼</font><br>";
 	}
 }
 sub mons_atowaza{}

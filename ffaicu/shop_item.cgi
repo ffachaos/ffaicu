@@ -1,60 +1,60 @@
 #!/usr/local/bin/perl --
 
 #------------------------------------------------------#
-#�@�{�X�N���v�g�̒��쌠�͉��L��3�l�ɂ���܂��B
-#�����Ȃ闝�R�������Ă����̕\�L���폜���邱�Ƃ͂ł��܂���
-#�ᔽ�𔭌������ꍇ�A�X�N���v�g�̗��p���~���Ă�������
-#�����łȂ��A�R��ׂ����u�������Ă��������܂��B
-#�@FF ADVENTURE ��i v2.1
-#�@programed by jun-k
-#�@http://www5b.biglobe.ne.jp/~jun-kei/
-#�@jun-kei@vanilla.freemail.ne.jp
+#　本スクリプトの著作権は下記の3人にあります。
+#いかなる理由があってもこの表記を削除することはできません
+#違反を発見した場合、スクリプトの利用を停止していただく
+#だけでなく、然るべき処置をさせていただきます。
+#　FF ADVENTURE 改i v2.1
+#　programed by jun-k
+#　http://www5b.biglobe.ne.jp/~jun-kei/
+#　jun-kei@vanilla.freemail.ne.jp
 #------------------------------------------------------#
-#�@FF ADVENTURE v0.21
-#�@programed by CUMRO
-#�@http://cgi.members.interq.or.jp/sun/cumro/mm/
-#�@cumro@sun.interq.or.jp
+#　FF ADVENTURE v0.21
+#　programed by CUMRO
+#　http://cgi.members.interq.or.jp/sun/cumro/mm/
+#　cumro@sun.interq.or.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(��) v1.021
+#  FF ADVENTURE(改) v1.021
 #  remodeling by GUN
 #  http://www2.to/meeting/
 #  gun24@j-club.ne.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(������)
-#�@remodeling by ����
-#�@http://www.eriicu.com
-#�@icu@kcc.zaq.ne.jp
+#  FF ADVENTURE(いく改)
+#　remodeling by いく
+#　http://www.eriicu.com
+#　icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
-#--- [���ӎ���] ------------------------------------------------#
-# 1. ���̃X�N���v�g�̓t���[�\�t�g�ł��B���̃X�N���v�g���g�p���� #
-#    �����Ȃ鑹�Q�ɑ΂��č�҂͈�؂̐ӔC�𕉂��܂���B     	#
-# 2. �ݒu�Ɋւ��鎿��̓T�|�[�g�f���ɂ��肢�������܂��B   	#
+#--- [注意事項] ------------------------------------------------#
+# 1. このスクリプトはフリーソフトです。このスクリプトを使用した #
+#    いかなる損害に対して作者は一切の責任を負いません。     	#
+# 2. 設置に関する質問はサポート掲示板にお願いいたします。   	#
 #    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi             #
-#    ���ڃ��[���ɂ�鎿��͈�؂��󂯂������Ă���܂���B   	#
+#    直接メールによる質問は一切お受けいたしておりません。   	#
 #---------------------------------------------------------------#
-# ���{�ꃉ�C�u�����̓ǂݍ���
-require 'jcode.pl';
+# 日本語ライブラリの読み込み
+require './jacode.pl';
 
-# ���W�X�g���C�u�����̓ǂݍ���
-require 'regist.pl';
+# レジストライブラリの読み込み
+require './regist.pl';
 
-# �A�C�e�����C�u�����̓ǂݍ���
-require 'item.pl';
+# アイテムライブラリの読み込み
+require './item.pl';
 
-# �����ݒ�t�@�C���̓ǂݍ���
-require 'data/ffadventure.ini';
+# 初期設定ファイルの読み込み
+require './data/ffadventure.ini';
 
-# ���̃t�@�C���p�ݒ�
+# このファイル用設定
 $backgif = $shop_back;
 $midi = $shop_midi;
 
-# [�ݒ�͂����܂�]------------------------------------------------------------#
+# [設定はここまで]------------------------------------------------------------#
 
-# �����艺�́ACGI�̂킩����ȊO�́A�ύX���Ȃ��ق����ǂ��ł��B
+# これより下は、CGIのわかる方以外は、変更しないほうが良いです。
 
 #-----------------------------------------------------------------------------#
 if($mente) {
-	&error("���݃o�[�W�����A�b�v���ł��B���΂炭���҂����������B");
+	&error("現在バージョンアップ中です。しばらくお待ちください。");
 }
 
 &decode;
@@ -64,14 +64,14 @@ if($mente) {
 <form action="$item_shop" method="post">
 <input type=hidden name=id value="$in{'id'}">
 <input type="hidden" name="mydata" value="$in{'mydata'}">
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
-#�h�o�A�h���X�ŃA�N�Z�X����
+#ＩＰアドレスでアクセス制限
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
-	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("�A�N�Z�X�ł��܂���I�I");}
+	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("アクセスできません！！");}
 }
 if($mode) { &$mode; }
 
@@ -80,7 +80,7 @@ if($mode) { &$mode; }
 exit;
 
 #----------------#
-#  �A�C�e���\��  #
+#  アイテム表示  #
 #----------------#
 sub item_view {
 
@@ -99,7 +99,7 @@ sub item_view {
 	}
 
 	if(!$hit) {
-		$si_name="�f��";
+		$si_name="素手";
 		$si_dmg="0";
 		$si_gold="0";
 	}
@@ -114,32 +114,32 @@ sub item_view {
 	&header;
 
 	print <<"EOM";
-<h1>���퉮</h1>
+<h1>武器屋</h1>
 <hr size=0>
 
 <FONT SIZE=3>
-<B>���퉮�̃}�X�^�[</B><BR>
-�u��������Ⴂ�I�������푵���Ă��`�B���̑嗤�̒�����A��������Ԃ̕i��������I<BR>
-�@���A�Ȃ񂾂��A<B>$chara[4]</B>����Ȃ����B���C�ɂ��Ă������H
-<BR>����$chara_syoku[$chara[14]]������Ă�̂��B
-<BR>���$chara_syoku[$chara[14]]�p�̕������ׂ����񂾂�I
+<B>武器屋のマスター</B><BR>
+「いらっしゃい！いい武器揃ってるよ～。この大陸の中じゃ、うちが一番の品揃えだよ！<BR>
+　あ、なんだい、<B>$chara[4]</B>じゃないか。元気にしてたかい？
+<BR>今は$chara_syoku[$chara[14]]をやってるのか。
+<BR>昨日$chara_syoku[$chara[14]]用の武器を入荷したんだよ！
 <BR>
-�@�܂��A������茩�Ă����Ă���B
-<BR><BR>���������I�ŋߑ����i�̉������͂��߂��񂾁B�v
+　まあ、ゆっくり見ていってくれ。
+<BR><BR>そうそう！最近装備品の下取りもはじめたんだ。」
 </FONT>
-<br><hr>���݂̏������F$chara[19] �f<br>
+<br><hr>現在の所持金：$chara[19] Ｇ<br>
 <table>
 <tr>
-<th></th><th>No.</th><th>�Ȃ܂�</th><th>�З�</th><th>���i</th></tr>
+<th></th><th>No.</th><th>なまえ</th><th>威力</th><th>価格</th></tr>
 <tr>
 <form action="$item_shop" method="post">
 <th><input type=hidden name=id value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=mode value=item_sell>
 EOM
-if ($hit) { print "<input type=submit class=btn value=\"����\">"; }
+if ($hit) { print "<input type=submit class=btn value=\"売る\">"; }
 	print <<"EOM";
-</th></form><th>���݂̑����i</th><th>$si_name</th><th>$si_dmg</th><th>$ui_gold</th></tr></table>
+</th></form><th>現在の装備品</th><th>$si_name</th><th>$si_dmg</th><th>$ui_gold</th></tr></table>
 <form action="$item_shop" method="post">
 <table>
 EOM
@@ -150,7 +150,7 @@ EOM
 		if ($chara[19] >= $igold) {
 			print "<input type=radio name=item_no value=\"$ino\">";
 		} else {
-			print "�~";
+			print "×";
 		}
 		print "</td><td align=right class=b1>$ino</td><td class=b1>$iname</td><td align=right class=b1>$idmg</td><td align=right class=b1>$igold</td>\n";
 		print "</tr>\n";
@@ -161,7 +161,7 @@ EOM
 <input type=hidden name=id value=$in{'id'}>
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=mode value=item_buy>
-<input type=submit class=btn value="����𔃂�">
+<input type=submit class=btn value="武器を買う">
 </form>
 EOM
 
@@ -174,7 +174,7 @@ EOM
 }
 
 #----------------#
-#  �A�C�e������  #
+#  アイテム買う  #
 #----------------#
 sub item_buy {
 
@@ -195,9 +195,9 @@ sub item_buy {
 		($i_no,$i_name,$i_dmg,$i_gold,$ihit) = split(/<>/);
 		if($in{'item_no'} eq "$i_no") { $hit=1;last; }
 	}
-	if(!$hit) { &error("����ȃA�C�e���͑��݂��܂���"); }
+	if(!$hit) { &error("そんなアイテムは存在しません"); }
 
-	if($chara[19] < $i_gold) { &error("����������܂���$back_form"); }
+	if($chara[19] < $i_gold) { &error("お金が足りません$back_form"); }
 	else { $chara[19] = $chara[19] - $i_gold; }
 
 	$chara[26] = $host;
@@ -211,7 +211,7 @@ sub item_buy {
 	$souko_item_num = @souko_item;
 
 	if ($souko_item_num >= $item_max) {
-		&error("����q�ɂ������ς��ł��I$back_form");
+		&error("武器倉庫がいっぱいです！$back_form");
 	}
 
 	push(@souko_item,"$i_no<>$i_name<>$i_dmg<>$i_gold<>$ihit<>\n");
@@ -230,10 +230,10 @@ sub item_buy {
 
 	print <<"EOM";
 <FONT SIZE=3>
-<B>���퉮�̃}�X�^�[</B><BR>
-�u���x����`�I<br>
-����������͂��񂽂̕���q�ɂɑ����Ă�������I
-�v</font>
+<B>武器屋のマスター</B><BR>
+「毎度あり～！<br>
+買った武器はあんたの武器倉庫に送っておいたよ！
+」</font>
 <hr size=0>
 EOM
 
@@ -245,7 +245,7 @@ EOM
 }
 
 #----------------#
-#  �A�C�e������  #
+#  アイテム売る  #
 #----------------#
 sub item_sell {
 	
@@ -267,8 +267,8 @@ sub item_sell {
 		($i_no,$i_name,$i_dmg,$i_gold) = split(/<>/);
 		if($chara[24] eq "$i_no") { $hit=1;last; }
 	}
-	if(!$hit) { &error("����ȃA�C�e���͑��݂��܂���"); }
-	if(!$chara[24]) { &error("����ȃA�C�e���͑��݂��܂���"); }
+	if(!$hit) { &error("そんなアイテムは存在しません"); }
+	if(!$chara[24]) { &error("そんなアイテムは存在しません"); }
 	$ui_gold = int($i_gold / 3) * 2;
 
 	$chara[19] = $chara[19] + $ui_gold;
@@ -292,7 +292,7 @@ sub item_sell {
 	&header;
 
 	print <<"EOM";
-<h1>$i_name�𔄂�܂���</h1>
+<h1>$i_nameを売りました</h1>
 <hr size=0>
 EOM
 

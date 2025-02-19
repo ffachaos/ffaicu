@@ -1,4 +1,4 @@
-FROM perl:5.8-threaded-buster
+FROM perl:5.40-threaded-buster
 
 RUN apt-get update && \
     apt-get install -y apache2 libapache2-mod-perl2 && \

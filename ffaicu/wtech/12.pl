@@ -1,7 +1,7 @@
 sub whissatu{
 	if ($wwaza_ritu > int(rand(80))) {
 		$dmg2 = 0;
-		$sake2 += 999;	$com2 .= "<font class=\"yellow\" size=5>‹ó–‚–@ƒwƒCƒXƒgIIIi‰ñ”ğ—¦Œƒ‘j</FONT><br>";
+		$sake2 += 999;	$com2 .= "<font class=\"yellow\" size=5>æ™‚ç©ºé­”æ³•ãƒ˜ã‚¤ã‚¹ãƒˆï¼ï¼ï¼ï¼ˆå›é¿ç‡æ¿€å¢—ï¼‰</FONT><br>";
 	}
 }
 sub watowaza{}

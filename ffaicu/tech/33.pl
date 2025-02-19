@@ -3,7 +3,7 @@ sub atowaza{
 	if ($waza_ritu > int(rand(120))) {
 		if ($mode ne 'isekai' and $mode ne 'boss') {
 			$dmg2 = 0;
-			$com1 .="<font class=\"white\">^Œ•”’næ‚èII</font><br>";
+			$com1 .="<font class=\"white\">çœŸå‰£ç™½åˆƒå–ã‚Šï¼ï¼</font><br>";
 		}
 	}
 }

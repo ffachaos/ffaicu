@@ -4,9 +4,9 @@ sub mons_waza{
 			$sake1 -= 999999;
 			$dmg2 = $khp_flg;
 			$dmg2 += $item[4];
-			$com2 .= "<font class=\"red\" size=5>‹ó–‚–@ƒfƒWƒ‡ƒ“‚ğ”­“®III</font><br>";
+			$com2 .= "<font class=\"red\" size=5>æ™‚ç©ºé­”æ³•ãƒ‡ã‚¸ãƒ§ãƒ³ã‚’ç™ºå‹•ï¼ï¼ï¼</font><br>";
 		} else {
-			$com2 .= "<font class=\"red\" size=5>‹ó–‚–@ƒfƒWƒ‡ƒ“‚ğ”­“®III¸”sII</font><br>";
+			$com2 .= "<font class=\"red\" size=5>æ™‚ç©ºé­”æ³•ãƒ‡ã‚¸ãƒ§ãƒ³ã‚’ç™ºå‹•ï¼ï¼ï¼å¤±æ•—ï¼ï¼</font><br>";
 		}
 	}
 }

@@ -1,70 +1,70 @@
 #!/usr/local/bin/perl --
 
 #------------------------------------------------------#
-#�@�{�X�N���v�g�̒��쌠�͉��L��3�l�ɂ���܂��B
-#�����Ȃ闝�R�������Ă����̕\�L���폜���邱�Ƃ͂ł��܂���
-#�ᔽ�𔭌������ꍇ�A�X�N���v�g�̗��p���~���Ă�������
-#�����łȂ��A�R��ׂ����u�������Ă��������܂��B
-#�@FF ADVENTURE ��i v2.1
-#�@programed by jun-k
-#�@http://www5b.biglobe.ne.jp/~jun-kei/
-#�@jun-kei@vanilla.freemail.ne.jp
+#　本スクリプトの著作権は下記の3人にあります。
+#いかなる理由があってもこの表記を削除することはできません
+#違反を発見した場合、スクリプトの利用を停止していただく
+#だけでなく、然るべき処置をさせていただきます。
+#　FF ADVENTURE 改i v2.1
+#　programed by jun-k
+#　http://www5b.biglobe.ne.jp/~jun-kei/
+#　jun-kei@vanilla.freemail.ne.jp
 #------------------------------------------------------#
-#�@FF ADVENTURE v0.21
-#�@programed by CUMRO
-#�@http://cgi.members.interq.or.jp/sun/cumro/mm/
-#�@cumro@sun.interq.or.jp
+#　FF ADVENTURE v0.21
+#　programed by CUMRO
+#　http://cgi.members.interq.or.jp/sun/cumro/mm/
+#　cumro@sun.interq.or.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(��) v1.021
+#  FF ADVENTURE(改) v1.021
 #  remodeling by GUN
 #  http://www2.to/meeting/
 #  gun24@j-club.ne.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(������)
-#�@remodeling by ����
-#�@http://www.eriicu.com
-#�@icu@kcc.zaq.ne.jp
+#  FF ADVENTURE(いく改)
+#　remodeling by いく
+#　http://www.eriicu.com
+#　icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
-#--- [���ӎ���] ------------------------------------------------#
-# 1. ���̃X�N���v�g�̓t���[�\�t�g�ł��B���̃X�N���v�g���g�p����	#
-#    �����Ȃ鑹�Q�ɑ΂��č�҂͈�؂̐ӔC�𕉂��܂���B		#
-# 2. �ݒu�Ɋւ��鎿��̓T�|�[�g�f���ɂ��肢�������܂��B	#
-#    ���ڃ��[���ɂ�鎿��͈�؂��󂯂������Ă���܂���B	#
-# 3. �ݒu������F����Ɋy����ł��炤�ׂɂ��AWeb�����O�ւ��ЎQ��#
-#    ���Ă�������m(__)m						#
+#--- [注意事項] ------------------------------------------------#
+# 1. このスクリプトはフリーソフトです。このスクリプトを使用した	#
+#    いかなる損害に対して作者は一切の責任を負いません。		#
+# 2. 設置に関する質問はサポート掲示板にお願いいたします。	#
+#    直接メールによる質問は一切お受けいたしておりません。	#
+# 3. 設置したら皆さんに楽しんでもらう為にも、Webリングへぜひ参加#
+#    してくださいm(__)m						#
 #    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi		#
 #---------------------------------------------------------------#
 
-# ���{�ꃉ�C�u�����̓ǂݍ���
-require 'jcode.pl';
+# 日本語ライブラリの読み込み
+require './jacode.pl';
 
-# ���W�X�g���C�u�����̓ǂݍ���
-require 'regist.pl';
+# レジストライブラリの読み込み
+require './regist.pl';
 
-# �퓬���C�u�����̓ǂݍ���
-require 'battle.pl';
-# �����X�^�[��p���C�u����
-require 'mbattle.pl';
+# 戦闘ライブラリの読み込み
+require './battle.pl';
+# モンスター戦用ライブラリ
+require './mbattle.pl';
 
-# �����ݒ�t�@�C���̓ǂݍ���
-require 'data/ffadventure.ini';
+# 初期設定ファイルの読み込み
+require './data/ffadventure.ini';
 
 #================================================================#
-#����������������������������������������������������������������#
-#�� �����艺��CGI�Ɏ��M�̂�����ȊO�͈���Ȃ��ق�������ł��@��#
-#����������������������������������������������������������������#
+#┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓#
+#┃ これより下はCGIに自信のある方以外は扱わないほうが無難です　┃#
+#┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛#
 #================================================================#
 
 if ($mente) {
-	&error("���݃o�[�W�����A�b�v���ł��B���΂炭���҂����������B");
+	&error("現在バージョンアップ中です。しばらくお待ちください。");
 }
 
 &decode;
 
-#�h�o�A�h���X�ŃA�N�Z�X����
+#ＩＰアドレスでアクセス制限
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
-	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("�A�N�Z�X�ł��܂���I�I");
+	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("アクセスできません！！");
 	}
 }
 
@@ -72,7 +72,7 @@ foreach (@shut_host) {
 
 exit;
 #----------------------------#
-#  ���W�F���h�v���C�X�ł̐퓬#
+#  レジェンドプレイスでの戦闘#
 #----------------------------#
 sub boss {
 
@@ -83,11 +83,11 @@ sub boss {
 	&chara_check;
 
 	if (!$chara[25]) {
-		&error("��x�L�����N�^�[�Ɠ����Ă�������");
+		&error("一度キャラクターと闘ってください");
 	}
 
 	if ($chara[32] < $in{'boss_file'}) {
-		&error("�܂�����ł��܂���I");
+		&error("まだ挑戦できません！");
 	}
 
 	$ntime = time();
@@ -175,9 +175,9 @@ sub boss {
 	&header;
 
 	print <<"EOM";
-<FONT SIZE= "5" COLOR= "#7777DD"><B>���W�F���h�v���C�X</B></FONT><br>
+<FONT SIZE= "5" COLOR= "#7777DD"><B>レジェンドプレイス</B></FONT><br>
 
-<B><CENTER><FONT SIZE= "6">$mname</B>�����ꂽ�I</FONT></CENTER>
+<B><CENTER><FONT SIZE= "6">$mname</B>が現れた！</FONT></CENTER>
 <BR>
 <BR>
 EOM
@@ -196,11 +196,11 @@ EOM
 }
 
 #--------------------------------#
-#  ���W�F���h�v���C�X�p�t�b�^�[  #
+#  レジェンドプレイス用フッター  #
 #--------------------------------#
 sub bossfooter {
-	if ($win) { print "$comment$chara[4]�́A$mex�̌o���l����ɓ��ꂽ�B<b>$gold</b>G��ɓ��ꂽ�B<br>\n"; }
-	else { print "$comment$chara[4]�́A$mex�̌o���l����ɓ��ꂽ�B������100���̂P�ɂȂ����E�E�E(��)<br>\n"; }
+	if ($win) { print "$comment$chara[4]は、$mexの経験値を手に入れた。<b>$gold</b>G手に入れた。<br>\n"; }
+	else { print "$comment$chara[4]は、$mexの経験値を手に入れた。お金が100分の１になった・・・(涙)<br>\n"; }
 
 	if ($chara[28] != 0 && $win == 1) {
 		print <<"EOM";
@@ -209,7 +209,7 @@ sub bossfooter {
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$new_chara">
 <input type="hidden" name="boss_file" value="$in{'boss_file'}">
-<input type=submit class=btn value="����ɉ��ɐi��">
+<input type=submit class=btn value="さらに奥に進む">
 </form>
 EOM
 	}
@@ -218,13 +218,13 @@ EOM
 <input type="hidden" name="mode" value="log_in">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$new_chara">
-<input type="submit" class="btn" value="�X�e�[�^�X��ʂ�">
+<input type="submit" class="btn" value="ステータス画面へ">
 </form>
 EOM
 }
 
 #----------------#
-#  �҂����ԕ\��  #
+#  待ち時間表示  #
 #----------------#
 sub legend_error {
 
@@ -248,22 +248,22 @@ sub legend_error {
 
        print <<"EOM";
 <center><hr width=400>
-<font color=red><B>�܂��퓬�ł��܂���I</B></font><br>
+<font color=red><B>まだ戦闘できません！</B></font><br>
 <FORM NAME= "form1">
-����<INPUT TYPE= "text" NAME= "clock" SIZE= "3">�b�҂��ĉ�����
+あと<INPUT TYPE= "text" NAME= "clock" SIZE= "3">秒待って下さい
 </FORM>
 <form action= "$script_legend" method= "POST">
 <input type= "hidden" name= "mode" value= "boss">
 <input type= "hidden" name= "id" value= "$chara[0]">
 <input type= "hidden" name= "mydata" value= "$in{'mydata'}">
 <input type="hidden" name="boss_file" value="$in{'boss_file'}">
-<input type= "submit" class= "btn" value= "���̐킢��">
+<input type= "submit" class= "btn" value= "次の戦いへ">
 </form>
 <form action= "$script" method= "POST">
 <input type= "hidden" name= "mode" value= "log_in">
 <input type= "hidden" name= "id" value= "$chara[0]">
 <input type= "hidden" name= "mydata" value= "$in{'mydata'}">
-<input type= "submit" class= "btn" value= "�X�e�[�^�X��ʂ�">
+<input type= "submit" class= "btn" value= "ステータス画面へ">
 </form>
 <hr width=400>
 </center>

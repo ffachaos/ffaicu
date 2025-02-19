@@ -3,11 +3,11 @@ sub mons_waza{
 		if (int(rand(2))==0) {
 			$sake1 -= 999999;
 			$dmg2 = $khp_flg + $chara[16];
-			$com2 .= "<font class=\"red\" size=5>aE“SEŒ•III</font><font color =#cc6633 size = 5><br>u„‚Éa‚ê‚Ê‚à‚Ì‚È‚Ç‚È‚¢v</font><br>";
+			$com2 .= "<font class=\"red\" size=5>æ–¬ãƒ»é‰„ãƒ»å‰£ï¼ï¼ï¼</font><font color =#cc6633 size = 5><br>ã€Œç§ã«æ–¬ã‚Œã¬ã‚‚ã®ãªã©ãªã„ã€</font><br>";
 		} else {
 			$dmg2 += int(rand($mrand)) * 10;
 			$dmg2 += $item[4];
-			$com2 .= "<font class=\"red\" size=5>aE“SEŒ•III</font><br>";
+			$com2 .= "<font class=\"red\" size=5>æ–¬ãƒ»é‰„ãƒ»å‰£ï¼ï¼ï¼</font><br>";
 		}
 	}
 }

@@ -2,7 +2,7 @@ sub acskouka{
 	if (int(rand(5))==0) {
 		$sake2 -= 999999;
 		$dmg1 += ($chara[8] + $chara[9]) * int(rand(100));
-		$com1 .= "<font class=\"white\" size=3>$item[6]‚ªŒõ‚ğ•ú‚ÂIIƒAƒ‹ƒeƒ}‚ÌŒø‰ÊII</font><br>";
+		$com1 .= "<font class=\"white\" size=3>$item[6]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼ã‚¢ãƒ«ãƒ†ãƒã®åŠ¹æœï¼ï¼</font><br>";
 	}
 }
 1;

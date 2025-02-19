@@ -3,7 +3,7 @@ sub wacskouka{
 		if (int(rand(5))==0) {
 			$dmg2 = $dmg2 * 10;
 			$sake1 -= 999999;
-			$com2 .= "<font class=\"green\" size=3>$winner[27]‚ªŒõ‚ğ•ú‚ÂII$item[6]‚É••‚¶‚ß‚ê‚ê‚½—Í‚ğ‰ğ•úII</FONT><br>";
+			$com2 .= "<font class=\"green\" size=3>$winner[27]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼$item[6]ã«å°ã˜è¾¼ã‚ã‚Œã‚ŒãŸåŠ›ã‚’è§£æ”¾ï¼ï¼</FONT><br>";
 		}
 	}
 }

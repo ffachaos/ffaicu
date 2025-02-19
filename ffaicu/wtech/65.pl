@@ -1,17 +1,17 @@
 sub whissatu{
 	if ($wwaza_ritu > int(rand(120))) {
 		$dmg2 = ($winner[7] + $winner[8]) * int(rand(100));
-		$com2 .= "<font class=\"yellow\" size=5>‹Ö’f–‚–@ƒAƒ‹ƒeƒ}II</font>";if ($wwaza_ritu > int(rand(80))) {
+		$com2 .= "<font class=\"yellow\" size=5>ç¦æ–­é­”æ³•ã‚¢ãƒ«ãƒ†ãƒï¼ï¼</font>";if ($wwaza_ritu > int(rand(80))) {
 		$dmg2 += ($winner[8]) * int(rand(80));
-		$com2 .= "<font class=\"white\" size=5>ƒz[ƒŠ[II</font>";
+		$com2 .= "<font class=\"white\" size=5>ãƒ›ãƒ¼ãƒªãƒ¼ï¼ï¼</font>";
 	}
 if ($wwaza_ritu > int(rand(80))) {
 		$dmg2 += ($winner[7]) * int(rand(80));
-		$com2 .= "<font class=\"red\" size=5>ƒtƒŒƒAII</font>";
+		$com2 .= "<font class=\"red\" size=5>ãƒ•ãƒ¬ã‚¢ï¼ï¼</font>";
 	}
 if ($wwaza_ritu > int(rand(80))) {
 		$dmg2 += ($winner[7]) * int(rand(100));
-		$com2 .= "<font class=\"red\" size=5>ƒƒeƒIII</font>";
+		$com2 .= "<font class=\"red\" size=5>ãƒ¡ãƒ†ã‚ªï¼ï¼</font>";
 	}
 $sake1 -= 999999;
 	}

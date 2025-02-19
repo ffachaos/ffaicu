@@ -1,7 +1,7 @@
 #------------------#
-#@ƒƒbƒZ[ƒW•\¦@#
+#ã€€ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸è¡¨ç¤ºã€€#
 #------------------#
-	print "y‘—M‚µ‚½ƒƒbƒZ[ƒWz•\\¦”<b>$max_gyo</b>Œ‚Ü‚Å";
+	print "ã€é€ä¿¡ã—ãŸãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã€‘è¡¨\ç¤ºæ•°<b>$max_gyo</b>ä»¶ã¾ã§";
 	open(IN,"$sousin_file/$chara[0].cgi");
 	@MESSAGE_LOG = <IN>;
 	close(IN);
@@ -17,7 +17,7 @@
 <table><tr>
 <td>
 <font color="$red">
-<small><b>$hname‚³‚ñ‚Ö</b>@„ u<b>$hmessage</b>v$htime\[$hhost\]</small>
+<small><b>$hnameã•ã‚“ã¸</b>ã€€ï¼ ã€Œ<b>$hmessage</b>ã€$htime\[$hhost\]</small>
 </font>
 </td>
 EOM
@@ -28,7 +28,7 @@ EOM
 		$hit=1;$i++;
 	}
 	if(!$hit){
-		print "<hr size=0><font color=$red>$chara[4]‚³‚ñ‚ª‘—M‚µ‚½ƒƒbƒZ[ƒW‚Í‚ ‚è‚Ü‚¹‚ñ</font>\n";
+		print "<hr size=0><font color=$red>$chara[4]ã•ã‚“ãŒé€ä¿¡ã—ãŸãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã¯ã‚ã‚Šã¾ã›ã‚“</font>\n";
 	}
 	print "<hr size=0>";
 

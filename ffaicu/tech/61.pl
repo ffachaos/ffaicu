@@ -1,92 +1,92 @@
 sub hissatu{
 	if ($waza_ritu > int(rand(100))) {
-		$com1 .= "<font color=\"$white\">$chara[4]‚ÍAƒ^ƒƒbƒgƒJ[ƒh‚ğˆê–‡Œ‚Á‚½II ¶‚©€‚©H ‘S‚Ä‚Í‚±‚Ì‰^–½‚ÌƒJ[ƒhˆê–‡‚ÉˆÏ‚Ë‚ç‚ê‚½ƒbII</font><br>";
+		$com1 .= "<font color=\"$white\">$chara[4]ã¯ã€ã‚¿ãƒ­ãƒƒãƒˆã‚«ãƒ¼ãƒ‰ã‚’ä¸€æšæ²ã£ãŸï¼ï¼ ç”Ÿã‹æ­»ã‹ï¼Ÿ å…¨ã¦ã¯ã“ã®é‹å‘½ã®ã‚«ãƒ¼ãƒ‰ä¸€æšã«å§”ã­ã‚‰ã‚ŒãŸãƒƒï¼ï¼</font><br>";
 		$ura = int(rand(22));
 		if (0 == $ura) {
-			$com1 .= "THE MAGICIANIIII\n";
+			$com1 .= "THE MAGICIANï¼ï¼ï¼ï¼\n";
 			$dmg1 += ($chara[8] + $chara[9]) * int(rand(80));
 			$sake2 -= 999999;
 		} elsif (1 == $ura) {
-			$com1 .= "THE CHARIOTIIII\n";
+			$com1 .= "THE CHARIOTï¼ï¼ï¼ï¼\n";
 			$dmg1 += ($chara[7] + $chara[11]) * int(rand(80));
 			$sake2 -= 999999;
 		} elsif (2 == $ura) {
-			$com1 .= "STRENGTHIII\n";
+			$com1 .= "STRENGTHï¼ï¼ï¼\n";
 			$dmg1 += ($chara[7] + $chara[10]) * int(rand(80));
 			$sake2 -= 999999;
 		} elsif (3 == $ura) {
-			$com1 .= "THE HIGH PRIESTESSIII\n";
+			$com1 .= "THE HIGH PRIESTESSï¼ï¼ï¼\n";
 			$dmg1 = 0;
 			$hpplus1 = ($chara[8] + $chara[9]) * int(rand(180));
-			$kaihuku1 .= "$chara[4] ‚Ì‚g‚o‚ª $hpplus1 ‰ñ•œ‚µ‚½Iô";
+			$kaihuku1 .= "$chara[4] ã®ï¼¨ï¼°ãŒ $hpplus1 å›å¾©ã—ãŸï¼â™ª";
 		} elsif (4 == $ura) {
-			$com1 .= "THE HIEROPHANTIIII\n";
+			$com1 .= "THE HIEROPHANTï¼ï¼ï¼ï¼\n";
 			$dmg1 += ($chara[7] +$chara[8] + $chara[9]) * int(rand(80));
 			$sake2 -= 999999;
 		} elsif (5 == $ura) {
-			$com1 .= "THE EMPRESSIIII\n";
+			$com1 .= "THE EMPRESSï¼ï¼ï¼ï¼\n";
 			$dmg1 += ($chara[7] +$chara[8] + $chara[9]) * int(rand(120));
 			$sake2 -= 999999;
 		} elsif (6 == $ura) {
-			$com1 .= "THE EMPERORIIIII\n";
+			$com1 .= "THE EMPERORï¼ï¼ï¼ï¼ï¼\n";
 			$dmg1 += ($chara[7] +$chara[8] + $chara[9]) * int(rand(180));
 			$sake2 -= 999999;
 		} elsif (7 == $ura) {
-			$com1 .= "THE LOVERSIIII\n";
+			$com1 .= "THE LOVERSï¼ï¼ï¼ï¼\n";
 			$hpplus1 = $chara[10] * int(rand(80));
 			$dmg1 = 0;
-			$kaihuku1 .= "$chara[4] ‚Ì‚g‚o‚ª $hpplus1 ‰ñ•œ‚µ‚½Iô";
+			$kaihuku1 .= "$chara[4] ã®ï¼¨ï¼°ãŒ $hpplus1 å›å¾©ã—ãŸï¼â™ª";
 		} elsif (8 == $ura) {
-			$com1 .= "THE HERMITIIII\n";
+			$com1 .= "THE HERMITï¼ï¼ï¼ï¼\n";
 			$dmg1 += $chara[13] * int(rand(80));
 			$sake2 -= 999999;
 		} elsif (9 == $ura) {
-			$com1 .= "WHEEL of FORTUNEIIII\n";
+			$com1 .= "WHEEL of FORTUNEï¼ï¼ï¼ï¼\n";
 			$dmg1 = ($chara[7] +$chara[8] + $chara[9] + $chara[10] +$chara[11] + $chara[12] + $chara[13]) * int(rand(80));
 			$sake2 -= 999999;
 		} elsif (10 == $ura) {
-			$com1 .= "JUSTICEIIII\n";
+			$com1 .= "JUSTICEï¼ï¼ï¼ï¼\n";
 			$dmg1 += ($chara[7] + $chara[9] ) * int(rand(180));
 			$sake2 -= 999999;
 		} elsif (11 == $ura) {
-			$com1 .= "THE HANGEDMANIIII\n";
+			$com1 .= "THE HANGEDMANï¼ï¼ï¼ï¼\n";
 			$dmg1 = int(0);
 		} elsif (12 == $ura) {
-			$com1 .= "DEATHIIII\n";
+			$com1 .= "DEATHï¼ï¼ï¼ï¼\n";
 			$dmg1 = $whp_flg + $mhp + $wd_dmg;
 			$sake2 -= 999999;
 		} elsif (13 == $ura) {
-			$com1 .= "TEMPERANCEIIII\n";
+			$com1 .= "TEMPERANCEï¼ï¼ï¼ï¼\n";
 			$dmg1 = ($chara[7] +$chara[8] + $chara[9] + $chara[10] +$chara[11] + $chara[12] + $chara[13]) * int(rand(80));
 			$sake2 -= 999999;
 		} elsif (14 == $ura) {
-			$com1 .= "THE DEVILIIII\n";
+			$com1 .= "THE DEVILï¼ï¼ï¼ï¼\n";
 			$dmg1 = 0;
 			$dmg2 = $khp_flg;
 			$sake1 -= 999999;
 		} elsif (15 == $ura) {
-			$com1 .= "THE TOWERIIII\n";
+			$com1 .= "THE TOWERï¼ï¼ï¼ï¼\n";
 			$hpplus2 = ($chara[7] +$chara[8] + $chara[9] + $chara[10] +$chara[11] + $chara[12] + $chara[13]) * int(rand(180));
 			$dmg1 = 0;
-			$kaihuku2 .= "$winner[3] ‚Ì‚g‚o‚ª $hpplus2 ‰ñ•œ‚µ‚½Iô";
+			$kaihuku2 .= "$winner[3] ã®ï¼¨ï¼°ãŒ $hpplus2 å›å¾©ã—ãŸï¼â™ª";
 		} elsif (16 == $ura) {
-			$com1 .= "THE STARIIII\n";
+			$com1 .= "THE STARï¼ï¼ï¼ï¼\n";
 			$dmg1 += ($chara[9] + $chara[13]) * int(rand(80));
 		} elsif (17 == $ura) {
-			$com1 .= "THE MOONIIII\n";
+			$com1 .= "THE MOONï¼ï¼ï¼ï¼\n";
 			$hpplus1 = ($chara[8] + $chara[9]) * int(rand(80));
 			$dmg1 = 0;
-			$kaihuku1 .= "$chara[4] ‚Ì‚g‚o‚ª $hpplus1 ‰ñ•œ‚µ‚½Iô";
+			$kaihuku1 .= "$chara[4] ã®ï¼¨ï¼°ãŒ $hpplus1 å›å¾©ã—ãŸï¼â™ª";
 		} elsif (18 == $ura) {
-			$com1 .= "THE SUNIIII\n";
+			$com1 .= "THE SUNï¼ï¼ï¼ï¼\n";
 			$dmg1 += ($chara[7] + $chara[11]) * int(rand(999));
 			$sake2 -= 999999;
 		} elsif (19 == $ura) {
-			$com1 .= "THE JUDGEMENTIIII\n";
+			$com1 .= "THE JUDGEMENTï¼ï¼ï¼ï¼\n";
 			$dmg1 += ($chara[8] + $chara[9]) * int(rand(999));
 			$sake2 -= 999999;
 		} elsif (20 == $ura) {
-			$com1 .= "THE WORLDIIII\n";
+			$com1 .= "THE WORLDï¼ï¼ï¼ï¼\n";
 			$dmg1 = ($chara[7] +$chara[8] + $chara[9] + $chara[10] +$chara[11] + $chara[12] + $chara[13]) * int(rand(80));
 			$sake2 -= 999999;
 		} else{
@@ -97,7 +97,7 @@ sub hissatu{
 		$dmg2 += $dmg2;
 		$hpplus1 += $hpplus1;
 		$hpplus2 += $hpplus2;
-		$com1 .= "<font color=$red>Œø‰Ê”{‘</font><br>";
+		$com1 .= "<font color=$red>åŠ¹æœå€å¢—</font><br>";
 	}
 }
 sub atowaza{}

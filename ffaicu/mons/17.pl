@@ -4,13 +4,13 @@ sub mons_waza{
 		$sake1 -=999999;
 		$dmg1 = 0;
 		$dmg2 += int(rand($mrand)) ** 8; 
-		$com2 = "<font class=\"red\" size =6>‚¦‚è‚è‚ñ‚ÌŠÃ‚¢‚³‚³‚â‚«I</font><br>";
+		$com2 = "<font class=\"red\" size =6>ãˆã‚Šã‚Šã‚“ã®ç”˜ã„ã•ã•ã‚„ãï¼</font><br>";
 		} else {
 	$hpplus1 = int(rand($msp)) * 8;
-		$kaihuku2 .= "$chara[4] ‚Ì‚g‚o‚ª $hpplus1 ‰ñ•œ‚µ‚½Iô";
+		$kaihuku2 .= "$chara[4] ã®ï¼¨ï¼°ãŒ $hpplus1 å›å¾©ã—ãŸï¼â™ª";
 		$dmg1 = 0;
 		$dmg2 = 0;
-		$com2 = "<font class=\"yellow\" size=5>j•Ÿ‚ÌƒLƒXôô</font><br>";
+		$com2 = "<font class=\"yellow\" size=5>ç¥ç¦ã®ã‚­ã‚¹â™ªâ™ª</font><br>";
 		}
 	}
 }

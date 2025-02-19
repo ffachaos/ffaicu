@@ -3,12 +3,12 @@ sub wacskouka{
 		if ($whp_flg < $dmg1) {
 			if ($wa_22lmt >= 3) {
 				$winner[51] == 0;
-				$com2 .= "<font class=\"green\" size=3>$winner[27]‚ÍŒõ‚ç‚È‚©‚Á‚½BBB</FONT><br>";
+				$com2 .= "<font class=\"green\" size=3>$winner[27]ã¯å…‰ã‚‰ãªã‹ã£ãŸã€‚ã€‚ã€‚</FONT><br>";
 			} else {
 				$wa_22lmt++;
 				$dmg2 += $dmg1;
 				$dmg1 = 0;
-				$com2 .= "<font class=\"white\" size=3>$winner[27]‚ªŒõ‚ğ•ú‚ÂII$chara[4]‚ÌUŒ‚‚ğ’µ‚Ë•Ô‚µ‚½II</FONT><br>";
+				$com2 .= "<font class=\"white\" size=3>$winner[27]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼$chara[4]ã®æ”»æ’ƒã‚’è·³ã­è¿”ã—ãŸï¼ï¼</FONT><br>";
 			}
 		}
 	}

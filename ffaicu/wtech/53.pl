@@ -4,7 +4,7 @@ sub whissatu{
 		$sake1 -= 999999;
 		$dmg2 = ($winner[7] + $winner[8] + $winner[39]) * int(rand(100));
 		$dmg2 = $dmg2 * $dwhit;
-		$com2 .= "<font class=\"yellow\" size=4>Œ¶bƒiƒCƒcEƒIƒuEƒ‰ƒEƒ“ƒh‚ğ¢ŠÒII</font><font class=small>$dwhitl‚Ì‹Rm‚ª—Í‚ğ‘İ‚µ‚½II</FONT><br>";
+		$com2 .= "<font class=\"yellow\" size=4>å¹»ç£ãƒŠã‚¤ãƒ„ãƒ»ã‚ªãƒ–ãƒ»ãƒ©ã‚¦ãƒ³ãƒ‰ã‚’å¬é‚„ï¼ï¼</font><font class=small>$dwhitäººã®é¨å£«ãŒåŠ›ã‚’è²¸ã—ãŸï¼ï¼</FONT><br>";
 	}
 }
 sub watowaza{}

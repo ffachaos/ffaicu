@@ -1,68 +1,68 @@
 #!/usr/local/bin/perl --
 
 #------------------------------------------------------#
-#@–{ƒXƒNƒŠƒvƒg‚Ì’˜ìŒ ‚ÍT.CUMRO‚³‚ñ‚É‚ ‚è‚Ü‚·B
-#‚¢‚©‚È‚é——R‚ª‚ ‚Á‚Ä‚à‚±‚Ì•\‹L‚ğíœ‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñ
-#ˆá”½‚ğ”­Œ©‚µ‚½ê‡AƒXƒNƒŠƒvƒg‚Ì—˜—p‚ğ’â~‚µ‚Ä‚¢‚½‚¾‚­
-#‚¾‚¯‚Å‚È‚­A‘R‚é‚×‚«ˆ’u‚ğ‚³‚¹‚Ä‚¢‚½‚¾‚«‚Ü‚·B
+#ã€€æœ¬ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®è‘—ä½œæ¨©ã¯T.CUMROã•ã‚“ã«ã‚ã‚Šã¾ã™ã€‚
+#ã„ã‹ãªã‚‹ç†ç”±ãŒã‚ã£ã¦ã‚‚ã“ã®è¡¨è¨˜ã‚’å‰Šé™¤ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“
+#é•åã‚’ç™ºè¦‹ã—ãŸå ´åˆã€ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®åˆ©ç”¨ã‚’åœæ­¢ã—ã¦ã„ãŸã ã
+#ã ã‘ã§ãªãã€ç„¶ã‚‹ã¹ãå‡¦ç½®ã‚’ã•ã›ã¦ã„ãŸã ãã¾ã™ã€‚
 #  FFA Emilia Ver1.01
 #  edit by Emilia
 #  http://www5d.biglobe.ne.jp/~sprite/
 #  y-kamata@jcom.home.ne.jp
 #------------------------------------------------------#
 #
-#@FF ADVENTURE ‰üi v2.1
-#@programed by jun-k
-#@http://www5b.biglobe.ne.jp/~jun-kei/
-#@jun-kei@vanilla.freemail.ne.jp
+#ã€€FF ADVENTURE æ”¹i v2.1
+#ã€€programed by jun-k
+#ã€€http://www5b.biglobe.ne.jp/~jun-kei/
+#ã€€jun-kei@vanilla.freemail.ne.jp
 #------------------------------------------------------#
-#@FF ADVENTURE v0.21
-#@programed by CUMRO
-#@http://cgi.members.interq.or.jp/sun/cumro/mm/
-#@cumro@sun.interq.or.jp
+#ã€€FF ADVENTURE v0.21
+#ã€€programed by CUMRO
+#ã€€http://cgi.members.interq.or.jp/sun/cumro/mm/
+#ã€€cumro@sun.interq.or.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(‰ü) v1.021
+#  FF ADVENTURE(æ”¹) v1.021
 #  remodeling by GUN
 #  http://www2.to/meeting/
 #  gun24@j-club.ne.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(‚¢‚­‰ü)
-#@remodeling by ‚¢‚­
-#@http://www.eriicu.com
-#@icu@kcc.zaq.ne.jp
+#  FF ADVENTURE(ã„ãæ”¹)
+#ã€€remodeling by ã„ã
+#ã€€http://www.eriicu.com
+#ã€€icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
-#--- [’ˆÓ–€] ------------------------------------------------#
-# 1. ‚±‚ÌƒXƒNƒŠƒvƒg‚ÍƒtƒŠ[ƒ\ƒtƒg‚Å‚·B‚±‚ÌƒXƒNƒŠƒvƒg‚ğg—p‚µ‚½	#
-#    ‚¢‚©‚È‚é‘¹ŠQ‚É‘Î‚µ‚ÄìÒ‚ÍˆêØ‚ÌÓ”C‚ğ•‰‚¢‚Ü‚¹‚ñB		#
-# 2. İ’u‚ÉŠÖ‚·‚é¿–â‚ÍƒTƒ|[ƒgŒf¦”Â‚É‚¨Šè‚¢‚¢‚½‚µ‚Ü‚·B	#
-#    ’¼Úƒ[ƒ‹‚É‚æ‚é¿–â‚ÍˆêØ‚¨ó‚¯‚¢‚½‚µ‚Ä‚¨‚è‚Ü‚¹‚ñB	#
+#--- [æ³¨æ„äº‹é …] ------------------------------------------------#
+# 1. ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã§ã™ã€‚ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ä½¿ç”¨ã—ãŸ	#
+#    ã„ã‹ãªã‚‹æå®³ã«å¯¾ã—ã¦ä½œè€…ã¯ä¸€åˆ‡ã®è²¬ä»»ã‚’è² ã„ã¾ã›ã‚“ã€‚		#
+# 2. è¨­ç½®ã«é–¢ã™ã‚‹è³ªå•ã¯ã‚µãƒãƒ¼ãƒˆæ²ç¤ºæ¿ã«ãŠé¡˜ã„ã„ãŸã—ã¾ã™ã€‚	#
+#    ç›´æ¥ãƒ¡ãƒ¼ãƒ«ã«ã‚ˆã‚‹è³ªå•ã¯ä¸€åˆ‡ãŠå—ã‘ã„ãŸã—ã¦ãŠã‚Šã¾ã›ã‚“ã€‚	#
 #    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi             #
 #---------------------------------------------------------------#
 
-# “ú–{Œêƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
-require 'jcode.pl';
+# æ—¥æœ¬èªãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './jacode.pl';
 
-# ƒŒƒWƒXƒgƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
-require 'regist.pl';
+# ãƒ¬ã‚¸ã‚¹ãƒˆãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
+require './regist.pl';
 
-# ‰Šúİ’èƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ
-require 'data/ffadventure.ini';
+# åˆæœŸè¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿
+require './data/ffadventure.ini';
 
-# ‚±‚Ìƒtƒ@ƒCƒ‹‚Ì‰Šúİ’è
+# ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã®åˆæœŸè¨­å®š
 $midi = $title_midi;
 $backgif = $backgif;
 
 #================================================================#
-#„¬„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„­#
-#„« ‚±‚ê‚æ‚è‰º‚ÍCGI‚É©M‚Ì‚ ‚é•ûˆÈŠO‚Íˆµ‚í‚È‚¢‚Ù‚¤‚ª–³“ï‚Å‚·@„«#
-#„¯„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„®#
+#â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”“#
+#â”ƒ ã“ã‚Œã‚ˆã‚Šä¸‹ã¯CGIã«è‡ªä¿¡ã®ã‚ã‚‹æ–¹ä»¥å¤–ã¯æ‰±ã‚ãªã„ã»ã†ãŒç„¡é›£ã§ã™ã€€â”ƒ#
+#â”—â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”›#
 #================================================================#
 
 #--------------#
-#@ƒƒCƒ“ˆ—@#
+#ã€€ãƒ¡ã‚¤ãƒ³å‡¦ç†ã€€#
 #--------------#
 if ($mente) {
-	&error("ƒo[ƒWƒ‡ƒ“ƒAƒbƒv’†‚Å‚·B‚QA‚R‚O•b‚Ù‚Ç‚¨‘Ò‚¿‰º‚³‚¢Bm(_ _)m");
+	&error("ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—ä¸­ã§ã™ã€‚ï¼’ã€ï¼“ï¼ç§’ã»ã©ãŠå¾…ã¡ä¸‹ã•ã„ã€‚m(_ _)m");
 }
 
 if($link_flg){
@@ -71,44 +71,44 @@ if($link_flg){
 
 &decode;
 
-#‚h‚oƒAƒhƒŒƒX‚ÅƒAƒNƒZƒX§ŒÀ
+#ï¼©ï¼°ã‚¢ãƒ‰ãƒ¬ã‚¹ã§ã‚¢ã‚¯ã‚»ã‚¹åˆ¶é™
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
 	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {
-		&error("ƒAƒNƒZƒX‚Å‚«‚Ü‚¹‚ñII");
+		&error("ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã›ã‚“ï¼ï¼");
 	}
 }
 
 &html_top;
 
 #-----------------#
-#  TOPƒy[ƒW•\¦  #
+#  TOPãƒšãƒ¼ã‚¸è¡¨ç¤º  #
 #-----------------#
 sub html_top {
 
-	# ƒ`ƒƒƒ“ƒvƒf[ƒ^“Ç
+	# ãƒãƒ£ãƒ³ãƒ—ãƒ‡ãƒ¼ã‚¿èª­è¾¼
 	&read_winner;
 
-	# ƒNƒbƒL[æ“¾
+	# ã‚¯ãƒƒã‚­ãƒ¼å–å¾—
 	&get_cookie;
 
-	# ƒ`ƒƒƒ“ƒvƒNƒ‰ƒX•\¦
+	# ãƒãƒ£ãƒ³ãƒ—ã‚¯ãƒ©ã‚¹è¡¨ç¤º
 	$class_flg = int($winner[39]/10);
 
 	@class_mark = (
-		'¡     @@<i><b>(Beginner)</b></i>'
-		,'¡¡    @@<i><b>(Charanger)</b></i>'
-		,'¡¡¡   @@<i><b>(Low Class)</b></i>'
-		,'¡¡¡¡  @@<i><b>(Normal Class)</b></i>'
-		,'¡¡¡¡¡ @@<i><b>(High Class)</b></i>'
-		,'¡¡¡¡¡¡@@<i><b>(Top Class)</b></i>'
-		,'šššššš@@<i><b>(Master)</b></i>'
+		'â– â–¡â–¡â–¡â–¡â–¡ã€€ã€€<i><b>(Beginner)</b></i>'
+		,'â– â– â–¡â–¡â–¡â–¡ã€€ã€€<i><b>(Charanger)</b></i>'
+		,'â– â– â– â–¡â–¡â–¡ã€€ã€€<i><b>(Low Class)</b></i>'
+		,'â– â– â– â– â–¡â–¡ã€€ã€€<i><b>(Normal Class)</b></i>'
+		,'â– â– â– â– â– â–¡ã€€ã€€<i><b>(High Class)</b></i>'
+		,'â– â– â– â– â– â– ã€€ã€€<i><b>(Top Class)</b></i>'
+		,'â˜…â˜…â˜…â˜…â˜…â˜…ã€€ã€€<i><b>(Master)</b></i>'
 	);
 
 	$class = $class_mark[$class_flg];
 
 
-	# Ÿ—¦ŒvZ
+	# å‹ç‡è¨ˆç®—
 	if($winner[18]) {
 		$ritu = int(($winner[19] / $winner[18]) * 100);
 	}
@@ -116,14 +116,14 @@ sub html_top {
 		$ritu = 0;
 	}
 
-	# ƒ`ƒƒƒ“ƒv«•Êæ“¾
+	# ãƒãƒ£ãƒ³ãƒ—æ€§åˆ¥å–å¾—
 	if($winner[4]) {
-		$esex = "’j";
+		$esex = "ç”·";
 	} else {
-		$esex = "—";
+		$esex = "å¥³";
 	}
 
-	# ƒ`ƒƒƒ“ƒvŠî–{’lZo
+	# ãƒãƒ£ãƒ³ãƒ—åŸºæœ¬å€¤ç®—å‡º
 	$divpm = int($charamaxpm / 100);
 	$hit_ritu = int(($winner[10] / 10)+51);
 	if($hit_ritu > 150){$hit_ritu = 150;}
@@ -132,7 +132,7 @@ sub html_top {
 	$waza_ritu = int(($winner[13] / 15)) + 10 + $winner[39];
 	if($waza_ritu > 75){$waza_ritu = 75;}
 
-	# ”\—Í’lƒo[‚ÌÚ‚µ‚¢•İ’è
+	# èƒ½åŠ›å€¤ãƒãƒ¼ã®è©³ã—ã„å¹…è¨­å®š
 	$bw0     = int(1 * ($winner[6] / $divpm));
 	$bw1     = int(1 * ($winner[7] / $divpm));
 	$bw2     = int(1 * ($winner[8] / $divpm));
@@ -152,24 +152,24 @@ sub html_top {
 
 	$date = time();
 
-	# ƒwƒbƒ_[•\¦
+	# ãƒ˜ãƒƒãƒ€ãƒ¼è¡¨ç¤º
 	&header;
 
-	# HTML‚Ì•\¦
+	# HTMLã®è¡¨ç¤º
 	print <<"EOM";
 <table border=0>
 <tr>
 <td valign="top">
 <table border=1>
 <tr><td id="td2" align=center colspan=5 class=b2>
-<font class="$white">‘O‰ñ‚Ì‘±‚«</font></td></tr>
+<font class="$white">å‰å›ã®ç¶šã</font></td></tr>
 <tr><td class=b1>I D</td>
 <form action="$loginscript" method="POST">
 <input type="hidden" name="mode" value="log_in">
 <td><input type="text" size="10" name="id" value="$c_id"></td>
-<td class=b1>ƒpƒXƒ[ƒh</td>
+<td class=b1>ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰</td>
 <td><input type="password" size="10" name="pass" value="$c_pass"></td>
-<td><input type="submit" class="btn" value="ƒƒOƒCƒ“"></td>
+<td><input type="submit" class="btn" value="ãƒ­ã‚°ã‚¤ãƒ³"></td>
 </form>
 </tr>
 </table>
@@ -182,29 +182,29 @@ if ($testdata[27] + 600 < $date) {
 	print <<"EOM";
 <table border=1>
 <tr><td id="td2" align=center colspan=5 class=b2>
-<font class="$white">ƒeƒXƒgƒvƒŒƒC</font></td></tr>
+<font class="$white">ãƒ†ã‚¹ãƒˆãƒ—ãƒ¬ã‚¤</font></td></tr>
 <tr>
 <form action="$loginscript" method="POST">
 <td>
 <input type="hidden" name="mode" value="log_in">
 <input type=hidden name="id" value=test>
 <input type=hidden name="pass" value=test>
-<input type="submit" class="btn" value="ƒeƒXƒgƒvƒŒƒC"></td>
+<input type="submit" class="btn" value="ãƒ†ã‚¹ãƒˆãƒ—ãƒ¬ã‚¤"></td>
 </form>
 </tr></table>
 EOM
 } else {
-print "Œ»İg—p’†‚Å‚·<br>‚¨‘Ò‚¿‰º‚³‚¢";
+print "ç¾åœ¨ä½¿ç”¨ä¸­ã§ã™<br>ãŠå¾…ã¡ä¸‹ã•ã„";
 }
 	print <<"EOM";
 </td><td>
 <table border=1>
 <tr><td id="td2" align=center colspan=5 class=b2>
-<font class="$white">V‹KƒLƒƒƒ‰ì¬</font></td></tr>
+<font class="$white">æ–°è¦ã‚­ãƒ£ãƒ©ä½œæˆ</font></td></tr>
 <tr>
 <FORM ACTION="$chara_make" METHOD="POST">
 <INPUT TYPE="hidden" NAME="mode" VALUE="chara_make">
-<td><input type="submit" class="btn" value="V‹KƒLƒƒƒ‰ƒNƒ^ì¬"></td>
+<td><input type="submit" class="btn" value="æ–°è¦ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ä½œæˆ"></td>
 </form>
 </tr></table>
 </td></tr></table>
@@ -214,7 +214,7 @@ print "Œ»İg—p’†‚Å‚·<br>‚¨‘Ò‚¿‰º‚³‚¢";
 </tr></table>
 EOM
 
-	# –`Œ¯Ò”•\¦
+	# å†’é™ºè€…æ•°è¡¨ç¤º
 	open(GUEST,"$guestfile");
 	@member=<GUEST>;
 	close(GUEST);
@@ -224,32 +224,32 @@ EOM
 	foreach (@member) {
 		($ntimer,$nname,$nid) = split(/<>/);
 		if($date - $ntimer < $sanka_time){
-			$blist .= "<a href=\"$scripta?mode=chara_sts&id=$nid\">$nname</a><font size=1 color=#ffff00>š</font>";
+			$blist .= "<a href=\"$scripta?mode=chara_sts&id=$nid\">$nname</a><font size=1 color=#ffff00>â˜…</font>";
 			$num++;
 		}
 	}
 
 
-	print "<font size=2 color=#aaaaff>Œ»İ‚Ì–`Œ¯Ò(<B>$numl</B>)F</font>\n";
+	print "<font size=2 color=#aaaaff>ç¾åœ¨ã®å†’é™ºè€…(<B>$numäºº</B>)ï¼š</font>\n";
 
 	if ($blist) {
 		print $blist;
 	}
 	else {
-		print '’N‚à‚¢‚Ü‚¹‚ñ';
+		print 'èª°ã‚‚ã„ã¾ã›ã‚“';
 	}
 
 	print <<"EOM";
-<br>Œ»İ‚Ì˜AŸ‹L˜^‚ÍA$winner[47]‚³‚ñ‚Ìu<A HREF=\"$winner[49]\" TARGET=\"_blank\"><FONT SIZE=\"3\" COLOR=\"#6666BB\">$winner[48]</FONT></A>vA$winner[45]˜AŸ‚Å‚·BV‹L˜^‚ğo‚µ‚½ƒTƒCƒg–¼‚Ì‰¡‚É‚ÍA<IMG SRC="$mark">ƒ}[ƒN‚ª‚Â‚«‚Ü‚·B
+<br>ç¾åœ¨ã®é€£å‹è¨˜éŒ²ã¯ã€$winner[47]ã•ã‚“ã®ã€Œ<A HREF=\"$winner[49]\" TARGET=\"_blank\"><FONT SIZE=\"3\" COLOR=\"#6666BB\">$winner[48]</FONT></A>ã€ã€$winner[45]é€£å‹ã§ã™ã€‚æ–°è¨˜éŒ²ã‚’å‡ºã—ãŸã‚µã‚¤ãƒˆåã®æ¨ªã«ã¯ã€<IMG SRC="$mark">ãƒãƒ¼ã‚¯ãŒã¤ãã¾ã™ã€‚
 <table border=0 width='100%'>
 <tr>
 <td width="500" valign="top">
 	<table border=1 width="100%">
 	<tr>
-	<td id="td1" colspan=5 align="center" class="b2">Œ»İ‚Ìƒ`ƒƒƒ“ƒv<font class="white">$winner[44]˜AŸ’†</font><br><font class = "yellow">(<a href=$scripta?mode=chara_sts&id=$winner[40]>$winner[41]</a><font class = "yellow">‚ÉŸ—˜II\[ƒTƒCƒg\]</font><A HREF=\"$winner[43]" TARGET="_blank">$winner[42]</A> )</font></td>
+	<td id="td1" colspan=5 align="center" class="b2">ç¾åœ¨ã®ãƒãƒ£ãƒ³ãƒ—<font class="white">$winner[44]é€£å‹ä¸­</font><br><font class = "yellow">(<a href=$scripta?mode=chara_sts&id=$winner[40]>$winner[41]</a><font class = "yellow">ã«å‹åˆ©ï¼ï¼\[ã‚µã‚¤ãƒˆ\]</font><A HREF=\"$winner[43]" TARGET="_blank">$winner[42]</A> )</font></td>
 	</tr>
 	<tr>
-	<td id="td2" align="center" class="b1">ƒz[ƒ€ƒy[ƒW</td>
+	<td id="td2" align="center" class="b1">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</td>
 	<td colspan="4"><a href="$winner[2]"><b>$winner[1]</b></a>
 EOM
 	if($winner[49] eq $winner[2]) {
@@ -265,71 +265,71 @@ EOM
 
 	print <<"EOM";
 </td></tr><tr>
-<td align="center" rowspan="11" valign=bottom><img src="$img_path/$chara_img[$winner[5]]"><font color=$white>$winner[18]</font>í<font color=$white>$winner[19]</font>Ÿ’†<br>Ÿ—¦F$ritu\%<br>
+<td align="center" rowspan="11" valign=bottom><img src="$img_path/$chara_img[$winner[5]]"><font color=$white>$winner[18]</font>æˆ¦<font color=$white>$winner[19]</font>å‹ä¸­<br>å‹ç‡ï¼š$ritu\%<br>
 <table width="100%" border=1>
-<tr><td id="td2" class="b2">•Ší</td><td align="center" class="b2">$winner[21]</td></tr>
-<tr><td id="td2" class="b2">–h‹ï</td><td align="center" class="b2">$winner[24]</td></tr>
-<tr><td id="td2" class="b2">ü‚è</td><td align="center" class="b2">$winner[27]</td></tr>
-<tr><td id="td2" class="b2">–½’†—¦</td><td align="left" class="b2"><img src=\"$bar\" width=$bwhit height=$bh><br><b>$hit_ritu + $winner[23] %</b></td></tr>
-<tr><td id="td2" class="b2">‰ñ”ğ—¦</td><td align="left" class="b2"><img src=\"$bar\" width=$bwkaihi height=$bh><b><br>$kaihi_ritu + $winner[26] %</b></td></tr>
-<tr><td id="td2" class="b2">•KE—¦</td><td align="left" class="b2"><img src=\"$bar\" width=$bwwaza height=$bh><br><b>$waza_ritu + $winner[35]%</b></td><td></td></tr>
+<tr><td id="td2" class="b2">æ­¦å™¨</td><td align="center" class="b2">$winner[21]</td></tr>
+<tr><td id="td2" class="b2">é˜²å…·</td><td align="center" class="b2">$winner[24]</td></tr>
+<tr><td id="td2" class="b2">é£¾ã‚Š</td><td align="center" class="b2">$winner[27]</td></tr>
+<tr><td id="td2" class="b2">å‘½ä¸­ç‡</td><td align="left" class="b2"><img src=\"$bar\" width=$bwhit height=$bh><br><b>$hit_ritu + $winner[23] %</b></td></tr>
+<tr><td id="td2" class="b2">å›é¿ç‡</td><td align="left" class="b2"><img src=\"$bar\" width=$bwkaihi height=$bh><b><br>$kaihi_ritu + $winner[26] %</b></td></tr>
+<tr><td id="td2" class="b2">å¿…æ®ºç‡</td><td align="left" class="b2"><img src=\"$bar\" width=$bwwaza height=$bh><br><b>$waza_ritu + $winner[35]%</b></td><td></td></tr>
 </table></td><tr>
-<td id="td2" align="center" class="b1">‚È‚Ü‚¦</td><td class="b2"><b>$winner[3]</b></td>
-<td id="td2" align="center" class="b1">«•Ê</td><td class="b2"><b>$esex</b></td></tr>
-<tr><td id="td2" align="center" class="b1">ƒWƒ‡ƒu</td><td class="b2"><b>$chara_syoku[$winner[14]]</b></td>
-<td id="td2" align="center" class="b1">ƒWƒ‡ƒuLV</td><td class="b2"><b>$winner[39]</b></td></tr>
-<tr><td id="td2" align="center" class="b1">ƒNƒ‰ƒX</td><td colspan=3 class="b2"><b>$class</b></td></tr>
-<tr><td id="td2" align="center" class="b1">ƒŒƒxƒ‹</td><td class="b2"><b>$winner[17]</b></td>
+<td id="td2" align="center" class="b1">ãªã¾ãˆ</td><td class="b2"><b>$winner[3]</b></td>
+<td id="td2" align="center" class="b1">æ€§åˆ¥</td><td class="b2"><b>$esex</b></td></tr>
+<tr><td id="td2" align="center" class="b1">ã‚¸ãƒ§ãƒ–</td><td class="b2"><b>$chara_syoku[$winner[14]]</b></td>
+<td id="td2" align="center" class="b1">ã‚¸ãƒ§ãƒ–LV</td><td class="b2"><b>$winner[39]</b></td></tr>
+<tr><td id="td2" align="center" class="b1">ã‚¯ãƒ©ã‚¹</td><td colspan=3 class="b2"><b>$class</b></td></tr>
+<tr><td id="td2" align="center" class="b1">ãƒ¬ãƒ™ãƒ«</td><td class="b2"><b>$winner[17]</b></td>
 <td id="td2" align="left" class="b1">-</td><td class="b2">-</td></tr>
 <tr><td id="td2" align="left" class="b1">HP</td><td class="b2"><b>$winner[15]\/$winner[16]</b></td>
-<td id="td2" align="left" class="b1">Ü‹à</td><td class="b2"><b>$winner[50]</b></td></tr>
-<tr><td id="td2" align="left" class="b1">—Í</td><td class="b2"><img src=\"$bar\" width=$bw0 height=$bh><br><b>$winner[6] + $winner[28]</b></td>
-<td id="td2" align="left" class="b1">–‚—Í</td><td class="b2"><img src=\"$bar\" width=$bw1 height=$bh><br><b>$winner[7] + $winner[29]</b></td></tr>
-<tr><td id="td2" align="left" class="b1">M‹ÂS</td><td class="b2"><img src=\"$bar\" width=$bw2 height=$bh><br><b>$winner[8] + $winner[30]</b></td>
-<td id="td2" align="left" class="b1">¶–½—Í</td><td class="b2"><img src=\"$bar\" width=$bw3 height=$bh><br><b>$winner[9] + $winner[31]</b></td>	</tr>
-<tr><td id="td2" align="left" class="b1">Ší—p‚³</td><td class="b2"><img src=\"$bar\" width=$bw4 height=$bh><br><b>$winner[10] + $winner[32]</b></td>
-<td id="td2" align="left" class="b1">‘¬‚³</td><td class="b2"><img src=\"$bar\" width=$bw5 height=$bh><br><b>$winner[11] + $winner[33]</b></td></tr>
-<tr><td id="td2" align="left" class="b1">–£—Í</td><td class="b2"><img src=\"$bar\" width=$bw6 height=$bh><br><b>$winner[12]</b></td>
-<td id="td2" align="left" class="b1">ƒJƒ‹ƒ}</td><td class="b2"><img src=\"$bar\" width=$bwlp height=$bh><br><b>$winner[13] + $winner[34]</b></td></tr>
+<td id="td2" align="left" class="b1">è³é‡‘</td><td class="b2"><b>$winner[50]</b></td></tr>
+<tr><td id="td2" align="left" class="b1">åŠ›</td><td class="b2"><img src=\"$bar\" width=$bw0 height=$bh><br><b>$winner[6] + $winner[28]</b></td>
+<td id="td2" align="left" class="b1">é­”åŠ›</td><td class="b2"><img src=\"$bar\" width=$bw1 height=$bh><br><b>$winner[7] + $winner[29]</b></td></tr>
+<tr><td id="td2" align="left" class="b1">ä¿¡ä»°å¿ƒ</td><td class="b2"><img src=\"$bar\" width=$bw2 height=$bh><br><b>$winner[8] + $winner[30]</b></td>
+<td id="td2" align="left" class="b1">ç”Ÿå‘½åŠ›</td><td class="b2"><img src=\"$bar\" width=$bw3 height=$bh><br><b>$winner[9] + $winner[31]</b></td>	</tr>
+<tr><td id="td2" align="left" class="b1">å™¨ç”¨ã•</td><td class="b2"><img src=\"$bar\" width=$bw4 height=$bh><br><b>$winner[10] + $winner[32]</b></td>
+<td id="td2" align="left" class="b1">é€Ÿã•</td><td class="b2"><img src=\"$bar\" width=$bw5 height=$bh><br><b>$winner[11] + $winner[33]</b></td></tr>
+<tr><td id="td2" align="left" class="b1">é­…åŠ›</td><td class="b2"><img src=\"$bar\" width=$bw6 height=$bh><br><b>$winner[12]</b></td>
+<td id="td2" align="left" class="b1">ã‚«ãƒ«ãƒ</td><td class="b2"><img src=\"$bar\" width=$bwlp height=$bh><br><b>$winner[13] + $winner[34]</b></td></tr>
 </table>
 </td>
 <td valign="top">
 <td valign="top" align="left">
-[<B><FONT COLOR=$yellow>$main_title ‚Ì—V‚Ñ•û</FONT></B>]
+[<B><FONT COLOR=$yellow>$main_title ã®éŠã³æ–¹</FONT></B>]
 <OL>
-<LI>‚Ü‚¸AuV‹KƒLƒƒƒ‰ƒNƒ^[“o˜^vƒ{ƒ^ƒ“‚ğ‰Ÿ‚µ‚ÄAƒLƒƒƒ‰ƒNƒ^[‚ğì¬‚µ‚Ü‚·B
-<LI>ƒLƒƒƒ‰ƒNƒ^[‚Ìì¬‚ªŠ®—¹‚µ‚½‚çA‚±‚Ìƒy[ƒW‚Ì¶ã‚É‚ ‚é‚Æ‚±‚ë‚©‚çƒƒOƒCƒ“‚µ‚ÄA‚ ‚È‚½ê—p‚ÌƒXƒe[ƒ^ƒX‰æ–Ê‚É“ü‚è‚Ü‚·B
-<LI>‚»‚±‚Å‚ ‚È‚½‚Ìs“®‚ğ‘I‘ğ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
-<LI>ˆê“xƒLƒƒƒ‰ƒNƒ^[‚ğì¬‚µ‚½‚çA‰Eã‚Ì‚Æ‚±‚ë‚©‚çƒƒOƒCƒ“‚µ‚Ä—V‚Ñ‚Ü‚·BV‹K‚ÉƒLƒƒƒ‰ƒNƒ^[‚ğì‚ê‚é‚Ì‚ÍAˆêl‚Éˆê‚Â‚ÌƒLƒƒƒ‰ƒNƒ^[‚Ì‚İ‚Å‚·B
-<LI>‚±‚ê‚ÍAHPƒoƒgƒ‰[‚Å‚Í‚È‚­AƒLƒƒƒ‰ƒoƒgƒ‰[‚Å‚·BƒLƒƒƒ‰ƒNƒ^[‚ğˆç‚Ä‚Ä‚¢‚­ƒQ[ƒ€‚Å‚·B
-<LI>”\\—Í‚ğU‚è•ª‚¯‚é‚±‚Æ‚ª‚Å‚«ƒLƒƒƒ‰ƒNƒ^[‚Ì”\\—Í‚ğ‚²©•ª‚ÅŒˆ‚ß‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B(‚±‚±‚ÅŒˆ‚ß‚½”\\—Í‚Í‚²‚­‚Ü‚ê‚É‚µ‚©ã¸‚µ‚È‚¢‚Ì‚ÅATd‚É)
-<LI><b>$limit“ú</b>ˆÈã“¬‚í‚È‚¯‚ê‚ÎAƒLƒƒƒ‰ƒNƒ^[‚Ìƒf[ƒ^‚ªíœ‚³‚ê‚Ü‚·B
-<LI>ˆê“xí“¬‚·‚é‚Æ<b>$b_time</b>•bŒo‰ß‚µ‚È‚¢‚ÆÄ‚Ñí“¬‚Å‚«‚Ü‚¹‚ñB
+<LI>ã¾ãšã€ã€Œæ–°è¦ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ç™»éŒ²ã€ãƒœã‚¿ãƒ³ã‚’æŠ¼ã—ã¦ã€ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã‚’ä½œæˆã—ã¾ã™ã€‚
+<LI>ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã®ä½œæˆãŒå®Œäº†ã—ãŸã‚‰ã€ã“ã®ãƒšãƒ¼ã‚¸ã®å·¦ä¸Šã«ã‚ã‚‹ã¨ã“ã‚ã‹ã‚‰ãƒ­ã‚°ã‚¤ãƒ³ã—ã¦ã€ã‚ãªãŸå°‚ç”¨ã®ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã«å…¥ã‚Šã¾ã™ã€‚
+<LI>ãã“ã§ã‚ãªãŸã®è¡Œå‹•ã‚’é¸æŠã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
+<LI>ä¸€åº¦ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã‚’ä½œæˆã—ãŸã‚‰ã€å³ä¸Šã®ã¨ã“ã‚ã‹ã‚‰ãƒ­ã‚°ã‚¤ãƒ³ã—ã¦éŠã³ã¾ã™ã€‚æ–°è¦ã«ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã‚’ä½œã‚Œã‚‹ã®ã¯ã€ä¸€äººã«ä¸€ã¤ã®ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã®ã¿ã§ã™ã€‚
+<LI>ã“ã‚Œã¯ã€HPãƒãƒˆãƒ©ãƒ¼ã§ã¯ãªãã€ã‚­ãƒ£ãƒ©ãƒãƒˆãƒ©ãƒ¼ã§ã™ã€‚ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã‚’è‚²ã¦ã¦ã„ãã‚²ãƒ¼ãƒ ã§ã™ã€‚
+<LI>èƒ½\åŠ›ã‚’æŒ¯ã‚Šåˆ†ã‘ã‚‹ã“ã¨ãŒã§ãã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã®èƒ½\åŠ›ã‚’ã”è‡ªåˆ†ã§æ±ºã‚ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚(ã“ã“ã§æ±ºã‚ãŸèƒ½\åŠ›ã¯ã”ãã¾ã‚Œã«ã—ã‹ä¸Šæ˜‡ã—ãªã„ã®ã§ã€æ…é‡ã«)
+<LI><b>$limitæ—¥</b>ä»¥ä¸Šé—˜ã‚ãªã‘ã‚Œã°ã€ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã®ãƒ‡ãƒ¼ã‚¿ãŒå‰Šé™¤ã•ã‚Œã¾ã™ã€‚
+<LI>ä¸€åº¦æˆ¦é—˜ã™ã‚‹ã¨<b>$b_time</b>ç§’çµŒéã—ãªã„ã¨å†ã³æˆ¦é—˜ã§ãã¾ã›ã‚“ã€‚
 </OL>
 </td>
 </tr>
 </table>
 <hr size=0>
-<font color=$white>‹¤—Lİ’uÒ/<a href="$homepage" TARGET="_top">$home_title</a> / $kyouyuu<br>
-<font color=$white>ƒƒjƒ…[/</font><a href="$scripta?mode=ranking">“o˜^Òˆê——</a> / <a href="$ranking">\”\\—Í•Êƒ‰ƒ“ƒLƒ“ƒO‚Ö</a> / <a href="$syoku_html" target="_blank">ŠeE‹Æ‚É•K—v‚È“Á«’l</a> /<a href="$img_all_list" target="_blank">$vote_gazou</a> /<a href="$bbs">$bbs_title</a> /<a href="$helptext" target="_blank">$helptext_url</a><br>
-<font color=$white>’¬‚ÌŠO‚ê/</font><a href="$sbbs">$sbbs_title</a> / <a href="$vote">$vote_title</a> /<br>
+<font color=$white>å…±æœ‰è¨­ç½®è€…/<a href="$homepage" TARGET="_top">$home_title</a> / $kyouyuu<br>
+<font color=$white>ãƒ¡ãƒ‹ãƒ¥ãƒ¼/</font><a href="$scripta?mode=ranking">ç™»éŒ²è€…ä¸€è¦§</a> / <a href="$ranking">\èƒ½\åŠ›åˆ¥ãƒ©ãƒ³ã‚­ãƒ³ã‚°ã¸</a> / <a href="$syoku_html" target="_blank">å„è·æ¥­ã«å¿…è¦ãªç‰¹æ€§å€¤</a> /<a href="$img_all_list" target="_blank">$vote_gazou</a> /<a href="$bbs">$bbs_title</a> /<a href="$helptext" target="_blank">$helptext_url</a><br>
+<font color=$white>ç”ºã®å¤–ã‚Œ/</font><a href="$sbbs">$sbbs_title</a> / <a href="$vote">$vote_title</a> /<br>
 <table border=0 width="100%">
-<TR><TD class="b1" bgcolor="#000000" align="center"><B>˜A—–€</B></font></TD></TR>
+<TR><TD class="b1" bgcolor="#000000" align="center"><B>é€£çµ¡äº‹é …</B></font></TD></TR>
 <TR><TD class="b2">$kanri_message</TD></TR></table>
 
 <form action="$scriptk" method="POST">
 <table><td><input type="password" size="10" name="pass"></td>
-<td><input type="submit" class="btn" value="ŠÇ—Ò"></td>
+<td><input type="submit" class="btn" value="ç®¡ç†è€…"></td>
 </tr></table></form>
 EOM
 
-	# ƒtƒbƒ^[•\¦
+	# ãƒ•ãƒƒã‚¿ãƒ¼è¡¨ç¤º
 	&footer;
 
 	exit;
 }
 #------------------#
-#  ƒNƒbƒL[‚ğæ“¾  #
+#  ã‚¯ãƒƒã‚­ãƒ¼ã‚’å–å¾—  #
 #------------------#
 sub get_cookie {
 	@pairs = split(/;/, $ENV{'HTTP_COOKIE'});
@@ -348,18 +348,18 @@ sub get_cookie {
 }
 
 #------------------#
-#’¼ƒŠƒ“ƒNƒ`ƒFƒbƒN  #
+#ç›´ãƒªãƒ³ã‚¯ãƒã‚§ãƒƒã‚¯  #
 #------------------#
 sub link_chack {
-	#’¼ƒŠƒ“ƒN–h~ˆ—
+	#ç›´ãƒªãƒ³ã‚¯é˜²æ­¢å‡¦ç†
 	$geturl = $ENV{'HTTP_REFERER'};
-	#’¼ƒŠƒ“ƒN—}~‹@”\g—p‚ÉˆÄ“à‚·‚é‚t‚q‚k
-	$guid ="<H1>ŒÄ‚Ño‚µŒ³‚ª³‚µ‚­‚ ‚è‚Ü‚¹‚ñII</H1>";
+	#ç›´ãƒªãƒ³ã‚¯æŠ‘æ­¢æ©Ÿèƒ½ä½¿ç”¨ã«æ¡ˆå†…ã™ã‚‹ï¼µï¼²ï¼¬
+	$guid ="<H1>å‘¼ã³å‡ºã—å…ƒãŒæ­£ã—ãã‚ã‚Šã¾ã›ã‚“ï¼ï¼</H1>";
 	if ($top_url) {
-		$guid.="<a href=\"$top_url\">$top_url</a>‚©‚ç“ü‚è‚È‚¨‚µ‚Ä‚­‚¾‚³‚¢B";
+		$guid.="<a href=\"$top_url\">$top_url</a>ã‹ã‚‰å…¥ã‚ŠãªãŠã—ã¦ãã ã•ã„ã€‚";
 	}
 	else{
-		$guid.="<font color=$yellow size=4>‹¤—LƒTƒCƒgˆê——</font>";
+		$guid.="<font color=$yellow size=4>å…±æœ‰ã‚µã‚¤ãƒˆä¸€è¦§</font>";
 		$index=0;
 		foreach (@site_url) {
 			$guid.="<a href=\"$_\">$site_title[$index]</a>/";
