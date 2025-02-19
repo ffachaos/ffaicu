@@ -35,13 +35,13 @@
 #---------------------------------------------------------------#
 
 # 日本語ライブラリの読み込み
-require 'jacode.pl';
+require './jacode.pl';
 
 # レジストライブラリの読み込み
-require 'regist.pl';
+require './regist.pl';
 
 # 初期設定ファイルの読み込み
-require 'data/ffadventure.ini';
+require './data/ffadventure.ini';
 
 # このファイル用設定
 $backgif = $sts_back;

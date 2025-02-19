@@ -36,18 +36,18 @@
 #     http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi 		#
 #---------------------------------------------------------------#
 # 日本語ライブラリの読み込み
-require 'jacode.pl';
+require './jacode.pl';
 
 # レジストライブラリの読み込み
-require 'regist.pl';
+require './regist.pl';
 
 # 戦闘ライブラリの読み込み
-require 'battle.pl';
+require './battle.pl';
 # チャンプ戦用ライブラリ読み込み
-require 'wbattle.pl';
+require './wbattle.pl';
 
 # 初期設定ファイルの読み込み
-require 'data/ffadventure.ini';
+require './data/ffadventure.ini';
 
 # このファイル用設定
 $backgif = $tennka_back;
