@@ -925,7 +925,7 @@ sub img {
 <html lang="ja">
 <head>
 <meta http-equiv="Pragma" content="no-cache">
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=Shift_JIS">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 <META http-equiv="Content-Script-Type" content="text/javascript">
 <META http-equiv="Content-Style-Type" content="text/css">
 <SCRIPT Language="JavaScript" src="$java_script_temp" type="text/javascript">
