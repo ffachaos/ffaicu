@@ -1,0 +1,7 @@
+services:
+  perl-apache:
+    ports:
+      - "8008:80"
+    build:
+      context: .
+      dockerfile: Dockerfile
