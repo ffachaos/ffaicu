@@ -1,7 +1,7 @@
 sub whissatu{
 	if ($wwaza_ritu > int(rand(120))) {
 		$gold -= int($kgold /25);
-		$com2 .= "<font class=\"red\">‚¨‹à‚ğ“‚Ü‚ê‚½II‡Œv$gold‚fƒ}ƒCƒiƒXII</FONT><br>";
+		$com2 .= "<font class=\"red\">ãŠé‡‘ã‚’ç›—ã¾ã‚ŒãŸï¼ï¼åˆè¨ˆ$goldï¼§ãƒã‚¤ãƒŠã‚¹ï¼ï¼</FONT><br>";
 	}
 }
 sub watowaza{}

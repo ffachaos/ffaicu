@@ -2,12 +2,12 @@ sub whissatu{}
 sub watowaza{
 	if ($wwaza_ritu > int(rand(80))) {
 	if (int(rand(4)) == 0) {
-		$com2 .= "$winner[3]‚ª‹©‚ñ‚¾I<font size=5>u‚ I‚ ‚ê‚Í‚È‚ñ‚¾IHHHHv</font>$chara[4]‚É‚ÍŒø‚©‚È‚©‚Á‚½II<br>";
+		$com2 .= "$winner[3]ãŒå«ã‚“ã ï¼<font size=5>ã€Œã‚ï¼ã‚ã‚Œã¯ãªã‚“ã ï¼ï¼Ÿï¼Ÿï¼Ÿï¼Ÿã€</font>$chara[4]ã«ã¯åŠ¹ã‹ãªã‹ã£ãŸï¼ï¼<br>";
 	}
 else{
 		$sake1 -= 999999;
 		$dmg1 = 0;
-		$com2 .= "$winner[3]‚ª‹©‚ñ‚¾I<font size=5>u‚ I‚ ‚ê‚Í‚È‚ñ‚¾IHHHHv</font>$chara[4]‚ÉŒ„‚ª‚Å‚«‚½I<br>";
+		$com2 .= "$winner[3]ãŒå«ã‚“ã ï¼<font size=5>ã€Œã‚ï¼ã‚ã‚Œã¯ãªã‚“ã ï¼ï¼Ÿï¼Ÿï¼Ÿï¼Ÿã€</font>$chara[4]ã«éš™ãŒã§ããŸï¼<br>";
 	}
 }}
 1;

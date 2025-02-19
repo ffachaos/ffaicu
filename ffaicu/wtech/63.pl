@@ -5,9 +5,9 @@ sub watowaza{
 		$sake2 = $sake1;
 		$hpplus2 = $hpplus1;
 		$clit2 = $clit1;if ($hpplus2) {
-		$kaihuku2 .= "$winner[3] ‚Ì‚g‚o‚ª $hpplus2 ‰ñ•œ‚µ‚½Iô";
+		$kaihuku2 .= "$winner[3] ã®ï¼¨ï¼°ãŒ $hpplus2 å›å¾©ã—ãŸï¼â™ª";
 	}
-$com2 .= "<font class=\"red\">$chara[4]‚Ì‚à‚Ì‚Ü‚Ë`ô</FONT><br>";
+$com2 .= "<font class=\"red\">$chara[4]ã®ã‚‚ã®ã¾ã­ï½â™ª</FONT><br>";
 	}
 }
 1;

@@ -3,7 +3,7 @@ sub mons_waza{
 		$sake1 -= 999999;
 		$dmg2 += int(rand($mrand)) * 3;
 		$dmg2 += $item[4];
-		$com2 .= "<font class=\"white\" size=5>‹Ö’f‚Ì–‚–@ƒAƒ‹ƒeƒ}‚ğ”­“®III</font><br>";
+		$com2 .= "<font class=\"white\" size=5>ç¦æ–­ã®é­”æ³•ã‚¢ãƒ«ãƒ†ãƒã‚’ç™ºå‹•ï¼ï¼ï¼</font><br>";
 	}
 }
 sub mons_atowaza{}

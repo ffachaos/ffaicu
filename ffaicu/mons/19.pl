@@ -2,13 +2,13 @@ sub mons_waza{
 	if ($mons_ritu > int(rand(100))) {
 		if (int(rand(5))==0) {
 			$hpplus2 = int(rand($mrand)) * 4;
-			$kaihuku2 .= "$mname ‚Ì‚g‚o‚ª $hpplus2 ‰ñ•œ‚µ‚½Iô";
-			$com2 = "<font class=\"yellow\" size=5>ƒnƒ@ƒnƒ@BBB</font><br>";
+			$kaihuku2 .= "$mname ã®ï¼¨ï¼°ãŒ $hpplus2 å›å¾©ã—ãŸï¼â™ª";
+			$com2 = "<font class=\"yellow\" size=5>ãƒã‚¡ãƒã‚¡ã€‚ã€‚ã€‚</font><br>";
 		} else {
 			$dmg2 += int(rand($mrand)) * 5;
 			$dmg2 += $item[4];
 			$sake1 -= 999999;
-			$com2 .= "<font class=\"white\" size=5>ƒnƒ@ƒnƒ@BBB</font><br>";
+			$com2 .= "<font class=\"white\" size=5>ãƒã‚¡ãƒã‚¡ã€‚ã€‚ã€‚</font><br>";
 		}
 	}
 }

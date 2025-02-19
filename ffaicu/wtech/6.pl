@@ -2,7 +2,7 @@ sub whissatu{}
 sub watowaza{
 	if ($wwaza_ritu > int(rand(80))) {
 		$dmg1 = int($dmg1 * 0.1);
-		$com2 .= "<font class=\"white\">”’–‚–@ƒVƒFƒ‹III</FONT><br>";
+		$com2 .= "<font class=\"white\">ç™½é­”æ³•ã‚·ã‚§ãƒ«ï¼ï¼ï¼</FONT><br>";
 	}
 }
 1;

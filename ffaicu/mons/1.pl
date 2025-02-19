@@ -1,7 +1,7 @@
 sub mons_waza{
 	if ($mons_ritu > int(rand(100))) {
 		$dmg1 = int($dmg1 * 0.1);
-		$com2 .= "<font class=\"yellow\">–hŒä–‚–@ƒ}ƒCƒeƒBƒK[ƒhIII</font><br>";
+		$com2 .= "<font class=\"yellow\">é˜²å¾¡é­”æ³•ãƒã‚¤ãƒ†ã‚£ã‚¬ãƒ¼ãƒ‰ï¼ï¼ï¼</font><br>";
 	}
 }
 sub mons_atowaza{}

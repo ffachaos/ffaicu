@@ -1,9 +1,9 @@
 sub whissatu{
 	if ($wwaza_ritu > int(rand(120))) {
 		$dmg2 = $dmg2 + (($winner[10] + $winner[39]) * int(rand(50)));
-		$com2 .= "<font class=\"yellow\" size=5>•KE‹Zƒ‰ƒCƒtEƒfƒWƒ‡ƒ“III</FONT><br>";
+		$com2 .= "<font class=\"yellow\" size=5>å¿…æ®ºæŠ€ãƒ©ã‚¤ãƒ•ãƒ»ãƒ‡ã‚¸ãƒ§ãƒ³ï¼ï¼ï¼</FONT><br>";
 		$hpplus2 = int($dmg2 /5);
-		$kaihuku2 .= "$winner[3] ‚Ì‚g‚o‚ª $hpplus2 ‰ñ•œ‚µ‚½Iô";
+		$kaihuku2 .= "$winner[3] ã®ï¼¨ï¼°ãŒ $hpplus2 å›å¾©ã—ãŸï¼â™ª";
 	}
 }
 sub watowaza{}

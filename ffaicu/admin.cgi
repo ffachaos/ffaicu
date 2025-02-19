@@ -1,51 +1,51 @@
 #!/usr/local/bin/perl
 
 #------------------------------------------------------#
-#�@�{�X�N���v�g�̒��쌠�͉��L��2�l�ɂ���܂��B
-#�����Ȃ闝�R�������Ă����̕\�L���폜���邱�Ƃ͂ł��܂���
-#�ᔽ�𔭌������ꍇ�A�X�N���v�g�̗��p���~���Ă�������
-#�����łȂ��A�R��ׂ����u�������Ă��������܂��B
-#  FF ADVENTURE(������) �Ǘ����[�h�X�N���v�g
-#�@remodeling by ����
-#�@http://www.eriicu.com
-#�@icu@kcc.zaq.ne.jp
+#　本スクリプトの著作権は下記の2人にあります。
+#いかなる理由があってもこの表記を削除することはできません
+#違反を発見した場合、スクリプトの利用を停止していただく
+#だけでなく、然るべき処置をさせていただきます。
+#  FF ADVENTURE(いく改) 管理モードスクリプト
+#　remodeling by いく
+#　http://www.eriicu.com
+#　icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
 # FF BATTLE de i
-#�@programed by jun-k
-#�@http://www5b.biglobe.ne.jp/~jun-kei/
-#�@jun-kei@vanilla.freemail.ne.jp
+#　programed by jun-k
+#　http://www5b.biglobe.ne.jp/~jun-kei/
+#　jun-kei@vanilla.freemail.ne.jp
 #------------------------------------------------------#
 
 #------------------------------------------------------#
-# �{�X�N���v�g�̍쐬�҂͂����ł����A�X�N���v�g�̒��쌠��CUMRO����
-# �ɂ���܂��A�K�v�Ȓ��쌠�\�����������Ďg�p���邱�Ƃ͂ł��܂���
-# �{�X�N���v�g�Ɋւ��Ă̂��₢���킹�͂����܂ł��肢���܂��B
-# CUMRO�ɂ͐�΂ɂ��Ȃ��ŉ������B
+# 本スクリプトの作成者はいくですが、スクリプトの著作権はCUMROさん
+# にあります、必要な著作権表示を消去して使用することはできません
+# 本スクリプトに関してのお問い合わせはいくまでお願いします。
+# CUMROには絶対にしないで下さい。
 #------------------------------------------------------#
 
-#--- [���ӎ���] ------------------------------------------------#
-# 1. ���̃X�N���v�g�̓t���[�\�t�g�ł��B���̃X�N���v�g���g�p����	#
-#    �����Ȃ鑹�Q�ɑ΂��č�҂͈�؂̐ӔC�𕉂��܂���B		#
-# 2. �ݒu�Ɋւ��鎿��̓T�|�[�g�f���ɂ��肢�������܂��B	#
-#    ���ڃ��[���ɂ�鎿��͈�؂��󂯂������Ă���܂���B	#
+#--- [注意事項] ------------------------------------------------#
+# 1. このスクリプトはフリーソフトです。このスクリプトを使用した	#
+#    いかなる損害に対して作者は一切の責任を負いません。		#
+# 2. 設置に関する質問はサポート掲示板にお願いいたします。	#
+#    直接メールによる質問は一切お受けいたしておりません。	#
 #    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi		#
 #---------------------------------------------------------------#
 
-# ���{�ꃉ�C�u�����̓ǂݍ���
+# 日本語ライブラリの読み込み
 require 'jcode.pl';
 
-# ���W�X�g���C�u�����̓ǂݍ���
+# レジストライブラリの読み込み
 require 'regist.pl';
 
-# �����ݒ�t�@�C���̓ǂݍ���
+# 初期設定ファイルの読み込み
 require 'data/ffadventure.ini';
 $java_script_temp = $java_script;
 $java_script = "";
 
-# �Ǘ��l���[�h�̃p�X���[�h
+# 管理人モードのパスワード
 $kanripass = '1111';
 
-# �L�����ʕۑ��p�t�H���_��(�폜�p)
+# キャラ個別保存用フォルダ名(削除用)
 $data_folder[0] = "./charalog";
 $data_folder[1] = $message_file;
 $data_folder[2] = $ban_file;
@@ -59,19 +59,19 @@ $data_folder[9] = "./syoku";
 $data_folder[10] = $sousin_file;
 
 #================================================================#
-#����������������������������������������������������������������#
-#�� �����艺��CGI�Ɏ��M�̂�����ȊO�͈���Ȃ��ق�������ł��@��#
-#����������������������������������������������������������������#
+#┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓#
+#┃ これより下はCGIに自信のある方以外は扱わないほうが無難です　┃#
+#┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛#
 #================================================================#
 
 #--------------#
-#�@���C�������@#
+#　メイン処理　#
 #--------------#
 &decode;
-#�h�o�A�h���X�ŃA�N�Z�X����
+#ＩＰアドレスでアクセス制限
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
-	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("�A�N�Z�X�ł��܂���I�I");}
+	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("アクセスできません！！");}
 }
 
 &get_time(time());
@@ -95,12 +95,12 @@ print OUT @logindata;
 close(OUT);
 &unlock($lock_file,'AD');
 
-if ($in{'pass'} ne $kanripass) { &error('�p�X���[�h����͂��ĉ�����'); }
+if ($in{'pass'} ne $kanripass) { &error('パスワードを入力して下さい'); }
 
 $back_form = << "EOM";
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
@@ -109,7 +109,7 @@ if ($mode) { &$mode; }
 exit;
 
 #-----------------#
-#  �Ǘ��l���[�h   #
+#  管理人モード   #
 #-----------------#
 sub kanri_top {
 
@@ -120,12 +120,12 @@ sub kanri_top {
 	&header;
 
 	print <<"EOM";
-<h1>�Ǘ����[�h</h1><hr size=0>
-�����ݓo�^����Ă���L�����N�^�[���v���C�p�x���������ɕ\\�����Ă��܂��B<br>
-����U<b>�폜</b>����ƁA��x�ƕ����ł��Ȃ��Ȃ�̂ŕK��<b>�o�b�N�A�b�v</b>���Ƃ��Ă�����s���Ă��������B<br><br>
-�����ŋ߂̊Ǘ����[�h�g�p�̗���(�����s�����N�����x�Ƀ��O���擾���Ă��܂�)
+<h1>管理モード</h1><hr size=0>
+※現在登録されているキャラクターをプレイ頻度が高い順に表\示しています。<br>
+※一旦<b>削除</b>すると、二度と復元できなくなるので必ず<b>バックアップ</b>をとってから実行してください。<br><br>
+ここ最近の管理モード使用の履歴(何か行動を起こす度にログを取得しています)
 <table bgcolor="#000000" cellspacing="1">
-<tr><th>���O�C������</th><th>�z�X�g</th><th>���̓p�X���[�h</th></tr>
+<tr><th>ログイン時間</th><th>ホスト</th><th>入力パスワード</th></tr>
 EOM
 	foreach (@logindata) {
 		($pass,$host,$time) = split(/<>/);
@@ -139,64 +139,64 @@ EOM
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value=del_noplay>
-<input type=submit class=btn value="�v���C�������߂����L�����N�^�[�f�[�^�̊��S�폜"><br>
-(�O��퓬����퓬������$limit���o�߂��Ă��܂����L�����������I�ɍ폜���܂�)
+<input type=submit class=btn value="プレイ日数を過ぎたキャラクターデータの完全削除"><br>
+(前回戦闘から戦闘せずに$limit日経過してしまったキャラを自動的に削除します)
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value=kanri_all>
-<input type=submit class=btn value="�L�����N�^�[�ꗗ"><br>
-(�e�e�`���̃L�����N�^�[���ꗗ�ŕ\\�����܂�)
+<input type=submit class=btn value="キャラクター一覧"><br>
+(ＦＦＡ内のキャラクターを一覧で表\示します)
 </form>
 <form action="$scriptk" method="post">
 <input type="text" name=id size=20>
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value=data>
-<input type=submit class=btn value="�h�c�w��L�����N�^�[�f�[�^"><br>
-(�e�e�`���̃L�����N�^�[����h�c�Ō������āA�ڍׂȃf�[�^��\\�����܂�)
+<input type=submit class=btn value="ＩＤ指定キャラクターデータ"><br>
+(ＦＦＡ内のキャラクターからＩＤで検索して、詳細なデータを表\示します)
 </form>
 <form action="$scriptk" method="post">
 <input type="text" name=name size=20>
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value=data>
-<input type=submit class=btn value="���O�w��L�����N�^�[�f�[�^"><br>
-(�e�e�`���̃L�����N�^�[���疼�O�Ō������āA�ڍׂȃf�[�^��\\�����܂�)
+<input type=submit class=btn value="名前指定キャラクターデータ"><br>
+(ＦＦＡ内のキャラクターから名前で検索して、詳細なデータを表\示します)
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value=save>
-<input type=submit class=btn value="�L�����ۑ�"><br>
-(�폜�����o�߂��Ă��폜����Ȃ��L�����N�^�[���w�肵�܂�)
+<input type=submit class=btn value="キャラ保存"><br>
+(削除日数経過しても削除されないキャラクターを指定します)
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value=img>
-<input type=submit class=btn value="�摜�̒ǉ�"><br>
-(./images/chara�t�H���_���̉摜�������I�ɓǂݎ��Affadventure.ini�ɒǉ�����p�Ɉꗗ�ŏo�͂��܂��B<br>HTML��CGI����������Ă���T�[�o�[�ł��g�p�ł��܂��̂ŁA�摜��ǉ�����ۂȂǂɈꎞ�I�ɉ摜�����A�ꗗ���o�͂���ƕ֗��ł��B)
+<input type=submit class=btn value="画像の追加"><br>
+(./images/charaフォルダ内の画像を自動的に読み取り、ffadventure.iniに追加する用に一覧で出力します。<br>HTMLとCGIが分離されているサーバーでも使用できますので、画像を追加する際などに一時的に画像を入れ、一覧を出力すると便利です。)
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="syoku">
-<input type=submit class=btn value="�E�Ƃ̕ҏW"><br>
-(�E�ƕʂׂ̍����ݒ��ύX�ł��܂��B)
+<input type=submit class=btn value="職業の編集"><br>
+(職業別の細かい設定を変更できます。)
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="item_all">
-<input type=submit class=btn value="�A�C�e���ꗗ"><br>
-(�A�C�e���̈ꗗ������܂��B)
+<input type=submit class=btn value="アイテム一覧"><br>
+(アイテムの一覧が見れます。)
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="waza_all">
-<input type=submit class=btn value="�K�E�Z�ꗗ"><br>
-(�K�E�Z�̈ꗗ������܂��B)
+<input type=submit class=btn value="必殺技一覧"><br>
+(必殺技の一覧が見れます。)
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="syoku_add_pre">
-<input type=submit class=btn value="�E�Ƃ̒ǉ�"><br>
-(�E�ƒǉ��̏������ł��܂��B)
+<input type=submit class=btn value="職業の追加"><br>
+(職業追加の準備ができます。)
 </form>
 <br>
 <br>
@@ -205,8 +205,8 @@ EOM
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value=del_all><br>
-<input type=submit class=btn value="�S���O�f�[�^�̍폜"><br>
-(�e�e�`���̑S�L�����N�^�[�f�[�^�𖕏����܂�)
+<input type=submit class=btn value="全ログデータの削除"><br>
+(ＦＦＡ内の全キャラクターデータを抹消します)
 </form>
 EOM
 	&footer;
@@ -216,7 +216,7 @@ EOM
 }
 
 #-----------------#
-#  �Ǘ��l���[�h   #
+#  管理人モード   #
 #-----------------#
 sub kanri_all {
 
@@ -235,13 +235,13 @@ sub kanri_all {
 	
 	@tmp = ();
 	if($in{'list'} eq 'other_list') {
-		# �z��28�ԖڂŃ\�[�g
+		# 配列28番目でソート
 		@tmp = map {(split /<>/)[21]} @RANK_NEW;
 	}elsif($in{'list'} eq 'ip_list') {
-		# �z��28�ԖڂŃ\�[�g
+		# 配列28番目でソート
 		@tmp = map {(split /<>/)[26]} @RANK_NEW;
 	}else{
-		# �z��28�ԖڂŃ\�[�g
+		# 配列28番目でソート
 		@tmp = map {(split /<>/)[27]} @RANK_NEW;
 	}
 
@@ -253,32 +253,32 @@ sub kanri_all {
 	&header;
 
 	print <<"EOM";
-<h1>�Ǘ����[�h</h1><hr size=0>
-�����ݓo�^����Ă���L�����N�^�[��\\�����Ă��܂��B<br>
+<h1>管理モード</h1><hr size=0>
+※現在登録されているキャラクターを表\示しています。<br>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value=kanri_all>
-<input type=submit class=btn value="���t���ɕ��ёւ�">
+<input type=submit class=btn value="日付順に並び替え">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value=kanri_all>
 <input type="hidden" name=list value=other_list>
-<input type=submit class=btn value="�퓬�񐔏��ɕ��ёւ�">
+<input type=submit class=btn value="戦闘回数順に並び替え">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value=kanri_all>
 <input type="hidden" name=list value=ip_list>
-<input type=submit class=btn value="�h�o�A�h���X���ɕ��ёւ�">
+<input type=submit class=btn value="ＩＰアドレス順に並び替え">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=mode value=kanri_top>
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 <hr size=0><p><table border=1>
-<tr><th>NO</th><th>���O�C��</th><th>�L������</th><th>�h�c</th><th>�p�X���[�h</th><th>�T�C�g��</th><th>�h�o�A�h���X</th><th>�폜�܂�</th><th>�퓬��</th><th>�폜</th><th>�ۑ�</th><th>�ڍ�</th></tr>
+<tr><th>NO</th><th>ログイン</th><th>キャラ名</th><th>ＩＤ</th><th>パスワード</th><th>サイト名</th><th>ＩＰアドレス</th><th>削除まで</th><th>戦闘回数</th><th>削除</th><th>保存</th><th>詳細</th></tr>
 EOM
 	$i=1;
 	foreach (@RANK_NEW){
@@ -288,7 +288,7 @@ EOM
 		$rdate = $rdate + (60*60*24*$limit);
 		$niti = $rdate - $ima;
 		$niti = int($niti / (60*60*24));
-		if($niti==-11337){$niti_s="<font class=red>���t����</font>";}else{$niti_s="<font class=yellow>$niti</font>��";}
+		if($niti==-11337){$niti_s="<font class=red>日付無し</font>";}else{$niti_s="<font class=yellow>$niti</font>日";}
 
 	print <<"EOM";
 <tr>
@@ -298,7 +298,7 @@ EOM
 <input type=hidden name=mode value=log_in>
 <input type=hidden name="id" value="$rid">
 <input type=hidden name="mydata" value="$_">
-<input type=submit class=btn value="���O�C��">
+<input type=submit class=btn value="ログイン">
 </td>
 <td align=left></form><a href="$scripta?mode=chara_sts&id=$rid">$rname</a></td><td align=left>$rid</td><td align=left>$rpass</td><td align=left><a href=\"$rurl\" target="_blank">$rsite</a></td>
 EOM
@@ -314,7 +314,7 @@ EOM
 <input type=hidden name=id value=$rid>
 <input type=hidden name=name value=$rname>
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�폜">
+<input type=submit class=btn value="削除">
 </td></form>
 <form action="$scriptk" method="post">
 <td align=center valign=center>
@@ -322,14 +322,14 @@ EOM
 <input type=hidden name=id value=$rid>
 <input type=hidden name=name value=$rname>
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�ۑ�">
+<input type=submit class=btn value="保存">
 </td></form>
 <form action="$scriptk" method="post">
 <td align=center valign=center>
 <input type=hidden name=id value=$rid>
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value=data>
-<input type=submit class=btn value="�ڍ�">
+<input type=submit class=btn value="詳細">
 </td></form>
 EOM
 		print "</tr>\n";
@@ -344,7 +344,7 @@ EOM
 }
 
 #-----------------#
-#  �S���O�폜     #
+#  全ログ削除     #
 #-----------------#
 sub del_all {
 
@@ -354,7 +354,7 @@ sub del_all {
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name="kakunin" value="1">
 <input type="hidden" name=mode value=del_all>
-<input type=submit class=btn value="�S���O�f�[�^�̍폜">
+<input type=submit class=btn value="全ログデータの削除">
 </form>
 <br>
 <br>
@@ -362,10 +362,10 @@ sub del_all {
 <form action="$scriptk" method="post">
 <input type=hidden name=mode value=kanri_top>
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
-		&error("�{���ɏ����܂����H$back_form");
+		&error("本当に消しますか？$back_form");
 	}
 
 
@@ -394,13 +394,13 @@ EOM
 	&header;
 
 	print <<"EOM";
-<h1>���L�̃L�����f�[�^���폜���܂���</h1><hr>
-<p>�폜�f�[�^�ꗗ(���v$su��)</font>
+<h1>下記のキャラデータを削除しました</h1><hr>
+<p>削除データ一覧(合計$su件)</font>
 $del_name
 <form action="$scriptk" method="post">
 <input type=hidden name=mode value=kanri_top>
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
@@ -411,7 +411,7 @@ EOM
 }
 
 #------------------------#
-#�v���C�����o�߃f�[�^�폜#
+#プレイ日数経過データ削除#
 #------------------------#
 sub del_noplay {
 
@@ -465,13 +465,13 @@ sub del_noplay {
 	&header;
 
 	print <<"EOM";
-<h1>���L�̃L�����f�[�^���폜���܂���</h1><hr>
-<p>�폜�f�[�^�ꗗ(���v$su��)</font>
+<h1>下記のキャラデータを削除しました</h1><hr>
+<p>削除データ一覧(合計$su件)</font>
 $del_name
 <form action="$scriptk" method="post">
 <input type=hidden name=mode value=kanri_top>
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
@@ -482,7 +482,7 @@ EOM
 }
 
 #-----------------#
-#�L�������O�폜   #
+#キャラログ削除   #
 #-----------------#
 sub del_chara {
 
@@ -494,7 +494,7 @@ sub del_chara {
 <input type="hidden" name="id" value="$in{'id'}">
 <input type="hidden" name="name" value="$in{'name'}">
 <input type="hidden" name=mode value=del_chara>
-<input type=submit class=btn value="�폜">
+<input type=submit class=btn value="削除">
 </form>
 <br>
 <br>
@@ -502,13 +502,13 @@ sub del_chara {
 <form action="$scriptk" method="post">
 <input type=hidden name=mode value=kanri_top>
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
-		&error("$in{'name'}�����{���ɏ����܂����H$back_form");
+		&error("$in{'name'}さんを本当に消しますか？$back_form");
 	}
 
-	if($in{'id'} eq ""){&error("�h�c���w�肳��Ă��܂���I�I");}
+	if($in{'id'} eq ""){&error("ＩＤが指定されていません！！");}
 
 	&del_file($in{'id'});
 
@@ -517,11 +517,11 @@ EOM
 	&header;
 
 	print <<"EOM";
-<h1>$in{'name'}�̃��O�f�[�^���폜���܂���</h1><hr>
+<h1>$in{'name'}のログデータを削除しました</h1><hr>
 <form action="$scriptk" method="post">
 <input type=hidden name=mode value=kanri_top>
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
@@ -531,14 +531,14 @@ EOM
 }
 
 #--------------------------#
-#�w�肵���h�c�̃t�@�C���폜#
+#指定したＩＤのファイル削除#
 #--------------------------#
 sub del_file {
 
 	local($id) = @_;
 	foreach (@data_folder) {
 		$m_charafile="$_/$id.cgi";
-		#���O�폜����
+		#ログ削除処理
 		if(-e $m_charafile){unlink($m_charafile);}
 	}
 
@@ -546,7 +546,7 @@ sub del_file {
 }
 
 #------------------#
-#�S�̃t�@�C���̍X�V#
+#全体ファイルの更新#
 #------------------#
 sub all_data_delete{
 
@@ -564,7 +564,7 @@ sub all_data_delete{
 		}
 		closedir(DIR);
 
-		# �z��19�ԖڂŃ\�[�g
+		# 配列19番目でソート
 		@tmp = map {(split /<>/)[18]} @temp_member;
 		@RANKING = @temp_member[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
@@ -575,7 +575,7 @@ sub all_data_delete{
 }
 
 #-----------------#
-#  �Ǘ��l���[�h   #
+#  管理人モード   #
 #-----------------#
 sub data {
 
@@ -590,19 +590,19 @@ sub data {
 
 		$back_form = << "EOM";
 <form action=$scriptk method=post>
-������x��������
+もう一度検索する
 <input type=hidden name=mode value=data>
 <input type=hidden name=pass value=$in{'pass'}>
 <input type=text name=name size=20>
-<input type=submit class=btn value=����>
+<input type=submit class=btn value=検索>
 </form>
 <form action=$scriptk method=post>
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value=�߂�>
+<input type=submit class=btn value=戻る>
 </form>
 EOM
 
-		if(!$hit){&error("�L�����N�^�[��������܂���B$back_form");}
+		if(!$hit){&error("キャラクターが見つかりません。$back_form");}
 		$in{'id'} = $chara_data[0];
 	}
 
@@ -617,19 +617,19 @@ EOM
 	&header;
 
 	print <<"EOM";
-<h1>�Ǘ����[�h</h1><hr size=0>
+<h1>管理モード</h1><hr size=0>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 <hr size=0><table border=1>
-<tr><th>���O�C��</th><th>�L������</th><th>�h�c</th><th>�p�X���[�h</th><th>�ύX�p�P��</th><th>�p�X���[�h�ύX�z�X�g</th><th>�T�C�g��</th><th>�h�o�A�h���X</th><th>�폜�܂�</th><th>�퓬��</th><th>�폜</th><th>�ۑ�</th></tr>
+<tr><th>ログイン</th><th>キャラ名</th><th>ＩＤ</th><th>パスワード</th><th>変更用単語</th><th>パスワード変更ホスト</th><th>サイト名</th><th>ＩＰアドレス</th><th>削除まで</th><th>戦闘回数</th><th>削除</th><th>保存</th></tr>
 EOM
 		$rdate = $chara[27] + (60*60*24*$limit);
 		$niti = $rdate - $ima;
 		$niti = int($niti / (60*60*24));
-		$niti_s="$niti��";
-		# �p�X���[�h�f�[�^�擾
+		$niti_s="$niti日";
+		# パスワードデータ取得
 		open(IN,"$pass_folder/$chara[0].cgi");
 		@pass_data = <IN>;
 		close(IN);
@@ -643,7 +643,7 @@ EOM
 <input type=hidden name=mode value=log_in>
 <input type=hidden name=id value=$chara[0]>
 <input type=hidden name="mydata" value="$chara_log">
-<input type=submit class=btn value="���O�C��">
+<input type=submit class=btn value="ログイン">
 </td></form>
 <td align=left>
 <a href="$scripta?mode=chara_sts&id=$chara[0]">
@@ -662,14 +662,14 @@ $chara[1]</td>
 <input type="hidden" name=mode value=del_chara>
 <input type=hidden name=id value="$chara[0]">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�폜">
+<input type=submit class=btn value="削除">
 </td></form>
 <form action="$scriptk" method="post">
 <td align=center valign=center>
 <input type="hidden" name=mode value=save_chara>
 <input type=hidden name=id value="$chara[0]">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�ۑ�">
+<input type=submit class=btn value="保存">
 </td></form>
 </tr></table><br>
 EOM
@@ -685,7 +685,7 @@ EOM
 }
 
 #------------#
-# �L�����ۑ� #
+# キャラ保存 #
 #------------#
 sub save {
 
@@ -696,20 +696,20 @@ sub save {
 	&header;
 	print <<"EOM";
 <font size=3>
-�����ł̓v���C�����o�߃L�����N�^�[�f�[�^�̊��S�폜�ō폜����Ȃ��L�����N�^�[���w��ł��܂��B<br>
-�Ȃ��A�����Ŏw��L�����ł��ʍ폜�͗L���ł��̂ŁA�����Ӊ������B</font>
+ここではプレイ日数経過キャラクターデータの完全削除で削除されないキャラクターを指定できます。<br>
+なお、ここで指定キャラでも個別削除は有効ですので、ご注意下さい。</font>
 <form action="$scriptk" method="post">
 <input type="text" name="id" size=20>
 <input type="hidden" name="pass" value=$in{'pass'}>
 <input type="hidden" name=mode value=save_chara>
-<input type=submit class=btn value="�h�c�w��ۑ�">
+<input type=submit class=btn value="ＩＤ指定保存">
 </form>
 <form action="$scriptk" method="post">
 <TABLE BORDER=0>
 <TR>
 <TD ALIGN="center" CLASS="b2" id="td1"></TD>
-<TD ALIGN="center" CLASS="b2" id="td1">�h�c</TD>
-<TD ALIGN="center" CLASS="b2" id="td1">�L������</TD>
+<TD ALIGN="center" CLASS="b2" id="td1">ＩＤ</TD>
+<TD ALIGN="center" CLASS="b2" id="td1">キャラ名</TD>
 </tr>
 EOM
 	foreach(@save){
@@ -728,11 +728,11 @@ EOM
 </table>
 <input type=hidden name=pass value=$in{'pass'}>
 <input type=hidden name=mode value=save_del>
-<input type=submit class=btn value="���X�g����폜">
+<input type=submit class=btn value="リストから削除">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
@@ -743,7 +743,7 @@ EOM
 }
 
 #------------#
-# �L�����ۑ� #
+# キャラ保存 #
 #------------#
 sub save_chara {
 
@@ -759,10 +759,10 @@ sub save_chara {
 			$back_form = << "EOM";
 <form action="$scriptk" method="post">
 <input type="hidden" name="pass" value="$in{'pass'}">
-<input type="submit" class="btn" value="�߂�">
+<input type="submit" class="btn" value="戻る">
 </form>
 EOM
-			&error("�o�^�ς݂ł�$back_form");
+			&error("登録済みです$back_form");
 		}
 	}
 
@@ -775,18 +775,18 @@ EOM
 	&header;
 
 	print <<"EOM";
-$chara[4]�����ۑ��L�������X�g�ɒǉ����܂���<br>
+$chara[4]さんを保存キャラリストに追加しました<br>
 <form action="$scriptk" method="post">
 <input type="text" name=id size=20>
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value=save_chara>
-<input type=submit class=btn value="�h�c�w��ۑ�">
+<input type=submit class=btn value="ＩＤ指定保存">
 </form>
 <form action="$scriptk" method="post">
 <TABLE BORDER=0>
 <TR><TD ALIGN="center" CLASS="b2" id="td1"></TD>
-<TD ALIGN="center" CLASS="b2" id="td1">�h�c</TD>
-<TD ALIGN="center" CLASS="b2" id="td1">�L������</TD>
+<TD ALIGN="center" CLASS="b2" id="td1">ＩＤ</TD>
+<TD ALIGN="center" CLASS="b2" id="td1">キャラ名</TD>
 </tr>
 EOM
 
@@ -806,11 +806,11 @@ print "</table>";
 	print <<"EOM";
 <input type=hidden name=pass value=$in{'pass'}>
 <input type=hidden name=mode value=save_del>
-<input type=submit class=btn value="���X�g����폜">
+<input type=submit class=btn value="リストから削除">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
@@ -821,7 +821,7 @@ EOM
 }
 
 #----------#
-# �ۑ����� #
+# 保存解除 #
 #----------#
 sub save_del {
 
@@ -842,18 +842,18 @@ sub save_del {
 	&header;
 
 	print <<"EOM";
-�������܂���<br>
+解除しました<br>
 <form action="$scriptk" method="post">
 <input type="text" name=id size=20>
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value=save_chara>
-<input type=submit class=btn value="�h�c�w��ۑ�">
+<input type=submit class=btn value="ＩＤ指定保存">
 </form>
 <form action="$scriptk" method="post">
 <TABLE BORDER=0>
 <TR><TD ALIGN="center" CLASS="b2" id="td1"></TD>
-<TD ALIGN="center" CLASS="b2" id="td1">�h�c</TD>
-<TD ALIGN="center" CLASS="b2" id="td1">�L������</TD>
+<TD ALIGN="center" CLASS="b2" id="td1">ＩＤ</TD>
+<TD ALIGN="center" CLASS="b2" id="td1">キャラ名</TD>
 </tr>
 EOM
 	foreach(@ranknew){
@@ -873,11 +873,11 @@ EOM
 </table>
 <input type=hidden name=pass value=$in{'pass'}>
 <input type=hidden name=mode value=save_del>
-<input type=submit class=btn value="���X�g����폜">
+<input type=submit class=btn value="リストから削除">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
@@ -888,7 +888,7 @@ EOM
 }
 
 #----------#
-# �摜�ꗗ #
+# 画像一覧 #
 #----------#
 sub img {
 
@@ -949,22 +949,22 @@ BODY{
 //-->
 </STYLE>
 <link rel="stylesheet" href="$style_sheet" type="text/css">
-<title>�摜�ꗗ</title></head>
+<title>画像一覧</title></head>
 <body background="$backgif" bgcolor="$bgcolor" text="$text" link="$link" vlink="$vlink" alink="$alink">
 <center>
 <table border="1">
 $img_tag[$s]
 </tr>
 </table>
-�摜�ꗗ�ʃy�[�W<br>
+画像一覧別ページ<br>
 $html_link1
 </center>
 <HR SIZE=0 WIDTH="100%"><DIV align=right>
-FFA ������ver2.00 edit by <a href="http://www.eriicu.com" target="_top">����</a><br>
-FFA Emilia Ver1.01 remodeled by Classic(��)<br>
-FF Battle De I v3.06 remodeling by <a href="http://www.mj-world.jp/" target="_blank">jun-k</a>(�X�V��~��)<br>
-FF ADVENTURE(��) v1.040 remodeled by <a href="http://www.gun-online.com" target="_blank">�f�t�m</a><br>
-FF ADVENTURE v0.43 edit by D.Takamiya(CUMRO) <a href="http://www5c.biglobe.ne.jp/~ma-ti/" target="_blank">���z�z��(�Ǘ���ma-ti)</a><br>
+FFA いく改ver2.00 edit by <a href="http://www.eriicu.com" target="_top">いく</a><br>
+FFA Emilia Ver1.01 remodeled by Classic(閉鎖)<br>
+FF Battle De I v3.06 remodeling by <a href="http://www.mj-world.jp/" target="_blank">jun-k</a>(更新停止中)<br>
+FF ADVENTURE(改) v1.040 remodeled by <a href="http://www.gun-online.com" target="_blank">ＧＵＮ</a><br>
+FF ADVENTURE v0.43 edit by D.Takamiya(CUMRO) <a href="http://www5c.biglobe.ne.jp/~ma-ti/" target="_blank">現配布元(管理者ma-ti)</a><br>
 </DIV></body></html>
 EOM
 
@@ -978,11 +978,11 @@ EOM
 	&header;
 
 	print << "EOM";
-�ȉ��̃e�[�u������ffadventure.ini�ɂ���w��ӏ��ɃR�s�[�y�[�X�g���ĉ������B<br>
-�܂��Affaicu�t�H���_����<br>
+以下のテーブル内をffadventure.iniにある指定箇所にコピーペーストして下さい。<br>
+また、ffaicuフォルダ内に<br>
 $html_link
-�Ƃ����t�@�C���쐬����܂����B<br>
-�L�����摜�ꗗ���o�͂���Ă���̂ŁA���Ђ����p�������B
+というファイル作成されました。<br>
+キャラ画像一覧が出力されているので、ぜひご利用下さい。
 <table border="1">
 <tr><td>
 $img_all
@@ -990,7 +990,7 @@ $img_all
 </table>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
@@ -1000,7 +1000,7 @@ EOM
 }
 
 #----------#
-# �E�ƈꗗ #
+# 職業一覧 #
 #----------#
 sub syoku {
 
@@ -1013,7 +1013,7 @@ sub syoku {
 	&header;
 
 	print <<"EOM";
-�E�ƈꗗ<br>
+職業一覧<br>
 <TABLE BORDER=0>
 <TR>
 EOM
@@ -1026,7 +1026,7 @@ $chara_syoku[$s]<br>
 <input type="hidden" name="syoku" value="$s">
 <input type="hidden" name="mode" value="syoku_pre">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type="submit" class="btn" value="�ύX" size="20">
+<input type="submit" class="btn" value="変更" size="20">
 </TD>
 </form>
 EOM
@@ -1039,7 +1039,7 @@ EOM
 </table>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
@@ -1050,7 +1050,7 @@ EOM
 }
 
 #----------#
-# �E�Ɣ\�� #
+# 職業能力 #
 #----------#
 sub syoku_pre {
 
@@ -1067,33 +1067,33 @@ sub syoku_pre {
 	&header;
 
 	print <<"EOM";
-<h1>$chara_syoku[$in{'syoku'}]�\\�͈ꗗ</h1><br>
+<h1>$chara_syoku[$in{'syoku'}]能\力一覧</h1><br>
 <form action="$scriptk" method="post">
 <input type="hidden" name="syoku" value="$in{'syoku'}">
 <input type="hidden" name="mode" value="syoku_change">
 <input type=hidden name=pass value=$in{'pass'}>
 <TABLE BORDER=0>
 <TR>
-<TD ALIGN="center" CLASS="b2" id="td1" colspan="8">�]�E�K�{�\\��</TD>
-<TD ALIGN="center" CLASS="b2" id="td1" colspan="8">�\\�͏㏸�l</TD>
+<TD ALIGN="center" CLASS="b2" id="td1" colspan="8">転職必須能\力</TD>
+<TD ALIGN="center" CLASS="b2" id="td1" colspan="8">能\力上昇値</TD>
 </tr>
 <tr>
-<TH><font size=1>��</font></TH>
-<TH><font size=1>����</font></TH>
-<TH><font size=1>�M�S</font></TH>
-<TH><font size=1>������</font></TH>
-<TH><font size=1>��p��</font></TH>
-<TH><font size=1>����</font></TH>
-<TH><font size=1>����</font></TH>
-<TH><font size=1>�J���}</font></TH>
-<TH><font size=1>��</font></TH>
-<TH><font size=1>����</font></TH>
-<TH><font size=1>�M�S</font></TH>
-<TH><font size=1>������</font></TH>
-<TH><font size=1>��p��</font></TH>
-<TH><font size=1>����</font></TH>
-<TH><font size=1>����</font></TH>
-<TH><font size=1>�J���}</font></TH>
+<TH><font size=1>力</font></TH>
+<TH><font size=1>魔力</font></TH>
+<TH><font size=1>信仰心</font></TH>
+<TH><font size=1>生命力</font></TH>
+<TH><font size=1>器用さ</font></TH>
+<TH><font size=1>速さ</font></TH>
+<TH><font size=1>魅力</font></TH>
+<TH><font size=1>カルマ</font></TH>
+<TH><font size=1>力</font></TH>
+<TH><font size=1>魔力</font></TH>
+<TH><font size=1>信仰心</font></TH>
+<TH><font size=1>生命力</font></TH>
+<TH><font size=1>器用さ</font></TH>
+<TH><font size=1>速さ</font></TH>
+<TH><font size=1>魅力</font></TH>
+<TH><font size=1>カルマ</font></TH>
 </tr>
 <tr>
 EOM
@@ -1111,7 +1111,7 @@ EOM
 <table>
 <tr>
 <TD ALIGN="center" CLASS="b2" id="td1" colspan="$syoku_sum">
-�]�E�K�{�K���E�ƃ��x��
+転職必須習得職業レベル
 </TD>
 </tr>
 <tr>
@@ -1130,15 +1130,15 @@ EOM
 	print <<"EOM";
 </tr>
 </table>
-<input type="submit" class="btn" value="$chara_syoku[$in{'syoku'}]�̔\\�͕ύX" size="20">
+<input type="submit" class="btn" value="$chara_syoku[$in{'syoku'}]の能\力変更" size="20">
 </form>
 <table><tr>
 <td valign="top">
 <form action="$scriptk" method="post">
-���퉮�̔��A�C�e��
+武器屋販売アイテム
 <table>
 <tr>
-<th></th><th>No.</th><th>�Ȃ܂�</th><th>�З�</th><th>���i</th><th>�������␳</th></tr>
+<th></th><th>No.</th><th>なまえ</th><th>威力</th><th>価格</th><th>命中率補正</th></tr>
 EOM
 	open(IN,"$item_folder/item$in{'syoku'}.ini");
 	@item_array = <IN>;
@@ -1168,14 +1168,14 @@ EOM
 <input type="hidden" name="syoku" value="$in{'syoku'}">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type=hidden name=item value=item>
-<input type=submit class=btn value="�폜">
+<input type=submit class=btn value="削除">
 </form>
 </td><td valign="top">
 <form action="$scriptk" method="post">
-�h��̔��A�C�e��
+防具屋販売アイテム
 <table>
 <tr>
-<th></th><th>No.</th><th>�Ȃ܂�</th><th>�З�</th><th>���i</th><th>��𗦕␳</th></tr>
+<th></th><th>No.</th><th>なまえ</th><th>威力</th><th>価格</th><th>回避率補正</th></tr>
 EOM
 	open(IN,"$def_folder/def$in{'syoku'}.ini");
 	@item_array = <IN>;
@@ -1205,14 +1205,14 @@ EOM
 <input type="hidden" name="syoku" value="$in{'syoku'}">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type=hidden name=item value=def>
-<input type=submit class=btn value="�폜">
+<input type=submit class=btn value="削除">
 </form>
 </td></tr></table>
 <form action="$scriptk" method="post">
-�����i�X�̔��A�C�e��
+装飾品店販売アイテム
 <table>
 <tr>
-<th></th><th>No.</th><th>�Ȃ܂�</th><th>���i</th><th>����</th><th>��</th><th>����</th><th>�M�S</th><th>������</th><th>��p��</th><th>����</th><th>����</th><th>�J���}</th><th>������</th><th>���</th><th>�K�E��</th><th>����</th></tr>
+<th></th><th>No.</th><th>なまえ</th><th>価格</th><th>効果</th><th>力</th><th>魔力</th><th>信仰心</th><th>生命力</th><th>器用さ</th><th>速さ</th><th>魅力</th><th>カルマ</th><th>命中率</th><th>回避率</th><th>必殺率</th><th>説明</th></tr>
 EOM
 	open(IN,"$acs_folder/acs$in{'syoku'}.ini");
 	@item_array = <IN>;
@@ -1242,14 +1242,14 @@ EOM
 <input type="hidden" name="syoku" value="$in{'syoku'}">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type=hidden name=item value=acs>
-<input type=submit class=btn value="�폜">
+<input type=submit class=btn value="削除">
 </form>
 <form action="$scriptk" method="post">
-�g�p�\\�K�E�Z<br>
-�g�p�����Ƃ́A1�Ń}�X�^�[����Ȃ��Ǝg�p�ł��Ȃ����́A0�Ń}�X�^�[���ĂȂ��Ƃ��g����K�E�Z�ƂȂ�܂��B
+使用可能\必殺技<br>
+使用条件とは、1でマスターじゃないと使用できないもの、0でマスターしてなくとも使える必殺技となります。
 <table>
 <tr>
-<th></th><th>No.</th><th>�Z��</th><th>����</th><th>�g�p����</th></tr>
+<th></th><th>No.</th><th>技名</th><th>説明</th><th>使用条件</th></tr>
 EOM
 	open(IN,"$tac_folder/tac$in{'syoku'}.ini");
 	@item_array = <IN>;
@@ -1279,16 +1279,16 @@ EOM
 <input type="hidden" name="syoku" value="$in{'syoku'}">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type=hidden name=item value=tac>
-<input type=submit class=btn value="�폜">
+<input type=submit class=btn value="削除">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="syoku">
-<input type=submit class=btn value="�E�Ƃ̈ꗗ�ɖ߂�">
+<input type=submit class=btn value="職業の一覧に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
@@ -1299,7 +1299,7 @@ EOM
 }
 
 #----------#
-# �E�ƕҏW #
+# 職業編集 #
 #----------#
 sub syoku_change {
 
@@ -1329,15 +1329,15 @@ sub syoku_change {
 	&header;
 
 	print <<"EOM";
-�ύX���܂���<br>
+変更しました<br>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="syoku">
-<input type=submit class=btn value="�E�Ƃ̈ꗗ�ɖ߂�">
+<input type=submit class=btn value="職業の一覧に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -1348,7 +1348,7 @@ EOM
 }
 
 #----------#
-# ����폜 #
+# 道具削除 #
 #----------#
 sub item_sell {
 
@@ -1367,15 +1367,15 @@ sub item_sell {
 	&header;
 
 	print <<"EOM";
-�폜���܂���<br>
+削除しました<br>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="syoku">
-<input type=submit class=btn value="�E�Ƃ̈ꗗ�ɖ߂�">
+<input type=submit class=btn value="職業の一覧に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -1386,32 +1386,32 @@ EOM
 }
 
 #----------#
-# ����ꗗ #
+# 道具一覧 #
 #----------#
 sub item_all {
 
 	&header;
 
 	print <<"EOM";
-<h1>�ǂ̃A�C�e�������܂����H</h1>
+<h1>どのアイテムを見ますか？</h1>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="item_all_item">
-<input type=submit class=btn value="����">
+<input type=submit class=btn value="武器">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="item_all_def">
-<input type=submit class=btn value="�h��">
+<input type=submit class=btn value="防具">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="item_all_acs">
-<input type=submit class=btn value="�����i">
+<input type=submit class=btn value="装飾品">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -1421,18 +1421,18 @@ EOM
 }
 
 #----------#
-# ����ꗗ #
+# 道具一覧 #
 #----------#
 sub item_all_item {
 
 	&header;
 
 	print <<"EOM";
-<h1>����ꗗ</h1>
+<h1>武器一覧</h1>
 <form action="$scriptk" method="post">
 <table>
 <tr>
-<th></th><th>No.</th><th>�Ȃ܂�</th><th>�З�</th><th>���i</th><th>�������␳</th></tr>
+<th></th><th>No.</th><th>なまえ</th><th>威力</th><th>価格</th><th>命中率補正</th></tr>
 EOM
 	open(IN,"$item_file");
 	@item_array = <IN>;
@@ -1461,17 +1461,17 @@ EOM
 <input type=hidden name=mode value=item_edit>
 <input type=hidden name=pass value=$in{'pass'}>
 <input type=hidden name=item value=item>
-<input type=submit class=btn value="�ҏW">
+<input type=submit class=btn value="編集">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=mode value=new_item_edit>
 <input type=hidden name=pass value=$in{'pass'}>
 <input type=hidden name=item value=item>
-<input type=submit class=btn value="�V���������ǉ�����">
+<input type=submit class=btn value="新しく武器を追加する">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -1481,18 +1481,18 @@ EOM
 }
 
 #----------#
-# ����ꗗ #
+# 道具一覧 #
 #----------#
 sub item_all_def {
 
 	&header;
 
 	print <<"EOM";
-<h1>�h��ꗗ</h1>
+<h1>防具一覧</h1>
 <form action="$scriptk" method="post">
 <table>
 <tr>
-<th></th><th>No.</th><th>�Ȃ܂�</th><th>�З�</th><th>���i</th><th>��𗦕␳</th></tr>
+<th></th><th>No.</th><th>なまえ</th><th>威力</th><th>価格</th><th>回避率補正</th></tr>
 EOM
 	open(IN,"$def_file");
 	@item_array = <IN>;
@@ -1521,17 +1521,17 @@ EOM
 <input type=hidden name=mode value=item_edit>
 <input type=hidden name=pass value=$in{'pass'}>
 <input type=hidden name=item value=def>
-<input type=submit class=btn value="�ҏW">
+<input type=submit class=btn value="編集">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=mode value=new_item_edit>
 <input type=hidden name=pass value=$in{'pass'}>
 <input type=hidden name=item value=def>
-<input type=submit class=btn value="�V�����h���ǉ�����">
+<input type=submit class=btn value="新しく防具を追加する">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -1541,18 +1541,18 @@ EOM
 }
 
 #----------#
-# ����ꗗ #
+# 道具一覧 #
 #----------#
 sub item_all_acs {
 
 	&header;
 
 	print <<"EOM";
-<h1>�����i�ꗗ</h1>
+<h1>装飾品一覧</h1>
 <form action="$scriptk" method="post">
 <table>
 <tr>
-<th></th><th>No.</th><th>�Ȃ܂�</th><th>���i</th><th>����</th><th>��</th><th>����</th><th>�M�S</th><th>������</th><th>��p��</th><th>����</th><th>����</th><th>�J���}</th><th>������</th><th>���</th><th>�K�E��</th><th>����</th></tr>
+<th></th><th>No.</th><th>なまえ</th><th>価格</th><th>効果</th><th>力</th><th>魔力</th><th>信仰心</th><th>生命力</th><th>器用さ</th><th>速さ</th><th>魅力</th><th>カルマ</th><th>命中率</th><th>回避率</th><th>必殺率</th><th>説明</th></tr>
 EOM
 	open(IN,"$acs_file");
 	@item_array = <IN>;
@@ -1581,17 +1581,17 @@ EOM
 <input type=hidden name=mode value=item_edit>
 <input type=hidden name=pass value=$in{'pass'}>
 <input type=hidden name=item value=acs>
-<input type=submit class=btn value="�ҏW">
+<input type=submit class=btn value="編集">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=mode value=new_item_edit>
 <input type=hidden name=pass value=$in{'pass'}>
 <input type=hidden name=item value=acs>
-<input type=submit class=btn value="�V���������i��ǉ�����">
+<input type=submit class=btn value="新しく装飾品を追加する">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -1601,7 +1601,7 @@ EOM
 }
 
 #----------#
-# ����ҏW #
+# 道具編集 #
 #----------#
 sub item_edit {
 
@@ -1615,10 +1615,10 @@ sub item_edit {
 	$item_array[$in{'item_no'}] =~ s/\r//g;
 
 	if ($in{'item'} eq 'acs') {
-		$list = '<th>No.</th><th>�Ȃ܂�</th><th>���i</th><th>����</th><th>��</th><th>����</th><th>�M�S</th><th>������</th></tr>';
-		$list2 = '<tr><th>��p��</th><th>����</th><th>����</th><th>�J���}</th><th>������</th><th>���</th><th>�K�E��</th><th>����</th></tr>';
+		$list = '<th>No.</th><th>なまえ</th><th>価格</th><th>効果</th><th>力</th><th>魔力</th><th>信仰心</th><th>生命力</th></tr>';
+		$list2 = '<tr><th>器用さ</th><th>速さ</th><th>魅力</th><th>カルマ</th><th>命中率</th><th>回避率</th><th>必殺率</th><th>説明</th></tr>';
 	} else {
-		$list = '<th>No.</th><th>�Ȃ܂�</th><th>�З�</th><th>���i</th><th>����/��𗦕␳</th></tr>';
+		$list = '<th>No.</th><th>なまえ</th><th>威力</th><th>価格</th><th>命中/回避率補正</th></tr>';
 	}
 
 	&header;
@@ -1626,7 +1626,7 @@ sub item_edit {
 	@item_data = split(/<>/,$item_array[$in{'item_no'}]);
 
 	print <<"EOM";
-<h1>$item_data[1]�̕ҏW</h1>
+<h1>$item_data[1]の編集</h1>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="item_edit_end">
@@ -1651,9 +1651,9 @@ EOM
 	print <<"EOM";
 </tr></table>
 <input type="hidden" name="item_num" value="$i">
-<input type=submit class=btn value="�\\�͂̕ҏW">
+<input type=submit class=btn value="能\力の編集">
 </form>
-����̐E�Ƃւ̒ǉ�
+特定の職業への追加
 <TABLE BORDER=0>
 <TR>
 EOM
@@ -1672,7 +1672,7 @@ $chara_syoku[$s]<br>
 <input type="hidden" name=item_no value="$in{'item_no'}">
 <input type="hidden" name=item value="$in{'item'}">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type="submit" class="btn" value="���̐E�Ƃɒǉ�" size="20">
+<input type="submit" class="btn" value="この職業に追加" size="20">
 </TD>
 </form>
 EOM
@@ -1689,24 +1689,24 @@ EOM
 <input type="hidden" name=item_no value="$in{'item_no'}">
 <input type="hidden" name=item value="$in{'item'}">
 <input type="text" name=id value="">
-<input type=submit class=btn value="�v���C���[�̑q�ɂɓ����(ID�w��)">
+<input type=submit class=btn value="プレイヤーの倉庫に入れる(ID指定)">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="item_delete">
 <input type="hidden" name=item_no value="$in{'item_no'}">
 <input type="hidden" name=item value="$in{'item'}">
-<input type=submit class=btn value="���̃A�C�e�����폜����"><br>
-(�v���C���[�̑q�ɂ���͂Ȃ��Ȃ�Ȃ��̂ŁA��x���ʂ��n�߂Ă��܂����A�C�e�����폜���邱�Ƃ̓I�X�X���ł��܂���B)
+<input type=submit class=btn value="このアイテムを削除する"><br>
+(プレイヤーの倉庫からはなくならないので、一度流通し始めてしまったアイテムを削除することはオススメできません。)
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="item_all">
-<input type=submit class=btn value="�A�C�e���̈ꗗ�ɖ߂�">
+<input type=submit class=btn value="アイテムの一覧に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -1717,7 +1717,7 @@ EOM
 }
 
 #------------------#
-# ����t�@�C���ҏW #
+# 道具ファイル編集 #
 #------------------#
 sub item_edit_end {
 
@@ -1740,7 +1740,7 @@ sub item_edit_end {
 	print OUT @item_array;
 	close(OUT);
 
-	# �E�ƕʂ̓���t�@�C���̓����������ĕϊ�
+	# 職業別の道具ファイルの同じ道具も一斉変換
 	opendir (DIR,"$$folder") or die "$!";
 	foreach $entry (readdir(DIR)){
 		if ($entry =~ /\.ini/) {
@@ -1766,22 +1766,22 @@ sub item_edit_end {
 	&header;
 
 	print <<"EOM";
-�ύX���܂���<br>
+変更しました<br>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=item_no value="$in{'item_no'}">
 <input type=hidden name=item value=$in{'item'}>
 <input type="hidden" name=mode value="item_edit">
-<input type=submit class=btn value="����ڍׂɖ߂�">
+<input type=submit class=btn value="道具詳細に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="item_all">
-<input type=submit class=btn value="�A�C�e���̈ꗗ�ɖ߂�">
+<input type=submit class=btn value="アイテムの一覧に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -1792,7 +1792,7 @@ EOM
 }
 
 #--------------#
-# �E�Ɠ���ǉ� #
+# 職業道具追加 #
 #--------------#
 sub syoku_item_add {
 
@@ -1811,7 +1811,7 @@ sub syoku_item_add {
 
 	push(@item_data,$newitem);
 
-	# �z��1�ԖڂŃ\�[�g
+	# 配列1番目でソート
 	@tmp = map {(split /<>/)[0]} @item_data;
 	@item_data = @item_data[sort {$tmp[$a] <=> $tmp[$b]} 0 .. $#tmp];
 
@@ -1822,7 +1822,7 @@ sub syoku_item_add {
 	&header;
 
 	print <<"EOM";
-�ύX���܂���<br>
+変更しました<br>
 EOM
 if ($in{'item'} eq 'tac') {
 	print <<"EOM";
@@ -1830,12 +1830,12 @@ if ($in{'item'} eq 'tac') {
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=item_no value="$in{'item_no'}">
 <input type="hidden" name=mode value="waza_edit">
-<input type=submit class=btn value="�K�E�Z�ڍׂɖ߂�">
+<input type=submit class=btn value="必殺技詳細に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="waza_all">
-<input type=submit class=btn value="�K�E�Z�̈ꗗ�ɖ߂�">
+<input type=submit class=btn value="必殺技の一覧に戻る">
 </form>
 EOM
 } else {
@@ -1845,19 +1845,19 @@ EOM
 <input type="hidden" name=item_no value="$in{'item_no'}">
 <input type=hidden name=item value=$in{'item'}>
 <input type="hidden" name=mode value="item_edit">
-<input type=submit class=btn value="����ڍׂɖ߂�">
+<input type=submit class=btn value="道具詳細に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="item_all">
-<input type=submit class=btn value="�A�C�e���̈ꗗ�ɖ߂�">
+<input type=submit class=btn value="アイテムの一覧に戻る">
 </form>
 EOM
 }
 	print <<"EOM";
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -1868,7 +1868,7 @@ EOM
 }
 
 #----------------------#
-# �L�����q�ɂɓ���ǉ� #
+# キャラ倉庫に道具追加 #
 #----------------------#
 sub player_item {
 
@@ -1899,7 +1899,7 @@ sub player_item {
 	$souko_item_num = @souko_item;
 
 	if ($souko_item_num >= $item_max) {
-		&error("����q�ɂ������ς��ł��I$back_form");
+		&error("武器倉庫がいっぱいです！$back_form");
 	}
 
 	push(@souko_item,$newitem);
@@ -1914,22 +1914,22 @@ sub player_item {
 	&header;
 
 	print <<"EOM";
-�A�C�e����q�ɂɓ���܂���<br>
+アイテムを倉庫に入れました<br>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=item_no value="$in{'item_no'}">
 <input type=hidden name=item value=$in{'item'}>
 <input type="hidden" name=mode value="item_edit">
-<input type=submit class=btn value="����ڍׂɖ߂�">
+<input type=submit class=btn value="道具詳細に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="item_all">
-<input type=submit class=btn value="�A�C�e���̈ꗗ�ɖ߂�">
+<input type=submit class=btn value="アイテムの一覧に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -1940,7 +1940,7 @@ EOM
 }
 
 #------------#
-# �V����ǉ� #
+# 新道具追加 #
 #------------#
 sub new_item_edit {
 
@@ -1951,13 +1951,13 @@ sub new_item_edit {
 	close(IN);
 
 	if ($in{'item'} eq 'acs') {
-		$list = '<th>No.</th><th>�Ȃ܂�</th><th>���i</th><th>����</th><th>��</th><th>����</th><th>�M�S</th><th>������</th></tr>';
-		$list2 = '<tr><th>��p��</th><th>����</th><th>����</th><th>�J���}</th><th>������</th><th>���</th><th>�K�E��</th><th>����</th></tr>';
+		$list = '<th>No.</th><th>なまえ</th><th>価格</th><th>効果</th><th>力</th><th>魔力</th><th>信仰心</th><th>生命力</th></tr>';
+		$list2 = '<tr><th>器用さ</th><th>速さ</th><th>魅力</th><th>カルマ</th><th>命中率</th><th>回避率</th><th>必殺率</th><th>説明</th></tr>';
 	} else {
-		$list = '<th>No.</th><th>�Ȃ܂�</th><th>�З�</th><th>���i</th><th>����/��𗦕␳</th></tr>';
+		$list = '<th>No.</th><th>なまえ</th><th>威力</th><th>価格</th><th>命中/回避率補正</th></tr>';
 	}
 
-	$data_sum = @item_array - 2;	# �Ō�Q�s�͂Ȃ��p�Ɖ��s�Ȃ���
+	$data_sum = @item_array - 2;	# 最後２行はなし用と改行なため
 
 	$item_array[$data_sum] =~ s/\n//g;
 	$item_array[$data_sum] =~ s/\r//g;
@@ -1971,7 +1971,7 @@ sub new_item_edit {
 	&header;
 
 	print <<"EOM";
-<h1>�V�����A�C�e���̒ǉ��i$in{'item'}�j</h1>
+<h1>新しいアイテムの追加（$in{'item'}）</h1>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="new_item_add">
@@ -1995,16 +1995,16 @@ EOM
 	print <<"EOM";
 </tr></table>
 <input type="hidden" name="item_num" value="$i">
-<input type=submit class=btn value="�V�����A�C�e����ǉ�����">
+<input type=submit class=btn value="新しくアイテムを追加する">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="item_all">
-<input type=submit class=btn value="�A�C�e���̈ꗗ�ɖ߂�">
+<input type=submit class=btn value="アイテムの一覧に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -2015,7 +2015,7 @@ EOM
 }
 
 #------------#
-# �V����ǉ� #
+# 新道具追加 #
 #------------#
 sub new_item_add {
 
@@ -2033,7 +2033,7 @@ sub new_item_add {
 
 	push(@item_array,"$newitem\n");
 
-	# �z��1�ԖڂŃ\�[�g
+	# 配列1番目でソート
 	@tmp = map {(split /<>/)[0]} @item_array;
 	@item_array = @item_array[sort {$tmp[$a] <=> $tmp[$b]} 0 .. $#tmp];
 
@@ -2044,20 +2044,20 @@ sub new_item_add {
 	&header;
 
 	print <<"EOM";
-�ǉ����܂���<br>
+追加しました<br>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="item_all">
-<input type=submit class=btn value="�A�C�e���̈ꗗ">
+<input type=submit class=btn value="アイテムの一覧">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="waza_all">
-<input type=submit class=btn value="�K�E�Z�̈ꗗ">
+<input type=submit class=btn value="必殺技の一覧">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -2068,7 +2068,7 @@ EOM
 }
 
 #----------#
-# ����폜 #
+# 道具削除 #
 #----------#
 sub item_delete {
 
@@ -2087,7 +2087,7 @@ sub item_delete {
 	print OUT @item_array;
 	close(OUT);
 
-	# �E�ƕʂ̓���t�@�C���̓����������č폜
+	# 職業別の道具ファイルの同じ道具も一斉削除
 	opendir (DIR,"$$folder") or die "$!";
 	foreach $entry (readdir(DIR)){
 		if ($entry =~ /\.ini/) {
@@ -2112,20 +2112,20 @@ sub item_delete {
 	&header;
 
 	print <<"EOM";
-�폜���܂���<br>
+削除しました<br>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="item_all">
-<input type=submit class=btn value="�A�C�e���̈ꗗ">
+<input type=submit class=btn value="アイテムの一覧">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="waza_all">
-<input type=submit class=btn value="�K�E�Z�̈ꗗ">
+<input type=submit class=btn value="必殺技の一覧">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -2136,7 +2136,7 @@ EOM
 }
 
 #------------#
-# �V�E�ƒǉ� #
+# 新職業追加 #
 #------------#
 sub syoku_add_pre {
 
@@ -2146,23 +2146,23 @@ sub syoku_add_pre {
 	&header;
 
 	print <<"EOM";
-<h1>�V�����E�Ƃ̒ǉ�</h1><br>
-�V�����E�Ƃ�ǉ����邽�߂̏������s���܂��B<br>
-�ȉ��̍��ڂ�S�ċL�����ĉ������B<br>
-<b><font color="$yellow" size = 3>�Ȃ��A�����ŊԈႦ���ꍇ�A����pl�t�@�C���Ȃǂ����������Ȃ��Ƃ����Ȃ��̂ŁA�T�d�ɓ��͂��Ă��������悤�ɂ��肢���܂��B</font></b>
+<h1>新しい職業の追加</h1><br>
+新しい職業を追加するための準備を行います。<br>
+以下の項目を全て記入して下さい。<br>
+<b><font color="$yellow" size = 3>なお、ここで間違えた場合、直接plファイルなどを書き換えないといけないので、慎重に入力していただくようにお願いします。</font></b>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="syoku_add" size="40">
-�U�����R�����g<br>
-�U���̎��ɏo��E�ƕʂ̑䎌�ł��B<br>
+攻撃時コメント<br>
+攻撃の時に出る職業別の台詞です。<br>
 <input type=text name="bcomment" value=""><br><br><br>
-�U���͔���p�T�u���[�`����<br>
-<b><font color="$red" size = 2>syoku�̌�Ɏ��̐����ł���<font color="$yellow" size = 3>$next_syoku</font>�̉p�ꖼ�����ĉ������B<br>������Ԃł�syokuthirty��30�Ԃ̐E�Ƃ̃O�����h�}�X�^�[�p�Ȃ̂ŁA<br>31��syokuthirtyone�Ƃ��������Ɏ��̐����ł���<font color="$yellow" size = 3>$next_syoku</font>�̉p�ꖼ����͂��ĉ������B<br>�K���A���p�������p���œ��͂��ĉ������B<br>�ԈႦ��ƃG���[���o�Ă��܂��܂��B</font></b><br>
+攻撃力判定用サブルーチン名<br>
+<b><font color="$red" size = 2>syokuの後に次の数字である<font color="$yellow" size = 3>$next_syoku</font>の英語名を入れて下さい。<br>初期状態ではsyokuthirtyが30番の職業のグランドマスター用なので、<br>31はsyokuthirtyoneという感じに次の数字である<font color="$yellow" size = 3>$next_syoku</font>の英語名を入力して下さい。<br>必ず、半角小文字英字で入力して下さい。<br>間違えるとエラーが出てしまいます。</font></b><br>
 <input type=text name="asub" value="syoku" size="20"><br><br><br>
-�U���͂ɔ��f������\\�͂̔{��<br>
-<b><font color="$red" size = 2>�U���͌���̍ۂ̌v�Z�ŁA�e�����y�ڂ��\\�͂̔{�������߂܂��B<br>0����͂���΂��̔\\�͍͂U���͂֋y�ڂ��܂���B<br>�Q�l�Ƃ��Ă̓O�����h�}�X�^�[�̏ꍇ�͑S�Ă�1�ɂȂ��Ă���܂��B<br>�K���A���p�����œ��͂��ĉ������B<br>�����ł��\\�ł��B<br>�Ȃ��A�S�̂Ƃ����͕̂���ȊO�̑S�Ă̐��l�𑫂������Ƃɂ����鐔�l�ɂȂ�܂��B<br>�Ǘ��l�Ȃǂ̐E�Ƃł�2�ɂȂ��Ă���܂��B</font></b><br>
+攻撃力に反映させる能\力の倍率<br>
+<b><font color="$red" size = 2>攻撃力決定の際の計算で、影響を及ぼす能\力の倍数を決めます。<br>0を入力すればその能\力は攻撃力へ及ぼしません。<br>参考としてはグランドマスターの場合は全てが1になっております。<br>必ず、半角数字で入力して下さい。<br>小数でも可能\です。<br>なお、全体というのは武器以外の全ての数値を足したあとにかける数値になります。<br>管理人などの職業では2になっております。</font></b><br>
 <table bgcolor="#ffffff">
-<tr><th>��</th><th>����</th><th>�M�S</th><th>������</th><th>��p��</th><th>����</th><th>����</th><th>�S��</th><th>����</th></tr>
+<tr><th>力</th><th>魔力</th><th>信仰心</th><th>生命力</th><th>器用さ</th><th>速さ</th><th>魅力</th><th>全体</th><th>武器</th></tr>
 <tr>
 <td align="center"><input type=text name="a1" value="0" size="5"></td>
 <td align="center"><input type=text name="a2" value="0" size="5"></td>
@@ -2175,12 +2175,12 @@ sub syoku_add_pre {
 <td align="center"><input type=text name="ai" value="0" size="5"></td>
 </tr>
 </table><br>
-<input type=submit class=btn value="�V�����E�Ƃ�ǉ�����">
+<input type=submit class=btn value="新しく職業を追加する">
 </form>
 <hr>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -2191,16 +2191,16 @@ EOM
 }
 
 #----------#
-# �E�ƒǉ� #
+# 職業追加 #
 #----------#
 sub syoku_add {
 
 	if ($in{'a1'} =~ /[^0-9]/ || $in{'a2'} =~ /[^0-9]/ || $in{'a3'} =~ /[^0-9]/ || $in{'a4'} =~ /[^0-9]/ || $in{'a5'} =~ /[^0-9]/ || $in{'a6'} =~ /[^0-9]/ || $in{'a7'} =~ /[^0-9]/ || $in{'at'} =~ /[^0-9]/ || $in{'ai'} =~ /[^0-9]/ || $in{'asub'} =~ /[^_a-z]/) {
-		&error("�K���ɂ����Ă��Ȃ����͒l������܂����B$back_form");
+		&error("規則にそっていない入力値がありました。$back_form");
 	}
 
 	if ($in{'a1'} eq "" || $in{'a2'} eq "" || $in{'a3'} eq "" || $in{'a4'} eq "" || $in{'a5'} eq "" || $in{'a6'} eq "" || $in{'a7'} eq "" || $in{'at'} eq "" || $in{'ai'} eq "" || $in{'asub'} eq "" || $in{'bcomment'} eq "") {
-		&error("���͂���Ă��Ȃ����ڂ�����܂��B$back_form");
+		&error("入力されていない項目があります。$back_form");
 	}
 
 	$atacksub = << "EOM";
@@ -2220,9 +2220,9 @@ chomp($watacksub);
 	open(IN,"./battle.pl");
 	@new = ();
 	foreach (<IN>) {
-		$_ =~ s/\"\)\;\#�R�����g/\"\,\n\t\"$in{'bcomment'}\"\)\;\#�R�����g/i;
-		$_ =~ s/\'\)\;\#�E�ƕʍU���͌��肱���܂�/\'\,\'$in{'asub'}\'\)\;\#�E�ƕʍU���͌��肱���܂�/i;
-		$_ =~ s/\}\#�U���͌v�Z�����܂�/\}\n$atacksub\#�U���͌v�Z�����܂�/i;
+		$_ =~ s/\"\)\;\#コメント/\"\,\n\t\"$in{'bcomment'}\"\)\;\#コメント/i;
+		$_ =~ s/\'\)\;\#職業別攻撃力決定ここまで/\'\,\'$in{'asub'}\'\)\;\#職業別攻撃力決定ここまで/i;
+		$_ =~ s/\}\#攻撃力計算ここまで/\}\n$atacksub\#攻撃力計算ここまで/i;
 		push(@new,$_);
 	}
 	close(IN);
@@ -2234,7 +2234,7 @@ chomp($watacksub);
 	open(IN,"./wbattle.pl");
 	@new = ();
 	foreach (<IN>) {
-		$_ =~ s/\}\#�`�����v�U���͌v�Z�����܂�/\}\n$watacksub\#�`�����v�U���͌v�Z�����܂�/i;
+		$_ =~ s/\}\#チャンプ攻撃力計算ここまで/\}\n$watacksub\#チャンプ攻撃力計算ここまで/i;
 		push(@new,$_);
 	}
 	close(IN);
@@ -2249,21 +2249,21 @@ chomp($watacksub);
 	&header;
 
 	print <<"EOM";
-�E�ƒǉ������������܂���<br>
-ffadventure.ini����<br>
+職業追加準備が整いました<br>
+ffadventure.ini内の<br>
 \$chara_syoku[$syoku_sum] = \"$chara_syoku[$syoku_sum]\"\;<br>
-�̉���<br>
-\$chara_syoku[$next_syoku] = \"�V�����E�Ɩ�\"\;<br>
-��ǉ����ĉ������B<br>
-�ǉ���A�E�Ƃ̕ҏW�ōׂ����ڍׂ����肷��ΐE�Ƃ̒ǉ����������܂�<br>
+の下に<br>
+\$chara_syoku[$next_syoku] = \"新しい職業名\"\;<br>
+を追加して下さい。<br>
+追加後、職業の編集で細かい詳細を決定すれば職業の追加が完了します<br>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="syoku_add_pre">
-<input type=submit class=btn value="�E�Ƃ̒ǉ��ɖ߂�">
+<input type=submit class=btn value="職業の追加に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -2274,19 +2274,19 @@ EOM
 }
 
 #--------#
-# �Z�ꗗ #
+# 技一覧 #
 #--------#
 sub waza_all {
 
 	&header;
 
 	print <<"EOM";
-<h1>�Z�ꗗ</h1><br>
+<h1>技一覧</h1><br>
 <form action="$scriptk" method="post">
-�g�p�����Ƃ́A���̕K�E�Z���g�p����̂Ɍ��݂̐E�Ƃ��}�X�^�[�ł���K�v�����邩�ǂ������������̂ŁA�}�X�^�[����Ȃ��Ǝg�p�ł��Ȃ����̂�1�A�}�X�^�[�łȂ��Ƃ��g�p�ł���̂�0�Ƃ��ĕ\\������Ă��܂��B<br>
+使用条件とは、その必殺技を使用するのに現在の職業がマスターである必要があるかどうかを示すもので、マスターじゃないと使用できないものが1、マスターでなくとも使用できるのが0として表\示されています。<br>
 <table>
 <tr>
-<th></th><th>No.</th><th>�Z��</th><th>����</th><th>�g�p����</th></tr>
+<th></th><th>No.</th><th>技名</th><th>説明</th><th>使用条件</th></tr>
 EOM
 	open(IN,"$tac_file");
 	@item_array = <IN>;
@@ -2314,16 +2314,16 @@ EOM
 </table>
 <input type=hidden name=mode value=waza_edit>
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�ҏW">
+<input type=submit class=btn value="編集">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=mode value=new_waza_edit>
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�V�����K�E�Z��ǉ�����">
+<input type=submit class=btn value="新しく必殺技を追加する">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -2333,7 +2333,7 @@ EOM
 }
 
 #----------#
-# �V�Z�ǉ� #
+# 新技追加 #
 #----------#
 sub new_waza_edit {
 
@@ -2341,7 +2341,7 @@ sub new_waza_edit {
 	@item_array = <IN>;
 	close(IN);
 
-	$data_sum = @item_array - 1;	# �Ō�Q�s�͂Ȃ��p�Ɖ��s�Ȃ���
+	$data_sum = @item_array - 1;	# 最後２行はなし用と改行なため
 
 	$item_array[$data_sum] =~ s/\n//g;
 	$item_array[$data_sum] =~ s/\r//g;
@@ -2353,15 +2353,15 @@ sub new_waza_edit {
 	&header;
 
 	print <<"EOM";
-<h1>�V�����K�E�Z�̒ǉ�</h1><br>
-�܂��́A�K�E�Z�p�̐V�����t�@�C�����_�E�����[�h���Ă��ĉ������B<br>
-<a href="http://www.eriicu.com" target="_blank">�����̂b�f�h�̂g�o</a><br>
-����𒧐�җp�̃t�@�C������<br>
+<h1>新しい必殺技の追加</h1><br>
+まずは、必殺技用の新しいファイルをダウンロードしてきて下さい。<br>
+<a href="http://www.eriicu.com" target="_blank">いくのＣＧＩのＨＰ</a><br>
+それを挑戦者用のファイル名を<br>
 $new_no.pl<br>
-�Ƃ���tech�t�H���_�ɓ���ĉ������B<br>
-�`�����v�p�̃t�@�C����<br>
+としてtechフォルダに入れて下さい。<br>
+チャンプ用のファイルを<br>
 $new_no.pl<br>
-�Ƃ���wtech�t�H���_�ɓ���ĉ������B<br>
+としてwtechフォルダに入れて下さい。<br>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="new_item_add">
@@ -2369,7 +2369,7 @@ $new_no.pl<br>
 <input type="hidden" name="item_skill0" value="$new_no">
 <table>
 <tr>
-<th>No.</th><th>�K�E�Z��</th><th>����</th><th>�g�p����</th>
+<th>No.</th><th>必殺技名</th><th>説明</th><th>使用条件</th>
 </tr>
 <tr>
 <td class=b1 align="center">$new_no</td>
@@ -2387,16 +2387,16 @@ EOM
 	print <<"EOM";
 </tr></table>
 <input type="hidden" name="item_num" value="$i">
-<input type=submit class=btn value="�V�����K�E�Z��ǉ�����">
+<input type=submit class=btn value="新しく必殺技を追加する">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="waza_all">
-<input type=submit class=btn value="�K�E�Z�̈ꗗ�ɖ߂�">
+<input type=submit class=btn value="必殺技の一覧に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -2407,7 +2407,7 @@ EOM
 }
 
 #--------#
-# �Z�ҏW #
+# 技編集 #
 #--------#
 sub waza_edit {
 
@@ -2423,7 +2423,7 @@ sub waza_edit {
 	@item_data = split(/<>/,$item_array[$in{'item_no'}]);
 
 	print <<"EOM";
-<h1>$item_data[1]�̕ҏW</h1>
+<h1>$item_data[1]の編集</h1>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="waza_edit_end">
@@ -2431,7 +2431,7 @@ sub waza_edit {
 <input type="hidden" name="item_skill0" value="$item_data[0]">
 <table>
 <tr>
-<th>No.</th><th>�K�E�Z��</th><th>����</th><th>�g�p����</th>
+<th>No.</th><th>必殺技名</th><th>説明</th><th>使用条件</th>
 </tr>
 <tr>
 <td class=b1 align="center">$item_data[0]</td>
@@ -2448,9 +2448,9 @@ EOM
 	print <<"EOM";
 </tr></table>
 <input type="hidden" name="item_num" value="$i">
-<input type=submit class=btn value="�K�E�Z�̕ҏW">
+<input type=submit class=btn value="必殺技の編集">
 </form>
-����̐E�Ƃւ̒ǉ�
+特定の職業への追加
 <TABLE BORDER=0>
 <TR>
 EOM
@@ -2469,7 +2469,7 @@ $chara_syoku[$s]<br>
 <input type="hidden" name="item_no" value="$in{'item_no'}">
 <input type="hidden" name="item" value="tac">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type="submit" class="btn" value="���̐E�Ƃɒǉ�" size="20">
+<input type="submit" class="btn" value="この職業に追加" size="20">
 </TD>
 </form>
 EOM
@@ -2485,17 +2485,17 @@ EOM
 <input type="hidden" name=mode value="item_delete">
 <input type="hidden" name=item_no value="$in{'item_no'}">
 <input type="hidden" name=item value="tac">
-<input type=submit class=btn value="���̋Z���폜����"><br>
-(���̕K�E�Z���p�ɐݒ肵�Ă���v���C���[�̕K�E�Z�܂ł͕ύX����܂���B)
+<input type=submit class=btn value="この技を削除する"><br>
+(この必殺技を戦術に設定しているプレイヤーの必殺技までは変更されません。)
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="waza_all">
-<input type=submit class=btn value="�K�E�Z�̈ꗗ�ɖ߂�">
+<input type=submit class=btn value="必殺技の一覧に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 
@@ -2506,7 +2506,7 @@ EOM
 }
 
 #--------------------#
-# �K�E�Z�t�@�C���ҏW #
+# 必殺技ファイル編集 #
 #--------------------#
 sub waza_edit_end {
 
@@ -2526,7 +2526,7 @@ sub waza_edit_end {
 	print OUT @item_array;
 	close(OUT);
 
-	# �E�ƕʂ̕K�E�Z�t�@�C���̓����K�E�Z����ĕϊ�
+	# 職業別の必殺技ファイルの同じ必殺技も一斉変換
 	opendir (DIR,"$tac_folder") or die "$!";
 	foreach $entry (readdir(DIR)){
 		if ($entry =~ /\.ini/) {
@@ -2552,21 +2552,21 @@ sub waza_edit_end {
 	&header;
 
 	print <<"EOM";
-�ύX���܂���<br>
+変更しました<br>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=item_no value="$in{'item_no'}">
 <input type="hidden" name=mode value="waza_edit">
-<input type=submit class=btn value="�K�E�Z�ڍׂɖ߂�">
+<input type=submit class=btn value="必殺技詳細に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
 <input type="hidden" name=mode value="waza_all">
-<input type=submit class=btn value="�K�E�Z�̈ꗗ�ɖ߂�">
+<input type=submit class=btn value="必殺技の一覧に戻る">
 </form>
 <form action="$scriptk" method="post">
 <input type=hidden name=pass value=$in{'pass'}>
-<input type=submit class=btn value="�Ǘ�TOP�ɖ߂�">
+<input type=submit class=btn value="管理TOPに戻る">
 </form>
 EOM
 

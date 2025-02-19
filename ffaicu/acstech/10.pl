@@ -1,7 +1,7 @@
 sub acskouka{
 	if (int(rand(5))==0) {
 		$item[1] = $item[1] * 2;
-		$com1 .= "<font class=\"white\" size=5>$item[6]‚ªŒõ‚ğ•ú‚ÂIIƒI[ƒ‰‚ÌŒø‰ÊIIIi•ŠíUŒ‚—Í‚Q”{Œø‰Ê‘±j</font><br>";
+		$com1 .= "<font class=\"white\" size=5>$item[6]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼ã‚ªãƒ¼ãƒ©ã®åŠ¹æœï¼ï¼ï¼ï¼ˆæ­¦å™¨æ”»æ’ƒåŠ›ï¼’å€åŠ¹æœæŒç¶šï¼‰</font><br>";
 	}
 }
 1;

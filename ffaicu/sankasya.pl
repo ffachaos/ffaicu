@@ -1,5 +1,5 @@
 #----------------#
-#  Q‰ÁÒ“o˜^    #
+#  å‚åŠ è€…ç™»éŒ²    #
 #----------------#
 sub guest_list{
 
@@ -18,13 +18,13 @@ sub guest_list{
 	foreach (@guest) {
 		($ntimer,$nname,$nid) = split(/<>/);
 			if ($ntimer + $sanka_time > $now_time && $nid ne $chara[0]) {
-				$blist .= "<a href=\"$scripta?mode=chara_sts&id=$nid\">$nname</a><font size=\"1\" color=\"#ffff00\">š</font>";
+				$blist .= "<a href=\"$scripta?mode=chara_sts&id=$nid\">$nname</a><font size=\"1\" color=\"#ffff00\">â˜…</font>";
 				push(@new_member,"$ntimer<>$nname<>$nid<>\n");
 				$num++;
 			}
 	}
 
-	$blist .= "<a href=\"$scripta?mode=chara_sts&id=$chara[0]\">$chara[4]</a><font size=\"1\" color=\"#ffff00\">š</font>";
+	$blist .= "<a href=\"$scripta?mode=chara_sts&id=$chara[0]\">$chara[4]</a><font size=\"1\" color=\"#ffff00\">â˜…</font>";
 	push(@new_member,"$now_time<>$chara[4]<>$chara[0]<>\n");
 
 	open(GUEST,">$guestfile");
@@ -36,17 +36,17 @@ sub guest_list{
 }
 
 #----------------#
-#  Q‰ÁÒ•\¦    #
+#  å‚åŠ è€…è¡¨ç¤º    #
 #----------------#
 sub guest_view {
 
-	print "<font size=2 color=#aaaaff>Œ»İ‚Ì–`Œ¯Ò(<B>$numl</B>)F</font>\n";
+	print "<font size=2 color=#aaaaff>ç¾åœ¨ã®å†’é™ºè€…(<B>$numäºº</B>)ï¼š</font>\n";
 
 	if ($blist) {
 		print $blist;
 	}
 	else {
-		print '’N‚à‚¢‚Ü‚¹‚ñ';
+		print 'èª°ã‚‚ã„ã¾ã›ã‚“';
 	}
 }
 

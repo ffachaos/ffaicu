@@ -2,12 +2,12 @@ sub acskouka{
 	if (int(rand(5))==0) {
 		if ($khp_flg < $dmg2) {
 			if ($a_23lmt >= 1) {
-				$com1 .= "<font class=\"red\" size=3>$item[6]‚ÍŒõ‚ç‚È‚©‚Á‚½BBB</font><br>";
+				$com1 .= "<font class=\"red\" size=3>$item[6]ã¯å…‰ã‚‰ãªã‹ã£ãŸã€‚ã€‚ã€‚</font><br>";
 			} else {
 				$a_23lmt++;
 				$hpplus1 = $chara[16];
 				$dmg2 = 0;
-				$com1 .= "<font class=\"white\" size=5>$item[6]‚ªŒõ‚ğ•ú‚ÂII$chara[4]‚Ì‚ªŠ®‘S‚É‰ñ•œ‚µ‚½II</font><br>";
+				$com1 .= "<font class=\"white\" size=5>$item[6]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼$chara[4]ã®å‚·ãŒå®Œå…¨ã«å›å¾©ã—ãŸï¼ï¼</font><br>";
 			}
 		}
 	}

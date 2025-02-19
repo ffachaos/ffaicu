@@ -3,10 +3,10 @@ sub whissatu{
 	if (int(rand(3)) == 0) {
 		$sake1 -= 999999;
 		$dmg2 = $chara[16];
-		$com2 .= "<font class=\"yellow\" size=5>‹ó–‚–@ƒfƒWƒ‡ƒ“III</FONT><br>";
+		$com2 .= "<font class=\"yellow\" size=5>æ™‚ç©ºé­”æ³•ãƒ‡ã‚¸ãƒ§ãƒ³ï¼ï¼ï¼</FONT><br>";
 	}
 else{
-		$com2 .= "<font class=\"red\" size=5>‹ó–‚–@ƒfƒWƒ‡ƒ“III¸”s‚µ‚½BB</FONT><br>";
+		$com2 .= "<font class=\"red\" size=5>æ™‚ç©ºé­”æ³•ãƒ‡ã‚¸ãƒ§ãƒ³ï¼ï¼ï¼å¤±æ•—ã—ãŸã€‚ã€‚</FONT><br>";
 	}
 }}
 sub watowaza{}

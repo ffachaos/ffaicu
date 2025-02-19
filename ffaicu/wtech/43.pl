@@ -3,8 +3,8 @@ sub whissatu{
 		$dmg2 = ($winner[7] + $winner[39]) * int(rand(20));
 		$hpplus2 = $dmg2;
 		$sake1 -= 999999;
-		$com2 .= "<font color=\"#009999\" size=4>ˆÃ•–‚–@ƒhƒŒƒCƒ“III</FONT><br>";
-		$kaihuku2 .= "$winner[3] ‚Ì‚g‚o‚ª $hpplus2 ‰ñ•œ‚µ‚½Iô";
+		$com2 .= "<font color=\"#009999\" size=4>æš—é»’é­”æ³•ãƒ‰ãƒ¬ã‚¤ãƒ³ï¼ï¼ï¼</FONT><br>";
+		$kaihuku2 .= "$winner[3] ã®ï¼¨ï¼°ãŒ $hpplus2 å›å¾©ã—ãŸï¼â™ª";
 	}
 }
 sub watowaza{}

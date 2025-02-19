@@ -1,9 +1,9 @@
 sub mons_waza{
 	if ($mons_ritu > int(rand(100))) {
 		$hpplus2 = int(rand($mhp)) * 2;
-		$kaihuku2 .= "$mname ‚Ì‚g‚o‚ª $hpplus2 ‰ñ•œ‚µ‚½Iô";
+		$kaihuku2 .= "$mname ã®ï¼¨ï¼°ãŒ $hpplus2 å›å¾©ã—ãŸï¼â™ª";
 		$dmg2 = 0;
-		$com2 = "<font class=\"yellow\" size=5>”’–‚–@ƒPƒAƒ‹ƒKIII</font><br>";
+		$com2 = "<font class=\"yellow\" size=5>ç™½é­”æ³•ã‚±ã‚¢ãƒ«ã‚¬ï¼ï¼ï¼</font><br>";
 	}
 }
 sub mons_atowaza{}

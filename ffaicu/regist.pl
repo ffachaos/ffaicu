@@ -1,9 +1,9 @@
 #----------------------#
-#  ƒLƒƒƒ‰“Ç‚İ‚İˆ—  #
+#  ã‚­ãƒ£ãƒ©èª­ã¿è¾¼ã¿å‡¦ç†  #
 #----------------------#
 sub chara_load {
 
-	open(IN,"./charalog/$in{'id'}.cgi") || &error("ƒLƒƒƒ‰ƒNƒ^[‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ$ENV{'CONTENT_LENGTH'}");
+	open(IN,"./charalog/$in{'id'}.cgi") || &error("ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“$ENV{'CONTENT_LENGTH'}");
 	$chara_log = <IN>;
 	close(IN);
 
@@ -12,7 +12,7 @@ sub chara_load {
 }
 
 #------------------------#
-#  ƒAƒCƒeƒ€“Ç‚İ‚İˆ—  #
+#  ã‚¢ã‚¤ãƒ†ãƒ èª­ã¿è¾¼ã¿å‡¦ç†  #
 #------------------------#
 sub item_load {
 
@@ -25,7 +25,7 @@ sub item_load {
 }
 
 #--------------------#
-#  E‹Æ“Ç‚İ‚İˆ—  #
+#  è·æ¥­èª­ã¿è¾¼ã¿å‡¦ç†  #
 #--------------------#
 sub syoku_load {
 
@@ -38,7 +38,7 @@ sub syoku_load {
 }
 
 #------------------------#
-#  ƒLƒƒƒ‰ƒNƒ^[ƒ`ƒFƒbƒN  #
+#  ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ãƒã‚§ãƒƒã‚¯  #
 #------------------------#
 sub chara_check {
 
@@ -46,13 +46,13 @@ sub chara_check {
 	$chara_log =~ s/>/&gt;/g;
 
 	if ($in{'mydata'} ne $chara_log){
-		&error('ƒLƒƒƒ‰ƒf[ƒ^•s®‡');
+		&error('ã‚­ãƒ£ãƒ©ãƒ‡ãƒ¼ã‚¿ä¸æ•´åˆ');
 	}
 
 }
 
 #----------------#
-#  ‘‚«‚İˆ—  #
+#  æ›¸ãè¾¼ã¿å‡¦ç†  #
 #----------------#
 sub chara_regist {
 
@@ -71,7 +71,7 @@ sub chara_regist {
 }
 
 #--------------------#
-#  ƒ`ƒƒƒ“ƒv“Ç‚İ‚İ  #
+#  ãƒãƒ£ãƒ³ãƒ—èª­ã¿è¾¼ã¿  #
 #--------------------#
 sub read_winner {
 	open(IN,"$winner_file");
@@ -82,12 +82,12 @@ sub read_winner {
 }
 
 #----------------#
-#  ƒfƒR[ƒhˆ—  #
+#  ãƒ‡ã‚³ãƒ¼ãƒ‰å‡¦ç†  #
 #----------------#
 sub decode {
 
 	if ($ENV{'REQUEST_METHOD'} eq "POST") {
-		if ($ENV{'CONTENT_LENGTH'} > 51200) { &error("“Še—Ê‚ª‘å‚«‚·‚¬‚Ü‚·"); }
+		if ($ENV{'CONTENT_LENGTH'} > 51200) { &error("æŠ•ç¨¿é‡ãŒå¤§ãã™ãã¾ã™"); }
 		read(STDIN, $buffer, $ENV{'CONTENT_LENGTH'});
 	} else { $buffer = $ENV{'QUERY_STRING'}; }
 	@pairs = split(/&/, $buffer);
@@ -96,15 +96,15 @@ sub decode {
 		$value =~ tr/+/ /;
 		$value =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/eg;
 
-		# •¶šƒR[ƒh‚ğƒVƒtƒgJIS•ÏŠ·
+		# æ–‡å­—ã‚³ãƒ¼ãƒ‰ã‚’ã‚·ãƒ•ãƒˆJISå¤‰æ›
 		&jcode'convert(*value, "sjis", "", "z");
 
-		# ƒ^ƒOˆ—
+		# ã‚¿ã‚°å‡¦ç†
 		$value =~ s/</&lt;/g;
 		$value =~ s/>/&gt;/g;
 		$value =~ s/\"/&quot;/g;
 
-		# ‰üs“™ˆ—
+		# æ”¹è¡Œç­‰å‡¦ç†
 		$value =~ s/\r//g;
 		$value =~ s/\n//g;
 
@@ -117,7 +117,7 @@ sub decode {
 }
 
 #----------------#
-#  ƒzƒXƒg–¼æ“¾  #
+#  ãƒ›ã‚¹ãƒˆåå–å¾—  #
 #----------------#
 sub get_host {
 
@@ -133,7 +133,7 @@ sub get_host {
 }
 
 #--------------#
-#  ƒGƒ‰[ˆ—  #
+#  ã‚¨ãƒ©ãƒ¼å‡¦ç†  #
 #--------------#
 sub error {
 
@@ -155,37 +155,37 @@ sub error {
 	print "<center><hr width=400><h3>ERROR !</h3>\n";
 	print "<font color=red><B>$_[0]</B></font>\n";
 	print "<hr width=400></center>\n";
-	print "<a href = \"$scripto\">$main_title‚ÌTOP‚Ö</a>\n";
+	print "<a href = \"$scripto\">$main_titleã®TOPã¸</a>\n";
 	print "</body></html>\n";
 	exit;
 }
 
 #--------------#
-#  ƒNƒ‰ƒXİ’è  #
+#  ã‚¯ãƒ©ã‚¹è¨­å®š  #
 #--------------#
 sub class {
 
 	$class_flg = int($chara[33]/10);
 
 	@class_mark = (
-		'¡     <i><b>(Beginner)</b></i>'
-		,'¡¡    <i><b>(Charanger)</b></i>'
-		,'¡¡¡   <i><b>(LowClass)</b></i>'
-		,'¡¡¡¡  <i><b>(NormalClass)</b></i>'
-		,'¡¡¡¡¡ <i><b>(HighClass)</b></i>'
-		,'¡¡¡¡¡¡<i><b>(TopClass)</b></i>'
-		,'šššššš<i><b>(Master)</b></i>'
+		'â– â–¡â–¡â–¡â–¡â–¡<i><b>(Beginner)</b></i>'
+		,'â– â– â–¡â–¡â–¡â–¡<i><b>(Charanger)</b></i>'
+		,'â– â– â– â–¡â–¡â–¡<i><b>(LowClass)</b></i>'
+		,'â– â– â– â– â–¡â–¡<i><b>(NormalClass)</b></i>'
+		,'â– â– â– â– â– â–¡<i><b>(HighClass)</b></i>'
+		,'â– â– â– â– â– â– <i><b>(TopClass)</b></i>'
+		,'â˜…â˜…â˜…â˜…â˜…â˜…<i><b>(Master)</b></i>'
 	);
 
 	$class = $class_mark[$class_flg];
 }
 
 #--------------------#
-# ƒtƒ@ƒCƒ‹ƒƒbƒNŠJn #
+# ãƒ•ã‚¡ã‚¤ãƒ«ãƒ­ãƒƒã‚¯é–‹å§‹ #
 #--------------------#
 sub lock {
 
-	# symlinkŠÖ”
+	# symlinké–¢æ•°
 	if ($lockkey == 1) {
 		local($retry) = 5;
 		while (!symlink(".", $_[0])) {
@@ -195,7 +195,7 @@ sub lock {
 			sleep(1);
 		}
 	}
-	# openŠÖ”
+	# opené–¢æ•°
 	elsif ($lockkey == 2) {
 		local($retry) = 0;
 		foreach (1 .. 5) {
@@ -213,11 +213,11 @@ sub lock {
 			if ((stat $_[0])[9] > time() - 300) {
 				unlink($_[0]);
 			} else {
-				&error("‚µ‚Î‚ç‚­‚¨‘Ò‚¿‚É‚È‚Á‚Ä‚­‚¾‚³‚¢(^^;)");
+				&error("ã—ã°ã‚‰ããŠå¾…ã¡ã«ãªã£ã¦ãã ã•ã„(^^;)");
 			}
 		}
 	}
-	# flockŠÖ”
+	# flocké–¢æ•°
 	elsif ($lockkey == 3) {
 		open($_[1],">$_[0]");
 		flock(2,$_[1]);
@@ -228,7 +228,7 @@ sub lock {
 }
 
 #---------------------#
-#  ƒƒbƒNƒtƒ@ƒCƒ‹‰ğœ #
+#  ãƒ­ãƒƒã‚¯ãƒ•ã‚¡ã‚¤ãƒ«è§£é™¤ #
 #---------------------#
 sub unlock {
 	
@@ -245,7 +245,7 @@ sub unlock {
 }
 
 #------------------#
-#  HTML‚Ìƒwƒbƒ_[  #
+#  HTMLã®ãƒ˜ãƒƒãƒ€ãƒ¼  #
 #------------------#
 sub header {
 	print "Cache-Control: no-cache\n";
@@ -291,7 +291,7 @@ EOM
 }
 
 #------------#
-#  ƒ^ƒCƒ}[  #
+#  ã‚¿ã‚¤ãƒãƒ¼  #
 #------------#
 sub time_view{
 	if($ltime < $b_time  and $ztime > 0){
@@ -317,30 +317,30 @@ EOM
 }
 
 #------------------#
-#@HTML‚Ìƒtƒbƒ^[@#
+#ã€€HTMLã®ãƒ•ãƒƒã‚¿ãƒ¼ã€€#
 #------------------#
 sub footer {
 
-	# ’˜ìŒ •\¦E‰ü•ÏŒµ‹Ö
+	# è‘—ä½œæ¨©è¡¨ç¤ºãƒ»æ”¹å¤‰å³ç¦
 
 	print << "EOM";
-<a href = "$scripto">$main_title‚ÌTOP‚Ö</a>
+<a href = "$scripto">$main_titleã®TOPã¸</a>
 <HR SIZE=0 WIDTH="100%"><DIV align=right>
-FFA ‚¢‚­‰üver2.00 edit by <a href="http://www.eriicu.com" target="_top">‚¢‚­</a><br>
-FFA Emilia Ver1.01 remodeled by Classic(•Â½)<br>
-FF Battle De I v3.06 remodeling by <a href="http://www.mj-world.jp/" target="_blank">jun-k</a>(XV’â~’†)<br>
-FF ADVENTURE(‰ü) v1.040 remodeled by <a href="http://www.gun-online.com" target="_blank">‚f‚t‚m</a><br>
-FF ADVENTURE v0.43 edit by D.Takamiya(CUMRO) <a href="http://www5c.biglobe.ne.jp/~ma-ti/" target="_blank">Œ»”z•zŒ³(ŠÇ—Òma-ti)</a><br>
+FFA ã„ãæ”¹ver2.00 edit by <a href="http://www.eriicu.com" target="_top">ã„ã</a><br>
+FFA Emilia Ver1.01 remodeled by Classic(é–‰é–)<br>
+FF Battle De I v3.06 remodeling by <a href="http://www.mj-world.jp/" target="_blank">jun-k</a>(æ›´æ–°åœæ­¢ä¸­)<br>
+FF ADVENTURE(æ”¹) v1.040 remodeled by <a href="http://www.gun-online.com" target="_blank">ï¼§ï¼µï¼®</a><br>
+FF ADVENTURE v0.43 edit by D.Takamiya(CUMRO) <a href="http://www5c.biglobe.ne.jp/~ma-ti/" target="_blank">ç¾é…å¸ƒå…ƒ(ç®¡ç†è€…ma-ti)</a><br>
 </DIV></body></html>
 EOM
 }
 
 #------------------#
-#@ƒƒbƒZ[ƒW•\¦@#
+#ã€€ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸è¡¨ç¤ºã€€#
 #------------------#
 sub message_load {
 
-	print "y“Í‚¢‚Ä‚¢‚éƒƒbƒZ[ƒWz•\\¦”<b>$max_gyo</b>Œ‚Ü‚Å";
+	print "ã€å±Šã„ã¦ã„ã‚‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã€‘è¡¨\ç¤ºæ•°<b>$max_gyo</b>ä»¶ã¾ã§";
 	open(IN,"$message_file/$chara[0].cgi");
 	@MESSAGE_LOG = <IN>;
 	close(IN);
@@ -356,7 +356,7 @@ sub message_load {
 <table><tr>
 <td>
 <font color="$red">
-<small><b>$hname‚³‚ñ</b>@„ u<b>$hmessage</b>v$htime\[$hhost\]</small>
+<small><b>$hnameã•ã‚“</b>ã€€ï¼ ã€Œ<b>$hmessage</b>ã€$htime\[$hhost\]</small>
 </font>
 </td>
 EOM
@@ -372,7 +372,7 @@ EOM
 <input type="hidden" name="mode" value="res">
 <input type="hidden" name="mesid" value="$hid">
 <input type="hidden" name="mesname" value="$hname">
-<input type="submit" class="btn" value="•ÔM">
+<input type="submit" class="btn" value="è¿”ä¿¡">
 </td>
 </form>
 <form action="$script_post" method="post">
@@ -383,7 +383,7 @@ EOM
 <input type=hidden name="mode" value="ban_do">
 <input type="hidden" name="mesid" value="$hid">
 <input type="hidden" name="mesname" value="$hname">
-<input type=submit class=btn value="—F’B“o˜^">
+<input type=submit class=btn value="å‹é”ç™»éŒ²">
 </td>
 </form>
 <form action="$script_post" method="post">
@@ -394,7 +394,7 @@ EOM
 <input type=hidden name="mode" value="ban_do">
 <input type="hidden" name="mesid" value="$hid">
 <input type="hidden" name="mesname" value="$hname">
-<input type=submit class=btn value="‹‘”Û">
+<input type=submit class=btn value="æ‹’å¦">
 </td>
 </form>
 </tr></table></td>
@@ -406,11 +406,11 @@ EOM
 		$hit=1;$i++;
 	}
 	if(!$hit){
-		print "<hr size=0><font color=$red>$chara[4]‚³‚ñˆ¶‚Ä‚ÌƒƒbƒZ[ƒW‚Í‚ ‚è‚Ü‚¹‚ñ</font>\n";
+		print "<hr size=0><font color=$red>$chara[4]ã•ã‚“å®›ã¦ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã¯ã‚ã‚Šã¾ã›ã‚“</font>\n";
 	}
 	print "<hr size=0>";
 
-	print "y‘Sˆõˆ¶‚ÄƒƒbƒZ[ƒWz•\\¦”<b>$all_max_gyo</b>Œ‚Ü‚Å";
+	print "ã€å…¨å“¡å®›ã¦ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã€‘è¡¨\ç¤ºæ•°<b>$all_max_gyo</b>ä»¶ã¾ã§";
 	open(IN,"$all_message_file");
 	@MESSAGE_LOG = <IN>;
 	close(IN);
@@ -424,20 +424,20 @@ EOM
 			print <<"EOM";
 <hr size=0>
 <font color="$red">
-<small>u<b>$hmessage</b>v$htime\[$hhost\]</small>
+<small>ã€Œ<b>$hmessage</b>ã€$htime\[$hhost\]</small>
 </font><br>
 EOM
 				$hit=1;$i++;
 	}
 
 	if(!$hit){
-		print "<hr size=0><font color=$red>‘Sˆõˆ¶‚Ä‚ÌƒƒbƒZ[ƒW‚Í‚ ‚è‚Ü‚¹‚ñ</font>\n";
+		print "<hr size=0><font color=$red>å…¨å“¡å®›ã¦ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã¯ã‚ã‚Šã¾ã›ã‚“</font>\n";
 	}
 	print "<hr size=0>";
 }
 
 #----------------------------#
-#@‘Sˆõ‚Ö‚ÌƒƒbƒZ[ƒW‘‚İ@#
+#ã€€å…¨å“¡ã¸ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸æ›¸è¾¼ã¿ã€€#
 #----------------------------#
 sub all_message {
 
@@ -461,19 +461,19 @@ sub all_message {
 }
 
 #--------------#
-#  ŠÔ‚ğæ“¾  #
+#  æ™‚é–“ã‚’å–å¾—  #
 #--------------#
 sub get_time {
 	$ENV{'TZ'} = "JST-9";
 	($sec,$min,$hour,$mday,$mon,$year,$wday) = localtime($_[0]);
-	@week = ('“ú','Œ','‰Î','…','–Ø','‹à','“y');
+	@week = ('æ—¥','æœˆ','ç«','æ°´','æœ¨','é‡‘','åœŸ');
 
-	# “ú‚ÌƒtƒH[ƒ}ƒbƒg
-	$gettime = sprintf("%04d”N%02dŒ%02d“ú(%s)%02d%02d•ª",$year+1900,$mon+1,$mday,$week[$wday],$hour,$min);
+	# æ—¥æ™‚ã®ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆ
+	$gettime = sprintf("%04då¹´%02dæœˆ%02dæ—¥(%s)%02dæ™‚%02dåˆ†",$year+1900,$mon+1,$mday,$week[$wday],$hour,$min);
 }
 
 #------------------------#
-#  ‘Sˆõƒf[ƒ^‚Ìæ‚èo‚µ  #
+#  å…¨å“¡ãƒ‡ãƒ¼ã‚¿ã®å–ã‚Šå‡ºã—  #
 #------------------------#
 sub all_data_read {
 	$lock_file = "$lockfolder/tim.lock";
@@ -527,7 +527,7 @@ sub all_data_read {
 		}
 		closedir(DIR);
 
-		# ”z—ñ19”Ô–Ú‚Åƒ\[ƒg
+		# é…åˆ—19ç•ªç›®ã§ã‚½ãƒ¼ãƒˆ
 		@tmp = map {(split /<>/)[18]} @temp_member;
 		@RANKING = @temp_member[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
@@ -548,7 +548,7 @@ sub all_data_read {
 }
 
 #--------------------------------#
-#  ‘Sˆõƒf[ƒ^‚©‚ç‚Ì–¼‘Oæ‚èo‚µ  #
+#  å…¨å“¡ãƒ‡ãƒ¼ã‚¿ã‹ã‚‰ã®åå‰å–ã‚Šå‡ºã—  #
 #--------------------------------#
 sub all_name_search {
 
@@ -564,7 +564,7 @@ sub all_name_search {
 	}
 
 	if (!$aite_hit) {
-		&error("‘Šè‚Ì–¼‘O‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñI$_[1]");
+		&error("ç›¸æ‰‹ã®åå‰ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ï¼$_[1]");
 	}
 }
 

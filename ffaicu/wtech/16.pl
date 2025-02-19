@@ -3,7 +3,7 @@ sub whissatu{
 		$sake1 -= 999999;
 		$item[4] = 0;
 		$dmg2 = ($winner[7] + $winner[39]) * int(rand(40));
-		$com2 .= "<font class=\"red\" size=5>Ô–‚–@ƒƒ‹ƒgƒ“IIIi–hŒä—Í–³Œøj</FONT><br>";
+		$com2 .= "<font class=\"red\" size=5>èµ¤é­”æ³•ãƒ¡ãƒ«ãƒˆãƒ³ï¼ï¼ï¼ï¼ˆé˜²å¾¡åŠ›ç„¡åŠ¹ï¼‰</FONT><br>";
 	}
 }
 sub watowaza{}

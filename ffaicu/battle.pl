@@ -1,46 +1,46 @@
-# �E�ƕʍU�����R�����g
-@battlecom = ("���������ꂽ�������V�n�e���̔@���G���a��J���b�I�I",
-	"�Ñ��萶�܂ꂵ���t���g�@�̉������グ�A�G���ރb�I�I",
-	"���ꖳ���S�͓V�ɓ͂��A���Ȃ�͂��ׂȂ�҂��l������b�I�I",
-	"�������܂��ꂽ�܊����G�̓�����I�m�ɑ�����I�I",
-	"����̉ʂĂɖ���傢�Ȃ�}�i���Ăъo�܂��I�I",
-	"���ƍ��̖��͂��������ċ���ׂ��͂��������I�I",
-	"���̔��������F���n�ƂȂ�A�G�𖻕{�ւƗU���I�I",
-	"���ɂ������ʈ�Ȃ������A�G�̐������b�I�I",
-	"�������݂ɑ���`���̑��p���G���т��I�I",
-	"���Ȃ�g�����̂��ރb�I�I �g���͓V�̌��Ɏp��ς��ēG���Ă��ł��b�I�I",
-	"�傢�Ȃ镃�A�_�̖��̌��ɓG���a��b�I�I",
-	"�������`��肵���p�A���̋Ɉӂ́A�꓁���f�b�I�I",
-	"�ۓ�����߂���͂��������b�I�I ���͔g�����h���G���ӂ��b�I�I",
-	"���߂̓��������ƂȂ�A�n�͎����v���̔@���G���a��̂Ă�b�I�I",
-	"���̓��C�����ɏh��A�G���]�̕��ɒǂ����b�I�I",
-	"���͂����߂����͍g������A�S�Ă��a��􂭏Ռ��j�𔭂���b�I�I",
-	"�Ïk���ꂽ���͂��e�ۂɍ��߂��G�����b�I�I",
-	"�ِ��E���Ă΂ꂵ�҂������󂯁A�G��S���҂Ɖ����b�I�I",
-	"�l�m�z�����𖂗͂��n����h�邪���b�I�I �z����₷�鋭��ȗ͂͑S�Ă�j�󂷂�b�I�I",
-	"����łڂ��`���ׂ̗͎͂Ȃ�͂𕕂����߂�I�I",
-	"�΁E���E�y�E���E�E�E�S�ẴA���J�i���G�̉^����f���؂�E�E�E�B",
-	"�܂˂܂ˁ�",
-	"�S���E���Ȃ��l�b�g���[�N�̗͂��W�߂ĉ������I�I",
-        "���ǂ��Ȃ���t���œG�ɐ؂肩����I�I�E�E�E��������",
-        "�������x�z�����Ȃ�͂��G�ɏP���|����I�I",
-        "�ł�萶�܂ꂵ���̑��݂͋C�z���甭������������Ɏ��炵�߂�I�I",
-        "�����C�s�Ő��܂ꂽ���Ȃ�͂����ׂĂ��򉻂���I�I",
-        "�������ꂽ���̓����͉��҂������邱�Ƃ͂ł��Ȃ��I�I",
-        "�Â̑I�΂ꂽ����m�B���G�Ɍ����������ӂ邤�I�I",
-        "�`���Ƃ܂ŌĂ΂ꂽ���̗͂͋t�炤���Ƃ��狖�����G�𕲂݂���ɂ���I�I",
-        "���̐��̂��ׂĂ��ɂ߂������̗͂͐_�̗͂ɂ���C�G����I�I");#�R�����g�����܂�
+# 職業別攻撃時コメント
+@battlecom = ("磨き抜かれた剛剣が天地覇王の如く敵を斬り捌くッ！！",
+	"古代より生まれし言葉が紅蓮の炎を作り上げ、敵を包むッ！！",
+	"汚れ無き心は天に届き、聖なる力が邪なる者を粛正するッ！！",
+	"研ぎ澄まされた五感が敵の動きを的確に捉える！！",
+	"時空の果てに眠る大いなるマナを呼び覚ます！！",
+	"白と黒の魔力が交差して恐るべき力を解放する！！",
+	"その美しい音色が刃となり、敵を冥府へと誘う！！",
+	"何にも属さぬ稲妻が轟き、敵の生命を絶つッ！！",
+	"竜を自在に操る伝説の槍術が敵を貫く！！",
+	"聖なる波動が体を包むッ！！ 波動は天の光に姿を変えて敵を焼き焦すッ！！",
+	"大いなる父、神の名の元に敵を斬るッ！！",
+	"東方より伝わりし剣術、その極意は、一刀両断ッ！！",
+	"鼓動が秘めたる力を解放するッ！！ 拳は波動を宿し敵を砕くッ！！",
+	"刹那の動きが嵐となり、刃は疾風迅雷の如く敵を斬り捨てるッ！！",
+	"負の闘気が剣に宿り、敵を絶望の淵に追いやるッ！！",
+	"魔力を込めた剣は紅く光り、全てを斬り裂く衝撃破を発するッ！！",
+	"凝縮された魔力が弾丸に込められ敵を撃つッ！！",
+	"異世界より呼ばれし者が命を受け、敵を亡き者と化すッ！！",
+	"人知越えたを魔力が地球を揺るがすッ！！ 想像を絶する強大な力は全てを破壊するッ！！",
+	"魔を滅ぼす伝説の力は邪なる力を封じ込める！！",
+	"火・水・土・風・・・全てのアルカナが敵の運命を断ち切る・・・。",
+	"まねまね♪",
+	"全世界をつなぐネットワークの力を集めて解き放つ！！",
+        "あどけない手付きで敵に切りかかる！！・・・こけたｗ",
+        "魔物を支配し絶大なる力が敵に襲い掛かる！！",
+        "闇より生まれしその存在は気配すら発せず相手を死に至らしめる！！",
+        "長い修行で生まれた聖なる力がすべてを浄化する！！",
+        "洗練されたその動きは何者も捉えることはできない！！",
+        "古の選ばれた聖戦士達が敵に向かい剣をふるう！！",
+        "伝説とまで呼ばれたその力は逆らうことすら許さず敵を粉みじんにする！！",
+        "この世のすべてを極めし数多の力は神の力にすら匹敵する！！");#コメントここまで
 
-#�E�ƕʍU���͌���T�u���[�`����
-@iryoku=('syokuzero','syokuone','syokutwo','syokuthree','syokufour','syokufive','syokusix','syokuseven','syokueight','syokunine','syokuten','syokueleven','syokutwelve','syokuthirteen','syokufourteen','syokufifteen','syokusixteen','syokuseventeen','syokueighteen','syokunineteen','syokutwenty','syokutwentyone','syokutwentytwo','syokutwentythree','syokutwentyfour','syokutwentyfive','syokutwentysix','syokutwentyseven','syokutwentyeight','syokutwentynine','syokuthirty');#�E�ƕʍU���͌��肱���܂�
+#職業別攻撃力決定サブルーチン名
+@iryoku=('syokuzero','syokuone','syokutwo','syokuthree','syokufour','syokufive','syokusix','syokuseven','syokueight','syokunine','syokuten','syokueleven','syokutwelve','syokuthirteen','syokufourteen','syokufifteen','syokusixteen','syokuseventeen','syokueighteen','syokunineteen','syokutwenty','syokutwentyone','syokutwentytwo','syokutwentythree','syokutwentyfour','syokutwentyfive','syokutwentysix','syokutwentyseven','syokutwentyeight','syokutwentynine','syokuthirty');#職業別攻撃力決定ここまで
 
 #------------------#
-#�@����҂̍U��  �@#
+#　挑戦者の攻撃  　#
 #------------------#
 sub tyousensya {
 
-	# ����҃_���[�W�v�Z
-	$com1 = "$chara[4]�́A$item[0]�ōU���I�I<FONT COLOR=\"$yellow\">$battlecom[$chara[14]]</FONT><br>";
+	# 挑戦者ダメージ計算
+	$com1 = "$chara[4]は、$item[0]で攻撃！！<FONT COLOR=\"$yellow\">$battlecom[$chara[14]]</FONT><br>";
 
 	$attackpower=$iryoku[$chara[14]];
 	&$attackpower;
@@ -48,11 +48,11 @@ sub tyousensya {
 }
 
 #------------------#
-#�@����҂̕K�E�Z�@#
+#　挑戦者の必殺技　#
 #------------------#
 sub tyosenwaza {
 
-	# �N���e�B�J��
+	# クリティカル
 	$waza_ritu = int(($chara[20] / 15)) + 10 + $chara[33];
 	if($waza_ritu > 75){$waza_ritu = 75;}
 	$waza_ritu += $a_wazaup;
@@ -65,26 +65,26 @@ sub tyosenwaza {
 		$waza_ritu = int($waza_ritu / 2);
 	}
 
-	#�g�o���P�^�P�O���ɕK�E���V�T��
+	#ＨＰが１／１０時に必殺率７５％
 	if (int($chara[16] / 10) > $khp_flg && int(rand(4)) > 1) {
 		$waza_ritu +=999;
 		$com1 .="<font class=\"red\" size=4>LIMIT BREAK!!</font><br>";
 	}
 
-	# ���󋅂̌���
+	# 封印球の効果
 	if ($winner[51] == 19 and $item[7] != 24 and $item[7] != 19) {
 		if ($chara[14] > 16 or $mode eq 'boss' or $mode eq 'isekiai') {
-			$com2 .="<font color=\"$red\">$winner[27]��������I�I$chara[4] �ɂ͌����Ȃ������I�I</font><br>";
+			$com2 .="<font color=\"$red\">$winner[27]が光を放つ！！$chara[4] には効かなかった！！</font><br>";
 		} elsif ($chara[14] > 7) {
 			if (int(rand(5)) == 0) {
 				$waza_ritu = 0;
-				$com2 .="<font color=\"$yellow\">$winner[27]��������I�I$chara[4] �̕K�E�Z�𕕂����߂��I�I</font><br>";
+				$com2 .="<font color=\"$yellow\">$winner[27]が光を放つ！！$chara[4] の必殺技を封じ込めた！！</font><br>";
 			}
 		} else {
 			if (int(rand(2)) == 0) {
 				$item[7] =0;
 				$waza_ritu = 0;
-				$com2 .="<font color=\"$yellow\">$winner[27]��������I�I$chara[4] �̕K�E�Z�𕕂����߂��I�I</font><br>";
+				$com2 .="<font color=\"$yellow\">$winner[27]が光を放つ！！$chara[4] の必殺技を封じ込めた！！</font><br>";
 			}
 		}
 	}
@@ -92,19 +92,19 @@ sub tyosenwaza {
 	&hissatu;
 }
 #------------------#
-#�@���x���A�b�v  �@#
+#　レベルアップ  　#
 #------------------#
 sub levelup {
 	if ($chara[18] < $charamaxlv) {
 
-		#�E�ƕʃ{�[�i�X���Z����
+		#職業別ボーナス加算処理
 		open(IN,"$syoku_file");
 		@syoku = <IN>;
 		close(IN);
 
 		my ($a,$b,$c,$d,$e,$f,$g,$h,$sy_0,$sy_1,$sy_2,$sy_3,$sy_4,$sy_5,$sy_6,$sylp) = split(/<>/,$syoku[$chara[14]]);
 
-		# �ϐ��̏�����
+		# 変数の初期化
 		$as0=0;
 		$as1=0;
 		$as2=0;
@@ -234,13 +234,13 @@ sub levelup {
 		}
 
 		if ($lvup != 0){
-			$comment .= "<font class=red size=7>���x����$lvup�オ�����I</font><br>";
+			$comment .= "<font class=red size=7>レベルが$lvup上がった！</font><br>";
 			$klvbf = $chara[33];
 			$chara[33] += $lvup;
 
-			#�W���u�}�X�^�[�̏���
+			#ジョブマスターの処理
 			if ($chara[33] > 59 && $klvbf <=59) {
-				$comment .= "<font class=red size=5>$chara_syoku[$chara[14]]���}�X�^�[�����I�I</font><br>";
+				$comment .= "<font class=red size=5>$chara_syoku[$chara[14]]をマスターした！！</font><br>";
 				$lock_file = "$lockfolder/syoku$in{'id'}.lock";
 				&lock($lock_file,'SK');
 				&syoku_load;
@@ -255,31 +255,31 @@ sub levelup {
 			$chara[15] = $chara[16];
 
 			if ($hit) {
-				$comment .= "�g�o��<font class=yellow>$ahp</font>�オ�����I�I";
+				$comment .= "ＨＰが<font class=yellow>$ahp</font>上がった！！";
 			}
 			if ($t1) {
-				$comment .= "�͂�<font class=yellow>$as0</font>�オ�����B";
+				$comment .= "力が<font class=yellow>$as0</font>上がった。";
 			}
 			if ($t2) {
-				$comment .= "���͂�<font class=yellow>$as1</font>�オ�����B";
+				$comment .= "魔力が<font class=yellow>$as1</font>上がった。";
 			}
 			if ($t3) {
-				$comment .= "�M�S��<font class=yellow>$as2</font>�オ�����B";
+				$comment .= "信仰心が<font class=yellow>$as2</font>上がった。";
 			}
 			if ($t4) {
-				$comment .= "�����͂�<font class=yellow>$as3</font>�オ�����B";
+				$comment .= "生命力が<font class=yellow>$as3</font>上がった。";
 			}
 			if ($t5) {
-				$comment .= "��p����<font class=yellow>$as4</font>�オ�����B";
+				$comment .= "器用さが<font class=yellow>$as4</font>上がった。";
 			}
 			if ($t6) {
-				$comment .= "������<font class=yellow>$as5</font>�オ�����B";
+				$comment .= "速さが<font class=yellow>$as5</font>上がった。";
 			}
 			if ($t7) {
-				$comment .= "���͂�<font class=yellow>$as6</font>�オ�����B";
+				$comment .= "魅力が<font class=yellow>$as6</font>上がった。";
 			}
 			if ($t8) {
-				$comment .= "�J���}��<font class=yellow>$as7</font>�オ�����B";
+				$comment .= "カルマが<font class=yellow>$as7</font>上がった。";
 			}
 	
 		}
@@ -287,7 +287,7 @@ sub levelup {
 }
 
 #----------------#
-# �E�Ə����ݏ��� #
+# 職業書込み処理 #
 #----------------#
 sub syoku_regist {
 
@@ -310,7 +310,7 @@ sub syoku_regist {
 }
 
 #------------------#
-#���A�N�Z�T���[����#
+#挑アクセサリー効果#
 #------------------#
 sub acs_waza {
 
@@ -320,7 +320,7 @@ sub acs_waza {
 }
 
 #----------------------#
-#����҃A�N�Z�T���[���Z#
+#挑戦者アクセサリー加算#
 #----------------------#
 sub acs_add {
 	$temp_chara[7] = $chara[7];
@@ -356,7 +356,7 @@ sub acs_add {
 }
 
 #--------------------#
-#�@����Ҕ\�͒l�����@#
+#　挑戦者能力値復元　#
 #--------------------#
 sub acs_sub {
 	$chara[7] = $temp_chara[7];
@@ -371,7 +371,7 @@ sub acs_sub {
 }
 
 #--------------------#
-#�@�E�ƕʍU���͌���@#
+#　職業別攻撃力決定　#
 #--------------------#
 sub syokuzero{
 	$dmg1 += int(rand($chara[7])) + $item[1];
@@ -465,12 +465,12 @@ sub syokutwentynine{
 }
 sub syokuthirty{
 	$dmg1 += ((int(rand($chara[7])) + int(rand($chara[8])) + int(rand($chara[9])) + int(rand($chara[10])) + int(rand($chara[11])) + int(rand($chara[12])) + int(rand($chara[13])) + int($chara[20]))) + $item[1];
-}#�U���͌v�Z�����܂�
+}#攻撃力計算ここまで
 
 #----------------------#
-#�@�ΐ푊��f�[�^�Ǒց@#
+#　対戦相手データ読替　#
 #----------------------#
-# �L�����f�[�^��@winner_data�ɑ�����Ă���Ăяo����@winner�ɕϊ����܂�
+# キャラデータを@winner_dataに代入してから呼び出すと@winnerに変換します
 sub winner_data {
 
 	open(IN,"./item/$winner_data[0].cgi");

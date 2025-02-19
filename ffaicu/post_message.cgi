@@ -1,48 +1,48 @@
 #!/usr/local/bin/perl
 
 #------------------------------------------------------#
-#@–{ƒXƒNƒŠƒvƒg‚Ì’˜ìŒ ‚Í‚¢‚­‚É‚ ‚è‚Ü‚·B
-#‚¢‚©‚È‚é——R‚ª‚ ‚Á‚Ä‚à‚±‚Ì•\‹L‚ğíœ‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñ
-#ˆá”½‚ğ”­Œ©‚µ‚½ê‡AƒXƒNƒŠƒvƒg‚Ì—˜—p‚ğ’â~‚µ‚Ä‚¢‚½‚¾‚­
-#‚¾‚¯‚Å‚È‚­A‘R‚é‚×‚«ˆ’u‚ğ‚³‚¹‚Ä‚¢‚½‚¾‚«‚Ü‚·B
-#  FF ADVENTURE(‚¢‚­‰ü)
-#@edit by ‚¢‚­
-#@http://www.eriicu.com
-#@icu@kcc.zaq.ne.jp
+#ã€€æœ¬ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®è‘—ä½œæ¨©ã¯ã„ãã«ã‚ã‚Šã¾ã™ã€‚
+#ã„ã‹ãªã‚‹ç†ç”±ãŒã‚ã£ã¦ã‚‚ã“ã®è¡¨è¨˜ã‚’å‰Šé™¤ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“
+#é•åã‚’ç™ºè¦‹ã—ãŸå ´åˆã€ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®åˆ©ç”¨ã‚’åœæ­¢ã—ã¦ã„ãŸã ã
+#ã ã‘ã§ãªãã€ç„¶ã‚‹ã¹ãå‡¦ç½®ã‚’ã•ã›ã¦ã„ãŸã ãã¾ã™ã€‚
+#  FF ADVENTURE(ã„ãæ”¹)
+#ã€€edit by ã„ã
+#ã€€http://www.eriicu.com
+#ã€€icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
 
-#--- [’ˆÓ–€] ------------------------------------------------#
-# 1. ‚±‚ÌƒXƒNƒŠƒvƒg‚ÍƒtƒŠ[ƒ\ƒtƒg‚Å‚·B‚±‚ÌƒXƒNƒŠƒvƒg‚ğg—p‚µ‚½	#
-#    ‚¢‚©‚È‚é‘¹ŠQ‚É‘Î‚µ‚ÄìÒ‚ÍˆêØ‚ÌÓ”C‚ğ•‰‚¢‚Ü‚¹‚ñB		#
-# 2. İ’u‚ÉŠÖ‚·‚é¿–â‚ÍƒTƒ|[ƒgŒf¦”Â‚É‚¨Šè‚¢‚¢‚½‚µ‚Ü‚·B	#
-#    ’¼Úƒ[ƒ‹‚É‚æ‚é¿–â‚ÍˆêØ‚¨ó‚¯‚¢‚½‚µ‚Ä‚¨‚è‚Ü‚¹‚ñB	#
+#--- [æ³¨æ„äº‹é …] ------------------------------------------------#
+# 1. ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã§ã™ã€‚ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ä½¿ç”¨ã—ãŸ	#
+#    ã„ã‹ãªã‚‹æå®³ã«å¯¾ã—ã¦ä½œè€…ã¯ä¸€åˆ‡ã®è²¬ä»»ã‚’è² ã„ã¾ã›ã‚“ã€‚		#
+# 2. è¨­ç½®ã«é–¢ã™ã‚‹è³ªå•ã¯ã‚µãƒãƒ¼ãƒˆæ²ç¤ºæ¿ã«ãŠé¡˜ã„ã„ãŸã—ã¾ã™ã€‚	#
+#    ç›´æ¥ãƒ¡ãƒ¼ãƒ«ã«ã‚ˆã‚‹è³ªå•ã¯ä¸€åˆ‡ãŠå—ã‘ã„ãŸã—ã¦ãŠã‚Šã¾ã›ã‚“ã€‚	#
 #    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi             #
 #---------------------------------------------------------------#
 
-# “ú–{Œêƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
+# æ—¥æœ¬èªãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
 require 'jcode.pl';
 
-# ƒŒƒWƒXƒgƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
+# ãƒ¬ã‚¸ã‚¹ãƒˆãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
 require 'regist.pl';
 
-# ‰Šúİ’èƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ
+# åˆæœŸè¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿
 require 'data/ffadventure.ini';
 
-# ‚±‚Ìƒtƒ@ƒCƒ‹—pİ’è
+# ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ç”¨è¨­å®š
 $backgif = $sts_back;
 $midi = $sts_midi;
 
 #================================================================#
-#„¬„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„­#
-#„« ‚±‚ê‚æ‚è‰º‚ÍCGI‚É©M‚Ì‚ ‚é•ûˆÈŠO‚Íˆµ‚í‚È‚¢‚Ù‚¤‚ª–³“ï‚Å‚·@„«#
-#„¯„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„®#
+#â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”“#
+#â”ƒ ã“ã‚Œã‚ˆã‚Šä¸‹ã¯CGIã«è‡ªä¿¡ã®ã‚ã‚‹æ–¹ä»¥å¤–ã¯æ‰±ã‚ãªã„ã»ã†ãŒç„¡é›£ã§ã™ã€€â”ƒ#
+#â”—â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”›#
 #================================================================#
 
 #--------------#
-#@ƒƒCƒ“ˆ—@#
+#ã€€ãƒ¡ã‚¤ãƒ³å‡¦ç†ã€€#
 #--------------#
 if ($mente) {
-	&error("ƒo[ƒWƒ‡ƒ“ƒAƒbƒv’†‚Å‚·B‚QA‚R‚O•b‚Ù‚Ç‚¨‘Ò‚¿‰º‚³‚¢Bm(_ _)m");
+	&error("ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—ä¸­ã§ã™ã€‚ï¼’ã€ï¼“ï¼ç§’ã»ã©ãŠå¾…ã¡ä¸‹ã•ã„ã€‚m(_ _)m");
 }
 
 &decode;
@@ -52,14 +52,14 @@ if ($mente) {
 <form action="$script_post" method="post">
 <input type=hidden name=id value="$in{'id'}">
 <input type="hidden" name="mydata" value="$in{'mydata'}">
-<input type=submit class=btn value="–ß‚é">
+<input type=submit class=btn value="æˆ»ã‚‹">
 </form>
 EOM
 
-#‚h‚oƒAƒhƒŒƒX‚ÅƒAƒNƒZƒX§ŒÀ
+#ï¼©ï¼°ã‚¢ãƒ‰ãƒ¬ã‚¹ã§ã‚¢ã‚¯ã‚»ã‚¹åˆ¶é™
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
-	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("ƒAƒNƒZƒX‚Å‚«‚Ü‚¹‚ñII");}
+	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã›ã‚“ï¼ï¼");}
 }
 
 if ($mode) { &$mode; }
@@ -68,7 +68,7 @@ if ($mode) { &$mode; }
 exit;
 
 #--------------#
-#  ƒƒbƒZ[ƒW  #
+#  ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸  #
 #--------------#
 sub message {
 
@@ -77,13 +77,13 @@ sub message {
 	&chara_check;
 
 	if($in{'mes'} eq "") {
-		&error("ƒƒbƒZ[ƒW‚ª‹L“ü‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ$back_form");
+		&error("ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒè¨˜å…¥ã•ã‚Œã¦ã„ã¾ã›ã‚“$back_form");
 	}
 	elsif($in{'mesid'} eq "" && $in{'mesname'} eq "") {
-		&error("‘Šè‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ$back_form");
+		&error("ç›¸æ‰‹ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“$back_form");
 	}
 	elsif($in{'id'} eq "test"){
-		&error("ƒeƒXƒgƒLƒƒƒ‰‚Å‚ÍƒƒbƒZ[ƒW‚ğ‘—M‚Å‚«‚Ü‚¹‚ñI$back_form");
+		&error("ãƒ†ã‚¹ãƒˆã‚­ãƒ£ãƒ©ã§ã¯ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ä¿¡ã§ãã¾ã›ã‚“ï¼$back_form");
 	}
 
 	&get_time(time());
@@ -104,10 +104,10 @@ sub message {
 	}
 
 	if ($aite_data[0] eq $chara[0]) {
-		&error("©•ª‚É‚ÍƒƒbƒZ[ƒW‚ğ‘—M‚Å‚«‚Ü‚¹‚ñI$back_form");
+		&error("è‡ªåˆ†ã«ã¯ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ä¿¡ã§ãã¾ã›ã‚“ï¼$back_form");
 	}
 
-	# ‘Šè‚ªŒ©‚Â‚©‚ç‚È‚¢
+	# ç›¸æ‰‹ãŒè¦‹ã¤ã‹ã‚‰ãªã„æ™‚
 	if (!$mhit) {
 		&mes_error;
 	}
@@ -117,16 +117,16 @@ sub message {
 	foreach (@ban_word) {
 		if(index($in{'mes'},$_) >= 0) {
 			$in{'mesname'} = $aite_data[4];
-			&error("–\\Œ¾‚Í‹Ö~‚³‚ê‚Ä‚¢‚Ü‚·");
+			&error("æš´\è¨€ã¯ç¦æ­¢ã•ã‚Œã¦ã„ã¾ã™");
 		}
 	}
 
 	if ($now_mes > $mes_size) {
 		$in{'mesname'} = $aite_data[4];
-		&res("ƒƒbƒZ[ƒW‚ª’·‚·‚¬‚Ü‚·I”¼Šp‚Å$mes_size•¶š‚Ü‚Å‚Å‚·I(Œ»İ•¶š”F$now_mes)<br>");
+		&res("ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒé•·ã™ãã¾ã™ï¼åŠè§’ã§$mes_sizeæ–‡å­—ã¾ã§ã§ã™ï¼(ç¾åœ¨æ–‡å­—æ•°ï¼š$now_mes)<br>");
 	}
 
-	# ‹‘”Ûó‘Ô‚ÌŒÄ‚Ño‚µ
+	# æ‹’å¦çŠ¶æ…‹ã®å‘¼ã³å‡ºã—
 	open(IN,"$ban_file/$aite_data[0].cgi");
 	@ban_sts = <IN>;
 	close(IN);
@@ -139,18 +139,18 @@ sub message {
 		if ($banid eq 'all'){
 			$ban_hit = 1;
 		} elsif ($banid eq $chara[0] && $bansts eq 1) {
-			# ‹‘”Û‚µ‚Ä‚él‚©‚ç‚ÌƒƒbƒZ[ƒW
+			# æ‹’å¦ã—ã¦ã‚‹äººã‹ã‚‰ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 			$ban_hit = 1;
 			last;
 		} elsif ($banid eq $chara[0] && $bansts eq 2) {
-			# —F’B“o˜^‚µ‚Ä‚él‚©‚ç‚ÌƒƒbƒZ[ƒW
+			# å‹é”ç™»éŒ²ã—ã¦ã‚‹äººã‹ã‚‰ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 			$ban_hit = 0;
 			last;
 		}
 	}
 
 	if ($ban_hit || $aite_data[0] eq 'test') {
-		&error("ƒƒbƒZ[ƒW§ŒÀ’†‚Å‚·$back_form");
+		&error("ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸åˆ¶é™ä¸­ã§ã™$back_form");
 	}
 
 	$lock_file = "$lockfolder/messa$aite_data[0].lock";
@@ -190,17 +190,17 @@ sub message {
 	&header;
 
 	print <<"EOM";
-<h1>$aite_data[4]‚³‚ñ‚ÖƒƒbƒZ[ƒW‚ğ‘—‚è‚Ü‚µ‚½B</h1>
+<h1>$aite_data[4]ã•ã‚“ã¸ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚Šã¾ã—ãŸã€‚</h1>
 <hr size=0>
 <form action="$script_post" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="—X•Ö‹Ç‚ÌÅ‰‚Ì‰æ–Ê‚Ö">
+<input type=submit class=btn value="éƒµä¾¿å±€ã®æœ€åˆã®ç”»é¢ã¸">
 </form>
 <form action="$script" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 
@@ -210,7 +210,7 @@ EOM
 }
 
 #------------------#
-#ƒƒbƒZ[ƒWƒVƒXƒeƒ€#
+#ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚·ã‚¹ãƒ†ãƒ #
 #------------------#
 sub messe {
 
@@ -218,22 +218,22 @@ sub messe {
 
 	&chara_check;
 
-	# ƒwƒbƒ_[•\¦
+	# ãƒ˜ãƒƒãƒ€ãƒ¼è¡¨ç¤º
 	&header;
 
 	print <<"EOM";
-<h1>D‚«‚ÈƒLƒƒƒ‰ƒNƒ^[‚ÖƒƒbƒZ[ƒW‚ğ‘—‚é</h1>
-<hr>¦‘¼‚ÌƒLƒƒƒ‰ƒNƒ^[‚ÖƒƒbƒZ[ƒW‚ğ‘—‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+<h1>å¥½ããªã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã¸ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚‹</h1>
+<hr>â€»ä»–ã®ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã¸ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 <table width = "100%">
-<tr><td class="b2">–¼‘O‚ğw’è‚µ‚Ä‘—‚é</td>
+<tr><td class="b2">åå‰ã‚’æŒ‡å®šã—ã¦é€ã‚‹</td>
 <form action="$script_post" method="post">
 <td class="b2" valign="top">
-–¼‘O@@@ F<input type="text" name="mesname" size=10><br>
-ƒƒbƒZ[ƒWF<input type="text" name="mes" size=50><br><br>
+åå‰ã€€ã€€ã€€ ï¼š<input type="text" name="mesname" size=10><br>
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ï¼š<input type="text" name="mes" size=50><br><br>
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
 <input type=hidden name=mode value=message>
-<input type=submit class=btn value="ƒƒbƒZ[ƒW‚ğ‘—‚é">
+<input type=submit class=btn value="ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚‹">
 </td>
 </form>
 <td class="b2" align="left" valign="top" rowspan=2>
@@ -246,37 +246,37 @@ EOM
 	print <<"EOM";
 </td></tr>
 <tr>
-<td class="b2">–¼‘O‚ğ‘I‚ñ‚Å‘—‚é</td>
+<td class="b2">åå‰ã‚’é¸ã‚“ã§é€ã‚‹</td>
 <td class="b2" valign="top">
 <br>
 <form action="$script_post" method="post">
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
 <input type=hidden name=mode value=all_list>
-<input type=submit class=btn value="ˆê——‚©‚ç–¼‘O‚ğ‘I‚Ô">
+<input type=submit class=btn value="ä¸€è¦§ã‹ã‚‰åå‰ã‚’é¸ã¶">
 </form>
 <form action="$script_post" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type="hidden" name="mode" value="ban">
-<input type=submit class=btn value="ƒƒbƒZ[ƒW‹‘”Û">
+<input type=submit class=btn value="ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸æ‹’å¦">
 </form>
 <form action="$script_post" method="post">
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
 <input type=hidden name=mode value=friend>
-<input type=submit class=btn value="—F’B“o˜^">
+<input type=submit class=btn value="å‹é”ç™»éŒ²">
 </form>
 <form action="$script_post" method="post">
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
 <input type=hidden name=mode value="limit">
-<input type=submit class=btn value="óM“€Œ‹">
+<input type=submit class=btn value="å—ä¿¡å‡çµ">
 </form>
 <form action="$script" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 </td>
 </tr></table>
@@ -288,7 +288,7 @@ EOM
 }
 
 #------------------#
-#ƒƒbƒZ[ƒWƒVƒXƒeƒ€#
+#ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚·ã‚¹ãƒ†ãƒ #
 #------------------#
 sub all_list {
 
@@ -298,25 +298,25 @@ sub all_list {
 
 	&all_data_read;
 
-	# ”z—ñ19”Ô–Ú‚Åƒ\[ƒg
+	# é…åˆ—19ç•ªç›®ã§ã‚½ãƒ¼ãƒˆ
 	@tmp = map {(split /<>/)[18]} @RANKING;
 	@RANKING = @RANKING[sort {$tmp[$b] <=> $tmp[$a]} 0 .. $#tmp];
 
-	# ƒwƒbƒ_[•\¦
+	# ãƒ˜ãƒƒãƒ€ãƒ¼è¡¨ç¤º
 	&header;
 
 	print <<"EOM";
-<h1>D‚«‚ÈƒLƒƒƒ‰ƒNƒ^[‚ÖƒƒbƒZ[ƒW‚ğ‘—‚é</h1>
-<hr>¦‘¼‚ÌƒLƒƒƒ‰ƒNƒ^[‚ÖƒƒbƒZ[ƒW‚ğ‘—‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+<h1>å¥½ããªã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã¸ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚‹</h1>
+<hr>â€»ä»–ã®ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã¸ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 <table>
 <tr>
-<td class="b2">ƒƒbƒZ[ƒW</td>
+<td class="b2">ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸</td>
 <form action="$script_post" method="post">
 <td class="b2" valign="top">
 <input type="text" name=mes size=50>
 </td></tr>
 <tr>
-<td class="b2">–¼‘O‘I‘ğ</td>
+<td class="b2">åå‰é¸æŠ</td>
 <td class="b2" valign="top">
 <select name=mesid size=20>
 EOM
@@ -326,7 +326,7 @@ EOM
 		s/\r//gi;
 		@aite_data = split(/<>/);
 		print << "EOM";
-<option value = "$aite_data[0]">$aite_data[4]‚³‚ñ(Lv.$aite_data[18])‚Ö
+<option value = "$aite_data[0]">$aite_data[4]ã•ã‚“(Lv.$aite_data[18])ã¸
 EOM
 	}
 	print <<"EOM";
@@ -334,19 +334,19 @@ EOM
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type="hidden" name="mode" value="message">
-<input type=submit class=btn value="ƒƒbƒZ[ƒW‚ğ‘—‚é">
+<input type=submit class=btn value="ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚‹">
 </td>
 </form>
 </tr></table>
 <form action="$script_post" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="—X•Ö‹Ç‚ÌÅ‰‚Ì‰æ–Ê‚Ö">
+<input type=submit class=btn value="éƒµä¾¿å±€ã®æœ€åˆã®ç”»é¢ã¸">
 </form>
 <form action="$script" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 
@@ -356,7 +356,7 @@ EOM
 }
 
 #------#
-# •ÔM #
+# è¿”ä¿¡ #
 #------#
 sub res {
 
@@ -364,30 +364,30 @@ sub res {
 
 	&chara_check;
 
-	# ƒwƒbƒ_[•\¦
+	# ãƒ˜ãƒƒãƒ€ãƒ¼è¡¨ç¤º
 	&header;
 
 	print <<"EOM";
 <h2>$_[0]</h2>
-<h1>$in{'mesname'}‚³‚ñ‚ÖƒƒbƒZ[ƒW‚ğ‘—‚é</h1>
+<h1>$in{'mesname'}ã•ã‚“ã¸ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚‹</h1>
 <form action="$script_post" method="post">
-ƒƒbƒZ[ƒWF<input type="text" name="mes" size=50 value = "$in{'mes'}"><br><br>
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ï¼š<input type="text" name="mes" size=50 value = "$in{'mes'}"><br><br>
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
 <input type="hidden" name="mesid" value="$in{'mesid'}">
 <input type="hidden" name="mesname" value="$in{'mesname'}">
 <input type=hidden name=mode value=message>
-<input type=submit class=btn value="ƒƒbƒZ[ƒW‚ğ‘—‚é">
+<input type=submit class=btn value="ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚‹">
 </form>
 <form action="$script_post" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="—X•Ö‹Ç‚ÌÅ‰‚Ì‰æ–Ê‚Ö">
+<input type=submit class=btn value="éƒµä¾¿å±€ã®æœ€åˆã®ç”»é¢ã¸">
 </form>
 <form action="$script" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 
@@ -397,34 +397,34 @@ EOM
 }
 
 #--------------------#
-# ‘Šè‚ªŒ©‚Â‚©‚ç‚È‚¢ #
+# ç›¸æ‰‹ãŒè¦‹ã¤ã‹ã‚‰ãªã„ #
 #--------------------#
 sub mes_error {
 
-	# ƒwƒbƒ_[•\¦
+	# ãƒ˜ãƒƒãƒ€ãƒ¼è¡¨ç¤º
 	&header;
 
 	print <<"EOM";
-<h1>‘Šè‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñI</h1>
+<h1>ç›¸æ‰‹ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ï¼</h1>
 <form action="$script_post" method="post">
-–¼‘O@@@ :<input type="text" name="mesname" value="$in{'mesname'}" size="20">
+åå‰ã€€ã€€ã€€ :<input type="text" name="mesname" value="$in{'mesname'}" size="20">
 <br>
-ƒƒbƒZ[ƒWF<input type="text" name="mes" size="50" value ="$in{'mes'}">
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ï¼š<input type="text" name="mes" size="50" value ="$in{'mes'}">
 <br><br>
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
 <input type=hidden name=mode value=message>
-<input type=submit class=btn value="ƒƒbƒZ[ƒW‚ğ‘—‚é">
+<input type=submit class=btn value="ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚‹">
 </form>
 <form action="$script_post" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="—X•Ö‹Ç‚ÌÅ‰‚Ì‰æ–Ê‚Ö">
+<input type=submit class=btn value="éƒµä¾¿å±€ã®æœ€åˆã®ç”»é¢ã¸">
 </form>
 <form action="$script" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 
@@ -434,7 +434,7 @@ EOM
 }
 
 #----------#
-# óM§ŒÀ #
+# å—ä¿¡åˆ¶é™ #
 #----------#
 sub limit {
 
@@ -448,7 +448,7 @@ sub limit {
 
 	@new_ban = "";
 	$ban_hit = 0;
-	@ban_mes = ('‰ğœ','İ’è');
+	@ban_mes = ('è§£é™¤','è¨­å®š');
 	foreach (@ban_sts) {
 		s/\n//gi;
 		s/\r//gi;
@@ -459,32 +459,32 @@ sub limit {
 		}
 	}
 
-	# ƒwƒbƒ_[•\¦
+	# ãƒ˜ãƒƒãƒ€ãƒ¼è¡¨ç¤º
 	&header;
 
 	print <<"EOM";
-<h1>ƒƒbƒZ[ƒW‚ğ—F’BˆÈŠO‚©‚çóM‚µ‚È‚¢‚æ‚¤‚É‚µ‚Ü‚·</h1><br>
+<h1>ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‹é”ä»¥å¤–ã‹ã‚‰å—ä¿¡ã—ãªã„ã‚ˆã†ã«ã—ã¾ã™</h1><br>
 EOM
 	if ($ban_hit) {
 	print <<"EOM";
-Œ»İ‚Ìİ’èF§ŒÀ’†<br>
+ç¾åœ¨ã®è¨­å®šï¼šåˆ¶é™ä¸­<br>
 <form action="$script_post" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=mode value=limit_do>
 <input type=hidden name=bansts value="0">
-<input type=submit class=btn value="§ŒÀ‰ğœ">
+<input type=submit class=btn value="åˆ¶é™è§£é™¤">
 </form>
 EOM
 	} else {
 	print <<"EOM";
-Œ»İ‚Ìİ’èF§ŒÀ‰ğœ’†<br>
+ç¾åœ¨ã®è¨­å®šï¼šåˆ¶é™è§£é™¤ä¸­<br>
 <form action="$script_post" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=mode value=limit_do>
 <input type=hidden name=bansts value="1">
-<input type=submit class=btn value="§ŒÀ‚·‚é">
+<input type=submit class=btn value="åˆ¶é™ã™ã‚‹">
 </form>
 EOM
 	}
@@ -492,12 +492,12 @@ EOM
 <form action="$script_post" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="—X•Ö‹Ç‚ÌÅ‰‚Ì‰æ–Ê‚Ö">
+<input type=submit class=btn value="éƒµä¾¿å±€ã®æœ€åˆã®ç”»é¢ã¸">
 </form>
 <form action="$script" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 
@@ -507,7 +507,7 @@ EOM
 }
 
 #------------------#
-#  ‹‘”ÛE—F’B“o˜^  #
+#  æ‹’å¦ãƒ»å‹é”ç™»éŒ²  #
 #------------------#
 sub limit_do {
 
@@ -515,7 +515,7 @@ sub limit_do {
 
 	&chara_check;
 
-	# ‹‘”Ûó‘Ô‚ÌŒÄ‚Ño‚µ
+	# æ‹’å¦çŠ¶æ…‹ã®å‘¼ã³å‡ºã—
 	$lock_file = "$lockfolder/banfr$chara[0].lock";
 	&lock($lock_file,'BF');
 	open(IN,"$ban_file/$chara[0].cgi");
@@ -524,7 +524,7 @@ sub limit_do {
 
 	@new_ban = "";
 	$ban_hit = 0;
-	@ban_mes = ('‰ğœ','İ’è');
+	@ban_mes = ('è§£é™¤','è¨­å®š');
 	foreach (@ban_sts) {
 		s/\n//gi;
 		s/\r//gi;
@@ -551,17 +551,17 @@ sub limit_do {
 	&header;
 
 	print <<"EOM";
-<h1>§ŒÀ‚ğ$ban_mes[$in{'bansts'}]‚µ‚Ü‚µ‚½B</h1>
+<h1>åˆ¶é™ã‚’$ban_mes[$in{'bansts'}]ã—ã¾ã—ãŸã€‚</h1>
 <hr size=0>
 <form action="$script_post" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="—X•Ö‹Ç‚ÌÅ‰‚Ì‰æ–Ê‚Ö">
+<input type=submit class=btn value="éƒµä¾¿å±€ã®æœ€åˆã®ç”»é¢ã¸">
 </form>
 <form action="$script" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 
@@ -571,7 +571,7 @@ EOM
 }
 
 #--------------#
-# ‹‘”ÛƒVƒXƒeƒ€ #
+# æ‹’å¦ã‚·ã‚¹ãƒ†ãƒ  #
 #--------------#
 sub ban {
 
@@ -579,36 +579,36 @@ sub ban {
 
 	&chara_check;
 
-	# ƒwƒbƒ_[•\¦
+	# ãƒ˜ãƒƒãƒ€ãƒ¼è¡¨ç¤º
 	&header;
 
 	print <<"EOM";
-<h1>Œ™‚Èl‚©‚ç‚ÌƒƒbƒZ[ƒW‚ğ‹‘”Û‚Å‚«‚Ü‚·</h1>
+<h1>å«Œãªäººã‹ã‚‰ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’æ‹’å¦ã§ãã¾ã™</h1>
 <table>
 <tr>
 <form action="$script_post" method="post">
 <td class="b2" valign="top">
-–¼‘O‚ğw’è‚µ‚Ä‹‘”Û<br>
+åå‰ã‚’æŒ‡å®šã—ã¦æ‹’å¦<br>
 <input type="text" name="mesname" size=10>
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
 <input type=hidden name=mode value=ban_do>
 <input type=hidden name=bansts value="1">
-<input type=submit class=btn value="‹‘”Û">
+<input type=submit class=btn value="æ‹’å¦">
 </td>
 </form>
 </tr>
 <tr>
 <form action="$script_post" method="post">
 <td class="b2" valign="top">
-Œ»İ‚Ì‹‘”ÛÒƒŠƒXƒg<br>
+ç¾åœ¨ã®æ‹’å¦è€…ãƒªã‚¹ãƒˆ<br>
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
 <input type=hidden name=mode value="ban_do">
 <input type=hidden name=bansts value="0">
 <select name=mesid size=5>
 EOM
-	# ‹‘”Ûó‘Ô‚ÌŒÄ‚Ño‚µ
+	# æ‹’å¦çŠ¶æ…‹ã®å‘¼ã³å‡ºã—
 	open(IN,"$ban_file/$chara[0].cgi");
 	@ban_sts = <IN>;
 	close(IN);
@@ -620,17 +620,17 @@ EOM
 		($banid,$bansts,$banname) = split(/<>/);
 		if ($bansts eq 1) {
 			print << "EOM";
-<option value = "$banid">$banname‚³‚ñ
+<option value = "$banid">$bannameã•ã‚“
 EOM
 			$ban_hit = 1;
 		}
 	}
 
 	if (!$ban_hit) {
-		print "<option value = \"\">‚¢‚Ü‚¹‚ñ";
+		print "<option value = \"\">ã„ã¾ã›ã‚“";
 	}
 	print <<"EOM";
-<input type=submit class=btn value="‹‘”Û‰ğœ">
+<input type=submit class=btn value="æ‹’å¦è§£é™¤">
 </td>
 </form>
 </tr>
@@ -640,12 +640,12 @@ EOM
 <form action="$script_post" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="—X•Ö‹Ç‚ÌÅ‰‚Ì‰æ–Ê‚Ö">
+<input type=submit class=btn value="éƒµä¾¿å±€ã®æœ€åˆã®ç”»é¢ã¸">
 </form>
 <form action="$script" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 </td>
 </tr></table>
@@ -657,7 +657,7 @@ EOM
 }
 
 #--------------#
-# —F’BƒVƒXƒeƒ€ #
+# å‹é”ã‚·ã‚¹ãƒ†ãƒ  #
 #--------------#
 sub friend {
 
@@ -665,36 +665,36 @@ sub friend {
 
 	&chara_check;
 
-	# ƒwƒbƒ_[•\¦
+	# ãƒ˜ãƒƒãƒ€ãƒ¼è¡¨ç¤º
 	&header;
 
 	print <<"EOM";
-<h3>óM“€Œ‹’†‚Å‚àƒƒbƒZ[ƒW‚ğó‚¯•t‚¯‚é‘Šè‚ğw’è‚Å‚«‚Ü‚·</h3>
+<h3>å—ä¿¡å‡çµä¸­ã§ã‚‚ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å—ã‘ä»˜ã‘ã‚‹ç›¸æ‰‹ã‚’æŒ‡å®šã§ãã¾ã™</h3>
 <table>
 <tr>
 <form action="$script_post" method="post">
 <td class="b2" valign="top">
-–¼‘O‚ğw’è‚µ‚Ä“o˜^<br>
+åå‰ã‚’æŒ‡å®šã—ã¦ç™»éŒ²<br>
 <input type="text" name="mesname" size=10>
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
 <input type=hidden name=mode value=ban_do>
 <input type=hidden name=bansts value="2">
-<input type=submit class=btn value="—F’B“o˜^">
+<input type=submit class=btn value="å‹é”ç™»éŒ²">
 </td>
 </form>
 </tr>
 <tr>
 <form action="$script_post" method="post">
 <td class="b2" valign="top">
-Œ»İ‚Ì—F’BƒŠƒXƒg<br>
+ç¾åœ¨ã®å‹é”ãƒªã‚¹ãƒˆ<br>
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
 <input type=hidden name=bansts value="0">
 <input type=hidden name=mode value="ban_do">
 <select name=mesid size=5>
 EOM
-	# —F’B‚ÌŒÄ‚Ño‚µ
+	# å‹é”ã®å‘¼ã³å‡ºã—
 	open(IN,"$ban_file/$chara[0].cgi");
 	@ban_sts = <IN>;
 	close(IN);
@@ -706,17 +706,17 @@ EOM
 		($banid,$bansts,$banname) = split(/<>/);
 		if ($bansts eq 2) {
 			print << "EOM";
-<option value = "$banid">$banname‚³‚ñ
+<option value = "$banid">$bannameã•ã‚“
 EOM
 			$ban_hit = 1;
 		}
 	}
 
 	if (!$ban_hit) {
-		print "<option value = \"\">‚¢‚Ü‚¹‚ñ";
+		print "<option value = \"\">ã„ã¾ã›ã‚“";
 	}
 	print <<"EOM";
-<input type=submit class=btn value="—F’B‰ğœ">
+<input type=submit class=btn value="å‹é”è§£é™¤">
 </td>
 </form>
 </tr>
@@ -726,12 +726,12 @@ EOM
 <form action="$script_post" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="—X•Ö‹Ç‚ÌÅ‰‚Ì‰æ–Ê‚Ö">
+<input type=submit class=btn value="éƒµä¾¿å±€ã®æœ€åˆã®ç”»é¢ã¸">
 </form>
 <form action="$script" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 </td>
 </tr></table>
@@ -743,7 +743,7 @@ EOM
 }
 
 #------------------#
-#  ‹‘”ÛE—F’B“o˜^  #
+#  æ‹’å¦ãƒ»å‹é”ç™»éŒ²  #
 #------------------#
 sub ban_do {
 
@@ -752,7 +752,7 @@ sub ban_do {
 	&chara_check;
 
 	if($in{'mesid'} eq "" && $in{'mesname'} eq "") {
-		&error("‘Šè‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ$back_form");
+		&error("ç›¸æ‰‹ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“$back_form");
 	}
 
 	&all_data_read;
@@ -769,15 +769,15 @@ sub ban_do {
 	}
 
 	if ($aite_data[0] eq $chara[0]) {
-		&error("©•ª‚Í“o˜^‚Å‚«‚Ü‚¹‚ñI$back_form");
+		&error("è‡ªåˆ†ã¯ç™»éŒ²ã§ãã¾ã›ã‚“ï¼$back_form");
 	}
 
-	# ‘Šè‚ªŒ©‚Â‚©‚ç‚È‚¢
+	# ç›¸æ‰‹ãŒè¦‹ã¤ã‹ã‚‰ãªã„æ™‚
 	if (!$mhit) {
-		&error("‘Šè‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñI$back_form");
+		&error("ç›¸æ‰‹ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ï¼$back_form");
 	}
 
-	# ‹‘”Ûó‘Ô‚ÌŒÄ‚Ño‚µ
+	# æ‹’å¦çŠ¶æ…‹ã®å‘¼ã³å‡ºã—
 	$lock_file = "$lockfolder/banfr$chara[0].lock";
 	&lock($lock_file,'BF');
 	open(IN,"$ban_file/$chara[0].cgi");
@@ -786,7 +786,7 @@ sub ban_do {
 
 	@new_ban = "";
 	$ban_hit = 0;
-	@ban_mes = ('‰ğœ','‹‘”Û“o˜^','—F’B“o˜^');
+	@ban_mes = ('è§£é™¤','æ‹’å¦ç™»éŒ²','å‹é”ç™»éŒ²');
 	foreach (@ban_sts) {
 		s/\n//gi;
 		s/\r//gi;
@@ -813,17 +813,17 @@ sub ban_do {
 	&header;
 
 	print <<"EOM";
-<h1>$aite_data[4]‚³‚ñ‚ğ$ban_mes[$in{'bansts'}]‚µ‚Ü‚µ‚½B</h1>
+<h1>$aite_data[4]ã•ã‚“ã‚’$ban_mes[$in{'bansts'}]ã—ã¾ã—ãŸã€‚</h1>
 <hr size=0>
 <form action="$script_post" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="—X•Ö‹Ç‚ÌÅ‰‚Ì‰æ–Ê‚Ö">
+<input type=submit class=btn value="éƒµä¾¿å±€ã®æœ€åˆã®ç”»é¢ã¸">
 </form>
 <form action="$script" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 

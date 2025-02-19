@@ -1,7 +1,7 @@
 sub whissatu{
 		$dmg2 += $winner[6] * int(rand(10));
 		$hpplus2 = int(0)-int($dmg2 /10);
-		$com2 .= "<font color=\"#005555\" size=5>ˆÃ•Œ•IIi©•ª‚É‚àƒ_ƒ[ƒWj</FONT><br>";
+		$com2 .= "<font color=\"#005555\" size=5>æš—é»’å‰£ï¼ï¼ï¼ˆè‡ªåˆ†ã«ã‚‚ãƒ€ãƒ¡ãƒ¼ã‚¸ï¼‰</FONT><br>";
 	}
 
 sub watowaza{}

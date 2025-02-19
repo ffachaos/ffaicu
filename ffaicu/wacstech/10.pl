@@ -1,7 +1,7 @@
 sub wacskouka{
 	if (int(rand(5))==0) {
 		$winner[22] = $winner[22] * 2;
-		$com2 .= "<font class=\"yellow\" size=3>$winner[27]‚ªŒõ‚ğ•ú‚ÂIIƒI[ƒ‰‚ÌŒø‰ÊIIIi•ŠíUŒ‚—Í‚Q”{Œø‰Ê‘±j</FONT><br>";
+		$com2 .= "<font class=\"yellow\" size=3>$winner[27]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼ã‚ªãƒ¼ãƒ©ã®åŠ¹æœï¼ï¼ï¼ï¼ˆæ­¦å™¨æ”»æ’ƒåŠ›ï¼’å€åŠ¹æœæŒç¶šï¼‰</FONT><br>";
 	}
 }
 1;

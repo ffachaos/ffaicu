@@ -4,8 +4,8 @@ sub mons_waza{
 		$dmg2 += $item[4];
 		$hpplus2 = $dmg2;
 		$sake1 -= 999999;
-		$com2 .= "<font classr=\"dark\" size=4>ˆÃ•–‚–@ƒhƒŒƒCƒ“III</font><br>";
-		$kaihuku2 .= "$mname ‚Ì‚g‚o‚ª $hpplus2 ‰ñ•œ‚µ‚½Iô";
+		$com2 .= "<font classr=\"dark\" size=4>æš—é»’é­”æ³•ãƒ‰ãƒ¬ã‚¤ãƒ³ï¼ï¼ï¼</font><br>";
+		$kaihuku2 .= "$mname ã®ï¼¨ï¼°ãŒ $hpplus2 å›å¾©ã—ãŸï¼â™ª";
 	}
 }
 sub mons_atowaza{}

@@ -20,22 +20,22 @@ sub mons_waza{
 			$sake1 -= 999999;
 			$dmg2 += int(rand($mrand)) * 2;
 			$com2 .= <<"EOM";
-<font class=\"red\" size=5>L‚¢‘§III</font><br>
+<font class=\"red\" size=5>è‡­ã„æ¯ï¼ï¼ï¼</font><br>
 <font class =\"white\" size = 2>
-—Í‚ª<font class =\"yellow\">$charadown[7]</font>‰º‚ª‚Á‚½B<br>
-–‚—Í‚ª<font class =\"yellow\">$charadown[8]</font>‰º‚ª‚Á‚½B<br>
-M‹ÂS‚ª<font class =\"yellow\">$charadown[9]</font>‰º‚ª‚Á‚½B<br>
-¶–½—Í‚ª<font class =\"yellow\">$charadown[10]</font>‰º‚ª‚Á‚½B<br>
-Ší—p‚³‚ª<font class =\"yellow\">$charadown[11]</font>‰º‚ª‚Á‚½B<br>
-‘¬‚³‚ª<font class =\"yellow\">$charadown[12]</font>‰º‚ª‚Á‚½B<br>
-–£—Í‚ª<font class =\"yellow\">$charadown[13]</font>‰º‚ª‚Á‚½B<br>
-ƒJƒ‹ƒ}‚ª<font class =\"yellow\">$charadown[20]</font>‰º‚ª‚Á‚½B
+åŠ›ãŒ<font class =\"yellow\">$charadown[7]</font>ä¸‹ãŒã£ãŸã€‚<br>
+é­”åŠ›ãŒ<font class =\"yellow\">$charadown[8]</font>ä¸‹ãŒã£ãŸã€‚<br>
+ä¿¡ä»°å¿ƒãŒ<font class =\"yellow\">$charadown[9]</font>ä¸‹ãŒã£ãŸã€‚<br>
+ç”Ÿå‘½åŠ›ãŒ<font class =\"yellow\">$charadown[10]</font>ä¸‹ãŒã£ãŸã€‚<br>
+å™¨ç”¨ã•ãŒ<font class =\"yellow\">$charadown[11]</font>ä¸‹ãŒã£ãŸã€‚<br>
+é€Ÿã•ãŒ<font class =\"yellow\">$charadown[12]</font>ä¸‹ãŒã£ãŸã€‚<br>
+é­…åŠ›ãŒ<font class =\"yellow\">$charadown[13]</font>ä¸‹ãŒã£ãŸã€‚<br>
+ã‚«ãƒ«ãƒãŒ<font class =\"yellow\">$charadown[20]</font>ä¸‹ãŒã£ãŸã€‚
 </font><br>
 EOM
 		} else {
 			$dmg2 += int(rand($mrand)) * 10;
 			$dmg2 += $item[4];
-			$com2 .= "<font class=\"red\" size=5>L‚¢‘§III</font><br>";
+			$com2 .= "<font class=\"red\" size=5>è‡­ã„æ¯ï¼ï¼ï¼</font><br>";
 		}
 	}
 }

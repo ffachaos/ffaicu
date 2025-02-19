@@ -2,10 +2,10 @@ sub whissatu{
 	if ($wwaza_ritu > int(rand(120))) {
 	if (int(rand(3)) == 0) {
 		$dmg2 = $khp_flg;
-		$com2 .= "<font class=\"white\" size=6><i>aE“SEŒ•II</i></FONT><br>";
+		$com2 .= "<font class=\"white\" size=6><i>æ–¬ãƒ»é‰„ãƒ»å‰£ï¼ï¼</i></FONT><br>";
 	}
 else{
-		$com2 .= "<font class=\"white\"><i>aE“SEŒ•II¸”sII</i></font><br>";
+		$com2 .= "<font class=\"white\"><i>æ–¬ãƒ»é‰„ãƒ»å‰£ï¼ï¼å¤±æ•—ï¼ï¼</i></font><br>";
 	}
 }}
 sub watowaza{}

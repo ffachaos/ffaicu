@@ -2,7 +2,7 @@ sub hissatu{
 	if ($waza_ritu > int(rand(80))) {
 		$sake2 -= 999999;
 		$dmg1 = ($chara[8] + $chara[33]) * int(rand(100));
-		$com1 .="<font class=\"red\" size=4>Œ¶bƒCƒtƒŠ[ƒg‚ğ¢ŠÒII’n–‚Ì‰Î‰ŠII</font><br>";
+		$com1 .="<font class=\"red\" size=4>å¹»ç£ã‚¤ãƒ•ãƒªãƒ¼ãƒˆã‚’å¬é‚„ï¼ï¼åœ°ç„ã®ç«ç‚ï¼ï¼</font><br>";
 	}
 }
 sub atowaza{}

@@ -1,48 +1,48 @@
 #!/usr/local/bin/perl
 
 #------------------------------------------------------#
-#�@�{�X�N���v�g�̒��쌠�͂����ɂ���܂��B
-#�����Ȃ闝�R�������Ă����̕\�L���폜���邱�Ƃ͂ł��܂���
-#�ᔽ�𔭌������ꍇ�A�X�N���v�g�̗��p���~���Ă�������
-#�����łȂ��A�R��ׂ����u�������Ă��������܂��B
-#  FF ADVENTURE(������)
-#�@edit by ����
-#�@http://www.eriicu.com
-#�@icu@kcc.zaq.ne.jp
+#　本スクリプトの著作権はいくにあります。
+#いかなる理由があってもこの表記を削除することはできません
+#違反を発見した場合、スクリプトの利用を停止していただく
+#だけでなく、然るべき処置をさせていただきます。
+#  FF ADVENTURE(いく改)
+#　edit by いく
+#　http://www.eriicu.com
+#　icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
 
-#--- [���ӎ���] ------------------------------------------------#
-# 1. ���̃X�N���v�g�̓t���[�\�t�g�ł��B���̃X�N���v�g���g�p����	#
-#    �����Ȃ鑹�Q�ɑ΂��č�҂͈�؂̐ӔC�𕉂��܂���B		#
-# 2. �ݒu�Ɋւ��鎿��̓T�|�[�g�f���ɂ��肢�������܂��B	#
-#    ���ڃ��[���ɂ�鎿��͈�؂��󂯂������Ă���܂���B	#
+#--- [注意事項] ------------------------------------------------#
+# 1. このスクリプトはフリーソフトです。このスクリプトを使用した	#
+#    いかなる損害に対して作者は一切の責任を負いません。		#
+# 2. 設置に関する質問はサポート掲示板にお願いいたします。	#
+#    直接メールによる質問は一切お受けいたしておりません。	#
 #    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi             #
 #---------------------------------------------------------------#
 
-# ���{�ꃉ�C�u�����̓ǂݍ���
+# 日本語ライブラリの読み込み
 require 'jcode.pl';
 
-# ���W�X�g���C�u�����̓ǂݍ���
+# レジストライブラリの読み込み
 require 'regist.pl';
 
-# �����ݒ�t�@�C���̓ǂݍ���
+# 初期設定ファイルの読み込み
 require 'data/ffadventure.ini';
 
-# ���̃t�@�C���p�ݒ�
+# このファイル用設定
 $backgif = $sts_back;
 $midi = $sts_midi;
 
 #================================================================#
-#����������������������������������������������������������������#
-#�� �����艺��CGI�Ɏ��M�̂�����ȊO�͈���Ȃ��ق�������ł��@��#
-#����������������������������������������������������������������#
+#┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓#
+#┃ これより下はCGIに自信のある方以外は扱わないほうが無難です　┃#
+#┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛#
 #================================================================#
 
 #--------------#
-#�@���C�������@#
+#　メイン処理　#
 #--------------#
 if ($mente) {
-	&error("�o�[�W�����A�b�v���ł��B�Q�A�R�O�b�قǂ��҂��������Bm(_ _)m");
+	&error("バージョンアップ中です。２、３０秒ほどお待ち下さい。m(_ _)m");
 }
 
 &decode;
@@ -52,14 +52,14 @@ if ($mente) {
 <form action="$script_pass" method="post">
 <input type=hidden name=id value="$in{'id'}">
 <input type="hidden" name="mydata" value="$in{'mydata'}">
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
-#�h�o�A�h���X�ŃA�N�Z�X����
+#ＩＰアドレスでアクセス制限
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
-	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("�A�N�Z�X�ł��܂���I�I");}
+	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("アクセスできません！！");}
 }
 
 if ($mode) { &$mode; }
@@ -68,7 +68,7 @@ if ($mode) { &$mode; }
 exit;
 
 #-----------------#
-#�@�@�p�X�ύX�@   #
+#　　パス変更　   #
 #-----------------#
 sub namechange {
 
@@ -76,7 +76,7 @@ sub namechange {
 
 	&chara_check;
 
-	if ($chara[0] eq 'test') {&error('�e�X�g�L�����͕ύX�ł��܂���');}
+	if ($chara[0] eq 'test') {&error('テストキャラは変更できません');}
 
 	$phit = 0;
 	open(IN,"./$pass_folder/$chara[0].cgi") || ($phit = 1);
@@ -90,43 +90,43 @@ sub namechange {
 	&header;
 
 	print <<"EOM";
-<h1>�p�X���[�h�ύX��</h1>
+<h1>パスワード変更所</h1>
 <hr size=0>
 <FONT SIZE=3>
 EOM
 	if (!$phit) {
 	print <<"EOM";
-<B>�p�X���[�h�ύX�l</B><BR>
-�u�N�̃p�X���[�h��ύX���Ă����悤�B<br>�p�X���[�h��ύX����ɂ͕ύX�p�P�ꂪ�K�v�����I<br>������Ɗo���Ă��邩�H�ԈႢ������Ƃ��炢�ڂɉ����C������񂾂ȁB�v
+<B>パスワード変更人</B><BR>
+「君のパスワードを変更してあげよう。<br>パスワードを変更するには変更用単語が必要だぞ！<br>きちんと覚えているか？間違いすぎるとえらい目に会うから気をつけるんだな。」
 </FONT><BR><BR>
-<font size=4>���Ȃ��̃p�X���[�h�ύX�́A�O��$gettime��$phost�ɂ���Đݒ肳��܂����B(�������́A�p�X���[�h�ύX�p�ݒ�����̎��ɂ���܂����B)</font><br>
+<font size=4>あなたのパスワード変更は、前回$gettimeに$phostによって設定されました。(もしくは、パスワード変更用設定をその時にされました。)</font><br>
 <form action="$script_pass" method="post">
 <table><tr><td>
 <input type=hidden name=mode value=passchan>
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=password name=pass size=10></td><td>�p�X���[�h�m�F����</td></tr>
-<tr><td><input type=text name=passchange size=20></td><td>�p�X���[�h�ύX�p�P��</td></tr>
-<tr><td><input type=password name=npass size=10></td><td>�V�����p�X���[�h�i�K������������ĖY��Ȃ��悤�ɂ��ĉ������B���p�łS�`�W�����j</td></tr>
-<tr><td><input type=password name=nkpass size=10></td><td>�V�����p�X���[�h�̊m�F����</td></tr>
+<input type=password name=pass size=10></td><td>パスワード確認入力</td></tr>
+<tr><td><input type=text name=passchange size=20></td><td>パスワード変更用単語</td></tr>
+<tr><td><input type=password name=npass size=10></td><td>新しいパスワード（必ずメモを取って忘れないようにして下さい。半角で４～８文字）</td></tr>
+<tr><td><input type=password name=nkpass size=10></td><td>新しいパスワードの確認入力</td></tr>
 </table>
-<input type=submit class=btn value="�p�X���[�h�ύX">
+<input type=submit class=btn value="パスワード変更">
 </form>
 EOM
 	} else {
 		print <<"EOM";
-<B>�p�X���[�h�ύX�l</B><BR>
-�u�N�̃p�X���[�h��ύX���邽�߂̒P���ݒ肵�Ă����悤�B<br>��x�ݒ肵�Ă��܂��Ɠ�x�ƕύX���ł��Ȃ��̂Œ��ӂ��K�v���I<br>�i�V�K�o�^���ɓo�^���Ă����l�͂�����Ɠo�^����Ă��܂���ł����B�\\����Ȃ��ł����A������x�ݒ肨�肢���܂��B�j�v
+<B>パスワード変更人</B><BR>
+「君のパスワードを変更するための単語を設定してあげよう。<br>一度設定してしまうと二度と変更ができないので注意が必要だ！<br>（新規登録時に登録していた人はきちんと登録されていませんでした。申\し訳ないですが、もう一度設定お願いします。）」
 </FONT><BR><BR>
 <form action="$script_pass" method="post">
 <table><tr><td>
 <input type=hidden name=mode value=$pass_folder>
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=password name=pass size=10></td><td>�p�X���[�h�m�F����</td></tr>
-<tr><td><input type=text name=$pass_folder size=20></td><td>�p�X���[�h�ύX�p�P��i�K������������ĖY��Ȃ��悤�ɂ��ĉ������B�S�p��4�����`10�����j</td></tr>
+<input type=password name=pass size=10></td><td>パスワード確認入力</td></tr>
+<tr><td><input type=text name=$pass_folder size=20></td><td>パスワード変更用単語（必ずメモを取って忘れないようにして下さい。全角で4文字～10文字）</td></tr>
 </table>
-<input type=submit class=btn value="�p�X���[�h�ύX�p�P��ݒ�">
+<input type=submit class=btn value="パスワード変更用単語設定">
 </form>
 EOM
 	}
@@ -135,7 +135,7 @@ EOM
 <form action="$script" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="�X�e�[�^�X��ʂ�">
+<input type=submit class=btn value="ステータス画面へ">
 </form>
 EOM
 
@@ -145,7 +145,7 @@ EOM
 }
 
 #-----------------#
-#�@�@�ύX�p�ݒ�   #
+#　　変更用設定   #
 #-----------------#
 sub passchange {
 
@@ -154,11 +154,11 @@ sub passchange {
 	&chara_check;
 
 	if ($in{'pass'} ne $chara[1]) {
-		&error("�p�X���[�h���Ⴂ�܂��I�I$back_form");
+		&error("パスワードが違います！！$back_form");
 	}
 
 	if ( -e "./$pass_folder/$chara[0].cgi") {
-		&error("���łɐݒ肳��Ă��܂��I$back_form");
+		&error("すでに設定されています！$back_form");
 	}
 
 	&get_host;
@@ -175,13 +175,13 @@ sub passchange {
 	&header;
 
 	print <<"EOM";
-<h1>�p�X���[�h�ύX�p�P��̐ݒ�����܂����B</h1><hr>
-<br>�p�X���[�h�ύX�p�P��́u<font color=white size=5>$in{'passchange'}</font>�v�͕K���Y��Ȃ��悤�ɂ��ĉ������B
+<h1>パスワード変更用単語の設定をしました。</h1><hr>
+<br>パスワード変更用単語の「<font color=white size=5>$in{'passchange'}</font>」は必ず忘れないようにして下さい。
 $back_form
 <form action="$script" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="�X�e�[�^�X��ʂ�">
+<input type=submit class=btn value="ステータス画面へ">
 </form>
 EOM
 	&footer;
@@ -190,7 +190,7 @@ EOM
 }
 
 #-----------------#
-#�@�@�ύX�p�ݒ�   #
+#　　変更用設定   #
 #-----------------#
 sub passchan {
 
@@ -201,19 +201,19 @@ sub passchan {
 	&chara_check;
 
 	if ($in{'pass'} ne $chara[1]) {
-		&error("�p�X���[�h���Ⴂ�܂��I$back_form"); 
+		&error("パスワードが違います！$back_form"); 
 	}
 	if($in{'passchange'} eq "") {
-		&error("�p�X���[�h�ύX�p�P�ꂪ���͂���Ă��܂���I$back_form"); 
+		&error("パスワード変更用単語が入力されていません！$back_form"); 
 	}
 	elsif($in{'npass'} eq "") {
-		&error("�V�����p�X���[�h�����͂���Ă��܂���I$back_form"); 
+		&error("新しいパスワードが入力されていません！$back_form"); 
 	}
 	elsif($in{'npass'} ne "$in{'nkpass'}") {
-		&error("�p�X���[�h�m�F���͂��Ԉ���Ă��܂��I$back_form");
+		&error("パスワード確認入力が間違っています！$back_form");
 	}
 	elsif(length($in{'npass'})<4 || length($in{'npass'})>8) {
-		&error("�p�X���[�h�͂S�`�W�����Őݒ肵�Ă��������I$back_form");
+		&error("パスワードは４～８文字で設定してください！$back_form");
 	}
 
 	$lock_file = "$lockfolder/passc$in{'id'}.lock";
@@ -226,7 +226,7 @@ sub passchan {
 	($ppass,$ptan,$ptime,$phost)=split(/<>/,$item_new[0]);
 
 	if ($ptan ne $in{'passchange'}) {
-		&error("�p�X���[�h�E�p�X���[�h�ݒ�p�P�ꂪ�Ⴂ�܂��I�I"); 
+		&error("パスワード・パスワード設定用単語が違います！！"); 
 	}
 
 	&get_host;
@@ -249,11 +249,11 @@ sub passchan {
 	&header;
 
 	print <<"EOM";
-<h1>�p�X���[�h��ύX���܂����B</h1><hr>
+<h1>パスワードを変更しました。</h1><hr>
 <form action="$script" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$new_chara">
-<input type=submit class=btn value="�X�e�[�^�X��ʂ�">
+<input type=submit class=btn value="ステータス画面へ">
 </form>
 EOM
 

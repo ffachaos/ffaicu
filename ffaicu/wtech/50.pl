@@ -3,7 +3,7 @@ sub whissatu{
 	if (int(rand(3)) == 0) {
 		$dmg2 = $khp_flg;
 		$sake1 -= 999999;
-		$com2 .= "<font color=red>‹}Š‚É‘_‚¢‚ğ’è‚ß‚½II</FONT><br>";
+		$com2 .= "<font color=red>æ€¥æ‰€ã«ç‹™ã„ã‚’å®šã‚ãŸï¼ï¼</FONT><br>";
 	}
 }}
 sub watowaza{}

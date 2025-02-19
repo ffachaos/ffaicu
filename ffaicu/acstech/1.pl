@@ -1,5 +1,5 @@
 sub acskouka{
 	$hpplus1 += int($chara[20] * rand(10));
-	$com1 .= "<font class=\"white\" size=5>$item[6]‚ªŒõ‚ğ•ú‚ÂII$chara[4] ‚Ì‚g‚o‚ª $hpplus1 ‰ñ•œô</font><br>";
+	$com1 .= "<font class=\"white\" size=5>$item[6]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼$chara[4] ã®ï¼¨ï¼°ãŒ $hpplus1 å›å¾©â™ª</font><br>";
 }
 1;

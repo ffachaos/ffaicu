@@ -1,6 +1,6 @@
 sub wacskouka{
 	if ($whp_flg < $dmg1) {
-		$com2 .= "<font class=\"green\" size=3>$winner[27]‚ÍŒõ‚ç‚È‚©‚Á‚½BBB</FONT><br>";
+		$com2 .= "<font class=\"green\" size=3>$winner[27]ã¯å…‰ã‚‰ãªã‹ã£ãŸã€‚ã€‚ã€‚</FONT><br>";
 	}
 }
 1;

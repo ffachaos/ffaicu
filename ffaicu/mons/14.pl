@@ -2,7 +2,7 @@ sub mons_waza{
 	if ($mons_ritu > int(rand(100))) {
 		$tgold = int(rand($chara[19] /7));
 		$gold -= $tgold;
-		$com2 .= "<font class=\"red\">‚¨‹à‚ğ“‚Ü‚ê‚½II$tgold‚fƒ}ƒCƒiƒXII</font><br>";
+		$com2 .= "<font class=\"red\">ãŠé‡‘ã‚’ç›—ã¾ã‚ŒãŸï¼ï¼$tgoldï¼§ãƒã‚¤ãƒŠã‚¹ï¼ï¼</font><br>";
 	}
 }
 sub mons_atowaza{}

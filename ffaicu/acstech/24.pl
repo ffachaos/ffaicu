@@ -3,7 +3,7 @@ sub acskouka{
 		if (int(rand(4))==0) {
 			$dmg1 = $dmg1 * 10;
 			$sake2 -= 999999;
-			$com1 .= "<font class=\"green\" size=3>$item[6]‚ªŒõ‚ğ•ú‚ÂII$winner[27]‚É••‚¶‚ß‚ê‚ê‚½—Í‚ğ‰ğ•úII</font><br>";
+			$com1 .= "<font class=\"green\" size=3>$item[6]ãŒå…‰ã‚’æ”¾ã¤ï¼ï¼$winner[27]ã«å°ã˜è¾¼ã‚ã‚Œã‚ŒãŸåŠ›ã‚’è§£æ”¾ï¼ï¼</font><br>";
 		}
 	}
 }

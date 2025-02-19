@@ -1,7 +1,7 @@
 sub whissatu{
 	if ($wwaza_ritu > int(rand(80))) {
 		$winner[22] = $winner[22] * 2;
-		$com2 .= "<font class=\"yellow\" size=5>ŒÃ‘ã–‚–@ƒI[ƒ‰IIIi•ŠíUŒ‚—Í‚Q”{Œø‰Ê‘±j</FONT><br>";
+		$com2 .= "<font class=\"yellow\" size=5>å¤ä»£é­”æ³•ã‚ªãƒ¼ãƒ©ï¼ï¼ï¼ï¼ˆæ­¦å™¨æ”»æ’ƒåŠ›ï¼’å€åŠ¹æœæŒç¶šï¼‰</FONT><br>";
 	}
 }
 sub watowaza{}

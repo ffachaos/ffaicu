@@ -1,56 +1,56 @@
 #!/usr/local/bin/perl
 
 #------------------------------------------------------#
-#@–{ƒXƒNƒŠƒvƒg‚Ì’˜ìŒ ‚Í‰º‹L‚Ì3l‚É‚ ‚è‚Ü‚·B
-#‚¢‚©‚È‚é——R‚ª‚ ‚Á‚Ä‚à‚±‚Ì•\‹L‚ğíœ‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñ
-#ˆá”½‚ğ”­Œ©‚µ‚½ê‡AƒXƒNƒŠƒvƒg‚Ì—˜—p‚ğ’â~‚µ‚Ä‚¢‚½‚¾‚­
-#‚¾‚¯‚Å‚È‚­A‘R‚é‚×‚«ˆ’u‚ğ‚³‚¹‚Ä‚¢‚½‚¾‚«‚Ü‚·B
-#@FF ADVENTURE ‰üi v2.1
-#@programed by jun-k
-#@http://www5b.biglobe.ne.jp/~jun-kei/
-#@jun-kei@vanilla.freemail.ne.jp
+#ã€€æœ¬ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®è‘—ä½œæ¨©ã¯ä¸‹è¨˜ã®3äººã«ã‚ã‚Šã¾ã™ã€‚
+#ã„ã‹ãªã‚‹ç†ç”±ãŒã‚ã£ã¦ã‚‚ã“ã®è¡¨è¨˜ã‚’å‰Šé™¤ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“
+#é•åã‚’ç™ºè¦‹ã—ãŸå ´åˆã€ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®åˆ©ç”¨ã‚’åœæ­¢ã—ã¦ã„ãŸã ã
+#ã ã‘ã§ãªãã€ç„¶ã‚‹ã¹ãå‡¦ç½®ã‚’ã•ã›ã¦ã„ãŸã ãã¾ã™ã€‚
+#ã€€FF ADVENTURE æ”¹i v2.1
+#ã€€programed by jun-k
+#ã€€http://www5b.biglobe.ne.jp/~jun-kei/
+#ã€€jun-kei@vanilla.freemail.ne.jp
 #------------------------------------------------------#
-#@FF ADVENTURE v0.21
-#@programed by CUMRO
-#@http://cgi.members.interq.or.jp/sun/cumro/mm/
-#@cumro@sun.interq.or.jp
+#ã€€FF ADVENTURE v0.21
+#ã€€programed by CUMRO
+#ã€€http://cgi.members.interq.or.jp/sun/cumro/mm/
+#ã€€cumro@sun.interq.or.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(‰ü) v1.021
+#  FF ADVENTURE(æ”¹) v1.021
 #  remodeling by GUN
 #  http://www2.to/meeting/
 #  gun24@j-club.ne.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(‚¢‚­‰ü)
-#@remodeling by ‚¢‚­
-#@http://www.eriicu.com
-#@icu@kcc.zaq.ne.jp
+#  FF ADVENTURE(ã„ãæ”¹)
+#ã€€remodeling by ã„ã
+#ã€€http://www.eriicu.com
+#ã€€icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
-#--- [’ˆÓ–€] ------------------------------------------------#
-# 1. ‚±‚ÌƒXƒNƒŠƒvƒg‚ÍƒtƒŠ[ƒ\ƒtƒg‚Å‚·B‚±‚ÌƒXƒNƒŠƒvƒg‚ğg—p‚µ‚½ #
-#    ‚¢‚©‚È‚é‘¹ŠQ‚É‘Î‚µ‚ÄìÒ‚ÍˆêØ‚ÌÓ”C‚ğ•‰‚¢‚Ü‚¹‚ñB     	#
-# 2. İ’u‚ÉŠÖ‚·‚é¿–â‚ÍƒTƒ|[ƒgŒf¦”Â‚É‚¨Šè‚¢‚¢‚½‚µ‚Ü‚·B   	#
+#--- [æ³¨æ„äº‹é …] ------------------------------------------------#
+# 1. ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã§ã™ã€‚ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ä½¿ç”¨ã—ãŸ #
+#    ã„ã‹ãªã‚‹æå®³ã«å¯¾ã—ã¦ä½œè€…ã¯ä¸€åˆ‡ã®è²¬ä»»ã‚’è² ã„ã¾ã›ã‚“ã€‚     	#
+# 2. è¨­ç½®ã«é–¢ã™ã‚‹è³ªå•ã¯ã‚µãƒãƒ¼ãƒˆæ²ç¤ºæ¿ã«ãŠé¡˜ã„ã„ãŸã—ã¾ã™ã€‚   	#
 #    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi             #
-#    ’¼Úƒ[ƒ‹‚É‚æ‚é¿–â‚ÍˆêØ‚¨ó‚¯‚¢‚½‚µ‚Ä‚¨‚è‚Ü‚¹‚ñB   	#
+#    ç›´æ¥ãƒ¡ãƒ¼ãƒ«ã«ã‚ˆã‚‹è³ªå•ã¯ä¸€åˆ‡ãŠå—ã‘ã„ãŸã—ã¦ãŠã‚Šã¾ã›ã‚“ã€‚   	#
 #---------------------------------------------------------------#
-# “ú–{Œêƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
+# æ—¥æœ¬èªãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
 require 'jcode.pl';
 
-# ƒŒƒWƒXƒgƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
+# ãƒ¬ã‚¸ã‚¹ãƒˆãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
 require 'regist.pl';
 
-# ‰Šúİ’èƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ
+# åˆæœŸè¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿
 require 'data/ffadventure.ini';
 
-# ‚±‚Ìƒtƒ@ƒCƒ‹—pİ’è
+# ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ç”¨è¨­å®š
 $backgif = $sts_back;
 $midi = $sts_midi;
 
-# [İ’è‚Í‚±‚±‚Ü‚Å]------------------------------------------------------------#
+# [è¨­å®šã¯ã“ã“ã¾ã§]------------------------------------------------------------#
 
-# ‚±‚ê‚æ‚è‰º‚ÍACGI‚Ì‚í‚©‚é•ûˆÈŠO‚ÍA•ÏX‚µ‚È‚¢‚Ù‚¤‚ª—Ç‚¢‚Å‚·B
+# ã“ã‚Œã‚ˆã‚Šä¸‹ã¯ã€CGIã®ã‚ã‹ã‚‹æ–¹ä»¥å¤–ã¯ã€å¤‰æ›´ã—ãªã„ã»ã†ãŒè‰¯ã„ã§ã™ã€‚
 
 #-----------------------------------------------------------------------------#
-if($mente) { &error("Œ»İƒo[ƒWƒ‡ƒ“ƒAƒbƒv’†‚Å‚·B‚µ‚Î‚ç‚­‚¨‘Ò‚¿‚­‚¾‚³‚¢B"); }
+if($mente) { &error("ç¾åœ¨ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—ä¸­ã§ã™ã€‚ã—ã°ã‚‰ããŠå¾…ã¡ãã ã•ã„ã€‚"); }
 &decode;
 
 	$back_form = << "EOM";
@@ -59,14 +59,14 @@ if($mente) { &error("Œ»İƒo[ƒWƒ‡ƒ“ƒAƒbƒv’†‚Å‚·B‚µ‚Î‚ç‚­‚¨‘Ò‚¿‚­‚¾‚³‚¢B"); }
 <input type=hidden name=id value="$in{'id'}">
 <input type="hidden" name="mydata" value="$in{'mydata'}">
 <input type=hidden name=mode value="log_in">
-<input type=submit class=btn value="–ß‚é">
+<input type=submit class=btn value="æˆ»ã‚‹">
 </form>
 EOM
 
-#‚h‚oƒAƒhƒŒƒX‚ÅƒAƒNƒZƒX§ŒÀ
+#ï¼©ï¼°ã‚¢ãƒ‰ãƒ¬ã‚¹ã§ã‚¢ã‚¯ã‚»ã‚¹åˆ¶é™
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
-	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("ƒAƒNƒZƒX‚Å‚«‚Ü‚¹‚ñII");}
+	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {&error("ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã›ã‚“ï¼ï¼");}
 }
 
 if($mode) { &$mode; }
@@ -76,7 +76,7 @@ if($mode) { &$mode; }
 exit;
 
 #----------------#
-#  íp•\¦      #
+#  æˆ¦è¡“è¡¨ç¤º      #
 #----------------#
 sub senjutu {
 
@@ -85,9 +85,9 @@ sub senjutu {
 	&chara_check;
 
 	$hit=0;
-	@log_senjutu = "0<>•’Ê‚Éí‚¤<>íp‚ğg—p‚¹‚¸‚Éí‚¢‚Ü‚·<>0<>\n";
+	@log_senjutu = "0<>æ™®é€šã«æˆ¦ã†<>æˆ¦è¡“ã‚’ä½¿ç”¨ã›ãšã«æˆ¦ã„ã¾ã™<>0<>\n";
 
-	# Œ»İ‚ÌE‹Æ‚Ìíp‚Ì‚İ
+	# ç¾åœ¨ã®è·æ¥­ã®æˆ¦è¡“ã®ã¿
 	open(IN,"$tac_folder/tac$chara[14].ini");
 	@gettac = <IN>;
 	close(IN);
@@ -103,7 +103,7 @@ sub senjutu {
 		}
 	}
 
-	#ƒ}ƒXƒ^[‚µ‚½íp‚ÌƒCƒ“ƒNƒ‹[ƒh
+	#ãƒã‚¹ã‚¿ãƒ¼ã—ãŸæˆ¦è¡“ã®ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰
 	if ($master_tac) {
 		&syoku_load;
 		$i = 0;
@@ -127,21 +127,21 @@ sub senjutu {
 	}
 
 	if(!$hit) {
-		$now_tac = "•’Ê‚Éí‚¤";
-		$now_tac_ex = "íp‚ğg—p‚¹‚¸‚Éí‚¢‚Ü‚·";
+		$now_tac = "æ™®é€šã«æˆ¦ã†";
+		$now_tac_ex = "æˆ¦è¡“ã‚’ä½¿ç”¨ã›ãšã«æˆ¦ã„ã¾ã™";
 	}
 
 	&header;
 
 	print <<"EOM";
-<h1>ìí‰ï‹cº</h1>
+<h1>ä½œæˆ¦ä¼šè­°å®¤</h1>
 <hr size=0>
 <BR>
 <form action="$scripts" method="post">
 <table>
 <tr>
-<th colspan=2>íp</th>
-<tr><td class=b1>Œ»İ‚Ìíp</td><td class=b1>$now_tac</td><td class=b1>$now_tac_ex</td>
+<th colspan=2>æˆ¦è¡“</th>
+<tr><td class=b1>ç¾åœ¨ã®æˆ¦è¡“</td><td class=b1>$now_tac</td><td class=b1>$now_tac_ex</td>
 </tr>
 EOM
 
@@ -158,12 +158,12 @@ EOM
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
 <input type=hidden name=mode value=senjutu_henkou>
-<input type=submit class=btn value="•ÏX‚·‚é">
+<input type=submit class=btn value="å¤‰æ›´ã™ã‚‹">
 </form>
 <form action="$script" method="post">
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 
@@ -173,7 +173,7 @@ EOM
 }
 
 #----------------#
-#  íp•ÏX      #
+#  æˆ¦è¡“å¤‰æ›´      #
 #----------------#
 sub senjutu_henkou {
 
@@ -183,20 +183,20 @@ sub senjutu_henkou {
 
 	&chara_check;
 
-	@log_senjutu = "0<>•’Ê‚Éí‚¤<>0<>0<>\n";
+	@log_senjutu = "0<>æ™®é€šã«æˆ¦ã†<>0<>0<>\n";
 
 	open(IN,"$tac_folder/tac$chara[14].ini");
 	@gettac = <IN>;
 	close(IN);
 	foreach (@gettac){
 		($ks_no,$ks_name,$ks_plus,$ks_ms) = split(/<>/);
-		# 2004”N7Œ7“úC³
+		# 2004å¹´7æœˆ7æ—¥ä¿®æ­£
 		if(!$ks_ms || ($ks_ms && $chara[33] >= 60)){
 			push(@log_senjutu,"$_");
 		}
 	}
 
-	#ƒ}ƒXƒ^[‚µ‚½íp‚ÌƒCƒ“ƒNƒ‹[ƒh
+	#ãƒã‚¹ã‚¿ãƒ¼ã—ãŸæˆ¦è¡“ã®ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰
 	if ($master_tac) {
 		&syoku_load;
 		$i = 0;
@@ -224,7 +224,7 @@ sub senjutu_henkou {
 		if($in{'senjutu_no'} eq "$s_no") { $hit=1;last; }
 	}
 
-	if(!$hit) { &error("‚»‚ñ‚Èíp‚Í‚ ‚è‚Ü‚¹‚ñ"); }
+	if(!$hit) { &error("ãã‚“ãªæˆ¦è¡“ã¯ã‚ã‚Šã¾ã›ã‚“"); }
 
 	&get_host;
 
@@ -236,12 +236,12 @@ sub senjutu_henkou {
 	&header;
 
 	print <<"EOM";
-<h1>íp‚ğ$s_name‚É•ÏX‚µ‚Ü‚µ‚½</h1>
+<h1>æˆ¦è¡“ã‚’$s_nameã«å¤‰æ›´ã—ã¾ã—ãŸ</h1>
 <hr size=0>
 <form action="$script" method="post">
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$new_chara">
-<input type=submit class=btn value="ƒXƒe[ƒ^ƒX‰æ–Ê‚Ö">
+<input type=submit class=btn value="ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢ã¸">
 </form>
 EOM
 

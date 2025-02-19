@@ -2,7 +2,7 @@ sub hissatu{
 	if ($waza_ritu > int(rand(120))) {
 		if (int(rand(3)) == 0) {
 			$dmg1 = int($mhp / 3) + int($whp_flg / 3);
-			$com1 .="<font class=\"blue\" size=4>Œ¶bƒfƒBƒAƒ{ƒƒX‚ğ¢ŠÒIIƒOƒ‰ƒrƒKII</font><br>";
+			$com1 .="<font class=\"blue\" size=4>å¹»ç£ãƒ‡ã‚£ã‚¢ãƒœãƒ­ã‚¹ã‚’å¬é‚„ï¼ï¼ã‚°ãƒ©ãƒ“ã‚¬ï¼ï¼</font><br>";
 		}
 	}
 }

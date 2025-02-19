@@ -1,82 +1,82 @@
 #!/usr/local/bin/perl
 
 #------------------------------------------------------#
-#�@�{�X�N���v�g�̒��쌠�͉��L��4�l�ɂ���܂��B
-#�����Ȃ闝�R�������Ă����̕\�L���폜���邱�Ƃ͂ł��܂���
-#�ᔽ�𔭌������ꍇ�A�X�N���v�g�̗��p���~���Ă�������
-#�����łȂ��A�R��ׂ����u�������Ă��������܂��B
-#  FF ADVENTURE(������)
-#�@remodeling by ����
-#�@http://www.eriicu.com
-#�@icu@kcc.zaq.ne.jp
+#　本スクリプトの著作権は下記の4人にあります。
+#いかなる理由があってもこの表記を削除することはできません
+#違反を発見した場合、スクリプトの利用を停止していただく
+#だけでなく、然るべき処置をさせていただきます。
+#  FF ADVENTURE(いく改)
+#　remodeling by いく
+#　http://www.eriicu.com
+#　icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
-#�@FF ADVENTURE ��i v2.1
-#�@programed by jun-k
-#�@http://www5b.biglobe.ne.jp/~jun-kei/
-#�@jun-kei@vanilla.freemail.ne.jp
+#　FF ADVENTURE 改i v2.1
+#　programed by jun-k
+#　http://www5b.biglobe.ne.jp/~jun-kei/
+#　jun-kei@vanilla.freemail.ne.jp
 #------------------------------------------------------#
-#�@FF ADVENTURE v0.21
-#�@programed by CUMRO
-#�@http://cgi.members.interq.or.jp/sun/cumro/mm/
-#�@cumro@sun.interq.or.jp
+#　FF ADVENTURE v0.21
+#　programed by CUMRO
+#　http://cgi.members.interq.or.jp/sun/cumro/mm/
+#　cumro@sun.interq.or.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(��) v1.021
+#  FF ADVENTURE(改) v1.021
 #  remodeling by GUN
 #  http://www2.to/meeting/
 #  gun24@j-club.ne.jp
 #------------------------------------------------------#
 
-#--- [���ӎ���] ------------------------------------------------#
-# 1. ���̃X�N���v�g�̓t���[�\�t�g�ł��B���̃X�N���v�g���g�p����	#
-#    �����Ȃ鑹�Q�ɑ΂��č�҂͈�؂̐ӔC�𕉂��܂���B		#
-# 2. �ݒu�Ɋւ��鎿��̓T�|�[�g�f���ɂ��肢�������܂��B	#
-#    ���ڃ��[���ɂ�鎿��͈�؂��󂯂������Ă���܂���B	#
-# 3. �ݒu������F����Ɋy����ł��炤�ׂɂ��AWeb�����O�ւ��ЎQ��#
-#    ���Ă�������m(__)m						#
-#    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi�@		#
+#--- [注意事項] ------------------------------------------------#
+# 1. このスクリプトはフリーソフトです。このスクリプトを使用した	#
+#    いかなる損害に対して作者は一切の責任を負いません。		#
+# 2. 設置に関する質問はサポート掲示板にお願いいたします。	#
+#    直接メールによる質問は一切お受けいたしておりません。	#
+# 3. 設置したら皆さんに楽しんでもらう為にも、Webリングへぜひ参加#
+#    してくださいm(__)m						#
+#    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi　		#
 #---------------------------------------------------------------#
 
-# ���{�ꃉ�C�u�����̓ǂݍ���
+# 日本語ライブラリの読み込み
 require 'jcode.pl';
 
-# ���W�X�g���C�u�����̓ǂݍ���
+# レジストライブラリの読み込み
 require 'regist.pl';
 
-# ���W�X�g���C�u�����̓ǂݍ���
+# レジストライブラリの読み込み
 require 'sankasya.pl';
 
-# �����ݒ�t�@�C���̓ǂݍ���
+# 初期設定ファイルの読み込み
 require 'data/ffadventure.ini';
 
-# ���̃t�@�C���p�ݒ�
+# このファイル用設定
 $backgif = $sts_back;
 $midi = $sts_midi;
 #================================================================#
-#����������������������������������������������������������������#
-#�� �����艺��CGI�Ɏ��M�̂�����ȊO�͈���Ȃ��ق�������ł��@��#
-#����������������������������������������������������������������#
+#┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓#
+#┃ これより下はCGIに自信のある方以外は扱わないほうが無難です　┃#
+#┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛#
 #================================================================#
 
 #--------------#
-#�@���C�������@#
+#　メイン処理　#
 #--------------#
 if ($mente) {
-	&error("�o�[�W�����A�b�v���ł��B�Q�A�R�O�b�قǂ��҂��������Bm(_ _)m"); 
+	&error("バージョンアップ中です。２、３０秒ほどお待ち下さい。m(_ _)m"); 
 }
 &decode;
 
-#�h�o�A�h���X�ŃA�N�Z�X����
+#ＩＰアドレスでアクセス制限
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
 	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {
-		&error("�A�N�Z�X�ł��܂���I�I");
+		&error("アクセスできません！！");
 	}
 }
 
 &log_in;
 
 #----------------#
-#  ���O�C�����  #
+#  ログイン画面  #
 #----------------#
 sub log_in {
 
@@ -101,13 +101,13 @@ sub log_in {
 
 	&class;
 
-	if($chara[5]) { $esex = "�j"; } else { $esex = "��"; }
+	if($chara[5]) { $esex = "男"; } else { $esex = "女"; }
 	$next_ex = $chara[18] * $lv_up;
 
         if(!$chara[32]){$chara[32] = 0;}
 	$syou = @shogo[$chara[32]];
 
-        #�h��v�Z
+        #宿代計算
         $yado_daix=int($yado_dai*$chara[18]);
 
 	&header;
@@ -118,12 +118,12 @@ sub log_in {
 
        print <<"EOM";
 	<hr size=0>
-	<font class=white>���j���[/</font><a href="$scripta?mode=ranking">�o�^�҈ꗗ</a> / <a href="$ranking">�\\�͕ʃ����L���O��</a> / <a href="$syoku_html" target="_blank">�e�E�ƂɕK�v�ȓ����l</a> /<a href="$img_all_list" target="_blank">$vote_gazou</a> /<a href="$bbs" target="_blank">$bbs_title</a> /<a href="$helptext" target="_blank">$helptext_url</a><br>
-<font class=white>���̊O��/</font><a href="$sbbs" target="_blank">$sbbs_title</a> / <a href="$vote" target="_blank">$vote_title</a> /<br>
+	<font class=white>メニュー/</font><a href="$scripta?mode=ranking">登録者一覧</a> / <a href="$ranking">能\力別ランキングへ</a> / <a href="$syoku_html" target="_blank">各職業に必要な特性値</a> /<a href="$img_all_list" target="_blank">$vote_gazou</a> /<a href="$bbs" target="_blank">$bbs_title</a> /<a href="$helptext" target="_blank">$helptext_url</a><br>
+<font class=white>町の外れ/</font><a href="$sbbs" target="_blank">$sbbs_title</a> / <a href="$vote" target="_blank">$vote_title</a> /<br>
 <table align="center"width="100%">
 <TR><td rowspan="2"  align="center" class="b2" width=70 height=60><img src="$img_path/$chara_img[$winner[5]]">
-<TD id="td1" align="center" colspan=2 class="b2">���݂̃`�����v<a href="$scripta?id=$winner[0]"><B>$winner[3]</B></a>����($winner[44]�A����)</TD></TR>
-	<TR><td id="td2"align="center" class="b2">���݂�HP</td><TD class="b2"align="center"><B>$winner[15]\/$winner[16]</B></TD></TR></table>
+<TD id="td1" align="center" colspan=2 class="b2">現在のチャンプ<a href="$scripta?id=$winner[0]"><B>$winner[3]</B></a>さん($winner[44]連勝中)</TD></TR>
+	<TR><td id="td2"align="center" class="b2">現在のHP</td><TD class="b2"align="center"><B>$winner[15]\/$winner[16]</B></TD></TR></table>
 <hr size=0>
 
 <table border=0 align="center" width='100%'>
@@ -135,7 +135,7 @@ if ($ztime > 0) {
 <table><tr>
 <FORM NAME="form1">
 <td>
-�퓬�J�n�\\�܂Ŏc��<INPUT TYPE="text" NAME="clock" SIZE="3">�b�ł��B(�X�V�̖ڈ��Ɏg���ĉ�����)
+戦闘開始可能\まで残り<INPUT TYPE="text" NAME="clock" SIZE="3">秒です。(更新の目安に使って下さい)
 </td>
 </FORM>
 </tr></table>
@@ -143,48 +143,48 @@ EOM
 }
        print <<"EOM";
 <table width="100%">
-<tr><td id="td1" colspan="5" class="b2" align="center">�L�����N�^�[�f�[�^</td></tr>
+<tr><td id="td1" colspan="5" class="b2" align="center">キャラクターデータ</td></tr>
 <td rowspan="4" align="center" valign=bottom class="b2"><img src="$img_path/$chara_img[$chara[6]]">
-<tr><td id="td2" class="b2">����</td><td align="right" class="b2">$item[0]</td>
-<td id="td2" class="b1">�U����</td><td align="right" class="b2">$item[1]</td></tr>
-<tr><td id="td2" class="b2">�h��</td><td align="right" class="b2">$item[3]</td>
-<td id="td2" class="b1">�h���</td><td align="right" class="b2">$item[4]</td></tr>
-<tr><td id="td2" class="b2">�A�N�Z�T���[</td><td align="right" class="b2">$item[6]</td>
+<tr><td id="td2" class="b2">武器</td><td align="right" class="b2">$item[0]</td>
+<td id="td2" class="b1">攻撃力</td><td align="right" class="b2">$item[1]</td></tr>
+<tr><td id="td2" class="b2">防具</td><td align="right" class="b2">$item[3]</td>
+<td id="td2" class="b1">防御力</td><td align="right" class="b2">$item[4]</td></tr>
+<tr><td id="td2" class="b2">アクセサリー</td><td align="right" class="b2">$item[6]</td>
 	
-<td id="td2" class="b2">�̍�</td><td align="center" class="b2"><font color=yellow>$syou</font></td></tr>
+<td id="td2" class="b2">称号</td><td align="center" class="b2"><font color=yellow>$syou</font></td></tr>
 </table>
 
 <table width='100%'>
-<tr><td id="td1" colspan="5" class="b2" align="center">�X�e�[�^�X</td></tr>
-<tr><td class="b1" id="td2">�W���u</td><td class="b2">$chara_syoku[$chara[14]]</td>
-<td id="td2" align="center" class="b1">�W���uLV</td><td class="b2"><b>$chara[33]</b></td></tr>
-<tr><td class="b1" id="td2">�N���X</td><td colspan=3 class="b2">$class</td></tr>
-<tr><td class="b1" id="td2">���x��</td><td class="b2">$chara[18]</td>
-<td class="b1" id="td2">�o���l</td><td class="b2">$chara[17]/$next_ex</td></tr>
+<tr><td id="td1" colspan="5" class="b2" align="center">ステータス</td></tr>
+<tr><td class="b1" id="td2">ジョブ</td><td class="b2">$chara_syoku[$chara[14]]</td>
+<td id="td2" align="center" class="b1">ジョブLV</td><td class="b2"><b>$chara[33]</b></td></tr>
+<tr><td class="b1" id="td2">クラス</td><td colspan=3 class="b2">$class</td></tr>
+<tr><td class="b1" id="td2">レベル</td><td class="b2">$chara[18]</td>
+<td class="b1" id="td2">経験値</td><td class="b2">$chara[17]/$next_ex</td></tr>
 <tr><td class="b1" id="td2">HP</td><td class="b2">$chara[15]\/$chara[16]</td>
-<td class="b1" id="td2">����</td><td class="b2">$chara[19]\/$gold_max</td></tr>
+<td class="b1" id="td2">お金</td><td class="b2">$chara[19]\/$gold_max</td></tr>
 <tr>
-<td class="b1" id="td2">�`�����s�I����ڎw��</td>
+<td class="b1" id="td2">チャンピオンを目指す</td>
 <form action="$scriptb" method="post">
 <td colspan="3" align="center" class="b2">
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
 EOM
 	if ($winner[0] eq $chara[0]) {
-		print "���݃`�����v�Ȃ̂œ����܂���\n";
+		print "現在チャンプなので闘えません\n";
 	} elsif ($winner[40] eq $chara[0] and $chanp_milit == 1) {
-		print "�`�����v�Ɛ��������Ȃ̂Ŕ��ē����܂���\n";
+		print "チャンプと戦った直後なので疲れて闘えません\n";
 	}elsif($ltime > $b_time) {
-		print "<input type=\"submit\" class=btn value=\"�`�����v�ɒ���\">\n";
+		print "<input type=\"submit\" class=btn value=\"チャンプに挑戦\">\n";
 	}else{
-		print "$ztime�b�㓬����悤�ɂȂ�܂��B\n";
+		print "$ztime秒後闘えるようになります。\n";
 	}
 	print <<"EOM";
-<br>���܋��F$winner[50] G
+<br>※賞金：$winner[50] G
 </td></form>
 </tr>
 <tr>
-<td class="b1" id="td2" class="b2">�D���ȃL�����Ƒΐ�</td>
+<td class="b1" id="td2" class="b2">好きなキャラと対戦</td>
 <form action="$script_select" method="post">
 <td align="center" colspan="3" class="b2">
 <input type="hidden" name="mode" value="log_in">
@@ -192,55 +192,55 @@ EOM
 <input type="hidden" name="mydata" value="$chara_log">
 EOM
 	if(!$chara[21]) {
-		print "�P�x�`�����v�ɒ��킵�Ă�������\n";
+		print "１度チャンプに挑戦してください\n";
 	} elsif($ltime > $b_time or !$chara[21]) {
-		print "<input type=submit class=btn value=\"�D���ȃL�����ɒ���\">\n";
+		print "<input type=submit class=btn value=\"好きなキャラに挑戦\">\n";
 	} else{
-		print "$ztime�b�㓬����悤�ɂȂ�܂��B\n";
+		print "$ztime秒後闘えるようになります。\n";
 	}
 
 	print <<"EOM";
 </td></form></tr>
 <tr>
-<td class="b1" id="td2" class="b2">�V���ꕐ����</td>
+<td class="b1" id="td2" class="b2">天下一武道会</td>
 <form action="$script_tenka" method="post">
 <td align="center" colspan="3" class="b2">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 EOM
 	if(!$chara[21]) {
-		print "�P�x�`�����v�ɒ��킵�Ă�������\n";
+		print "１度チャンプに挑戦してください\n";
 	} elsif($ltime > $b_time or !$chara[21]) {
-		print "<input type=submit class=btn value=\"�V���ꕐ����\">\n";
+		print "<input type=submit class=btn value=\"天下一武道会\">\n";
 	} else{
-		print "$ztime�b�㓬����悤�ɂȂ�܂��B\n";
+		print "$ztime秒後闘えるようになります。\n";
 	}
 
 	print <<"EOM";
 </td></form></tr>
 <tr>
-<td class="b1" id="td2">����c��</td>
+<td class="b1" id="td2">作戦会議室</td>
 <form action="$scripts" method="post">
 <td colspan="3" align="center" class="b2">
 <input type=hidden name=id value=$chara[0]>
 <input type="hidden" name=mydata value="$chara_log">
-<input type=submit class=btn value="��p�̕ύX">
+<input type=submit class=btn value="戦術の変更">
 </td></form>
 </tr>
 </table>
 </td>
 EOM
 
-# ��������E�����̃e�[�u��
+# ここから右半分のテーブル
 	print <<"EOM";
 <td valign="top">
 <table width="100%">
-<tr><td id="td1" colspan="4" class="b2" align="center">�X�̎{��</td></tr>
+<tr><td id="td1" colspan="4" class="b2" align="center">街の施設</td></tr>
 <tr>
-<td bgcolor="#cbfffe" align="center">�y���̏h�z(<b>$yado_daix</b>G)</td>
-<td bgcolor="#cbfffe" align="center">�y���퉮�z</td>
-<td bgcolor="#cbfffe" align="center">�y�h��z</td>
-<td bgcolor="#cbfffe" align="center">�y�����i�X�z</td>
+<td bgcolor="#cbfffe" align="center">【旅の宿】(<b>$yado_daix</b>G)</td>
+<td bgcolor="#cbfffe" align="center">【武器屋】</td>
+<td bgcolor="#cbfffe" align="center">【防具屋】</td>
+<td bgcolor="#cbfffe" align="center">【装飾品店】</td>
 </tr>
 <tr>
 <form action="$scripty" method="post">
@@ -248,96 +248,96 @@ EOM
 <input type=hidden name=mode value="yado">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="�̗͂���"></td>
+<input type=submit class=btn value="体力を回復"></td>
 </form>
 <form action="$item_shop" method="post">
 <td align="center" class="b2">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="���퉮"></td>
+<input type=submit class=btn value="武器屋"></td>
 </form>
 <form action="$def_shop" method="post">
 <td align="center" class="b2">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="�h�"></td>
+<input type=submit class=btn value="防具屋"></td>
 </form>
 <form action="$acs_shop" method="post">
 <td align="center" class="b2">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="�����i�X"></td>
+<input type=submit class=btn value="装飾品店"></td>
 </form>
 </tr>
 <tr>
-<td bgcolor="#cbfffe" align="center">�y�X�e�[�^�X�̕ύX�z</td>
-<td bgcolor="#cbfffe" align="center">�y��@�s�z</td>
-<td bgcolor="#cbfffe" align="center">�y�A�C�e���q�Ɂz</td>
-<td bgcolor="#cbfffe" align="center">�y�X�֋ǁz</td>
+<td bgcolor="#cbfffe" align="center">【ステータスの変更】</td>
+<td bgcolor="#cbfffe" align="center">【銀　行】</td>
+<td bgcolor="#cbfffe" align="center">【アイテム倉庫】</td>
+<td bgcolor="#cbfffe" align="center">【郵便局】</td>
 </tr><tr>
 <td align="center" class="b2">
 <form action="$scriptst" method="post">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="�X�e�[�^�X�̕ύX">
+<input type=submit class=btn value="ステータスの変更">
 </td>
 </form>
 <form action="$script_bank" method="post">
 <td align="center" class="b2">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="�@��s�@"></td>
+<input type=submit class=btn value="　銀行　"></td>
 </form>
 <form action="$script_souko" method="post">
 <td align="center" class="b2">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="�A�C�e���q��"></td>
+<input type=submit class=btn value="アイテム倉庫"></td>
 </form>
 <form action="$script_post" method="post">
 <td align="center" class="b2">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="�X�֋�">
+<input type=submit class=btn value="郵便局">
 </td>
 </form>
 </tr>
 <tr>
-<td bgcolor="#cbfffe" align="center">�y�]�E�̐_�a�z</td>
-<td bgcolor="#cbfffe" align="center">�y�X�n�z</td>
-<td bgcolor="#cbfffe" align="center">�y�X�n�z</td>
-<td bgcolor="#cbfffe" align="center">�y�X�V���z</td>
+<td bgcolor="#cbfffe" align="center">【転職の神殿】</td>
+<td bgcolor="#cbfffe" align="center">【更地】</td>
+<td bgcolor="#cbfffe" align="center">【更地】</td>
+<td bgcolor="#cbfffe" align="center">【更新所】</td>
 </tr><tr>
 <form action="$script_tensyoku" method="post">
 <td align="center" class="b2">
 <input type=hidden name=mode value=tensyoku>
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type="submit" class="btn" value="�]�E�̐_�a">
+<input type="submit" class="btn" value="転職の神殿">
 </td>
 </form>
 <td align="center" class="b2">
-�X�n
+更地
 </td>
 <td align="center" class="b2">
-�X�n
+更地
 </td>
 <form action="$script" method="post">
 <td align="center" class="b2">
 <input type=hidden name=mode value=log_in>
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
-<input type=submit class=btn value="��ʍX�V">
+<input type=submit class=btn value="画面更新">
 </td>
 </form>
 </tr>
 </table>
 <table width="100%">
 <tr>
-<td id="td1" colspan="2" class="b2" align="center">�`���ɏo������</td>
+<td id="td1" colspan="2" class="b2" align="center">冒険に出かける</td>
 </tr>
 <tr><td class="b1" id="td2">
-���ӂ̒T��</td>
+周辺の探索</td>
 <form action="$scriptm" method="post">
 <td align="center" class="b2">
 <input type=hidden name=mode value=monster>
@@ -346,30 +346,30 @@ EOM
 EOM
 
 	if(!$chara[21]) {
-		print "�P�x�`�����v�ɒ��킵�Ă�������\n";
+		print "１度チャンプに挑戦してください\n";
 	} elsif($ltime >= $m_time or !$chara[21]) {
 	print <<"EOM";
 <select name="mons_file">
-<option value="monster0">���̕ӂɏo������i�ア�G���o���I�j
-<option value="monster1">�߂��̓��A�i�����G���o���I�j
-<option value="monster2">�_�[�N�_���W�����i���Ȃ苭���G���o���I�j
-<option value="monster3">�~�V�f�B�A�̓��i�S�̂悤�ȓG���o���I�j
+<option value="monster0">その辺に出かける（弱い敵が出現！）
+<option value="monster1">近くの洞窟（強い敵が出現！）
+<option value="monster2">ダークダンジョン（かなり強い敵が出現！）
+<option value="monster3">ミシディアの塔（鬼のような敵が出現！）
 </select>
-<input type=submit class=btn value="�����X�^�[�Ɠ���">
+<input type=submit class=btn value="モンスターと闘う">
 EOM
 	}else{
-		print "$mtime�b�㓬����悤�ɂȂ�܂��B<br>\n";
+		print "$mtime秒後闘えるようになります。<br>\n";
 	}
 
 	print <<"EOM";
 </td>
 </form>
-</tr><tr><td colspan=2>���C�s�̗��ɂ����܂��B</td></tr>
+</tr><tr><td colspan=2>※修行の旅にいけます。</td></tr>
 EOM
 
 	if($chara[27]%5 == 0){
 	print <<"EOM";
-<tr><td class="b1" id="td2">�ˑR�̏o��</td>
+<tr><td class="b1" id="td2">突然の出現</td>
 <form action=\"$scriptm\" method=\"post\">
 <td align=\"center\" class=\"b2\">
 <input type=hidden name=mode value=genei>
@@ -377,18 +377,18 @@ EOM
 <input type="hidden" name="mydata" value="$chara_log">
 EOM
 	if (!$chara[21]) {
-		print "�P�x�`�����v�ɒ��킵�Ă�������\n";
+		print "１度チャンプに挑戦してください\n";
 	} elsif($ltime >= $m_time or !$chara[21]) {
-	print "<input type=submit class=btn value=\"���e�̏��\">\n";
+	print "<input type=submit class=btn value=\"幻影の城へ\">\n";
 	} else {
-		print "$mtime�b��s����悤�ɂȂ�܂��B<br>\n";
+		print "$mtime秒後行けるようになります。<br>\n";
 	}
 
 	print <<"EOM";
 </td>
 </form>
 </tr><tr><td colspan=2>
-�����󂪖���ƌ�����u���e�̏�v�ɂ����܂��B
+※財宝が眠ると言われる「幻影の城」にいけます。
 </td></tr>
 EOM
 }
@@ -396,7 +396,7 @@ EOM
 	print <<"EOM";
 <tr>
 <td class="b1" id="td2">
-���W�F���h�v���C�X</td>
+レジェンドプレイス</td>
 <form action="$script_legend" method="post">
 <td align="center" class="b2">
 <input type=hidden name=mode value=boss>
@@ -404,36 +404,36 @@ EOM
 <input type="hidden" name="mydata" value="$chara_log">
 EOM
 	if (!$chara[21] || $chara[28] != $boss) {
-		print "�P�x�`�����v�ɒ��킵�Ă�������\n";
+		print "１度チャンプに挑戦してください\n";
 	} elsif ($ltime >= $m_time or !$chara[21]) {
 		print <<"EOM";
 <select name="boss_file">
-<option value="0">���킳�̂ق���i���S�҂������J���āE�E�j
+<option value="0">うわさのほこら（初心者を口を開けて・・）
 EOM
 		if ($chara[32] > 0) {
-			print "<option value=\"1\">�Â̐_�a�i�n���҂����𗎂Ƃ��Ƃ����E�E�j\n";
+			print "<option value=\"1\">古の神殿（熟練者も命を落とすという・・）\n";
 		}
 		if ($chara[32] > 1) {
-			print "<option value=\"2\">�E�҂̓��A�i�`���̗E�҂��K�ꂽ�Ƃ����E�E�j\n";
+			print "<option value=\"2\">勇者の洞窟（伝説の勇者が訪れたという・・）\n";
 		}
 		if ($chara[32] > 2) {
-			print "<option value=\"3\">�K�C�A�t�H�[�X�i�_�݂̂����邱�Ƃ�������Ă���E�E�j\n";
+			print "<option value=\"3\">ガイアフォース（神のみが入ることを許されている・・）\n";
 		}
 print <<"EOM";
 </select>
-<input type=submit class=btn value="�`���ɒ���">
+<input type=submit class=btn value="伝説に挑む">
 EOM
 	}else{
-		print "$mtime�b�㓬����悤�ɂȂ�܂��B<br>\n";
+		print "$mtime秒後闘えるようになります。<br>\n";
 	}
 
 	print <<"EOM";
 </td>
 </form>
 </tr><tr><td colspan=2>
-���ł񂹂̏ꏊ�֖K��邱�Ƃ��ł��܂��B</td></tr>
+※でんせつの場所へ訪れることができます。</td></tr>
 <tr>
-<td class="b1" id="td2">�ِ��E</td>
+<td class="b1" id="td2">異世界</td>
 <form action="$scriptm" method="post">
 <td align="center" class="b2">
 <input type=hidden name=mode value=isekiai>
@@ -441,20 +441,20 @@ EOM
 <input type="hidden" name="mydata" value="$chara_log">
 EOM
 	if (!$chara[21]) {
-		print "�P�x�`�����v�ɒ��킵�Ă�������\n";
+		print "１度チャンプに挑戦してください\n";
 	} elsif ($ltime >= $m_time or !$chara[21]) {
 		if ($chara[18] < $isekai_lvl) {
-			print "���x����$isekai_lvl�𒴂���܂ōs���܂���B<br>\n";
+			print "レベルが$isekai_lvlを超えるまで行けません。<br>\n";
 		} else {
-			print "<input type=submit class=btn value=\"�ِ��E�֍s��\"><br>\n";
+			print "<input type=submit class=btn value=\"異世界へ行く\"><br>\n";
 		}
 	} else {
-			print "$mtime�b�㓬����悤�ɂȂ�܂��B<br>\n";
+			print "$mtime秒後闘えるようになります。<br>\n";
 	}
 
 	print <<"EOM";
 </td></form></tr>
-<tr><td colspan=2>���_�X�̗̈�ƌ����邱�̐��E�ɑ����ӂ݂���āA�����ɋA�������̂͒N��l���Ȃ��E�E�E</td></tr>
+<tr><td colspan=2>※神々の領域と言われるこの世界に足をふみいれて、無事に帰ったものは誰一人いない・・・</td></tr>
 </table></td></tr></table>
 EOM
 

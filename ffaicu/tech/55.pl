@@ -3,9 +3,9 @@ sub hissatu{
 		if (int(rand(3)) == 0) {
 			$sake2 -= 999999;
 			$dmg1 = $winner[16] + $mhp_flg;
-			$com1 .="<font class=\"yellow\" size=5>‹ó–‚–@ƒfƒWƒ‡ƒ“III</font><br>";
+			$com1 .="<font class=\"yellow\" size=5>æ™‚ç©ºé­”æ³•ãƒ‡ã‚¸ãƒ§ãƒ³ï¼ï¼ï¼</font><br>";
 		} else {
-			$com1 .="<font class=\"red\" size=5>‹ó–‚–@ƒfƒWƒ‡ƒ“III¸”s‚µ‚½BB</font><br>";
+			$com1 .="<font class=\"red\" size=5>æ™‚ç©ºé­”æ³•ãƒ‡ã‚¸ãƒ§ãƒ³ï¼ï¼ï¼å¤±æ•—ã—ãŸã€‚ã€‚</font><br>";
 		}
 	}
 }

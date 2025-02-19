@@ -1,7 +1,7 @@
 sub hissatu{
 	if ($waza_ritu > int(rand(120))) {
 		$temp_gold =  int(rand($gold)) + 1;
-		$com1 .="<font class=\"yellow\">‚¨‹à‚ğ“‚ñ‚¾ô‡Œv$temp_gold‚fƒQƒbƒgô</font><br>";
+		$com1 .="<font class=\"yellow\">ãŠé‡‘ã‚’ç›—ã‚“ã â™ªåˆè¨ˆ$temp_goldï¼§ã‚²ãƒƒãƒˆâ™ª</font><br>";
 		$gold += $temp_gold;
 	}
 }

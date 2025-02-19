@@ -2,9 +2,9 @@ sub hissatu{
 	if ($waza_ritu > int(rand(120))) {
 		if (int(rand(5)) == 0) {
 			$dmg1 = $mhp + $whp_flg;
-			$com1 .="<font class=\"white\" size=6><i>aE“SEŒ•II</i></font><br>";
+			$com1 .="<font class=\"white\" size=6><i>æ–¬ãƒ»é‰„ãƒ»å‰£ï¼ï¼</i></font><br>";
 		} else {
-			$com1 .="<font class=\"white\"><i>aE“SEŒ•II¸”sII</i></font><br>";
+			$com1 .="<font class=\"white\"><i>æ–¬ãƒ»é‰„ãƒ»å‰£ï¼ï¼å¤±æ•—ï¼ï¼</i></font><br>";
 		}
 	}
 }

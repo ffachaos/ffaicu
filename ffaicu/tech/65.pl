@@ -1,18 +1,18 @@
 sub hissatu{
 	if ($waza_ritu > int(rand(120))) {
 		$dmg1 = ($chara[8] + $chara[9]) * int(rand(100));
-		$com1 .= "<font class=\"yellow\" size=5>‹Ö’f–‚–@ƒAƒ‹ƒeƒ}II</font>";
+		$com1 .= "<font class=\"yellow\" size=5>ç¦æ–­é­”æ³•ã‚¢ãƒ«ãƒ†ãƒï¼ï¼</font>";
 		if ($waza_ritu > int(rand(80))) {
 			$dmg1 += ($chara[9]) * int(rand(80));
-			$com1 .= "<font class=\"white\" size=5>ƒz[ƒŠ[II</font>";
+			$com1 .= "<font class=\"white\" size=5>ãƒ›ãƒ¼ãƒªãƒ¼ï¼ï¼</font>";
 		}
 		if ($waza_ritu > int(rand(80))) {
 			$dmg1 += ($chara[8]) * int(rand(80));
-			$com1 .="<font class=\"red\" size=5>ƒtƒŒƒAII</font>";
+			$com1 .="<font class=\"red\" size=5>ãƒ•ãƒ¬ã‚¢ï¼ï¼</font>";
 		}
 		if ($waza_ritu > int(rand(80))) {
 			$dmg1 += ($chara[8]) * int(rand(100));
-			$com1 .="<font class=\"red\" size=5>ƒƒeƒIII</font>";
+			$com1 .="<font class=\"red\" size=5>ãƒ¡ãƒ†ã‚ªï¼ï¼</font>";
 		}
 		$com1 .= "<br>\n";
 		$sake2 -= 999999;

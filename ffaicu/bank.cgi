@@ -1,60 +1,60 @@
 #!/usr/local/bin/perl
 
 #------------------------------------------------------#
-#�@�{�X�N���v�g�̒��쌠�͉��L��3�l�ɂ���܂��B
-#�����Ȃ闝�R�������Ă����̕\�L���폜���邱�Ƃ͂ł��܂���
-#�ᔽ�𔭌������ꍇ�A�X�N���v�g�̗��p���~���Ă�������
-#�����łȂ��A�R��ׂ����u�������Ă��������܂��B
-#�@FF ADVENTURE ��i v2.1
-#�@programed by jun-k
-#�@http://www5b.biglobe.ne.jp/~jun-kei/
-#�@jun-kei@vanilla.freemail.ne.jp
+#　本スクリプトの著作権は下記の3人にあります。
+#いかなる理由があってもこの表記を削除することはできません
+#違反を発見した場合、スクリプトの利用を停止していただく
+#だけでなく、然るべき処置をさせていただきます。
+#　FF ADVENTURE 改i v2.1
+#　programed by jun-k
+#　http://www5b.biglobe.ne.jp/~jun-kei/
+#　jun-kei@vanilla.freemail.ne.jp
 #------------------------------------------------------#
-#�@FF ADVENTURE v0.21
-#�@programed by CUMRO
-#�@http://cgi.members.interq.or.jp/sun/cumro/mm/
-#�@cumro@sun.interq.or.jp
+#　FF ADVENTURE v0.21
+#　programed by CUMRO
+#　http://cgi.members.interq.or.jp/sun/cumro/mm/
+#　cumro@sun.interq.or.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(��) v1.021
+#  FF ADVENTURE(改) v1.021
 #  remodeling by GUN
 #  http://www2.to/meeting/
 #  gun24@j-club.ne.jp
 #------------------------------------------------------#
-#  FF ADVENTURE(������)
-#�@remodeling by ����
-#�@http://www.eriicu.com
-#�@icu@kcc.zaq.ne.jp
+#  FF ADVENTURE(いく改)
+#　remodeling by いく
+#　http://www.eriicu.com
+#　icu@kcc.zaq.ne.jp
 #------------------------------------------------------#
-#--- [���ӎ���] ------------------------------------------------#
-# 1. ���̃X�N���v�g�̓t���[�\�t�g�ł��B���̃X�N���v�g���g�p���� #
-#    �����Ȃ鑹�Q�ɑ΂��č�҂͈�؂̐ӔC�𕉂��܂���B     	#
-# 2. �ݒu�Ɋւ��鎿��̓T�|�[�g�f���ɂ��肢�������܂��B   	#
+#--- [注意事項] ------------------------------------------------#
+# 1. このスクリプトはフリーソフトです。このスクリプトを使用した #
+#    いかなる損害に対して作者は一切の責任を負いません。     	#
+# 2. 設置に関する質問はサポート掲示板にお願いいたします。   	#
 #    http://icus.s13.xrea.com/cgi-bin/cbbs/cbbs.cgi             #
-#    ���ڃ��[���ɂ�鎿��͈�؂��󂯂������Ă���܂���B   	#
+#    直接メールによる質問は一切お受けいたしておりません。   	#
 #---------------------------------------------------------------#
-# ���{�ꃉ�C�u�����̓ǂݍ���
+# 日本語ライブラリの読み込み
 require 'jcode.pl';
 
-# ���W�X�g���C�u�����̓ǂݍ���
+# レジストライブラリの読み込み
 require 'regist.pl';
 
-# �A�C�e�����C�u�����̓ǂݍ���
+# アイテムライブラリの読み込み
 require 'item.pl';
 
-# �����ݒ�t�@�C���̓ǂݍ���
+# 初期設定ファイルの読み込み
 require 'data/ffadventure.ini';
 
-# ���̃t�@�C���p�ݒ�
+# このファイル用設定
 $backgif = $shop_back;
 $midi = $shop_midi;
 
-# [�ݒ�͂����܂�]------------------------------------------------------------#
+# [設定はここまで]------------------------------------------------------------#
 
-# �����艺�́ACGI�̂킩����ȊO�́A�ύX���Ȃ��ق����ǂ��ł��B
+# これより下は、CGIのわかる方以外は、変更しないほうが良いです。
 
 #-----------------------------------------------------------------------------#
 if($mente) {
-	&error("���݃o�[�W�����A�b�v���ł��B���΂炭���҂����������B");
+	&error("現在バージョンアップ中です。しばらくお待ちください。");
 }
 
 &decode;
@@ -64,15 +64,15 @@ if($mente) {
 <form action="$script_bank" method="post">
 <input type=hidden name=id value="$in{'id'}">
 <input type="hidden" name="mydata" value="$in{'mydata'}">
-<input type=submit class=btn value="�߂�">
+<input type=submit class=btn value="戻る">
 </form>
 EOM
 
-#�h�o�A�h���X�ŃA�N�Z�X����
+#ＩＰアドレスでアクセス制限
 foreach (@shut_host) {
 	$_ =~ s/\*/\.\*/g;
 	if ($ENV{'REMOTE_ADDR'} =~ /$_/) {
-		&error("�A�N�Z�X�ł��܂���I�I");
+		&error("アクセスできません！！");
 	}
 }
 
@@ -83,7 +83,7 @@ if($mode) { &$mode; }
 exit;
 
 #----------#
-# ��s�\�� #
+# 銀行表示 #
 #----------#
 sub bank_shop {
 
@@ -108,42 +108,42 @@ sub bank_shop {
 	&header;
 
 	print <<"EOM";
-<h1>��s</h1>
+<h1>銀行</h1>
 <hr size=0>
-<font Size="3"> $chara[4]����̌��݂�<br>
-�@�@�@�������F<b>$chara[19]</b>�M��  �^<br>
-�@�@�@�@�@�@�@�a���\\�z�@�F<b><font color=$yellow>$bank_max_in\,000</font></b>�M��<br>
-�@�@�@�a���@�F<b>$chara[34]</b>�M���^<br>
-�@�@�@�@�@�@�@���o�\\�z  �F<b><font color=$yellow>$bank_max_out\,000</font></b>�M��
+<font Size="3"> $chara[4]さんの現在の<br>
+　　　所持金：<b>$chara[19]</b>ギル  ／<br>
+　　　　　　　預金可能\額　：<b><font color=$yellow>$bank_max_in\,000</font></b>ギル<br>
+　　　預金　：<b>$chara[34]</b>ギル／<br>
+　　　　　　　引出可能\額  ：<b><font color=$yellow>$bank_max_out\,000</font></b>ギル
 </font><br>
-<font color=$yellow><b>�ō��a������z $bank_max�M��</b></font>�𒴂������͓�������c�̂Ɋ�t����܂��B<br>
+<font color=$yellow><b>最高預け入れ額 $bank_maxギル</b></font>を超えた分は動物愛護団体に寄付されます。<br>
 <form action="$script_bank" method="post">
-<input type="text" name="azuke" value="" size=10>000 �M��
+<input type="text" name="azuke" value="" size=10>000 ギル
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=mode value=bank_sell>
-<input type=submit class=btn value="�M����a����">
+<input type=submit class=btn value="ギルを預ける">
 </form>
 <form action="$script_bank" method="post">
 <input type="hidden" name="azuke" value="$bank_max_in">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=mode value=bank_sell>
-<input type=submit class=btn value="�a����邾���a����">
+<input type=submit class=btn value="預けれるだけ預ける">
 </form>
 <form action="$script_bank" method="post">
-<input type="text" name=dasu value="" size=10>000 �M��
+<input type="text" name=dasu value="" size=10>000 ギル
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=mode value=bank_buy>
-<input type=submit class=btn value="�M�����o��">
+<input type=submit class=btn value="ギルを出す">
 </form>
 <form action="$script_bank" method="post">
 <input type="hidden" name=dasu value="$bank_max_out">
 <input type="hidden" name="id" value="$chara[0]">
 <input type="hidden" name="mydata" value="$chara_log">
 <input type=hidden name=mode value=bank_buy>
-<input type=submit class=btn value="�o���邾���o��">
+<input type=submit class=btn value="出せるだけ出す">
 </form>
 EOM
 
@@ -156,7 +156,7 @@ EOM
 }
 
 #----------------#
-# �������o�� #
+# お金を出す #
 #----------------#
 sub bank_buy {
 
@@ -167,25 +167,25 @@ sub bank_buy {
 	&chara_check;
 
 	if($in{'dasu'} eq ""){
-		&error("���z�����͂���Ă��܂���B$back_form");
+		&error("金額が入力されていません。$back_form");
 	}
 
 	if($in{'dasu'} =~ /[^0-9]/){
-		&error('�G���[�I���l�s���̂��ߎ󂯕t���܂���');
+		&error('エラー！数値不正のため受け付けません');
 	}
 
 	if($in{'dasu'} <= 0) {
-		&error("�}�C�i�X�͓��͏o���܂���B$back_form");
+		&error("マイナスは入力出来ません。$back_form");
 	} else {
 		$dasuru = int($in{'dasu'}) * 1000;
 	}
 
 	if ($dasuru  > $chara[34]) {
-		&error("�a���z�𒴂��Ă��܂��I�I$back_form");
+		&error("預金額を超えています！！$back_form");
 	}
 
 	if(!($in{'dasu'} > 0 && $in{'dasu'} <= $gold_max)) {
-		&error("�s���Ȓl�ł��I");
+		&error("不正な値です！");
 	}
 
 	&get_host;
@@ -202,8 +202,8 @@ sub bank_buy {
 	&header;
 
 	print <<"EOM";
-<h1>�����p���肪�Ƃ��������܂���</h1><br>
-$dasuru�f�����o���܂����B
+<h1>ご利用ありがとうございました</h1><br>
+$dasuruＧ引き出しました。
 EOM
 
 	&shopfooter;
@@ -214,7 +214,7 @@ EOM
 }
 
 #----------------#
-# ������a����   #
+# お金を預ける   #
 #----------------#
 sub bank_sell {
 	$lock_file = "$lockfolder/$in{'id'}.lock";
@@ -224,25 +224,25 @@ sub bank_sell {
 	&chara_check;
 
 	if($in{'azuke'} eq ""){
-		&error("���z�����͂���Ă��܂���B$back_form");
+		&error("金額が入力されていません。$back_form");
 	}
 
 	if($in{'azuke'} =~ /[^0-9]/){
-		&error('�G���[�I���l�s���̂��ߎ󂯕t���܂���');
+		&error('エラー！数値不正のため受け付けません');
 	}
 
 	if($in{'azuke'} <= 0) {
-		&error("�}�C�i�X�͓��͏o���܂���B$back_form");
+		&error("マイナスは入力出来ません。$back_form");
 	} else {
 		$azukeru = int($in{'azuke'}) * 1000;
 	}
 
 	if ($azukeru  > $chara[19]) {
-		&error("�������𒴂��Ă��܂��I�I$back_form");
+		&error("所持金を超えています！！$back_form");
 	}
 
 	if(!($in{'azuke'} > 0 && $in{'azuke'} <= $gold_max)) {
-		&error("�s���Ȓl�ł��I");
+		&error("不正な値です！");
 	}
 
 	&get_host;
@@ -259,8 +259,8 @@ sub bank_sell {
 	&header;
 
 	print <<"EOM";
-<h1>�����p���肪�Ƃ��������܂���</h1><br>
-$azukeru�f�a���܂����B
+<h1>ご利用ありがとうございました</h1><br>
+$azukeruＧ預けました。
 EOM
 
 	&shopfooter;
