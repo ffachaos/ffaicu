@@ -302,7 +302,7 @@ EOM
 <LI>そこであなたの行動を選択することができます。
 <LI>一度キャラクターを作成したら、右上のところからログインして遊びます。新規にキャラクターを作れるのは、一人に一つのキャラクターのみです。
 <LI>これは、HPバトラーではなく、キャラバトラーです。キャラクターを育てていくゲームです。
-<LI>能\力を振り分けることができキャラクターの能\力をご自分で決めることができます。(ここで決めた能\力はごくまれにしか上昇しないので、慎重に)
+<LI>能力を振り分けることができキャラクターの能力をご自分で決めることができます。(ここで決めた能力はごくまれにしか上昇しないので、慎重に)
 <LI><b>$limit日</b>以上闘わなければ、キャラクターのデータが削除されます。
 <LI>一度戦闘すると<b>$b_time</b>秒経過しないと再び戦闘できません。
 </OL>
@@ -311,7 +311,7 @@ EOM
 </table>
 <hr size=0>
 <font color=$white>共有設置者/<a href="$homepage" TARGET="_top">$home_title</a> / $kyouyuu<br>
-<font color=$white>メニュー/</font><a href="$scripta?mode=ranking">登録者一覧</a> / <a href="$ranking">\能\力別ランキングへ</a> / <a href="$syoku_html" target="_blank">各職業に必要な特性値</a> /<a href="$img_all_list" target="_blank">$vote_gazou</a> /<a href="$bbs">$bbs_title</a> /<a href="$helptext" target="_blank">$helptext_url</a><br>
+<font color=$white>メニュー/</font><a href="$scripta?mode=ranking">登録者一覧</a> / <a href="$ranking">\能力別ランキングへ</a> / <a href="$syoku_html" target="_blank">各職業に必要な特性値</a> /<a href="$img_all_list" target="_blank">$vote_gazou</a> /<a href="$bbs">$bbs_title</a> /<a href="$helptext" target="_blank">$helptext_url</a><br>
 <font color=$white>町の外れ/</font><a href="$sbbs">$sbbs_title</a> / <a href="$vote">$vote_title</a> /<br>
 <table border=0 width="100%">
 <TR><TD class="b1" bgcolor="#000000" align="center"><B>連絡事項</B></font></TD></TR>

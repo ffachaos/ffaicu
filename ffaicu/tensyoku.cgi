@@ -128,7 +128,7 @@ $tensyokuok.= "現在転職できる職業は<br><table><tr>";
 	print <<"EOM";
 <h1>転職の神殿</h1><hr>
 ここでは他の職業に転職できます。<br>
-※ 転職すると、現在の能\力値がランダムで下がります。ただし、転職する職業の職業レベルが20以上の場合は下がりません。<br><br>
+※ 転職すると、現在の能力値がランダムで下がります。ただし、転職する職業の職業レベルが20以上の場合は下がりません。<br><br>
 $tensyokuok</tr></table><br>
 $mitensyoku</tr></table><br>
 <form action="$script_tensyoku" method="post">

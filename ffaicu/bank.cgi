@@ -112,9 +112,9 @@ sub bank_shop {
 <hr size=0>
 <font Size="3"> $chara[4]さんの現在の<br>
 　　　所持金：<b>$chara[19]</b>ギル  ／<br>
-　　　　　　　預金可能\額　：<b><font color=$yellow>$bank_max_in\,000</font></b>ギル<br>
+　　　　　　　預金可能額　：<b><font color=$yellow>$bank_max_in\,000</font></b>ギル<br>
 　　　預金　：<b>$chara[34]</b>ギル／<br>
-　　　　　　　引出可能\額  ：<b><font color=$yellow>$bank_max_out\,000</font></b>ギル
+　　　　　　　引出可能額  ：<b><font color=$yellow>$bank_max_out\,000</font></b>ギル
 </font><br>
 <font color=$yellow><b>最高預け入れ額 $bank_maxギル</b></font>を超えた分は動物愛護団体に寄付されます。<br>
 <form action="$script_bank" method="post">
