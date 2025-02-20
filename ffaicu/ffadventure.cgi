@@ -118,7 +118,7 @@ sub log_in {
 
        print <<"EOM";
 	<hr size=0>
-	<font class=white>メニュー/</font><a href="$scripta?mode=ranking">登録者一覧</a> / <a href="$ranking">能\力別ランキングへ</a> / <a href="$syoku_html" target="_blank">各職業に必要な特性値</a> /<a href="$img_all_list" target="_blank">$vote_gazou</a> /<a href="$bbs" target="_blank">$bbs_title</a> /<a href="$helptext" target="_blank">$helptext_url</a><br>
+	<font class=white>メニュー/</font><a href="$scripta?mode=ranking">登録者一覧</a> / <a href="$ranking">能力別ランキングへ</a> / <a href="$syoku_html" target="_blank">各職業に必要な特性値</a> /<a href="$img_all_list" target="_blank">$vote_gazou</a> /<a href="$bbs" target="_blank">$bbs_title</a> /<a href="$helptext" target="_blank">$helptext_url</a><br>
 <font class=white>町の外れ/</font><a href="$sbbs" target="_blank">$sbbs_title</a> / <a href="$vote" target="_blank">$vote_title</a> /<br>
 <table align="center"width="100%">
 <TR><td rowspan="2"  align="center" class="b2" width=70 height=60><img src="$img_path/$chara_img[$winner[5]]">
@@ -135,7 +135,7 @@ if ($ztime > 0) {
 <table><tr>
 <FORM NAME="form1">
 <td>
-戦闘開始可能\まで残り<INPUT TYPE="text" NAME="clock" SIZE="3">秒です。(更新の目安に使って下さい)
+戦闘開始可能まで残り<INPUT TYPE="text" NAME="clock" SIZE="3">秒です。(更新の目安に使って下さい)
 </td>
 </FORM>
 </tr></table>

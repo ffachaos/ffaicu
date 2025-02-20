@@ -1067,15 +1067,15 @@ sub syoku_pre {
 	&header;
 
 	print <<"EOM";
-<h1>$chara_syoku[$in{'syoku'}]能\力一覧</h1><br>
+<h1>$chara_syoku[$in{'syoku'}]能力一覧</h1><br>
 <form action="$scriptk" method="post">
 <input type="hidden" name="syoku" value="$in{'syoku'}">
 <input type="hidden" name="mode" value="syoku_change">
 <input type=hidden name=pass value=$in{'pass'}>
 <TABLE BORDER=0>
 <TR>
-<TD ALIGN="center" CLASS="b2" id="td1" colspan="8">転職必須能\力</TD>
-<TD ALIGN="center" CLASS="b2" id="td1" colspan="8">能\力上昇値</TD>
+<TD ALIGN="center" CLASS="b2" id="td1" colspan="8">転職必須能力</TD>
+<TD ALIGN="center" CLASS="b2" id="td1" colspan="8">能力上昇値</TD>
 </tr>
 <tr>
 <TH><font size=1>力</font></TH>
@@ -1130,7 +1130,7 @@ EOM
 	print <<"EOM";
 </tr>
 </table>
-<input type="submit" class="btn" value="$chara_syoku[$in{'syoku'}]の能\力変更" size="20">
+<input type="submit" class="btn" value="$chara_syoku[$in{'syoku'}]の能力変更" size="20">
 </form>
 <table><tr>
 <td valign="top">
@@ -1245,7 +1245,7 @@ EOM
 <input type=submit class=btn value="削除">
 </form>
 <form action="$scriptk" method="post">
-使用可能\必殺技<br>
+使用可能必殺技<br>
 使用条件とは、1でマスターじゃないと使用できないもの、0でマスターしてなくとも使える必殺技となります。
 <table>
 <tr>
@@ -1651,7 +1651,7 @@ EOM
 	print <<"EOM";
 </tr></table>
 <input type="hidden" name="item_num" value="$i">
-<input type=submit class=btn value="能\力の編集">
+<input type=submit class=btn value="能力の編集">
 </form>
 特定の職業への追加
 <TABLE BORDER=0>
@@ -2159,8 +2159,8 @@ sub syoku_add_pre {
 攻撃力判定用サブルーチン名<br>
 <b><font color="$red" size = 2>syokuの後に次の数字である<font color="$yellow" size = 3>$next_syoku</font>の英語名を入れて下さい。<br>初期状態ではsyokuthirtyが30番の職業のグランドマスター用なので、<br>31はsyokuthirtyoneという感じに次の数字である<font color="$yellow" size = 3>$next_syoku</font>の英語名を入力して下さい。<br>必ず、半角小文字英字で入力して下さい。<br>間違えるとエラーが出てしまいます。</font></b><br>
 <input type=text name="asub" value="syoku" size="20"><br><br><br>
-攻撃力に反映させる能\力の倍率<br>
-<b><font color="$red" size = 2>攻撃力決定の際の計算で、影響を及ぼす能\力の倍数を決めます。<br>0を入力すればその能\力は攻撃力へ及ぼしません。<br>参考としてはグランドマスターの場合は全てが1になっております。<br>必ず、半角数字で入力して下さい。<br>小数でも可能\です。<br>なお、全体というのは武器以外の全ての数値を足したあとにかける数値になります。<br>管理人などの職業では2になっております。</font></b><br>
+攻撃力に反映させる能力の倍率<br>
+<b><font color="$red" size = 2>攻撃力決定の際の計算で、影響を及ぼす能力の倍数を決めます。<br>0を入力すればその能力は攻撃力へ及ぼしません。<br>参考としてはグランドマスターの場合は全てが1になっております。<br>必ず、半角数字で入力して下さい。<br>小数でも可能です。<br>なお、全体というのは武器以外の全ての数値を足したあとにかける数値になります。<br>管理人などの職業では2になっております。</font></b><br>
 <table bgcolor="#ffffff">
 <tr><th>力</th><th>魔力</th><th>信仰心</th><th>生命力</th><th>器用さ</th><th>速さ</th><th>魅力</th><th>全体</th><th>武器</th></tr>
 <tr>

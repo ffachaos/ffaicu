@@ -308,8 +308,8 @@ EOM
 
 	$buffer.="<TABLE BORDER=0>\n";
 	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b2\" COLSPAN=\"5\">\n";
-	$buffer.="知\能\</TD></TR>\n";
-	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">なまえ</TD><TD ALIGN=\"center\" CLASS=\"b1\">知\能\</TD><TD ALIGN=\"center\" CLASS=\"b1\">ホームページ</TD>\n";
+	$buffer.="知能</TD></TR>\n";
+	$buffer.="<TR><TD ALIGN=\"center\" CLASS=\"b1\"></TD><TD ALIGN=\"center\" CLASS=\"b1\">なまえ</TD><TD ALIGN=\"center\" CLASS=\"b1\">知能</TD><TD ALIGN=\"center\" CLASS=\"b1\">ホームページ</TD>\n";
 
 	$i=1;
 	foreach(@def){

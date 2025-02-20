@@ -67,7 +67,7 @@ sub log_in {
 
 	&chara_load;
 
-if(!@chara) { &error("キャラデータが消えている可能\性があります。復元しますか？ただし、一日前のバックアップデータに戻ることになります<form action=\"hukugen.cgi\" method=\"post\"><input type=hidden name=id value=$in{'id'}><input type=hidden name=mode value=log_in><input type=submit style=\"background-color:#9370DB;color:#FFFFFF;border:2 solid BFEFFF\" value=\"復元する\"></form>");}
+if(!@chara) { &error("キャラデータが消えている可能性があります。復元しますか？ただし、一日前のバックアップデータに戻ることになります<form action=\"hukugen.cgi\" method=\"post\"><input type=hidden name=id value=$in{'id'}><input type=hidden name=mode value=log_in><input type=submit style=\"background-color:#9370DB;color:#FFFFFF;border:2 solid BFEFFF\" value=\"復元する\"></form>");}
 
 	&get_host;
 

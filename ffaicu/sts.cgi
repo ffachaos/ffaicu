@@ -142,7 +142,7 @@ sub chara_st {
 <hr size=0>
 <font class=white>メニュー/</font>
 <a href="$scripta?mode=ranking">登録者一覧</a> / 
-<a href="$ranking">\能\力別ランキングへ</a> / 
+<a href="$ranking">\能力別ランキングへ</a> / 
 <a href="$syoku_html" target="_blank">各職業に必要な特性値</a> / 
 <a href="$img_all_list" target="_blank">$vote_gazou</a> / 
 <a href="$bbs" target="_blank">$bbs_title</a> / 
