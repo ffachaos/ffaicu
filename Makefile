@@ -17,7 +17,7 @@ endif
 .PHONY: shebang
 shebang: ## shebangを任意のパスに変更する (e.g. make shebang SHEBANG="/usr/local/bin/perl --")
 ifeq ($(OS),Windows_NT)
-	@echo TODO
+	@.\scripts\bat\shebang.bat $(SHEBANG)
 else
 	@bash scripts/sh/shebang.sh $(SHEBANG)
 endif
