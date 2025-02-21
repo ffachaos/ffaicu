@@ -8,8 +8,9 @@ RUN apt-get update && \
 WORKDIR /var/www/html
 COPY ffaicu/ /var/www/html/
 COPY apache/apache2.conf /etc/apache2/
+RUN chown -R www-data:www-data /var/www/html
 
-RUN find /var/www/html -name "*.cgi" -type f -exec chmod 755 {} \;
+RUN find /var/www/html -type f -iregex ".*\.\(cgi\|pl\)$" -exec chmod 755 {} \;
 RUN find /var/www/html -type d -exec chmod 755 {} \;
 RUN find /var/www/html -type f -iregex ".*\.\(dat\|ini\)$" -exec chmod 666 {} \;
 
