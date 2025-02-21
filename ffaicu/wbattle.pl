@@ -80,14 +80,14 @@ sub wacs_add {
 	$winner[12] += $winner[53];
 	$winner[13] += $winner[34];
 	if ($winner[37]) {
-		require './wtech/$winner[37].pl';
+		require "./wtech/$winner[37].pl";
 	} else {
-		require './wtech/0.pl';
+		require "./wtech/0.pl";
 	}
 	if ($winner[51]) {
-		require './wacstech/$winner[51].pl';
+		require "./wacstech/$winner[51].pl";
 	} else {
-		require './wacstech/0.pl';
+		require "./wacstech/0.pl";
 	}
 }
 
