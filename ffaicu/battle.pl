@@ -97,192 +97,77 @@ sub tyosenwaza {
 sub levelup {
 	if ($chara[18] < $charamaxlv) {
 
-		#職業別ボーナス加算処理
-		open(IN,"$syoku_file");
+		# 職業別ボーナス加算処理
+		open(IN, "$syoku_file");
 		@syoku = <IN>;
 		close(IN);
 
-		my ($a,$b,$c,$d,$e,$f,$g,$h,$sy_0,$sy_1,$sy_2,$sy_3,$sy_4,$sy_5,$sy_6,$sylp) = split(/<>/,$syoku[$chara[14]]);
+		my ($a, $b, $c, $d, $e, $f, $g, $h, @sy) = split(/<>/, $syoku[$chara[14]]);
+		my @as;
 
-		# 変数の初期化
-		$as0=0;
-		$as1=0;
-		$as2=0;
-		$as3=0;
-		$as4=0;
-		$as5=0;
-		$as6=0;
-		$as7=0;
-		$ahp=0;
-		$t1=0;
-		$t2=0;
-		$t3=0;
-		$t4=0;
-		$t5=0;
-		$t6=0;
-		$t7=0;
-		$t8=0;
-		$hit=0;
+		my $base_exp = ($lv_up * ($chara[18] * ($chara[18] - 1))) / 2;
+		my $total_exp = $base_exp + $chara[17];
 
-		while ($chara[17] >= ($chara[18] * $lv_up)) {
-			$chara[17] = $chara[17] - int($chara[18] * $lv_up);
-			$lvup += 1;
-			$chara[18] += 1;
-			$hpup = int((rand($chara[10])) * 3 + $chara[10]);
-			$k0up = int(rand($sy_0)) + 1;
-			$k1up = int(rand($sy_1)) + 1;
-			$k2up = int(rand($sy_2)) + 1;
-			$k3up = int(rand($sy_3)) + 1;
-			$k4up = int(rand($sy_4)) + 1;
-			$k5up = int(rand($sy_5)) + 1;
-			$k6up = int(rand($sy_6)) + 1;
-			$klpup = int(rand($sylp)) + 1;
-			$chara[16] = $chara[16] + $hpup;
-			if ($chara[16] < $charamaxhp) {
-				$ahp += $hpup;
-				$hit = 1;
-			} else {
-				$ahp += $charamaxhp - $chara[16] + $hpup;
-				$chara[16] = $charamaxhp;
-			}
-			if (int(rand(2)) == 0) {
-				$chara[7] += $k0up;
-					if ($chara[7] < $charamaxpm) {
-						$t1 = 1;
-						$as0 += $k0up;
-					} else {
-						$as0 += $charamaxpm - $chara[7] + $k0up;
-						$chara[7] = $charamaxpm;
-					}
-			}
+		my $new_level = int((1 + sqrt(1 + (8 * $total_exp) / $lv_up)) / 2);
 
-			if (int(rand(2)) == 0) {
-				$chara[8] += $k1up;
-				if ($chara[8] < $charamaxpm) {
-					$t2 = 1;
-					$as1 += $k1up;
-				} else {
-					$as1 += $charamaxpm - $chara[8] + $k1up;
-					$chara[8] = $charamaxpm;
-				}
-			}
+		my $remaining_exp = $total_exp - ($lv_up * ($new_level * ($new_level - 1))) / 2;
 
-			if (int(rand(2)) == 0) {
-				$chara[9] += $k2up;
-				if ($chara[9] < $charamaxpm) {
-					$t3 = 1;
-					$as2 += $k2up;
-				} else {
-					$as2 += $charamaxpm - $chara[9] + $k2up;
-					$chara[9] = $charamaxpm;
-				}
-			}
+		my $lvup = $new_level - $chara[18];
+		$chara[17] = $remaining_exp;
+		$chara[18] = $new_level;
+		return if $lvup == 0;  # 1回もレベルアップできないなら終了
 
-			if (int(rand(2)) == 0) {
-				$chara[10] += $k3up;
-				if ($chara[10] < $charamaxpm) {
-					$t4 = 1;
-					$as3 += $k3up;
-				} else {
-					$as3 += $charamaxpm-$chara[10]+$k3up;
-					$chara[10] = $charamaxpm;
-				}
-			}
-			if (int(rand(2)) == 0) {
-				$chara[11] += $k4up;
-				if ($chara[11] < $charamaxpm) {
-					$t5 = 1;
-					$as4 += $k4up;
-				} else {
-					$as4 += $charamaxpm-$chara[11]+$k4up;
-					$chara[11] = $charamaxpm;
-				}
-			}
+		# HP の計算
+		my $hpup = int(($chara[10] * 3 / 2 + $chara[10]) * $lvup);
+		$chara[16] += $hpup;
+		$chara[16] = $charamaxhp if $chara[16] > $charamaxhp;
+		my $ahp = ($chara[16] > $charamaxhp) ? ($charamaxhp - ($chara[16] - $hpup)) : $hpup;
 
-			if (int(rand(2)) == 0) {
-				$chara[12] += $k5up;
-				if ($chara[12] < $charamaxpm) {
-					$t6 = 1;
-					$as5 += $k5up;
-				} else {
-					$as5 += $charamaxpm-$chara[12]+$k5up;
-					$chara[12] = $charamaxpm;
-				}
-			}
-
-			if (int(rand(2)) == 0) {
-				$chara[13] += $k6up;
-				if ($chara[13] < $charamaxpm) {
-					$t7 = 1;
-					$as6 += $k6up;
-				} else {
-					$as6 += $charamaxpm-$chara[13]+$k6up;
-					$chara[13] = $charamaxpm;
-				}
-			}
-
-			if (int(rand(2)) == 0) {
-				$chara[20]  += $klpup;
-				if ($chara[20]  < $charamaxpm) {
-					$t8 = 1;
-					$as7 += $klpup;
-				} else {
-					$as7 += $charamaxpm-$chara[20]+$klpup;
-					$chara[20]  = $charamaxpm;
-				}
-			}
+		foreach my $i (0..$#sy) {
+			my $random_factor = 0.8 + rand(1.25 - 0.8);
+			$as[$i] = int($sy[$i] * $lvup * $random_factor);
 		}
 
-		if ($lvup != 0){
-			$comment .= "<font class=red size=7>レベルが$lvup上がった！</font><br>";
-			$klvbf = $chara[33];
-			$chara[33] += $lvup;
+		# ステータスの増加 (まとめて計算)
+		$chara[7]  = $charamaxpm if ($chara[7]  += $as[0]) > $charamaxpm;
+		$chara[8]  = $charamaxpm if ($chara[8]  += $as[1]) > $charamaxpm;
+		$chara[9]  = $charamaxpm if ($chara[9]  += $as[2]) > $charamaxpm;
+		$chara[10] = $charamaxpm if ($chara[10] += $as[3]) > $charamaxpm;
+		$chara[11] = $charamaxpm if ($chara[11] += $as[4]) > $charamaxpm;
+		$chara[12] = $charamaxpm if ($chara[12] += $as[5]) > $charamaxpm;
+		$chara[13] = $charamaxpm if ($chara[13] += $as[6]) > $charamaxpm;
+		$chara[20] = $charamaxpm if ($chara[20] += $as[7]) > $charamaxpm;
 
-			#ジョブマスターの処理
-			if ($chara[33] > 59 && $klvbf <=59) {
-				$comment .= "<font class=red size=5>$chara_syoku[$chara[14]]をマスターした！！</font><br>";
-				$lock_file = "$lockfolder/syoku$in{'id'}.lock";
-				&lock($lock_file,'SK');
-				&syoku_load;
+		# レベルアップのメッセージ
+		$comment .= "<font class=red size=7>レベルが$lvup上がった！</font><br>";
+		my $klvbf = $chara[33];
+		$chara[33] += $lvup;
+		$chara[33] = 60 if $chara[33] > 60;
 
-				$syoku_master[$chara[14]] = 60;
-
-				&syoku_regist;
-				&unlock($lock_file,'SK');
-			}
-			if ($chara[33] > 60) { $chara[33]=60; }
-
-			$chara[15] = $chara[16];
-
-			if ($hit) {
-				$comment .= "ＨＰが<font class=yellow>$ahp</font>上がった！！";
-			}
-			if ($t1) {
-				$comment .= "力が<font class=yellow>$as0</font>上がった。";
-			}
-			if ($t2) {
-				$comment .= "魔力が<font class=yellow>$as1</font>上がった。";
-			}
-			if ($t3) {
-				$comment .= "信仰心が<font class=yellow>$as2</font>上がった。";
-			}
-			if ($t4) {
-				$comment .= "生命力が<font class=yellow>$as3</font>上がった。";
-			}
-			if ($t5) {
-				$comment .= "器用さが<font class=yellow>$as4</font>上がった。";
-			}
-			if ($t6) {
-				$comment .= "速さが<font class=yellow>$as5</font>上がった。";
-			}
-			if ($t7) {
-				$comment .= "魅力が<font class=yellow>$as6</font>上がった。";
-			}
-			if ($t8) {
-				$comment .= "カルマが<font class=yellow>$as7</font>上がった。";
-			}
-	
+		# ジョブマスター処理
+		if ($chara[33] > 59 && $klvbf <= 59) {
+			$comment .= "<font class=red size=5>$chara_syoku[$chara[14]]をマスターした！！</font><br>";
+			my $lock_file = "$lockfolder/syoku$in{'id'}.lock";
+			&lock($lock_file, 'SK');
+			&syoku_load;
+			$syoku_master[$chara[14]] = 60;
+			&syoku_regist;
+			&unlock($lock_file, 'SK');
 		}
+
+		$chara[15] = $chara[16];
+
+		# 各ステータスの増加をコメントに反映
+		$comment .= "ＨＰが<font class=yellow>".$ahp."</font>上がった！！" if $ahp;
+		$comment .= "力が<font class=yellow>".$as[0]."</font>上がった。" if $as[0];
+		$comment .= "魔力が<font class=yellow>".$as[1]."</font>上がった。" if $as[1];
+		$comment .= "信仰心が<font class=yellow>".$as[2]."</font>上がった。" if $as[2];
+		$comment .= "生命力が<font class=yellow>".$as[3]."</font>上がった。" if $as[3];
+		$comment .= "器用さが<font class=yellow>".$as[4]."</font>上がった。" if $as[4];
+		$comment .= "速さが<font class=yellow>".$as[5]."</font>上がった。" if $as[5];
+		$comment .= "魅力が<font class=yellow>".$as[6]."</font>上がった。" if $as[6];
+		$comment .= "カルマが<font class=yellow>".$as[7]."</font>上がった。" if $as[7];
+
 	}
 }
 
