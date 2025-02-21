@@ -357,9 +357,9 @@ sub mons_read{
 	($mname,$mex,$mrand,$msp,$mdmg,$mkahi,$monstac,$mons_ritu,$mgold) = split(/<>/,$MONSTER[$r_no]);
 
 	if ($monstac) {
-		require './mons/$monstac.pl';
+		require "./mons/$monstac.pl";
 	} else {
-		require './mons/0.pl';
+		require "./mons/0.pl";
 	}
 
 }

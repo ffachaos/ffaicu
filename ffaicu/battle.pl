@@ -344,14 +344,14 @@ sub acs_add {
 	@temp_item = @item;
 
 	if ($chara[30]) {
-		require './tech/$chara[30].pl';
+		require "./tech/$chara[30].pl";
 	} else {
-		require './tech/0.pl';
+		require "./tech/0.pl";
 	}
 	if ($item[7]) {
-		require './acstech/$item[7].pl';
+		require "./acstech/$item[7].pl";
 	} else {
-		require './acstech/0.pl';
+		require "./acstech/0.pl";
 	}
 }
 

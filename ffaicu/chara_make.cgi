@@ -37,16 +37,16 @@
 #---------------------------------------------------------------#
 
 # 日本語ライブラリの読み込み
-require './jacode.pl';
+require "./jacode.pl";
 
 # レジストライブラリの読み込み
-require './regist.pl';
+require "./regist.pl";
 
 # アイテムライブラリの読み込み
-require './item.pl';
+require "./item.pl";
 
 # 初期設定ファイルの読み込み
-require './data/ffadventure.ini';
+require "./data/ffadventure.ini";
 
 # 初期状態の設定(初期状態で所持している武器・防具。0は「なし」になります)
 $first_item = 0;	# 武器NO
